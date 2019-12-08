@@ -1,0 +1,16 @@
+<template>
+    <div>
+        <p class="ft25 mb-2"><slot></slot></p>
+        <hr class="subtitle">
+    </div>
+</template>
+
+<style>
+    .subtitle {
+        background: #99CA3E !important;
+        width: 100px;
+        height: 4px;
+        border: none;
+        margin-bottom: 30px;
+    }
+</style>

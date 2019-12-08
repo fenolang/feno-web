@@ -1,7 +1,7 @@
 {
-  "name": "oleo-website",
+  "name": "darl",
   "version": "1.0.0",
-  "description": "The official Oleo&#39;s website",
+  "description": "The official Darl website",
   "author": "YahirGNz",
   "private": true,
   "scripts": {
@@ -12,6 +12,7 @@
   },
   "dependencies": {
     "@nuxtjs/axios": "^5.3.6",
+    "anchor-js": "^4.2.1",
     "cross-env": "^5.2.0",
     "express": "^4.16.4",
     "nuxt": "^2.0.0",

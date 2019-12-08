@@ -2,10 +2,10 @@
     <div>
         <v-app-bar fixed flat app class="not" :class="vback">
             <v-toolbar-title v-if="vtitle" :class="vcolor">
-                <nuxt-link :to="localePath('index')" class="no-decors home-link">Óleo.js</nuxt-link> | {{ vtitle }}
+                <nuxt-link :to="localePath('index')" class="no-decors home-link">Daft</nuxt-link> | {{ vtitle }}
             </v-toolbar-title>
             <v-toolbar-title :class="vcolor" v-else>
-                <nuxt-link :to="localePath('index')" class="no-decors home-link">Óleo.js</nuxt-link>
+                <nuxt-link :to="localePath('index')" class="no-decors home-link">Daft</nuxt-link>
             </v-toolbar-title>
             <v-spacer></v-spacer>
             <v-btn v-for="(item, index) in vbuttons" :key="index"

@@ -4,17 +4,50 @@
       <Banner />
     </v-flex>
     <v-flex xs12>
+      <v-container grid-list-md>
+        <v-layout row wrap :justify-center="$vuetify.breakpoint.smAndDown">
+          <v-flex xs10 md4>
+            <p class="ft15 bold">Define your <span class="ft-green">components</span></p>
+            <EditorBox>
+              <El>doc:</El> { <br>
+              &nbsp;&nbsp;&nbsp;<Tag>h1</Tag>This is my component<Tag>/h1</Tag> <br>
+              &nbsp;&nbsp;&nbsp;<Tag>p <Attr>class</Attr>=<String>"myclass"</String></Tag>Hello Again<Tag>/p</Tag> <br>
+              }
+            </EditorBox>
+          </v-flex>
+          <v-flex xs10 md4>
+            <p class="ft15 bold">Define <span class="ft-green">docs</span> and call your components</p>
+            <EditorBox>
+              <El>doc:</El> { <br>
+              &nbsp;&nbsp;&nbsp;<Tag>h1</Tag>My Main Page<Tag>/h1</Tag> <br>
+              &nbsp;&nbsp;&nbsp;&nbsp;<El>@call(</El>MyComponent<El>)</El> <br>
+              }
+            </EditorBox>
+          </v-flex>
+          <v-flex xs10 md4>
+            <p class="ft15 bold">Define your <span class="ft-green">meta in single-files</span></p>
+            <EditorBox>
+              <El>meta:</El> [ <br>
+              &nbsp;&nbsp;&nbsp;<String>"author, YahirGNz"</String>, <br>
+              &nbsp;&nbsp;&nbsp;<String>"description, This is my description"</String> <br>
+              ]
+            </EditorBox>
+          </v-flex>
+        </v-layout>
+      </v-container>
+    </v-flex>
+    <v-flex xs12 class="mt-2">
       <div class="pt30 center-txt">
         <p class="ft30 bold ft-dk">
-          {{ $t('index.what') }} <span class="ft-green">Óleo</span>?
+          {{ $t('index.what') }} <span class="ft-green">Daft</span>?
         </p>
       </div>
     </v-flex>
-    <v-flex xs12>
+    <v-flex xs12 class="mb-4">
       <v-container grid-list-lg>
         <v-layout row wrap :justify-center="$vuetify.breakpoint.xsOnly">
           <v-flex xs10 md6>
-            <v-img width="600" src="/draw/mac.png"></v-img>
+            <v-img width="300" src="/draw/mac.png" class="center-this"></v-img>
           </v-flex>
           <v-flex xs10 md6>
             <div class="pt30">
@@ -81,12 +114,20 @@
 import { Vue, Component } from 'vue-property-decorator';
 import { Action, namespace } from 'vuex-class';
 import Banner from '@/components/Index/Banner.vue';
+// Editor components ->
+import EditorBox from '@/components/code-box.vue';
+import Attr from '@/components/Code/Attr.vue';
+import String from '@/components/Code/String.vue';
+import El from '@/components/Code/El.vue';
+import Tag from '@/components/Code/Tag.vue';
+// <- ---- ->
 
 const MenuModule = namespace('menu');
 
 @Component({
   components: {
-    Banner
+    Banner, EditorBox,
+    Attr, String, Tag, El
   }
 })
 
@@ -97,7 +138,7 @@ export default class Index extends Vue {
   mounted() {
     this.setButtons([
       { id: 0, classes: "border-btn", outlined: true, text: this.$t('btns.about'), route: "about" },
-      { id: 1, classes: "bg3 shadows dk", text: this.$t('btns.docs') },
+      { id: 1, classes: "bg3 shadows dk", text: this.$t('btns.docs'), route: "docs" },
       { id: 2, classes: "border-btn", outlined: true, text: this.$t('btns.examples') },
       { id: 3, classes: "border-btn", outlined: true, text: "FAQ" }
     ])
@@ -105,6 +146,9 @@ export default class Index extends Vue {
 }
 </script>
 
-<style>
-
+<style scoped>
+.code {
+  font-family: "Consolas" !important;
+  font-size: 13px;
+}
 </style>

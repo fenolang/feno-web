@@ -6,7 +6,7 @@ module.exports = {
   ** Headers of the page
   */
   head: {
-    titleTemplate: '%s | The web framework that you need.',
+    titleTemplate: 'Mush | The programming language for great web development.',
     title: process.env.npm_package_name || '',
     meta: [
       { charset: 'utf-8' },
@@ -26,7 +26,8 @@ module.exports = {
   */
   css: [
     '@/assets/css/oleo.css',
-    '@/assets/css/colors.css'
+    '@/assets/css/colors.css',
+    '@/assets/css/font.css'
   ],
   /*
   ** Plugins to load before mounting the App

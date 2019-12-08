@@ -30,7 +30,7 @@ export default class Default extends Vue {
 
 <style scoped>
   .line {
-    background: #0DBC82 !important;
+    background: #99CA3E !important;
     width: 100%;
     height: 3px;
   }
