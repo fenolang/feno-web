@@ -6,7 +6,7 @@ module.exports = {
   ** Headers of the page
   */
   head: {
-    titleTemplate: 'Mush | The programming language for great web development.',
+    titleTemplate: 'Daft | The programming language for great web development.',
     title: process.env.npm_package_name || '',
     meta: [
       { charset: 'utf-8' },

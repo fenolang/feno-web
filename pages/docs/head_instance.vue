@@ -79,7 +79,7 @@
                                 <p class="ft13 lTXTgrey" v-html="$t('docs.head.elements.styles.subtitle')"></p>
                                 <v-btn outlined block class="border-btn mb-4"
                                 v-for="(item, index) in $t('docs.head.elements.styles.btns')" :key="index"
-                                v-html="item.text"></v-btn>
+                                v-html="item.text" :to="localePath(item.route)"></v-btn>
                             </div>
                         </v-flex>
                         <v-flex xs12>
@@ -88,7 +88,7 @@
                                 <p class="ft13 lTXTgrey" v-html="$t('docs.head.elements.scripts.subtitle')"></p>
                                 <v-btn outlined block class="border-btn mb-4"
                                 v-for="(item, index) in $t('docs.head.elements.scripts.btns')" :key="index"
-                                v-html="item.text"></v-btn>
+                                v-html="item.text" :to="localePath(item.route)"></v-btn>
                             </div>
                         </v-flex>
                         <v-flex xs12>

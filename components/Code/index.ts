@@ -5,7 +5,8 @@ import Viewer from '@/components/Code/Viewer.vue';
 import Comment from '@/components/Code/Comment.vue';
 import Attr from '@/components/Code/Attr.vue';
 import CodeBox from '@/components/code-box.vue';
+import Tab from '@/components/Code/Tab.vue';
 
 export {
-    El, Tag, String, Viewer, Comment, Attr, CodeBox
+    El, Tag, String, Viewer, Comment, Attr, Tab, CodeBox
 };

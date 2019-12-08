@@ -36,11 +36,11 @@
       <router-link :to="localePath('docs-head_instance')">
         <p class="ft13 link mb-1">Head Instance</p>
       </router-link>
+      <router-link :to="localePath('docs-styles_instance')">
+        <p class="ft13 link mb-1">Styles Instance</p>
+      </router-link>
       <router-link :to="localePath('docs-meta_elements')">
         <p class="ft13 link mb-1">Meta Elements</p>
-      </router-link>
-      <router-link :to="localePath('docs-attributes')">
-        <p class="ft13 link mb-1">Styles</p>
       </router-link>
       <router-link :to="localePath('docs-attributes')">
         <p class="ft13 link mb-1">The Daft Class</p>

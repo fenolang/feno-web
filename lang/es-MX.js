@@ -265,16 +265,16 @@ export default {
             title: "Estilos",
             subtitle: 'Para importar estilos que definiste en un archivo <span class="bold">.css</span> externo utilizamos la función <span class="bold ft-green">style()</span> mientras que si quieres definir estilos en el mismo archivo utilizamos la instancia <span class="bold ft-green">#styles</span>:',
             btns: [
-              { text: 'Ver más sobre la función&nbsp;<span class="bold">style()</span>' },
-              { text: 'Ver más sobre la instancia&nbsp;<span class="bold">#styles</span>' }
+              { text: 'Ver más sobre la función&nbsp;<span class="bold">style()</span>', route: "docs-meta_elements" },
+              { text: 'Ver más sobre la instancia&nbsp;<span class="bold">#styles</span>', route: "docs-styles_instance" }
             ]
           },
           scripts: {
             title: "Scripts",
             subtitle: 'Para importar scripts externos de Daft utilizamos la función <span class="bold ft-green">import()</span> y para definir un script en el mismo archivo llamamos a la clase <span class="bold ft-green">{ Daft }</span>',
             btns: [
-              { text: 'Ver más sobre la función&nbsp;<span class="bold">import()</span>' },
-              { text: 'Ver más sobre la clase&nbsp;<span class="bold">{ Daft }</span>' }
+              { text: 'Ver más sobre la función&nbsp;<span class="bold">import()</span>', route: "docs-meta_elements" },
+              { text: 'Ver más sobre la clase&nbsp;<span class="bold">{ Daft }</span>', route: "docs-daft_class" }
             ]
           },
           meta: {

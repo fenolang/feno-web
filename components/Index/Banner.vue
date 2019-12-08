@@ -3,7 +3,7 @@
         <v-layout row wrap>
             <v-flex xs12>
                 <div class="h350 STwhite pt60 center-txt pl30">
-                    <v-img contain height="45" src="/logotest.png"></v-img>
+                    <v-img contain height="45" src="/logo.png"></v-img>
                     <span class="ft60 bold ft-dk underline">Daft</span>
                     <div class="sub-padding mt15">
                         <p class="lTXTgrey ft15">{{ $t('banner.subtitle') }}</p>
