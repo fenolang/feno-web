@@ -1,13 +1,13 @@
 <template>
     <div>
-        <p class="ft20 mt20"><slot></slot></p>
-        <hr class="mark-this">
+        <p class="ft20 bold mt20"><slot></slot></p>
+        <hr class="danger-this">
     </div>
 </template>
 
 <style>
-    .mark-this {
-        background: #2c2e41 !important;
+    .danger-this {
+        background: #ec2e2e !important;
         width: 60px;
         height: 3px;
         border: none;

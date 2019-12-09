@@ -258,7 +258,7 @@ export default {
             title: "Styles",
             subtitle: 'To import styles that you defined in an external <span class="bold">.css</span> file we use the <span class="bold ft-green">style()</span> function while if you want to define styles in the same file we use the <span class="bold ft-green"># styles</span> instance:',
             btns: [
-              { text: 'See more about the&nbsp;<span class="bold">style()</span>&nbsp;function', route: "docs-meta_elements" },
+              { text: 'See more about the&nbsp;<span class="bold">style()</span>&nbsp;function', route: "docs-meta_elements", id: "#style" },
               { text: 'See more about the&nbsp;<span class="bold">#styles</span>&nbsp;instance', route: "docs-styles_instance" }
             ]
           },
@@ -266,7 +266,7 @@ export default {
             title: "Scripts",
             subtitle: 'To import external Daft scripts we use the <span class="bold ft-green">import()</span> function and to define a script in the same file we call the <span class="bold ft-green">{ Daft }</span> class',
             btns: [
-              { text: 'See more about the&nbsp;<span class="bold">import()</span>&nbsp;function', route: "docs-meta_elements" },
+              { text: 'See more about the&nbsp;<span class="bold">import()</span>&nbsp;function', route: "docs-meta_elements", id: "#import" },
               { text: 'See more about the&nbsp;<span class="bold">{ Daft }</span>&nbsp;class', route: "docs-daft_class" }
             ]
           },

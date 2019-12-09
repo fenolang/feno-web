@@ -1,6 +1,6 @@
 <template>
     <div>
-        <p class="ft25 mb-2"><slot></slot></p>
+        <p class="ft25 mt20"><slot></slot></p>
         <hr class="subtitle">
     </div>
 </template>

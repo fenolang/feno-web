@@ -6,7 +6,9 @@ import Comment from '@/components/Code/Comment.vue';
 import Attr from '@/components/Code/Attr.vue';
 import CodeBox from '@/components/code-box.vue';
 import Tab from '@/components/Code/Tab.vue';
+import Func from '@/components/Code/Func.vue';
+import Mark from '@/components/Code/Mark.vue';
 
 export {
-    El, Tag, String, Viewer, Comment, Attr, Tab, CodeBox
+    El, Tag, String, Viewer, Comment, Attr, Tab, CodeBox, Func, Mark
 };
