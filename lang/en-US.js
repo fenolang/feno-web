@@ -446,6 +446,75 @@ export default {
           title: 'print() and msg()',
           subtitle: 'When we need to know something that is happening internally as the result of a function in a simple way we need a message to show it to us, <span class="bold">msg()</span> is a good option but if we need several messages and we need them several times we will end up getting tired of so many pop-ups. <br> <br> Then we make use of <span class="bold">print()</span> which is just a simple message in the console, it\'s like a <span class="bold">console.log()</span> in JavaScript :)'
         }
+      },
+      msf: {
+        title: '<span class="ft-green">#Meta</span> Single Files',
+        my_web: 'My project',
+        welcome: 'Welcome',
+        desc: 'My awesome description',
+        subtitle: 'One of the reasons for the existence of Daft is to present an improvement in the cleanliness of the code compared to other alternatives and we know that writing the "meta tags" or elements of the meta in each file next to our marking is dirty and in the long run It is a bad practice. Daft introduces you: the individual #meta files',
+        what: {
+          title: 'What are the meta files?',
+          subtitle: 'Meta Single Files are a novelty that Daft implements to separate the Meta element from your pages. In such a way that you can create a file that is only for the meta of your page and Daft will automatically attach its content to the corresponding page.',
+        },
+        why: {
+          title: 'Why use them?',
+          subtitle: 'The meta element can sometimes be VERY extensive by configurations and work in SEO in such a way that in the long term it will be a hindrance in our pages and it will be very dirty to have our entire goal next to the true content of each page so both the solution is to separate the meta from the pages in a different file to improve the organization and cleaning of our code.'
+        },
+        how: {
+          title: 'How should I call my meta files?',
+          subtitle: 'Daft will automatically locate your meta files and apply their content to the destination page but for that each meta file has to be called according to certain rules: it must start with an underscore and must have the same name as the page for which the goal will be :'
+        },
+        create: {
+          title: 'Creating a Meta Single File',
+          subtitle: 'Suppose we have a file called: index.daft with the following document:',
+          creating_one: 'Now we have to go to the folder called "meta" and create a new file called: _index.daft. Why? Because the meta files should always start their name with an underscore and then the name of the page / document to which it will be assigned. We have a document called "index.daft" so that the meta file must be called "_index.daft"',
+          with_content: 'And in that new meta file we place the following content:',
+          result: 'And ready! We have our first individual #meta file, Daft will now know that the index.daft file is assigned a meta file so the two files will be merged and the final document that Daft will transpire will be as follows:',
+          alert: 'If on the landing page (in this example the landing page is: "index.daft") you already have a meta element declared within the #Head instance then the contents of the meta file will NOT APPLY'
+        },
+        default: {
+          title: 'Define a default meta file',
+          subtitle: 'Daft also gives us the option to create a meta file that is used by default when we do not create a meta file for a page. We just have to create a new file in the folder called "meta" named: "default.daft" And that\'s it! Now if we do not apply any meta for a file, this meta will be applied by default',
+          alert: 'If on the landing page you already have a meta element declared within the #Head instance then the content of the default meta file will NOT APPLY'
+        }
+      },
+      compos: {
+        title: 'Components',
+        subtitle: 'The components are reusable pieces of code that we can import into our pages to reduce repetitive code and improve cleanliness in our project',
+        btn: 'Press this button',
+        welcome: 'Welcome to my website',
+        my_page: 'My website',
+        btn_name: 'mybutton',
+        create: {
+          title: 'Creating our first component',
+          subtitle: 'We will go to the folder called "components" and inside we will create a new file called for example: "miboton.daft" and inside we will place the following content:',
+          go_to: 'Now we will go to our main page: "index.daft" and call our component through the function:',
+          alert: 'The components ONLY accept the #Doc instance, if you put a head or meta in a component you will see a compilation error',
+          res: 'And ready! Daft will call the component "mybutton" on the "index" page so even if we don\'t see it, the final document that will be transpired for the browser will be the following:',
+          continue: 'This was a very simple example of how to create components since you can obviously achieve much more complex things and even create interactive components with properties, keep learning in the next lesson!'
+        }
+      },
+      props: {
+        subtitle: 'The props or properties for the components are data that can be sent to the components to increase their interactivity',
+        compo: 'my_component',
+        hw: 'Hello World!',
+        welcome: 'Welcome buddy',
+        hello: 'Hello!',
+        bye: 'Goodbye!',
+        newone: {
+          title: 'Sending and receiving data',
+          subtitle: 'To send a prop to a component you must send an object and within the name of the prop and its value:',
+          subtitle2: 'In this way we are sending a property called "prop" with a value of "Hello World!". Half of the work is done now, we just need to RECEIVE that value we send. For that we do something like the following:',
+          result: 'And so we tell Daft that we are waiting for a property called prop and we want him to place it before our message that says "Welcome buddy", just with "${}" and in square brackets place the name of the property you want to place. <br> <br> Taking into account that we already send a property with its value and we already receive it in the component, what we will see in the browser will be the following:'
+        },
+        two: {
+          title: 'Sending and receiving 2 props',
+          subtitle: 'Here is an example now with 2 properties so you don\'t miss it ;)',
+          doc: 'Our document:',
+          com: 'Our component:',
+          res: 'The result:'
+        }
       }
     }
 }

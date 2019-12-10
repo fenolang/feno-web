@@ -454,6 +454,75 @@ export default {
           title: 'print() y msg()',
           subtitle: 'Cuando necesitamos saber de algo que está pasando internamente como el resultado de una función de una manera sencilla necesitamos de un mensaje que nos lo muestre, <span class="bold">msg()</span> es una buena opción pero si necesitamos varios mensajes y varias veces nos acabarán cansando tantas ventanas emergentes. <br> <br> Entonces hacemos uso de <span class="bold">print()</span> que tan sólo es un simple mensaje en la consola, es como un <span class="bold">console.log()</span> en JavaScript :)'
         }
+      },
+      msf: {
+        title: 'Archivos <span class="ft-green">#Meta</span> individuales',
+        my_web: 'Mi página web',
+        welcome: 'Bienvenido',
+        desc: 'Mi increíble descripción',
+        subtitle: 'Uno de los motivos de la existencia de Daft es presentar una mejora en cuanto a la limpieza del código frente a otras alternativas y bien sabemos que escribir las "meta tags" o elementos del meta en cada archivo junto a nuestro marcado es sucio y a la larga una mala práctica. Daft te presenta: los archivos #meta individuales',
+        what: {
+          title: '¿Qué son los Archivos #meta individuales?',
+          subtitle: 'Los archivos de meta individuales o Meta Single Files son una novedad que implementa Daft para separar el elemento Meta de tus páginas. De tal manera que puedes crear un archivo que sólo sea para el meta de tu página y Daft automáticamente adjuntará su contenido a la página que corresponda.',
+        },
+        why: {
+          title: '¿Por qué utilizar archivos meta?',
+          subtitle: 'El elemento meta a veces puede llegar a ser MUY extenso por configuraciones y trabajo en el SEO de tal manera que a largo plazo será un estorbo en nuestras páginas y será muy sucio tener todo nuestro meta junto a el verdadero contenido de cada página por lo tanto la solución es separar el meta de las páginas en un archivo distinto para mejorar la organización y limpieza de nuestro código.'
+        },
+        how: {
+          title: '¿Cómo debo llamar a mis archivos meta?',
+          subtitle: 'Daft automáticamente localizará tus archivos meta y aplicará su contenido a la página destino pero para eso cada archivo meta tiene que llamarse de acuerdo a ciertas reglas: debe comenzar con guión bajo y debe tener el mismo nombre que tiene la página para la que será el meta:'
+        },
+        create: {
+          title: 'Creando un MSF',
+          subtitle: 'Supongamos que tenemos un archivo llamado: index.daft con el documento siguiente:',
+          creating_one: 'Ahora tenemos que ir a la carpeta llamada "meta" y creemos un nuevo archivo llamado: _index.daft. ¿Por qué? Porque los archivos de meta siempre deben iniciar su nombre con un guión bajo y en seguida el nombre de la página/documento al que se asignará. Nosotros tenemos un documento llamado "index.daft" de tal manera que su archivo de meta debe llamarse "_index.daft"',
+          with_content: 'Y en ese nuevo archivo meta colocamos el siguiente contenido:',
+          result: '¡Y listo! tenemos nuestro primer archivo de meta individual, Daft ahora sabrá que el archivo index.daft tiene asignado un archivo de meta entonces los dos archivos se fusionarán y el documento final que Daft transpilará será el siguiente:',
+          alert: 'Si en la página destino (en éste ejemplo la página destino es: "index.daft") ya tienes un elemento meta declarado dentro de la instancia #Head entonces NO SE APLICARÁ el contenido del archivo meta'
+        },
+        default: {
+          title: 'Definir un archivo meta por defecto',
+          subtitle: 'Daft también nos da la opción de crear un archivo meta que se utilice por defecto cuando no creemos un archivo meta para una página. Tan sólo tenemos que crear un nuevo archivo en la carpeta llamada "meta" que tenga por nombre: "default.daft" ¡Y listo! Ahora si no aplicamos ningún meta para un archivo se le aplicará éste meta por defecto que podemos personalizar',
+          alert: 'Si en la página destino ya tienes un elemento meta declarado dentro de la instancia #Head entonces NO SE APLICARÁ el contenido del archivo meta que tienes por defecto'
+        }
+      },
+      compos: {
+        title: 'Componentes',
+        subtitle: 'Los componentes son pedazos de código reusables que podemos importar en nuestras páginas para reducir el código repetitivo y mejorar la limpieza en nuestro proyecto',
+        btn: 'Presiona este botón',
+        welcome: 'Bienvenido a mi página web',
+        my_page: 'Mi página web',
+        btn_name: 'miboton',
+        create: {
+          title: 'Creando nuestro primer componente',
+          subtitle: 'Nos dirigiremos a la carpeta llamada "components" y dentro crearemos un nuevo archivo llamado por ejemplo: "miboton.daft" y dentro colocaremos el siguiente contenido:',
+          go_to: 'Ahora iremos a nuestra página principal: "index.daft" y llamaremos a nuestro componente mediante la función:',
+          alert: 'Los componentes SÓlO aceptan la instancia #Doc, si colocas un head o meta en un componente verás un error de compilación',
+          res: '¡Y listo! Daft llamará a el componente "miboton" en la página "index" por lo tanto aunque no lo veamos el documento final que se transpilará para el navegador será el siguiente:',
+          continue: 'Éste fue un ejemplo muy sencillo de cómo crear componentes ya que obviamente puedes lograr cosas mucho más complejas e incluso crear componentes interactivos con propiedades, ¡Sigue aprendiendo en la siguiente lección!'
+        }
+      },
+      props: {
+        subtitle: 'Las props o propiedades para los componentes son datos que se le pueden enviar a los componentes para aumentar su interactividad',
+        compo: 'mi_componente',
+        hw: 'Hola Mundo!',
+        welcome: 'Bienvenido amigo',
+        hello: 'Hola!',
+        bye: 'Adiós!',
+        newone: {
+          title: 'Mandando y recibiendo datos',
+          subtitle: 'Para mandar una prop a un componente debemos mandarle un objeto y dentro el nombre de la prop y su valor:',
+          subtitle2: 'De esta manera éstamos mandando una propiedad llamada "prop" con un valor de "Hola Mundo!". La mitad del trabajo está hecha ahora sólo falta RECIBIR ese valor que enviamos. Para eso hacemos algo como lo siguiente:',
+          result: 'Y así le decimos a Daft que éstamos esperando una propiedad llamada prop y queremos que la coloque antes de nuestro mensaje que dice "Bienvenido amigo", tan sólo con "${}" y entre corchetes colocar el nombre de la propiedad que quieres colocar. <br> <br> Tomando en cuenta que ya mandamos una propiedad con su valor y ya la recibimos en el componente, lo que veremos en el navegador será lo siguiente:'
+        },
+        two: {
+          title: 'Mandando y recibiendo 2 props',
+          subtitle: 'Aquí tienes un ejemplo ahora con 2 propiedades para que no te piedas ;)',
+          doc: 'Nuestro documento:',
+          com: 'Nuestro componente:',
+          res: 'El resultado:'
+        }
       }
     }
 }

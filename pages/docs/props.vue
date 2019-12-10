@@ -17,49 +17,48 @@
                             <div class="spacing pt20">
                                 <p class="ft35 bold">Props</p>
                                 <p class="ft13 lTXTgrey">
-                                    Las props o propiedades para los componentes son datos que se le pueden enviar a los componentes para aumentar su interactividad
+                                    {{ $t('docs.props.subtitle') }}
                                 </p>
                             </div>
                         </v-flex>
                         <v-flex xs12>
                             <div class="spacing">
-                                <Title>Mandando y recibiendo datos</Title>
+                                <Title>{{ $t('docs.props.newone.title') }}</Title>
                                 <p class="ft13 lTXTgrey">
-                                    Para mandar una prop a un componente debemos mandarle un objeto y dentro el nombre de la prop y su valor:
+                                    {{ $t('docs.props.newone.subtitle') }}
                                 </p>
                                 <CodeBox>
-                                    <Func name="call"><String>"mi_componente"</String>, { <El>prop</El>:<String>"Hola Mundo!"</String> }</Func>
+                                    <Func name="call"><String>"{{ $t('docs.props.compo') }}"</String>, { <El>prop</El>:<String>"{{ $t('docs.props.hw') }}"</String> }</Func>
                                 </CodeBox>
                                 <p class="mt20 ft13 lTXTgrey">
-                                    De esta manera éstamos mandando una propiedad llamada "prop" con un valor de "Hola Mundo!". La mitad del trabajo está hecha ahora sólo falta RECIBIR ese valor que enviamos. Para eso hacemos algo como lo siguiente:
+                                    {{ $t('docs.props.newone.subtitle2') }}
                                 </p>
                                 <CodeBox>
                                     <Doc>
                                         <Tag>h1</Tag><Attr>$</Attr>{ <Attr>prop</Attr> }<Tag>/h1</Tag> <br>
-                                        <Tab/><Tag>p</Tag>Bienvenido amigo<Tag>p</Tag>
+                                        <Tab/><Tag>p</Tag>{{ $t('docs.props.welcome') }}<Tag>p</Tag>
                                     </Doc>
                                 </CodeBox>
-                                <p class="mt20 ft13 lTXTgrey">
-                                    Y así le decimos a Daft que éstamos esperando una propiedad llamada prop y queremos que la coloque antes de nuestro mensaje que dice "Bienvenido amigo", tan sólo con "${}" y entre corchetes colocar el nombre de la propiedad que quieres colocar. <br> <br> Tomando en cuenta que ya mandamos una propiedad con su valor y ya la recibimos en el componente, lo que veremos en el navegador será lo siguiente:
+                                <p class="mt20 ft13 lTXTgrey" v-html="$t('docs.props.newone.result')">
                                 </p>
                                 <Viewer>
-                                    <h1>Hola Mundo!</h1>
-                                    <p>Bienvenido amigo</p>
+                                    <h1>{{ $t('docs.props.hw') }}</h1>
+                                    <p>{{ $t('docs.props.welcome') }}</p>
                                 </Viewer>
                             </div>
                         </v-flex>
                         <v-flex xs12 class="mb30">
                             <div class="spacing">
-                                <Subtitle>Mandando y recibiendo 2 props</Subtitle>
-                                <p class="lTXTgrey">Aquí tienes un ejemplo ahora con 2 propiedades para que no te piedas ;)</p>
-                                <p class="ft13 lTXTgrey">Nuestro documento:</p>
+                                <Subtitle>{{ $t('docs.props.two.title') }}</Subtitle>
+                                <p class="lTXTgrey">{{ $t('docs.props.two.subtitle') }}</p>
+                                <p class="ft13 lTXTgrey">{{ $t('docs.props.two.doc') }}</p>
                                 <CodeBox class="line">
                                     <Doc>
-                                        <Func name="call"><String>"mi_componente"</String>, { <El>prop1</El>:<String>"Hola!"</String>, <El>prop2</El>:<String>"Adiós!"</String> }</Func>
+                                        <Func name="call"><String>"{{ $t('docs.props.compo') }}"</String>, { <El>prop1</El>:<String>"{{ $t('docs.props.hello') }}"</String>, <El>prop2</El>:<String>"{{ $t('docs.props.bye') }}"</String> }</Func>
                                     </Doc>
                                 </CodeBox>
                                 <p class="mt20 ft13 lTXTgrey">
-                                    Nuestro componente:
+                                    {{ $t('docs.props.two.com') }}
                                 </p>
                                 <CodeBox class="line">
                                     <Doc>
@@ -68,11 +67,11 @@
                                     </Doc>
                                 </CodeBox>
                                 <p class="mt20 ft13 lTXTgrey">
-                                    El resultado:
+                                    {{ $t('docs.props.two.res') }}
                                 </p>
                                 <Viewer>
-                                    <h1>Hola!</h1>
-                                    <h3>Adiós!</h3>
+                                    <h1>{{ $t('docs.props.hello') }}</h1>
+                                    <h3>{{ $t('docs.props.bye') }}</h3>
                                 </Viewer>
                             </div>
                         </v-flex>

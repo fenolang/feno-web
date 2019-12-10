@@ -15,48 +15,48 @@
                     <v-layout row wrap>
                         <v-flex xs12>
                             <div class="spacing pt20">
-                                <p class="ft35 bold">Componentes</p>
+                                <p class="ft35 bold">{{ $t('docs.compos.title') }}</p>
                                 <p class="ft13 lTXTgrey">
-                                    Los componentes son pedazos de código reusables que podemos importar en nuestras páginas para reducir el código repetitivo y mejorar la limpieza en nuestro proyecto
+                                    {{ $t('docs.compos.subtitle') }}
                                 </p>
                             </div>
                         </v-flex>
                         <v-flex xs12>
                             <div class="spacing">
-                                <Title>Creando nuestro primer componente</Title>
+                                <Title>{{ $t('docs.compos.create.title') }}</Title>
                                 <p class="ft13 lTXTgrey">
-                                    Nos dirigiremos a la carpeta llamada "components" y dentro crearemos un nuevo archivo llamado por ejemplo: "miboton.daft" y dentro colocaremos el siguiente contenido:
+                                    {{ $t('docs.compos.create.subtitle') }}
                                 </p>
                                 <CodeBox>
                                     <Doc>
-                                        <Tag>button</Tag>Presiona este botón<Tag>/button</Tag>
+                                        <Tag>button</Tag>{{ $t('docs.compos.btn') }}<Tag>/button</Tag>
                                     </Doc>
                                 </CodeBox>
                                 <p class="mt20 ft13 lTXTgrey">
-                                    Ahora iremos a nuestra página principal: "index.daft" y llamaremos a nuestro componente mediante la función: <span class="bold">call()</span>
+                                    {{ $t('docs.compos.create.go_to') }} <span class="bold">call()</span>
                                 </p>
                                 <CodeBox>
                                     <Head>
-                                        <Tab/><El>title:</El> <String>"Mi página principal"</String>
+                                        <Tab/><El>title:</El> <String>"{{ $t('docs.compos.my_page') }}"</String>
                                     </Head>
                                     <Doc>
-                                        <Tag>h1</Tag>Bienvenido a mi sitio web<Tag>/h1</Tag> <br>
-                                        <Tab/> <Func name="call"><String>"miboton"</String></Func>
+                                        <Tag>h1</Tag>{{ $t('docs.compos.welcome') }}<Tag>/h1</Tag> <br>
+                                        <Tab/> <Func name="call"><String>"{{ $t('docs.compos.btn_name') }}"</String></Func>
                                     </Doc>
                                 </CodeBox>
                                 <v-alert class="mt20" type="warning" border="left" outlined>
-                                    Los componentes SÓlO aceptan la instancia #Doc, si colocas un head o meta en un componente verás un error de compilación
+                                    {{ $t('docs.compos.create.alert') }}
                                 </v-alert>
                                 <p class="mt20 ft13 lTXTgrey">
-                                    ¡Y listo! Daft llamará a el componente "miboton" en la página "index" por lo tanto aunque no lo veamos el documento final que se transpilará para el navegador será el siguiente:
+                                    {{ $t('docs.compos.create.res') }}
                                 </p>
                                 <CodeBox>
                                     <Head>
-                                        <Tab/><El>title:</El> <String>"Mi página principal"</String>
+                                        <Tab/><El>title:</El> <String>"{{ $t('docs.compos.my_page') }}"</String>
                                     </Head>
                                     <Doc>
-                                        <Tag>h1</Tag>Bienvenido a mi sitio web<Tag>/h1</Tag> <br>
-                                        <Tab/> <Tag>button</Tag>Presiona este botón<Tag>/button</Tag>
+                                        <Tag>h1</Tag>{{ $t('docs.compos.welcome') }}<Tag>/h1</Tag> <br>
+                                        <Tab/> <Tag>button</Tag>{{ $t('docs.compos.btn') }}<Tag>/button</Tag>
                                     </Doc>
                                 </CodeBox>
                             </div>
@@ -64,7 +64,7 @@
                         <v-flex xs12 class="mb40">
                             <div class="spacing">
                                 <p class="ft15 lTXTgrey">
-                                    Éste fue un ejemplo muy sencillo de cómo crear componentes ya que obviamente puedes lograr cosas mucho más complejas e incluso crear componentes interactivos con propiedades, ¡Sigue aprendiendo en la siguiente lección!
+                                    {{ $t('docs.compos.create.continue') }}
                                 </p>
                             </div>
                         </v-flex>
