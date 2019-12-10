@@ -92,6 +92,17 @@ export default {
           hw: "Hola Mundo",
           better_hw: "Un mejor hola mundo",
           functions: "Funciones: Print y Msg"
+        },
+        msf: {
+          name: "Archivos meta individuales",
+          what: "Qué son",
+          why: "Por qué utilizarlos",
+          how: "Cómo llamarlos",
+          starting: "Creando uno",
+          default: "Definir un archivo por defecto"
+        },
+        comps: {
+          name: "Componentes"
         }
       },
       what: {

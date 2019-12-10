@@ -88,6 +88,17 @@ export default {
           hw: "Hello World",
           better_hw: "A better hello world",
           functions: "Print and Msg functions"
+        },
+        msf: {
+          name: "Meta Single Files",
+          what: "What are the meta files",
+          why: "Why use them",
+          how: "How call them",
+          starting: "Creating one",
+          default: "Defining a default meta file"
+        },
+        comps: {
+          name: "Components"
         }
       },
       what: {

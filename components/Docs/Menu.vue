@@ -69,6 +69,27 @@
       <router-link :to="localePath('docs-daft_class')+'#print-and-msg'" v-if="onDaftClass">
         <p class="ft13 link mb-1"><Tab/>{{ $t('docs.menu.daft_class.functions') }}</p>
       </router-link>
+      <router-link :to="localePath('docs-meta_single_files')">
+        <p class="ft13 link mb-1">{{ $t('docs.menu.msf.name') }}</p>
+      </router-link>
+      <router-link :to="localePath('docs-meta_single_files')+'#meaning'" v-if="onMsf">
+        <p class="ft13 link mb-1"><Tab/>{{ $t('docs.menu.msf.what') }}</p>
+      </router-link>
+      <router-link :to="localePath('docs-meta_single_files')+'#why'" v-if="onMsf">
+        <p class="ft13 link mb-1"><Tab/>{{ $t('docs.menu.msf.why') }}</p>
+      </router-link>
+      <router-link :to="localePath('docs-meta_single_files')+'#how'" v-if="onMsf">
+        <p class="ft13 link mb-1"><Tab/>{{ $t('docs.menu.msf.how') }}</p>
+      </router-link>
+      <router-link :to="localePath('docs-meta_single_files')+'#starting'" v-if="onMsf">
+        <p class="ft13 link mb-1"><Tab/>{{ $t('docs.menu.msf.starting') }}</p>
+      </router-link>
+      <router-link :to="localePath('docs-meta_single_files')+'#default'" v-if="onMsf">
+        <p class="ft13 link mb-1"><Tab/>{{ $t('docs.menu.msf.default') }}</p>
+      </router-link>
+      <router-link :to="localePath('docs-components')">
+        <p class="ft13 link mb-1">{{ $t('docs.menu.comps.name') }}</p>
+      </router-link>
     </div>
   </div>
 </template>
@@ -88,6 +109,7 @@
     onDirectoryStructure:boolean = false;
     onMeta:boolean = false;
     onDaftClass:boolean = false;
+    onMsf:boolean = false;
 
     created() {
       let path:string = this.$route.path;
@@ -99,6 +121,8 @@
         this.onMeta = true;
       } else if (path.indexOf('daft_class') != -1) {
         this.onDaftClass = true;
+      } else if (path.indexOf('meta_single_files') != -1) {
+        this.onMsf = true;
       }
     }
   }
