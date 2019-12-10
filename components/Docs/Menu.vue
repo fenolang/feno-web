@@ -54,6 +54,21 @@
       <router-link :to="localePath('docs-meta_elements')+'#functions'" v-if="onMeta">
         <p class="ft13 link mb-1"><Tab/>Import functions</p>
       </router-link>
+      <router-link :to="localePath('docs-daft_class')">
+        <p class="ft13 link mb-1">The Daft Class</p>
+      </router-link>
+      <router-link :to="localePath('docs-daft_class')+'#starting'" v-if="onDaftClass">
+        <p class="ft13 link mb-1"><Tab/>Starting the class</p>
+      </router-link>
+      <router-link :to="localePath('docs-daft_class')+'#hello-world'" v-if="onDaftClass">
+        <p class="ft13 link mb-1"><Tab/>Hello World</p>
+      </router-link>
+      <router-link :to="localePath('docs-daft_class')+'#better-hw'" v-if="onDaftClass">
+        <p class="ft13 link mb-1"><Tab/>A better hello world</p>
+      </router-link>
+      <router-link :to="localePath('docs-daft_class')+'#print-and-msg'" v-if="onDaftClass">
+        <p class="ft13 link mb-1"><Tab/>Print and Msg functions</p>
+      </router-link>
     </div>
   </div>
 </template>
@@ -72,6 +87,7 @@
     onInstallation:boolean = false;
     onDirectoryStructure:boolean = false;
     onMeta:boolean = false;
+    onDaftClass:boolean = false;
 
     created() {
       let path:string = this.$route.path;
@@ -81,6 +97,8 @@
         this.onDirectoryStructure = true;
       } else if (path.indexOf('meta_elements') != -1) {
         this.onMeta = true;
+      } else if (path.indexOf('daft_class') != -1) {
+        this.onDaftClass = true;
       }
     }
   }
