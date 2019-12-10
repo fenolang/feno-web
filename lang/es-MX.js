@@ -75,7 +75,24 @@ export default {
         install_scratch: "Desde el inicio",
         directory_structure: "Estructura de directorios",
         directories: "Carpetas",
-        files: "Archivos"
+        files: "Archivos",
+        doc: "Instancia Document",
+        head: "Instancia Head",
+        styles: "Instancia Styles",
+        meta: {
+          name: "Elementos del Meta",
+          structure: "Estructura de propiedades",
+          desc: "Propiedad Description",
+          author: "Propiedad Author",
+          functions: "Funciones de importación",
+        },
+        daft_class: {
+          name: "La Clase Daft",
+          start: "Iniciando la clase",
+          hw: "Hola Mundo",
+          better_hw: "Un mejor hola mundo",
+          functions: "Funciones: Print y Msg"
+        }
       },
       what: {
         sub: `Daft es un lenguaje que trabaja sobre un marco de trabajo que te permite desarrollar páginas web de una manera mucho más rápida y efectiva.`,
@@ -287,6 +304,119 @@ export default {
           title: "¡Continúa aprendiendo sobre el grupo",
           subtitle: "Ésto es sólo el principio de lo que puedes aprender sobre #meta y cómo emplear un buen SEO en tu próximo sitio web con Daft",
           btn: "Continuar aprendiendo sobre Daft"
+        }
+      },
+      styles: {
+        title: 'Instancia <span class="ft-green">#Styles</span>',
+        subtitle: "Ya aprendímos sobre la instancia #Doc y la instancia #Head, ahora es momento de profundizar en la tercera y última instancia de Daft: #Styles",
+        defining: {
+          title: "Definiendo la instacia",
+          subtitle: "La instancia #Styles nos sirve para definir estilos CSS en el mismo archivo, se coloca dentro de la instancia #Head y así es su correcto uso:",
+          class: "mi_clase",
+          here_mark: "Aquí va nuestro marcado",
+          alert: "¡Recuerda que la instancia #Styles SÓLO puede ser definida dentro de la instancia #Head! Si lo haces de otra manera recibirás un error de compilación"
+        },
+        under: {
+          title: "Entendiendo la instancia",
+          subtitle: "Cuando queremos insertar estilos css en nuestros documentos y no llamar a un archivo externo es cuando usamos la instancia #Styles, con el código anterior en realidad lo que Daft internamente está produciendo para el navegador es lo siguiente:"
+        },
+        clean_title: "¡Quiero mis estilos en archivos separados!",
+        clean_subtitle: '¡No hay problema! Para personas como tú amantes de la limpieza Daft cuenta con la función <span class="ft-green">style()</span> Sigue con la documentación para saber más y más de el mejor lenguaje que puedes utilizar para desarrollar tu próximo proyecto',
+        continue: "Continuar con la documentación"
+      },
+      meta: {
+        title: "Elementos del Meta",
+        subtitle: "Hay mucho que aprender sobre las propiedades que podemos utilizar en nuestro #meta para lograr un buen SEO en nuestro proyecto",
+        comment: "Nada por aquí",
+        mtitle: 'Mi buen título',
+        go: 'Ir a la sección indicada',
+        ele: {
+          title: 'El elemento <span class="ft-green">#Meta</span>',
+          subtitle: "El elemento #Meta es un grupo de subelementos que puedes asimilar como un array, aquí es donde nosotros colocamos distintas propiedades como la descripción de nuestro sitio, cómo queremos que luzcan nuestros enlaces en facebook, twitter y demás cosas que conforman algo llamado: SEO. Podemos iniciar el elemento #Meta de la siguiente manera:",
+          mtitle: "Este es mi título",
+          mcomment: "Aquí irá el contenido de nuestro meta"
+        },
+        structure: {
+          title: "Estructura de una propiedad",
+          subtitle: 'Antes de empezar a ver cuáles son las propiedades que podemos utilizar dentro del elemento #Meta tenemos que entender <span class="bold">cómo es la estructura</span> de una propiedad:'
+        },
+        desc: {
+          title: "¡Nuestra primera descripción!",
+          subtitle: 'Ahora que sabemos cómo escribir un subelemento podemos comenzar a escribir nuestra primera propiedad: <span class="ft-green">description</span>',
+          val: "Esta es la increíble descripción de mi página",
+        },
+        author: {
+          title: "Propiedad Author",
+          subtitle: 'La propiedad <span class="ft-green">Author</span> es la indicada para colocar nuestro nombre como creador del sitio web, es importante y lo único que tenemos que hacer es lo siguiente:',
+          val: "Tu maravilloso y hermoso nombre",
+        },
+        under: {
+          title: "Entendiendo el elemento #Meta",
+          subtitle: "Mientras nosotros en Daft tan sólo éstamos llenando un elemento con propiedades internamente lo que está sucediendo es lo siguiente: (Tomando como ejemplo que queremos utilizar la propiedad #description y #author)"
+        },
+        func: {
+          title: "Funciones de importación",
+          subtitle: 'Daft cuenta con 2 funciones especializadas para importar archivos externos con contenido para tu documento:'
+        },
+        style: {
+          title: 'Función <span class="ft-green">style()</span>',
+          subtitle: 'La función <span class="ft-green">style()</span> nos ayuda a importar hojas de estilo de CSS, ¿Cómo lo hacemos? Checa lo siguiente',
+          file: 'nombre_del_archivo_css',
+          benefits: '¿Viste eso? No hace falta colocar la extensión: <span class="bold">.css</span> ni siquiera colocar la ruta en donde se encuentra el archivo, nada más y nada menos que sólo el nombre del archivo.',
+          alert: '<span class="bold">¡ALERTA!</span> Sólo para los archivos que se encuentren dentro de la carpeta <span class="bold">styles</span> no es necesario colocar la ruta, si tu archivo <span class="bold">NO</span> se encuentra dentro de ésta carpeta o se encuentra en una subcarpeta de ésta misma tienes las siguientes opciones:'
+        },
+        call_file: {
+          title: "Llamar a el archivo desde otra ruta",
+          subtitle: 'Si tu archivo .css no se encuentra en la carpeta styles entonces SÍ debes colocar una ruta, supongamos que nuestro archivo se encuentra dentro de la carpeta styles PERO se encuentra dentro de una subcarpeta llamada "index", haríamos algo como ésto:',
+          route1: './index/mi_archivo',
+          outside: 'De nuevo recuerda que no es necesario colocar la extensión ".css", tan sólo colocamos un punto al inicio y comenzamos a colocar la ruta hacia el archivo. <br> Ahora, si nuestro archivo de estilos está FUERA totalmente de la carpeta styles y se encuentra en una carpeta llamada por ejemplo: "tools", hacemos algo como lo siguiente:',
+          route2: '/tools/mi_archivo',
+          rules: 'Es importante que notes que cuando nuestro archivo de estilos esté fuera totalmente de la carpeta styles directamente colocamos la ruta con una barra: "/", PERO si en cambio nuestro archivo se encuentra en una subcarpeta dentro de la carpeta styles empezamos la ruta con un punto y barra como: "./"'
+        },
+        configure: {
+          title: "Configurar otra carpeta para los estilos",
+          subtitle: "Si no quieres utilizar la carpeta styles por defecto para tus estilos puedes configurar otra carpeta para utilizarla por defecto para que Daft ubique tus archivos .css, mira la sección de #Estilos en la guía del archivo de configuración de Daft:",
+        },
+        import: {
+          title: 'Función <span class="ft-green">#import</span>',
+          subtitle: 'La función <span class="ft-green">import()</span> realiza la misma función que la función <span class="ft-green">style()</span> PERO esta función sólo funciona para archivos con extensión: <span class="bold">.daft</span>, la sintaxis es muy sencilla:',
+          file: 'nombre_del_archivo_daft',
+          alert: 'Si quieres llamar a un archivo que está fuera de la carpeta <span class="bold">scripts</span> puedes hacer lo mismo que indicamos aquí ( Sólo cambiaría la función style() por import() )'
+        },
+        props: {
+          title: 'Propiedades',
+          charset: {
+            name: 'Charset',
+            sub: 'La propiedad Charset define el formato de codificación para nuestro sitio, por defecto todos utilizamos el valor de: "utf-8" y te recomendamos hacerlo así:'
+          },
+          view: {
+            name: 'Viewport',
+            sub: 'La propiedad Viewport nos proporciona la posibilidad de configurar cómo nuestro sitio se verá en dispositivos móviles y demás cosas relacionadas al responsive design, la mayoría utilizamos un estándar y es el siguiente en HTML:',
+            sub2: 'Pero Daft nos facilita la vida de tal manera que para realizar lo anterior tan sólo tenemos que escribir la palabra "viewport":'
+          },
+          base: {
+            name: 'Base',
+            sub: 'En Daft <span class="bold">YA NO ES NECESARIO</span> colocar la propiedad base que colocamos en HTML ya que el mismo lenguaje lo hace automáticamente por nosotros ;)'
+          },
+          noscript: {
+            name: 'Noscript',
+            sub: 'Existen maneras de desactivar javascript en nuestro navegador de tal manera que tenemos que estar preparados ante éste tipo de situaciones. Daft nos proporciona el objeto NoScript:',
+            dont_js: '¡Éste sitio necesita de JavaScript!',
+            alert: 'Es importante saber que <span class="bold">noscript</span> NO es una instancia, es un objeto. Por lo tanto no recibe la misma prioridad ante errores que las instancias.'
+          },
+          nojs_default: {
+            name: 'Noscript por defecto',
+            sub: 'Si no defines ningún objeto noscript entonces Daft añade uno por defecto para que no tengas que preocuparte de nada :)'
+          },
+          configure_nojs: {
+            name: 'Configurar Noscript por defecto',
+            sub: 'Ahora, sabemos que si queremos personalizar nuestro objeto noscript tenemos que definirlo en cada archivo, ¡eso es cansado! La solución podría ser crear un componente que tan sólo contenga nuestro objeto noscript y llamarlo en cada página, pero sigue siendo sucio. <br> <br> La solución que Daft nos proporciona es configurar y personalizar el objeto noscript que Daft por defecto agrega, ésto se realiza en el archivo de configuración de Daft. Presiona el siguiente enlace y mira todo acerca de cómo configurar el objeto noscript'
+          },
+          more: {
+            name: 'Más propiedades',
+            sub: 'Por supuesto que existen muchas más propiedades que las anteriores, pero ésto sería redundante, por lo tanto puedes visitar <a href="https://htmlhead.dev/#meta" target="_blank" class="ft-green">https://htmlhead.dev</a> y ver todas las propiedades del meta en HTML ya que también funcionan en Daft, PERO recuerda que si en HTML es así:'
+          },
+          in_daft: 'En Daft es así'
         }
       }
     }

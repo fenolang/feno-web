@@ -15,23 +15,23 @@
                     <v-layout row wrap>
                         <v-flex xs12>
                             <div class="spacing pt20">
-                                <p class="ft35 bold">Elementos del Meta</p>
+                                <p class="ft35 bold">{{ $t('docs.meta.title') }}</p>
                                 <p class="ft15 lTXTgrey">
-                                    Hay mucho que aprender sobre las propiedades que podemos utilizar en nuestro #meta para lograr un buen SEO en nuestro proyecto
+                                    {{ $t('docs.meta.subtitle') }}
                                 </p>
                             </div>
                         </v-flex>
                         <v-flex xs12>
                             <div class="spacing">
-                                <Title>El elemento <span class="ft-green">#Meta</span></Title>
+                                <Title><span v-html="$t('docs.meta.ele.title')"></span></Title>
                                 <p class="ft13 lTXTgrey">
-                                    El elemento #Meta es un grupo de subelementos que puedes asimilar como un array, aquí es donde nosotros colocamos distintas propiedades como la descripción de nuestro sitio, cómo queremos que luzcan nuestros enlaces en facebook, twitter y demás cosas que conforman algo llamado: SEO. Podemos iniciar el elemento #Meta de la siguiente manera:
+                                    {{ $t('docs.meta.ele.subtitle') }}
                                 </p>
                                 <CodeBox>
                                     <El>head:</El> { <br>
-                                    <Tab/><El>title:</El> <String>"Este es mi titulo"</String> <br>
+                                    <Tab/><El>title:</El> <String>{{ $t('docs.meta.mtitle') }}</String> <br>
                                     <Tab/><El>meta:</El> [ <br>
-                                    <Tab/><Tab/><Comment>#- Aquí irá el contenido de nuestro meta -#</Comment> <br>
+                                    <Tab/><Tab/><Comment>#- {{ $t('docs.meta.ele.mcomment') }} -#</Comment> <br>
                                     <Tab/>] <br>
                                     } <br>
                                     <El>doc:</El> { <br>
@@ -42,10 +42,8 @@
                         </v-flex>
                         <v-flex xs12>
                             <div class="spacing">
-                                <Subtitle id="structure">Estructura de una propiedad</Subtitle>
-                                <p class="ft13 lTXTgrey">
-                                    Antes de empezar a ver cuáles son las propiedades que podemos utilizar dentro del elemento #Meta tenemos que entender <span class="bold">cómo es la estructura</span> de una propiedad:
-                                </p>
+                                <Subtitle id="structure">{{ $t('docs.meta.structure.title') }}</Subtitle>
+                                <p class="ft13 lTXTgrey" v-html="$t('docs.meta.structure.subtitle')"></p>
                             </div>
                         </v-flex>
                         <v-flex xs12>
@@ -55,55 +53,51 @@
                         </v-flex>
                         <v-flex xs12>
                             <div class="spacing" id="description">
-                                <Subtitle>¡Nuestra primera descripción!</Subtitle>
-                                <p class="ft13 lTXTgrey">
-                                    Ahora que sabemos cómo escribir un subelemento podemos comenzar a escribir nuestra primera propiedad: <span class="ft-green">description</span>
-                                </p>
+                                <Subtitle>{{ $t('docs.meta.desc.title') }}</Subtitle>
+                                <p class="ft13 lTXTgrey" v-html="$t('docs.meta.desc.subtitle')"></p>
                                 <CodeBox>
                                     <Head>
                                         <Tab/><Dmeta>
-                                        <Tab/><Tab/> <String>"description, Esta es la increíble descripción de mi página"</String>
+                                        <Tab/><Tab/> <String>"description, {{ $t('docs.meta.desc.val') }}"</String>
                                         </Dmeta>
                                     </Head>
                                     <Doc>
-                                        <Comment>#- Nada por aquí -#</Comment>
+                                        <Comment>#- {{ $t('docs.meta.comment') }} -#</Comment>
                                     </Doc>
                                 </CodeBox>
                             </div>
                         </v-flex>
                         <v-flex xs12>
                             <div class="spacing">
-                                <Subtitle id="author">Propiedad Author</Subtitle>
-                                <p class="ft13 lTXTgrey">
-                                    La propiedad <span class="ft-green">Author</span> es la indicada para colocar nuestro nombre como creador del sitio web, es importante y lo único que tenemos que hacer es lo siguiente:
-                                </p>
+                                <Subtitle id="author">{{ $t('docs.meta.author.title') }}</Subtitle>
+                                <p class="ft13 lTXTgrey" v-html="$t('docs.meta.author.subtitle')"></p>
                                 <CodeBox>
                                     <Head>
                                         <Tab/><Dmeta>
-                                        <Tab/><Tab/> <String>"author, Tu maravilloso y hermoso nombre"</String>
+                                        <Tab/><Tab/> <String>"author, {{ $t('docs.meta.author.val') }}"</String>
                                         </Dmeta>
                                     </Head>
                                     <Doc>
-                                        <Comment>#- Nada por aquí -#</Comment>
+                                        <Comment>#- {{ $t('docs.meta.comment') }} -#</Comment>
                                     </Doc>
                                 </CodeBox>
                             </div>
                         </v-flex>
                         <v-flex xs12>
                             <div class="spacing">
-                                <Subtitle>Entendiendo el elemento #Meta</Subtitle>
+                                <Subtitle>{{ $t('docs.meta.under.title') }}</Subtitle>
                                 <p class="ft13 lTXTgrey">
-                                    Mientras nosotros en Daft tan sólo éstamos llenando un elemento con propiedades internamente lo que está sucediendo es lo siguiente: (Tomando como ejemplo que queremos utilizar la propiedad #description y #author)
+                                    {{ $t('docs.meta.under.subtitle') }}
                                 </p>
                                 <CodeBox>
                                     <Tag>!doctype html</Tag> <br>
                                     <Tag>html</Tag> <br>
                                     <Tab/> <Tag>head</Tag> <br>
-                                    <Tab/><Tab/> <Tag>meta <Attr>name</Attr>=<String>"description"</String> <Attr>content</Attr>=<String>"Esta es mi descripción"</String></Tag> <br>
-                                    <Tab/><Tab/> <Tag>meta <Attr>name</Attr>=<String>"author"</String> <Attr>content</Attr>=<String>"Tu maravilloso y hermoso nombre"</String></Tag> <br>
+                                    <Tab/><Tab/> <Tag>meta <Attr>name</Attr>=<String>"description"</String> <Attr>content</Attr>=<String>"{{ $t('docs.meta.desc.val') }}"</String></Tag> <br>
+                                    <Tab/><Tab/> <Tag>meta <Attr>name</Attr>=<String>"author"</String> <Attr>content</Attr>=<String>"{{ $t('docs.meta.author.val') }}"</String></Tag> <br>
                                     <Tab/> <Tag>/head</Tag> <br>
                                     <Tab/> <Tag>body</Tag> <br>
-                                    <Tab/><Tab/> <Comment>&lt;!-- Nada por aquí --&gt;</Comment> <br>
+                                    <Tab/><Tab/> <Comment>&lt;!-- {{ $t('docs.meta.comment') }} --&gt;</Comment> <br>
                                     <Tab/> <Tag>/body</Tag> <br>
                                     <Tag>/html</Tag>
                                 </CodeBox>
@@ -111,110 +105,96 @@
                         </v-flex>
                         <v-flex xs12>
                             <div class="spacing">
-                                <Title id="functions">Funciones de importación</Title>
-                                <p class="ft13 lTXTgrey">
-                                    Daft cuenta con 2 funciones especializadas para importar archivos externos con contenido para tu documento:
-                                </p>
+                                <Title id="functions">{{ $t('docs.meta.func.title') }}</Title>
+                                <p class="ft13 lTXTgrey">{{ $t('docs.meta.func.subtitle') }}</p>
                             </div>
                         </v-flex>
                         <v-flex xs12>
                             <div class="spacing">
-                                <Subtitle id="style">Función <span class="ft-green">style()</span></Subtitle>
-                                <p class="ft13 lTXTgrey">
-                                    La función <span class="ft-green">style()</span> nos ayuda a importar hojas de estilo de CSS, ¿Cómo lo hacemos? Checa lo siguiente
-                                </p>
+                                <Subtitle id="style"><span v-html="$t('docs.meta.style.title')"></span></Subtitle>
+                                <p class="ft13 lTXTgrey" v-html="$t('docs.meta.style.subtitle')"></p>
                                 <CodeBox>
                                     <Head>
-                                        <Tab/><El>title:</El> <String>"Mi buen título"</String>, <br>
+                                        <Tab/><El>title:</El> <String>"{{ $t('docs.meta.mtitle') }}"</String>, <br>
                                         <Tab/><Dmeta>
-                                        <Tab/><Tab/> <Func name="style"><String>"nombre_del_archivo_css"</String></Func>
+                                        <Tab/><Tab/> <Func name="style"><String>"{{ $t('docs.meta.style.file') }}"</String></Func>
                                         </Dmeta>
                                     </Head>
                                     <Doc>
-                                        <Comment>#- Nada por aquí.. de nuevo -#</Comment>
+                                        <Comment>#- {{ $t('docs.meta.comment') }} -#</Comment>
                                     </Doc>
                                 </CodeBox>
-                                <p class="ft13 lTXTgrey mt20">
-                                    ¿Viste eso? No hace falta colocar la extensión: <span class="bold">.css</span> ni siquiera colocar la ruta en donde se encuentra el archivo, nada más y nada menos que sólo el nombre del archivo.
+                                <p class="ft13 lTXTgrey mt20" v-html="$t('docs.meta.style.benefits')">
                                 </p>
-                                <v-alert type="error" border="left" outlined>
-                                    <span class="bold">¡ALERTA!</span> Sólo para los archivos que se encuentren dentro de la carpeta <span class="bold">styles</span> no es necesario colocar la ruta, si tu archivo <span class="bold">NO</span> se encuentra dentro de ésta carpeta o se encuentra en una subcarpeta de ésta misma tienes las siguientes opciones:
-                                </v-alert>
+                                <v-alert type="error" border="left" outlined v-html="$t('docs.meta.style.alert')"></v-alert>
                             </div>
                         </v-flex>
                         <v-flex xs12>
                             <div class="spacing">
-                                <Subtitle>Llamar a el archivo desde otra ruta</Subtitle>
+                                <Subtitle>{{ $t('docs.meta.call_file.title') }}</Subtitle>
                                 <p class="ft13 lTXTgrey">
-                                    Si tu archivo .css no se encuentra en la carpeta styles entonces SÍ debes colocar una ruta, supongamos que nuestro archivo se encuentra dentro de la carpeta styles PERO se encuentra dentro de una subcarpeta llamada "index", haríamos algo como ésto:
+                                    {{ $t('docs.meta.call_file.subtitle') }}
                                 </p>
                                 <CodeBox>
-                                    <Func name="style"><String>"./index/mi_archivo"</String></Func>
+                                    <Func name="style"><String>"{{ $t('docs.meta.call_file.route1') }}"</String></Func>
                                 </CodeBox>
-                                <p class="ft13 lTXTgrey mt20">
-                                    De nuevo recuerda que no es necesario colocar la extensión ".css", tan sólo colocamos un punto al inicio y comenzamos a colocar la ruta hacia el archivo. <br>
-                                    Ahora, si nuestro archivo de estilos está FUERA totalmente de la carpeta styles y se encuentra en una carpeta llamada por ejemplo: "tools", hacemos algo como lo siguiente:
-                                </p>
+                                <p class="ft13 lTXTgrey mt20" v-html="$t('docs.meta.call_file.outside')"></p>
                                 <CodeBox>
-                                    <Func name="style"><String>"/tools/mi_archivo"</String></Func>
+                                    <Func name="style"><String>"{{ $t('docs.meta.call_file.route2') }}"</String></Func>
                                 </CodeBox>
                                 <p class="ft13 lTXTgrey mt20">
-                                    Es importante que notes que cuando nuestro archivo de estilos esté fuera totalmente de la carpeta styles directamente colocamos la ruta con una barra: "/", PERO si en cambio nuestro archivo se encuentra en una subcarpeta dentro de la carpeta styles empezamos la ruta con un punto y barra como: "./"
+                                    {{ $t('docs.meta.call_file.rules') }}
                                 </p>
                             </div>
                         </v-flex>
                         <v-flex xs12>
                             <div class="spacing">
-                                <Subtitle>Configurar otra carpeta para los estilos</Subtitle>
+                                <Subtitle>{{ $t('docs.meta.configure.title') }}</Subtitle>
                                 <p class="ft13 lTXTgrey">
-                                    Si no quieres utilizar la carpeta styles por defecto para tus estilos puedes configurar otra carpeta para utilizarla por defecto para que Daft ubique tus archivos .css, mira la sección de #Estilos en la guía del archivo de configuración de Daft:
+                                    {{ $t('docs.meta.configure.subtitle') }}
                                 </p>
-                                <v-btn outlined class="border-btn">Ir a la sección indicada</v-btn>
+                                <v-btn outlined class="border-btn">{{ $t('docs.meta.go') }}</v-btn>
                             </div>
                         </v-flex>
                         <v-flex xs12>
                             <div class="spacing">
-                                <Subtitle id="import">Función <span class="ft-green">#import</span></Subtitle>
-                                <p class="ft13 lTXTgrey">
-                                    La función <span class="ft-green">import()</span> realiza la misma función que la función <span class="ft-green">style()</span> PERO esta función sólo funciona para archivos con extensión: <span class="bold">.daft</span>, la sintaxis es muy sencilla:
-                                </p>
+                                <Subtitle id="import"><span v-html="$t('docs.meta.import.title')"></span></Subtitle>
+                                <p class="ft13 lTXTgrey" v-html="$t('docs.meta.import.subtitle')"></p>
                                 <CodeBox>
                                     <Head>
-                                        <Tab/><El>title:</El> <String>"Mi buen título"</String>, <br>
+                                        <Tab/><El>title:</El> <String>"{{ $t('docs.meta.mtitle') }}"</String>, <br>
                                         <Tab/><Dmeta>
-                                        <Tab/><Tab/> <Func name="import"><String>"nombre_del_archivo_daft"</String></Func>
+                                        <Tab/><Tab/> <Func name="import"><String>"{{ $t('docs.meta.import.file') }}"</String></Func>
                                         </Dmeta>
                                     </Head>
                                     <Doc>
-                                        <Comment>#- Nada por aquí.. de nuevo -#</Comment>
+                                        <Comment>#- {{ $t('docs.meta.comment') }} -#</Comment>
                                     </Doc>
                                 </CodeBox>
-                                <v-alert class="mt20" type="warning" border="left" outlined>
-                                    Si quieres llamar a un archivo que está fuera de la carpeta <span class="bold">scripts</span> puedes hacer lo mismo que indicamos aquí ( Sólo cambiaría la función style() por import() )
-                                </v-alert>
+                                <v-alert class="mt20" type="warning" border="left" outlined v-html="$t('docs.meta.import.alert')"></v-alert>
                             </div>
                         </v-flex>
                         <v-flex xs12 class="mb30">
                             <div class="spacing">
-                                <Title>Propiedades</Title>
-                                <Subtitle id="charset">Charset</Subtitle>
+                                <Title>{{ $t('docs.meta.props.title') }}</Title>
+                                <Subtitle id="charset">{{ $t('docs.meta.props.charset.name') }}</Subtitle>
                                 <p class="ft13 lTXTgrey">
-                                    La propiedad Charset define el formato de codificación para nuestro sitio, por defecto todos utilizamos el valor de: "utf-8" y te recomendamos hacerlo así:
+                                    {{ $t('docs.meta.props.charset.sub') }}
                                 </p>
                                 <CodeBox :mark="true">
                                     <Head>
-                                        <Tab/><El>title:</El> <String>"Mi buen título"</String>, <br>
+                                        <Tab/><El>title:</El> <String>"{{ $t('docs.meta.mtitle') }}"</String>, <br>
                                         <Tab/><Dmeta>
                                         <Tab/><Tab/> <Mark><String>"charset, utf-8"</String></Mark>
                                         </Dmeta>
                                     </Head>
                                     <Doc>
-                                        <Comment>#- Nada por aquí.. de nuevo -#</Comment>
+                                        <Comment>#- {{ $t('docs.meta.comment') }} -#</Comment>
                                     </Doc>
                                 </CodeBox>
-                                <Subtitle id="viewport">Viewport</Subtitle>
+                                <Subtitle id="viewport">{{ $t('docs.meta.props.view.name') }}</Subtitle>
                                 <p class="ft13 lTXTgrey">
-                                    La propiedad Viewport nos proporciona la posibilidad de configurar cómo nuestro sitio se verá en dispositivos móviles y demás cosas relacionadas al responsive design, la mayoría utilizamos un estándar y es el siguiente en HTML:
+                                    {{ $t('docs.meta.props.view.sub') }}
                                 </p>
                                 <CodeBox>
                                     <Tag>!doctype html</Tag> <br>
@@ -223,70 +203,64 @@
                                     <Tab/><Tab/> <Mark><Tag>meta <Attr>name</Attr>=<String>"viewport"</String> <Attr>content</Attr>=<String>"width=device-width, initial-scale=1"</String></Tag></Mark> <br>
                                     <Tab/> <Tag>/head</Tag> <br>
                                     <Tab/> <Tag>body</Tag> <br>
-                                    <Tab/><Tab/> <Comment>&lt;!-- Nada por aquí --&gt;</Comment> <br>
+                                    <Tab/><Tab/> <Comment>&lt;!-- {{ $t('docs.meta.comment') }} --&gt;</Comment> <br>
                                     <Tab/> <Tag>/body</Tag> <br>
                                     <Tag>/html</Tag>
                                 </CodeBox>
                                 <p class="ft15 lTXTgrey mt30">
-                                    Pero Daft nos facilita la vida de tal manera que para realizar lo anterior tan sólo tenemos que escribir la palabra "viewport":
+                                    {{ $t('docs.meta.props.view.sub2') }}
                                 </p>
                                 <CodeBox :mark="true" class="mt30">
                                     <Head>
-                                        <Tab/><El>title:</El> <String>"Mi buen título"</String>, <br>
+                                        <Tab/><El>title:</El> <String>"{{ $t('docs.meta.mtitle') }}"</String>, <br>
                                         <Tab/><Dmeta>
                                         <Tab/><Tab/> <Mark><String>"viewport"</String></Mark>
                                         </Dmeta>
                                     </Head>
                                     <Doc>
-                                        <Comment>#- Nada por aquí.. de nuevo -#</Comment>
+                                        <Comment>#- {{ $t('docs.meta.comment') }} -#</Comment>
                                     </Doc>
                                 </CodeBox>
-                                <Subtitle id="base">Base</Subtitle>
-                                <p class="ft13 lTXTgrey">
-                                    En Daft <span class="bold">YA NO ES NECESARIO</span> colocar la propiedad base que colocamos en HTML ya que el mismo lenguaje lo hace automáticamente por nosotros ;)
+                                <Subtitle id="base">{{ $t('docs.meta.props.base.name') }}</Subtitle>
+                                <p class="ft13 lTXTgrey" v-html="$t('docs.meta.props.base.sub')">
                                 </p>
-                                <Subtitle id="noscript">Noscript</Subtitle>
+                                <Subtitle id="noscript">{{ $t('docs.meta.props.noscript.name') }}</Subtitle>
                                 <p class="ft13 lTXTgrey">
-                                    Existen maneras de desactivar javascript en nuestro navegador de tal manera que tenemos que estar preparados ante éste tipo de situaciones. Daft nos proporciona el objeto NoScript:
+                                    {{ $t('docs.meta.props.noscript.sub') }}
                                 </p>
                                 <CodeBox :mark="true" class="mt30">
                                     <Head>
-                                        <Tab/><El>title:</El> <String>"Mi buen título"</String>, <br>
+                                        <Tab/><El>title:</El> <String>"{{ $t('docs.meta.mtitle') }}"</String>, <br>
                                         <Tab/><Dmeta>
                                         <Mark>
                                             <Tab/><Tab/> <El>noscript:</El> { <br>
-                                            <Tab/><Tab/><Tab/> <Tag>p</Tag>¡Este sitio necesita de JavaScript!<Tag>/p</Tag> <br>
+                                            <Tab/><Tab/><Tab/> <Tag>p</Tag>{{ $t('docs.meta.props.noscript.dont_js') }}<Tag>/p</Tag> <br>
                                             <Tab/><Tab/> } <br>
                                         </Mark>
                                         </Dmeta>
                                     </Head>
                                     <Doc>
-                                        <Comment>#- Nada por aquí.. de nuevo -#</Comment>
+                                        <Comment>#- {{ $t('docs.meta.comment') }} -#</Comment>
                                     </Doc>
                                 </CodeBox>
-                                <v-alert outlined type="warning" border="left" class="mt-4">
-                                    Es importante saber que <span class="bold">noscript</span> NO es una instancia, es un objeto. Por lo tanto no recibe la misma prioridad ante errores que las instancias.
+                                <v-alert outlined type="warning" border="left" class="mt-4" v-html="$t('docs.meta.props.noscript.alert')">
                                 </v-alert>
-                                <Subtitle id="noscript-default">Noscript por defecto</Subtitle>
+                                <Subtitle id="noscript-default">{{ $t('docs.meta.props.nojs_default.name') }}</Subtitle>
                                 <p class="ft13 lTXTgrey">
-                                    Si no defines ningún objeto noscript entonces Daft añade uno por defecto para que no tengas que preocuparte de nada :)
+                                    {{ $t('docs.meta.props.nojs_default.sub') }}
                                 </p>
-                                <Subtitle>Configurar Noscript por defecto</Subtitle>
-                                <p class="ft13 lTXTgrey">
-                                    Ahora, sabemos que si queremos personalizar nuestro objeto noscript tenemos que definirlo en cada archivo, ¡eso es cansado! La solución podría ser crear un componente que tan sólo contenga nuestro objeto noscript y llamarlo en cada página, pero sigue siendo sucio. <br> <br>
-                                    La solución que Daft nos proporciona es configurar y personalizar el objeto noscript que Daft por defecto agrega, ésto se realiza en el archivo de configuración de Daft. Presiona el siguiente enlace y mira todo acerca de cómo configurar el objeto noscript
+                                <Subtitle>{{ $t('docs.meta.props.configure_nojs.name') }}</Subtitle>
+                                <p class="ft13 lTXTgrey" v-html="$t('docs.meta.props.configure_nojs.sub')">
                                 </p>
                                 <br>
-                                <v-btn depressed class="bg3 dk">Ir a la sección indicada</v-btn>
-                                <Subtitle id="more">Más propiedades</Subtitle>
-                                <p class="ft13 lTXTgrey">
-                                    Por supuesto que existen muchas más propiedades que las anteriores, pero ésto sería redundante, por lo tanto puedes visitar <a href="https://htmlhead.dev/#meta" target="_blank" class="ft-green">https://htmlhead.dev</a> y ver todas las propiedades del meta en HTML ya que también funcionan en Daft, PERO recuerda que si en HTML es así:
-                                </p>
+                                <v-btn depressed class="bg3 dk">{{ $t('docs.meta.go') }}</v-btn>
+                                <Subtitle id="more">{{ $t('docs.meta.props.more.name') }}</Subtitle>
+                                <p class="ft13 lTXTgrey" v-html="$t('docs.meta.props.more.sub')"></p>
                                 <CodeBox>
                                     <Tag>meta <Attr>name</Attr>=<String>"theme-color"</String> <Attr>content</Attr>=<String>"#0a8cbd"</String></Tag>
                                 </CodeBox>
                                 <p class="mt20 ft13 lTXTgrey">
-                                    En Daft es así
+                                    {{ $t('docs.meta.props.in_daft') }}
                                 </p>
                                 <CodeBox>
                                     <String>"theme-color, #0a8cbd"</String>

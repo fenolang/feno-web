@@ -15,28 +15,28 @@
                     <v-layout row wrap>
                         <v-flex xs12>
                             <div class="spacing pt20">
-                                <p class="ft35 bold">Instancia <span class="ft-green">#Styles</span></p>
+                                <p class="ft35 bold" v-html="$t('docs.styles.title')"></p>
                                 <p class="ft15 lTXTgrey">
-                                    Ya aprendímos sobre la instancia #Doc y la instancia #Head, ahora es momento de profundizar en la tercera y última instancia de Daft: #Styles
+                                    {{ $t('docs.styles.subtitle') }}
                                 </p>
                             </div>
                         </v-flex>
                         <v-flex xs12>
                             <div class="spacing">
-                                <Title>Definiendo la instacia</Title>
+                                <Title>{{ $t('docs.styles.defining.title') }}</Title>
                                 <p class="ft13 lTXTgrey">
-                                    La instancia #Styles nos sirve para definir estilos CSS en el mismo archivo, se coloca dentro de la instancia #Head y así es su correcto uso:
+                                    {{ $t('docs.styles.defining.subtitle') }}
                                 </p>
                                 <CodeBox>
                                     <El>head:</El> { <br>
                                     <Tab/><El>styles:</El> { <br>
-                                    <Tab/><Tab/><Attr>.mi_clase</Attr> { <br>
+                                    <Tab/><Tab/><Attr>.{{ $t('docs.styles.defining.class') }}</Attr> { <br>
                                     <Tab/><Tab/><Tab/>color: <Attr>#0a8cbd</Attr>; <br>
                                     <Tab/><Tab/>} <br>
                                     <Tab/>} <br>
                                     } <br>
                                     <El>doc:</El> { <br>
-                                    &nbsp;&nbsp;<Comment>#- Aquí va nuestro marcado -#</Comment> <br>
+                                    &nbsp;&nbsp;<Comment>#- {{ $t('docs.styles.defining.here_mark') }} -#</Comment> <br>
                                     }
                                 </CodeBox>
                             </div>
@@ -44,28 +44,28 @@
                         <v-flex xs12>
                             <div class="spacing">
                                 <v-alert outlined type="warning" border="left" class="ft13">
-                                    ¡Recuerda que la instancia #Styles SÓLO puede ser definida dentro de la instancia #Head! Si lo haces de otra manera recibirás un error de compilación
+                                    {{ $t('docs.styles.defining.alert') }}
                                 </v-alert>
                             </div>
                         </v-flex>
                         <v-flex xs12>
                             <div class="spacing">
-                                <Subtitle>Entendiendo la instancia</Subtitle>
+                                <Subtitle>{{ $t('docs.styles.under.title') }}</Subtitle>
                                 <p class="ft13 lTXTgrey">
-                                    Cuando queremos insertar estilos css en nuestros documentos y no llamar a un archivo externo es cuando usamos la instancia #Styles, con el código anterior en realidad lo que Daft internamente está produciendo para el navegador es lo siguiente:
+                                    {{ $t('docs.styles.under.subtitle') }}
                                 </p>
                                 <CodeBox>
                                     <Tag>!doctype html</Tag> <br>
                                     <Tag>html</Tag> <br>
                                     <Tab /> <Tag>head</Tag><br>
                                     <Tab/><Tab/> <Tag>style</Tag> <br>
-                                    <Tab/><Tab/><Tab/> <Attr>.mi_clase</Attr> { <br>
+                                    <Tab/><Tab/><Tab/> <Attr>.{{ $t('docs.styles.defining.class') }}</Attr> { <br>
                                     <Tab/><Tab/><Tab/><Tab/> color: <Attr>#0a8cbd</Attr>; <br>
                                     <Tab/><Tab/><Tab/> } <br>
                                     <Tab/><Tab/> <Tag>/style</Tag> <br>
                                     <Tab/> <Tag>/head</Tag> <br>
                                     <Tab/> <Tag>body</Tag> <br>
-                                    <Tab/><Tab/> <Comment>&lt;!-- Aquí va nuetro marcado --&gt;</Comment> <br>
+                                    <Tab/><Tab/> <Comment>&lt;!-- {{ $t('docs.styles.defining.here_mark') }} --&gt;</Comment> <br>
                                     <Tab/> <Tag>/body</Tag> <br>
                                     <Tag>/html</Tag>
                                 </CodeBox>
@@ -73,13 +73,12 @@
                         </v-flex>
                         <v-flex xs12 class="mt20 mb50">
                             <div class="spacing">
-                                <Subtitle>¡Quiero mis estilos en archivos separados!</Subtitle>
-                                <p class="ft13 lTXTgrey">
-                                    ¡No hay problema! Para personas como tú amantes de la limpieza Daft cuenta con la función <span class="ft-green">style()</span> Sigue con la documentación para saber más y más de el mejor lenguaje que puedes utilizar para desarrollar tu próximo proyecto
+                                <Subtitle>{{ $t('docs.styles.clean_title') }}</Subtitle>
+                                <p class="ft13 lTXTgrey" v-html="$t('docs.styles.clean_subtitle')">
                                 </p>
                                 <br>
                                 <v-btn depressed class="bg3 dk bold"
-                                :to="localePath('docs-meta_elements')">Continuar con la documentación</v-btn>
+                                :to="localePath('docs-meta_elements')">{{ $t('docs.styles.continue') }}</v-btn>
                             </div>
                         </v-flex>
                     </v-layout>

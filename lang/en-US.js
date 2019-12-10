@@ -71,7 +71,24 @@ export default {
         install_scratch: "From Scratch",
         directory_structure: "Directory Structure",
         directories: "Directories",
-        files: "Files"
+        files: "Files",
+        doc: "Document Instance",
+        head: "Head Instance",
+        styles: "Styles Instance",
+        meta: {
+          name: "Meta Elements",
+          structure: "Property Structure",
+          desc: "Description property",
+          author: "Author property",
+          functions: "Import functions",
+        },
+        daft_class: {
+          name: "The Daft Class",
+          start: "Starting the class",
+          hw: "Hello World",
+          better_hw: "A better hello world",
+          functions: "Print and Msg functions"
+        }
       },
       what: {
         sub: `Daft is a language that allows you to develop web pages in a much faster and more effective way.`,
@@ -280,6 +297,118 @@ export default {
           title: "Continue learning about the",
           subtitle: "This is just the beginning of what you can learn about #meta and how to use good SEO on your next website with Daft",
           btn: "Continue learning about Daft"
+        }
+      },
+      styles: {
+        title: '<span class="ft-green">#Styles</span> Instance',
+        subtitle: "We already learned about the #Doc instance and the #Head instance, now it's time to delve into the third and last instance of Daft: #Styles",
+        defining: {
+          title: "Defining the instance",
+          subtitle: "The #Styles instance helps us to define CSS styles in the same file, it is placed inside the #Head instance and thus its correct use:",
+          class: "my_class",
+          here_mark: "Here will go our html",
+          alert: "Remember that the #Styles instance can ONLY be defined within the #Head instance! If you do otherwise you will receive a compilation error!"
+        },
+        under: {
+          title: "Understanding the instance",
+          subtitle: "When we want to insert css styles into our documents and not call an external file, it is when we use the #Styles instance, with the previous code actually what Daft is producing internally for the browser is the following:"
+        },
+        clean_title: "I want my styles in separate files!",
+        clean_subtitle: 'No problem! For people like you cleaning enthusiasts Daft has the function <span class="ft-green">style()</span> Follow the documentation to know more and more of the best language you can use to develop your next project',
+        continue: "Continue with the documentation"
+      },
+      meta: {
+        title: "Meta Elements",
+        subtitle: "There is much to learn about the properties that we can use in our #meta to achieve a good SEO in our project",
+        comment: "Nothing around here... for now",
+        mtitle: 'A good and precious title',
+        go: 'Go to the indicated section',
+        ele: {
+          title: 'The <span class="ft-green">#Meta</span> element',
+          subtitle: "The #Meta element is a group of properties that you can assimilate as an array, this is where we place different properties such as the description of our site, how we want our links to appear on facebook, twitter and other things that make up something called: SEO. We can start the #Meta element as follows:",
+          mcomment: "Here will go the content of our meta"
+        },
+        structure: {
+          title: "Property structure",
+          subtitle: 'Before we begin to see what are the properties that we can use within the #Meta element we have to understand <span class="bold">how is the structure</span> of a property:'
+        },
+        desc: {
+          title: "Our first description!",
+          subtitle: 'Now that we know how to write a property we can start writing our first property: <span class="ft-green">description</span>',
+          val: "This is the amazing description of my page",
+        },
+        author: {
+          title: "Author property",
+          subtitle: 'The <span class="ft-green">Author</span> property is the one indicated to place our name as creator of the website, it is important and all we have to do is the following:',
+          val: "Your wonderful and beautiful name",
+        },
+        under: {
+          title: "Understanding the #Meta element",
+          subtitle: "While we in Daft are only filling an element with properties internally what is happening is the following: (Taking as an example that we want to use the #description and #author property)"
+        },
+        func: {
+          title: "Import functions",
+          subtitle: 'Daft has 2 specialized functions to import external files with content for your document:'
+        },
+        style: {
+          title: 'The <span class="ft-green">style()</span> function',
+          subtitle: 'The <span class="ft-green">style()</span> function helps us import CSS style sheets, how do we do it? Check out the following',
+          file: 'css_file_name',
+          benefits: 'Did you see that? It is not necessary to place the extension: <span class="bold">.css</span> or even place the path where the file is located, nothing more and nothing less than just the name of the file.',
+          alert: '<span class="bold">ALERT!</span> Only for the files inside the <span class="bold">styles</span> folder it is not necessary to place the path, if your file <span class="bold">IS NOT</span> in this folder or is in a subfolder of the same you have the following options:'
+        },
+        call_file: {
+          title: "Call the file from another path",
+          subtitle: 'If your .css file is not in the styles folder then YES you must place a path, suppose our file is in the styles folder BUT it is in a subfolder called "index", we would do something like this:',
+          route1: './index/my_file',
+          outside: 'Again remember that it is not necessary to place the extension ".css", just place a point at the beginning and start placing the path to the file. <br> Now, if our style file is totally OUT of the styles folder and is in a folder called for example: "tools", we do something like the following:',
+          route2: '/tools/my_file',
+          rules: 'It is important that you notice that when our style file is completely out of the styles folder we directly place the path with a bar: "/", BUT if instead our file is in a subfolder inside the styles folder we start the path with a point and bar as: "./"'
+        },
+        configure: {
+          title: "Configure another folder for styles",
+          subtitle: "If you do not want to use the default styles folder for your styles you can configure another folder to use it by default so that Daft locates your .css files, see the #Styles section in the Daft configuration file guide:",
+        },
+        import: {
+          title: 'The <span class="ft-green">#import</span> function',
+          subtitle: 'The <span class = "ft-green"> import () </span> function performs the same as the <span class = "ft-green"> style () </span> function BUT this function only works for files with extension: <span class="bold">.daft</span>, the syntax is very simple:',
+          file: 'daft_file_name',
+          alert: 'If you want to call a file that is outside the <span class="bold">scripts</span> folder you can do the same as indicated here (Just change the style() function to import())'
+        },
+        props: {
+          title: 'Properties',
+          charset: {
+            name: 'Charset',
+            sub: 'The Charset property defines the encoding format for our site, by default we all use the value of: "utf-8" and we recommend doing so:'
+          },
+          view: {
+            name: 'Viewport',
+            sub: 'The Viewport property gives us the possibility to configure how our site will look on mobile devices and other things related to the responsive design, most of us use a standard and it is the following in HTML:',
+            sub2: 'But Daft makes life easier for us so that to do the above we just have to write the word "viewport":'
+          },
+          base: {
+            name: 'Base',
+            sub: 'In Daft <span class="bold">IT IS NO LONGER NECESSARY</span> to place the base property that we place in HTML since the same language does it automatically for us;)'
+          },
+          noscript: {
+            name: 'Noscript',
+            sub: 'There are ways to disable javascript in our browser so that we have to be prepared for these types of situations. Daft gives us the NoScript object:',
+            dont_js: 'This site needs JavaScript!',
+            alert: 'It is important to know that <span class="bold">noscript</span> is NOT an instance, it is an object. Therefore, it does not receive the same priority for errors as the instances.'
+          },
+          nojs_default: {
+            name: 'Default Noscript',
+            sub: "If you don't define any noscript object then Daft adds one by default so you don't have to worry about anything :)"
+          },
+          configure_nojs: {
+            name: 'Configure default Noscript',
+            sub: "Now, we know that if we want to customize our noscript object we have to define it in each file, that's tired! The solution could be to create a component that only contains our noscript object and call it on each page, but it is still dirty. <br> <br> The solution that Daft provides us is to configure and customize the noscript object that Daft by default adds, this is done in the Daft configuration file. Click on the following link and see all about how to configure the noscript object"
+          },
+          more: {
+            name: 'More properties',
+            sub: 'Of course there are many more properties than the previous ones, but this would be redundant, so you can visit <a href="https://htmlhead.dev/#meta" target="_blank" class="ft-green">https://htmlhead.dev</a> and see all the properties of the meta in HTML as they also work in Daft, BUT remember that if in HTML it is like this:'
+          },
+          in_daft: 'In Daft is more clean, like this:'
         }
       }
     }

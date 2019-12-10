@@ -31,43 +31,43 @@
       </router-link>
       <p class="ft16 bold ft-green mt-2 mb-1">Getting Started</p>
       <router-link :to="localePath('docs-doc_instance')">
-        <p class="ft13 link mb-1">Document Instance</p>
+        <p class="ft13 link mb-1">{{ $t('docs.menu.doc') }}</p>
       </router-link>
       <router-link :to="localePath('docs-head_instance')">
-        <p class="ft13 link mb-1">Head Instance</p>
+        <p class="ft13 link mb-1">{{ $t('docs.menu.head') }}</p>
       </router-link>
       <router-link :to="localePath('docs-styles_instance')">
-        <p class="ft13 link mb-1">Styles Instance</p>
+        <p class="ft13 link mb-1">{{ $t('docs.menu.styles') }}</p>
       </router-link>
       <router-link :to="localePath('docs-meta_elements')">
-        <p class="ft13 link mb-1">Meta Elements</p>
+        <p class="ft13 link mb-1">{{ $t('docs.menu.meta.name') }}</p>
       </router-link>
       <router-link :to="localePath('docs-meta_elements')+'#structure'" v-if="onMeta">
-        <p class="ft13 link mb-1"><Tab/>Properties Structure</p>
+        <p class="ft13 link mb-1"><Tab/>{{ $t('docs.menu.meta.structure') }}</p>
       </router-link>
       <router-link :to="localePath('docs-meta_elements')+'#description'" v-if="onMeta">
-        <p class="ft13 link mb-1"><Tab/>Description property</p>
+        <p class="ft13 link mb-1"><Tab/>{{ $t('docs.menu.meta.desc') }}</p>
       </router-link>
       <router-link :to="localePath('docs-meta_elements')+'#author'" v-if="onMeta">
-        <p class="ft13 link mb-1"><Tab/>Author property</p>
+        <p class="ft13 link mb-1"><Tab/>{{ $t('docs.menu.meta.author') }}</p>
       </router-link>
       <router-link :to="localePath('docs-meta_elements')+'#functions'" v-if="onMeta">
-        <p class="ft13 link mb-1"><Tab/>Import functions</p>
+        <p class="ft13 link mb-1"><Tab/>{{ $t('docs.menu.meta.functions') }}</p>
       </router-link>
       <router-link :to="localePath('docs-daft_class')">
-        <p class="ft13 link mb-1">The Daft Class</p>
+        <p class="ft13 link mb-1">{{ $t('docs.menu.daft_class.name') }}</p>
       </router-link>
       <router-link :to="localePath('docs-daft_class')+'#starting'" v-if="onDaftClass">
-        <p class="ft13 link mb-1"><Tab/>Starting the class</p>
+        <p class="ft13 link mb-1"><Tab/>{{ $t('docs.menu.daft_class.start') }}</p>
       </router-link>
       <router-link :to="localePath('docs-daft_class')+'#hello-world'" v-if="onDaftClass">
-        <p class="ft13 link mb-1"><Tab/>Hello World</p>
+        <p class="ft13 link mb-1"><Tab/>{{ $t('docs.menu.daft_class.hw') }}</p>
       </router-link>
       <router-link :to="localePath('docs-daft_class')+'#better-hw'" v-if="onDaftClass">
-        <p class="ft13 link mb-1"><Tab/>A better hello world</p>
+        <p class="ft13 link mb-1"><Tab/>{{ $t('docs.menu.daft_class.better_hw') }}</p>
       </router-link>
       <router-link :to="localePath('docs-daft_class')+'#print-and-msg'" v-if="onDaftClass">
-        <p class="ft13 link mb-1"><Tab/>Print and Msg functions</p>
+        <p class="ft13 link mb-1"><Tab/>{{ $t('docs.menu.daft_class.functions') }}</p>
       </router-link>
     </div>
   </div>
