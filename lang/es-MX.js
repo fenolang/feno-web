@@ -418,6 +418,31 @@ export default {
           },
           in_daft: 'En Daft es así'
         }
+      },
+      daft_class: {
+        title: 'La clase <span class="ft-green">#Daft</span>',
+        subtitle: "La clase #Daft es el elemento principal de todo Daft y ahí es donde surgirá la magia, en donde utilizaremos nada más y nada menos que sólo sintaxis que Daft entienda",
+        comment: "Nada por aquí.. de nuevo",
+        start: {
+          title: "Iniciando la clase",
+          subtitle: "Para comenzar a programar en Daft puro necesitamos crear la clase { Daft } de la siguiente manera al final de nuestros archivos .daft:"
+        },
+        hw: {
+          title: "Tu primer Hola Mundo en Daft",
+          subtitle: 'Como primer ejercicio no podía faltar el típico "Hola Mundo", y así es como lo hacemos en Daft:',
+          val: 'Hola Mundo en Daft!',
+          result: 'Compila el código y abre tu navegador, dírigete hacia la consola y verás un mensaje diciendo: <span class="bold">Hola Mundo en Daft!</span>'
+        },
+        better_hw: {
+          title: "Un mejor Hola Mundo",
+          subtitle: 'Ahora sabemos que para colocar un mensaje en la consola necesitamos llamar a la función <span class="bold">print()</span> pero ¿y si mejor hacemos que el mensaje nos salga en una pequeña ventana? Te presentamos a la función <span class="bold">msg()</span>:',
+          val: 'Hola Mundo!',
+          result: 'Ahora recarga la página y verás una pequeña ventana salir con el mensaje <span class="bold">Hola Mundo!</span>'
+        },
+        funcs: {
+          title: 'print() y msg()',
+          subtitle: 'Cuando necesitamos saber de algo que está pasando internamente como el resultado de una función de una manera sencilla necesitamos de un mensaje que nos lo muestre, <span class="bold">msg()</span> es una buena opción pero si necesitamos varios mensajes y varias veces nos acabarán cansando tantas ventanas emergentes. <br> <br> Entonces hacemos uso de <span class="bold">print()</span> que tan sólo es un simple mensaje en la consola, es como un <span class="bold">console.log()</span> en JavaScript :)'
+        }
       }
     }
 }

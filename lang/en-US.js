@@ -410,6 +410,31 @@ export default {
           },
           in_daft: 'In Daft is more clean, like this:'
         }
+      },
+      daft_class: {
+        title: 'The <span class="ft-green">#Daft</span> Class',
+        subtitle: "The #Daft class is the main element of everything and that is where the magic will arise, where we will use nothing more and nothing less than just syntax that Daft understands",
+        comment: "Nothing around here .. again",
+        start: {
+          title: "Starting the class",
+          subtitle: "To start programming in pure Daft we need to create the { Daft } class as follows at the end of our .daft files:"
+        },
+        hw: {
+          title: "Your first Hello World in Daft!",
+          subtitle: 'As a first exercise you could not miss the typical "Hello World", and this is how we do it in Daft:',
+          val: 'Hello World in Daft!',
+          result: 'Compile the code and open your browser, go to the console and you will see a message saying: <span class="bold">Hello World in Daft!</span>'
+        },
+        better_hw: {
+          title: "A better hello world",
+          subtitle: 'Now we know that to place a message on the console we need to call the function <span class="bold">print()</span> but what if we better make the message come out in a small window? We introduce you to the <span class="bold">msg()</span> function:',
+          val: 'Hello World!',
+          result: 'Now reload the page and you will see a small window exit with the message <span class="bold">Hello World!</span>'
+        },
+        funcs: {
+          title: 'print() and msg()',
+          subtitle: 'When we need to know something that is happening internally as the result of a function in a simple way we need a message to show it to us, <span class="bold">msg()</span> is a good option but if we need several messages and we need them several times we will end up getting tired of so many pop-ups. <br> <br> Then we make use of <span class="bold">print()</span> which is just a simple message in the console, it\'s like a <span class="bold">console.log()</span> in JavaScript :)'
+        }
       }
     }
 }

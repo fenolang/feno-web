@@ -15,21 +15,21 @@
                     <v-layout row wrap>
                         <v-flex xs12>
                             <div class="spacing pt20">
-                                <p class="ft35 bold">La clase <span class="ft-green">#Daft</span></p>
+                                <p class="ft35 bold" v-html="$t('docs.daft_class.title')"></p>
                                 <p class="ft13 lTXTgrey">
-                                    La clase #Daft es el elemento principal de todo Daft y ahí es donde surgirá la magia, en donde utilizaremos nada más y nada menos que sólo sintaxis que Daft entienda
+                                    {{ $t('docs.daft_class.subtitle') }}
                                 </p>
                             </div>
                         </v-flex>
                         <v-flex xs12>
                             <div class="spacing">
-                                <Title id="starting">Iniciando la clase</Title>
+                                <Title id="starting">{{ $t('docs.daft_class.start.title') }}</Title>
                                 <p class="ft13 lTXTgrey">
-                                    Para comenzar a programar en Daft puro necesitamos crear la clase { Daft } de la siguiente manera al final de nuestros archivos .daft:
+                                    {{ $t('docs.daft_class.start.subtitle') }}
                                 </p>
                                 <CodeBox>
                                     <Doc>
-                                        <Comment>#- Nada por aquí.. de nuevo -#</Comment>
+                                        <Comment>#- {{ $t('docs.daft_class.comment') }} -#</Comment>
                                     </Doc> <br>
                                     <Attr>new</Attr> <Func name="Daft"></Func> { <br>
                                     <br>
@@ -39,43 +39,35 @@
                         </v-flex>
                         <v-flex xs12>
                             <div class="spacing">
-                                <Subtitle id="hello-world">Tu primer Hola Mundo en Daft</Subtitle>
+                                <Subtitle id="hello-world">{{ $t('docs.daft_class.hw.title') }}</Subtitle>
                                 <p class="ft13 lTXTgrey">
-                                    Como primer ejercicio no podía faltar el típico "Hola Mundo", y así es como lo hacemos en Daft:
+                                    {{ $t('docs.daft_class.hw.subtitle') }}
                                 </p>
                                 <CodeBox>
                                     <Attr>new</Attr> <Func name="Daft"></Func> { <br>
-                                        <Tab/><El>print</El>(<String>"Hola Mundo en Daft!"</String>) <br>
+                                        <Tab/><El>print</El>(<String>"{{ $t('docs.daft_class.hw.val') }}"</String>) <br>
                                     }
                                 </CodeBox>
-                                <p class="mt20 ft13 lTXTgrey">
-                                    Compila el código y abre tu navegador, dírigete hacia la consola y verás un mensaje diciendo: <span class="bold">Hola Mundo en Daft!</span>
-                                </p>
+                                <p class="mt20 ft13 lTXTgrey" v-html="$t('docs.daft_class.hw.result')"></p>
                             </div>
                         </v-flex>
                         <v-flex xs12>
                             <div class="spacing">
-                                <Subtitle id="better-hw">Un mejor Hola Mundo</Subtitle>
-                                <p class="ft13 lTXTgrey">
-                                    Ahora sabemos que para colocar un mensaje en la consola necesitamos llamar a la función <span class="bold">print()</span> pero ¿y si mejor hacemos que el mensaje nos salga en una pequeña ventana? Te presentamos a la función <span class="bold">msg()</span>:
+                                <Subtitle id="better-hw">{{ $t('docs.daft_class.better_hw.title') }}</Subtitle>
+                                <p class="ft13 lTXTgrey" v-html="$t('docs.daft_class.better_hw.subtitle')">
                                 </p>
                                 <CodeBox>
                                     <Attr>new</Attr> <Func name="Daft"></Func> { <br>
-                                        <Tab/><El>msg</El>(<String>"Hola Mundo!"</String>) <br>
+                                        <Tab/><El>msg</El>(<String>"{{ $t('docs.daft_class.better_hw.val') }}"</String>) <br>
                                     }
                                 </CodeBox>
-                                <p class="mt20 ft13 lTXTgrey">
-                                    Ahora recarga la página y verás una pequeña ventana salir con el mensaje <span class="bold">Hola Mundo!</span>
-                                </p>
+                                <p class="mt20 ft13 lTXTgrey" v-html="$t('docs.daft_class.better_hw.result')"></p>
                             </div>
                         </v-flex>
                         <v-flex xs12 class="mb30">
                             <div class="spacing">
-                                <Subtitle id="print-and-msg">print() y msg()</Subtitle>
-                                <p class="ft13 lTXTgrey">
-                                    Cuando necesitamos saber de algo que está pasando internamente como el resultado de una función de una manera sencilla necesitamos de un mensaje que nos lo muestre, <span class="bold">msg()</span> es una buena opción pero si necesitamos varios mensajes y varias veces nos acabarán cansando tantas ventanas emergentes. <br> <br>
-                                    Entonces hacemos uso de <span class="bold">print()</span> que tan sólo es un simple mensaje en la consola, es como un <span class="bold">console.log()</span> en JavaScript :)
-                                </p>
+                                <Subtitle id="print-and-msg">{{ $t('docs.daft_class.funcs.title') }}</Subtitle>
+                                <p class="ft13 lTXTgrey" v-html="$t('docs.daft_class.funcs.subtitle')"></p>
                             </div>
                         </v-flex>
                     </v-layout>
