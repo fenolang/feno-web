@@ -90,6 +90,9 @@
       <router-link :to="localePath('docs-components')">
         <p class="ft13 link mb-1">{{ $t('docs.menu.comps.name') }}</p>
       </router-link>
+      <router-link :to="localePath('docs-props')">
+        <p class="ft13 link mb-1">Props</p>
+      </router-link>
     </div>
   </div>
 </template>

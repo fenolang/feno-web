@@ -21,8 +21,9 @@ export default class Doc extends Vue {
 }
 </script>
 
-<style scoped>
+<style>
     .ftt {
         font-family: 'Consolas' !important;
+        font-size: 13px;
     }
 </style>
