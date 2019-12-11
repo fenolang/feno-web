@@ -93,6 +93,60 @@
       <router-link :to="localePath('docs-props')">
         <p class="ft13 link mb-1">Props</p>
       </router-link>
+      <router-link :to="localePath('docs-layouts')">
+        <p class="ft13 link mb-1">Layouts</p>
+      </router-link>
+      <router-link :to="localePath('docs-layouts')+'#appview'" v-if="onLayouts">
+        <p class="ft13 link mb-1"><Tab/>La función appView</p>
+      </router-link>
+      <router-link :to="localePath('docs-layouts')+'#layout'" v-if="onLayouts">
+        <p class="ft13 link mb-1"><Tab/>La propiedad Layout</p>
+      </router-link>
+      <router-link :to="localePath('docs-attributes')">
+        <p class="ft13 link mb-1">Atributos</p>
+      </router-link>
+      <router-link :to="localePath('docs-attributes')+'#click'" v-if="onAttr">
+        <p class="ft13 link mb-1"><Tab/>Click</p>
+      </router-link>
+      <router-link :to="localePath('docs-attributes')" v-if="onAttr">
+        <p class="ft13 link mb-1"><Tab/>keyUp</p>
+      </router-link>
+      <router-link :to="localePath('docs-attributes')" v-if="onAttr">
+        <p class="ft13 link mb-1"><Tab/>keyDown</p>
+      </router-link>
+      <router-link :to="localePath('docs-attributes')" v-if="onAttr">
+        <p class="ft13 link mb-1"><Tab/>Name</p>
+      </router-link>
+      <router-link :to="localePath('docs-attributes')" v-if="onAttr">
+        <p class="ft13 link mb-1"><Tab/>Id</p>
+      </router-link>
+      <router-link :to="localePath('docs-attributes')" v-if="onAttr">
+        <p class="ft13 link mb-1"><Tab/>Class</p>
+      </router-link>
+      <router-link :to="localePath('docs-attributes')" v-if="onAttr">
+        <p class="ft13 link mb-1"><Tab/>Type</p>
+      </router-link>
+      <router-link :to="localePath('docs-attributes')" v-if="onAttr">
+        <p class="ft13 link mb-1"><Tab/>To</p>
+      </router-link>
+      <router-link :to="localePath('docs-attributes')" v-if="onAttr">
+        <p class="ft13 link mb-1"><Tab/>Src</p>
+      </router-link>
+      <router-link :to="localePath('docs-attributes')" v-if="onAttr">
+        <p class="ft13 link mb-1"><Tab/>Size</p>
+      </router-link>
+      <router-link :to="localePath('docs-attributes')" v-if="onAttr">
+        <p class="ft13 link mb-1"><Tab/>Width</p>
+      </router-link>
+      <router-link :to="localePath('docs-attributes')" v-if="onAttr">
+        <p class="ft13 link mb-1"><Tab/>Height</p>
+      </router-link>
+      <router-link :to="localePath('docs-attributes')" v-if="onAttr">
+        <p class="ft13 link mb-1"><Tab/>newTab</p>
+      </router-link>
+      <router-link :to="localePath('docs-attributes')" v-if="onAttr">
+        <p class="ft13 link mb-1"><Tab/>Val</p>
+      </router-link>
     </div>
   </div>
 </template>
@@ -113,6 +167,8 @@
     onMeta:boolean = false;
     onDaftClass:boolean = false;
     onMsf:boolean = false;
+    onLayouts:boolean = false;
+    onAttr:boolean = false;
 
     created() {
       let path:string = this.$route.path;
@@ -126,6 +182,10 @@
         this.onDaftClass = true;
       } else if (path.indexOf('meta_single_files') != -1) {
         this.onMsf = true;
+      } else if (path.indexOf('layouts') != -1) {
+        this.onLayouts = true;
+      } else if (path.indexOf('attributes') != -1) {
+        this.onAttr = true;
       }
     }
   }
