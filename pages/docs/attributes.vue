@@ -24,7 +24,7 @@
                         <v-flex xs12>
                             <div class="spacing">
                                 <Title>Atributos en Daft:</Title>
-                                <Subtitle>Click</Subtitle>
+                                <Subtitle id="click">Click</Subtitle>
                                 <p class="ft13 lTXTgrey">El atributo Click nos sirve para asignar un evento a un elemento cuando esté sea presionado</p>
                                 <CodeBox>
                                     <Doc>
@@ -35,7 +35,7 @@
                         </v-flex>
                         <v-flex xs12>
                             <div class="spacing">
-                                <Subtitle>keyUp</Subtitle>
+                                <Subtitle id="keyup">keyUp</Subtitle>
                                 <p class="ft13 lTXTgrey">El atributo keyUp es un evento que se ejecuta cuando el usuario suelta una tecla </p>
                                 <CodeBox>
                                     <Doc>
@@ -46,7 +46,7 @@
                         </v-flex>
                         <v-flex>
                             <div class="spacing">
-                                <Subtitle>keyDown</Subtitle>
+                                <Subtitle id="keydown">keyDown</Subtitle>
                                 <p class="ft13 lTXTgrey">El atributo keyDown almacena un evento que se ejecuta cuando el usuario presiona una tecla</p>
                                 <CodeBox>
                                     <Doc>
@@ -57,7 +57,7 @@
                         </v-flex>
                         <v-flex xs12>
                             <div class="spacing">
-                                <Subtitle>Name</Subtitle>
+                                <Subtitle id="name">Name</Subtitle>
                                 <p class="ft13 lTXTgrey">El atributo Name sirve para asignar un nombre único a un elemento</p>
                                 <CodeBox>
                                     <Doc>
@@ -68,7 +68,7 @@
                         </v-flex>
                         <v-flex xs12>
                             <div class="spacing">
-                                <Subtitle>Id</Subtitle>
+                                <Subtitle id="id">Id</Subtitle>
                                 <p class="ft13 lTXTgrey">El atributo Id sirve para asignar una id única a un elemento</p>
                                 <CodeBox>
                                     <Doc>
@@ -79,7 +79,7 @@
                         </v-flex>
                         <v-flex xs12>
                             <div class="spacing">
-                                <Subtitle>Class</Subtitle>
+                                <Subtitle id="class">Class</Subtitle>
                                 <p class="ft13 lTXTgrey">El atributo Class sirve para asignar el grupo de clases css que se quieren aplicar al elemento</p>
                                 <CodeBox>
                                     <Doc>
@@ -90,7 +90,7 @@
                         </v-flex>
                         <v-flex xs12>
                             <div class="spacing">
-                                <Subtitle>Type</Subtitle>
+                                <Subtitle id="type">Type</Subtitle>
                                 <p class="ft13 lTXTgrey">El atributo Type tiene distintos usos: para los botones específica el tipo de botón, para elementos #input sirve para especificar el tipo de campo de texto, y para elementos como: #embed, #link, #object, #script, #source y #style sirve para colocar el conocido MIME type</p>
                                 <CodeBox>
                                     <Doc>
@@ -101,7 +101,7 @@
                         </v-flex>
                         <v-flex xs12>
                             <div class="spacing">
-                                <Subtitle>To</Subtitle>
+                                <Subtitle id="to">To</Subtitle>
                                 <p class="ft13 lTXTgrey">En HTML puede que lo hayas conocido como href, en Daft tan sólo es un simple "To" y sirve para especificar la url de un enlace</p>
                                 <CodeBox>
                                     <Doc>
@@ -112,7 +112,7 @@
                         </v-flex>
                         <v-flex xs12>
                             <div class="spacing">
-                                <Subtitle>Src</Subtitle>
+                                <Subtitle id="src">Src</Subtitle>
                                 <p class="ft13 lTXTgrey">El atributo src muy conocido en HTML sirve para llamar a una imagen mediante su ruta local o enlace</p>
                                 <CodeBox>
                                     <Doc>
@@ -126,7 +126,7 @@
                         </v-flex>
                         <v-flex xs12>
                             <div class="spacing">
-                                <Subtitle>Size</Subtitle>
+                                <Subtitle id="size">Size</Subtitle>
                                 <p class="ft13 lTXTgrey">El atributo Size nos sirve para modificar el ancho inicial de nuestro elemento, funciona en: #input, #select y #hr</p>
                                 <CodeBox>
                                     <Doc>
@@ -137,7 +137,7 @@
                         </v-flex>
                         <v-flex xs12>
                             <div class="spacing">
-                                <Subtitle>Width</Subtitle>
+                                <Subtitle id="width">Width</Subtitle>
                                 <p class="ft13 lTXTgrey">El atributo Width nos sirve para modificar el ancho de nuestros elementos</p>
                                 <CodeBox>
                                     <Doc>
@@ -148,7 +148,7 @@
                         </v-flex>
                         <v-flex xs12>
                             <div class="spacing">
-                                <Subtitle>Height</Subtitle>
+                                <Subtitle id="height">Height</Subtitle>
                                 <p class="ft13 lTXTgrey">El atributo Height nos sirve para modificar el alto de nuestros elementos</p>
                                 <CodeBox>
                                     <Doc>
@@ -159,7 +159,7 @@
                         </v-flex>
                         <v-flex xs12>
                             <div class="spacing">
-                                <Subtitle>newTab</Subtitle>
+                                <Subtitle id="newtab">newTab</Subtitle>
                                 <p class="ft13 lTXTgrey">El atributo newTab es una alternativa a colocar target="_blank" como en HTML y sirve para que un enlace sea abierto en una nueva pestaña</p>
                                 <CodeBox>
                                     <Doc>
@@ -170,7 +170,7 @@
                         </v-flex>
                         <v-flex xs12>
                             <div class="spacing">
-                                <Subtitle>Val</Subtitle>
+                                <Subtitle id="val">Val</Subtitle>
                                 <p class="ft13 lTXTgrey">El atributo Val realiza la misma acción que value en HTML</p>
                                 <CodeBox>
                                     <Doc>
@@ -181,7 +181,7 @@
                         </v-flex>
                         <v-flex xs12 class="mb30">
                             <div class="spacing">
-                                <Subtitle>Más atributos</Subtitle>
+                                <Subtitle id="more">Más atributos</Subtitle>
                                 <p class="ft13 lTXTgrey">
                                     Evidentemente existen más atributos pero eso ya es cosa de HTML, tan sólo recuerda que los atributos en Daft comienzan con mayúsculas si el nombre del atributo es una sola palabra como el atributo "rows" en Daft es:
                                 </p>

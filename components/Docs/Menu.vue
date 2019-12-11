@@ -147,6 +147,9 @@
       <router-link :to="localePath('docs-attributes')" v-if="onAttr">
         <p class="ft13 link mb-1"><Tab/>Val</p>
       </router-link>
+      <router-link :to="localePath('docs-variables')">
+        <p class="ft13 link mb-1">Variables</p>
+      </router-link>
     </div>
   </div>
 </template>
