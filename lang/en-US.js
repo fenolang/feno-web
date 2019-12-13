@@ -99,6 +99,15 @@ export default {
         },
         comps: {
           name: "Components"
+        },
+        attr: 'Attributes',
+        layouts: {
+          app: 'The appView function',
+          prop: 'The Layout property'
+        },
+        variables: {
+          def: 'Def variables',
+          const: 'Constants'
         }
       },
       what: {
@@ -515,6 +524,115 @@ export default {
           com: 'Our component:',
           res: 'The result:'
         }
+      },
+      layouts: {
+        subtitle: "Layouts are ideal when we want to change how our website environment looks, in them we can define an interface that we can reuse on our pages",
+        start: "This is the start of my layout",
+        end: "This is the end of my layout",
+        page: 'This is my content',
+        create: {
+          title: "Let's create a layout",
+          subtitle: 'To create a layout we must obviously go to the "layouts" folder and then create a file with a .daft extension, for example we will create one called: "design.daft" and place the following content'
+        },
+        app: {
+          title: 'The appView() function',
+          subtitle: 'The appView() function only works for layouts and serves to render the content of your pages in such a way that Daft will search where you placed this function and there it will place the content of your pages that have that layout applied'
+        },
+        apply: {
+          title: "Let's apply the layout",
+          subtitle: 'We have already created our layout "design" so now we must apply it to the document we want, for example the index.daft:'
+        },
+        property: {
+          title: 'The Layout property',
+          subtitle: 'The this.layout property works only for pages and not for components, and serves to assign a layout to our page so its value must be the name of the layout we want to apply'
+        },
+        result: {
+          title: 'The result',
+          subtitle: 'We have already created a layout called: "design.daft" and we have already assigned it to our page "index.daft" with the property this.layout, Now we can compile and go to our browser, you will notice that you will get a result like the following :',
+          subtitle2: 'It worked! We went to our "index" page and we observed that our layout was perfectly applied to our content, this is only part of everything you can do with Daft;)'
+        }
+      },
+      attr: {
+        title: 'Attributes',
+        subtitle: 'Attributes are properties of HTML elements that we can assign to edit the shape and behavior of our elements that make up the structure of our website.',
+        subtitle2: 'Attributes in Daft:',
+        mytext: 'mytext',
+        func: 'myFunction',
+        hello: 'Hello!',
+        click: {
+          subtitle: 'The Click attribute is used to assign an event to an element when it is pressed',
+          btn: "My amazing button",
+          func: 'greet'
+        },
+        keyup: {
+          subtitle: 'The keyUp attribute is an event that is executed when the user releases a key',
+        },
+        keydown: {
+          subtitle: 'The keyDown attribute stores an event that is executed when the user presses a key'
+        },
+        name: {
+          subtitle: 'The Name attribute is used to assign a unique name to an element'
+        },
+        id: {
+          subtitle: 'The Id attribute is used to assign a unique id to an element'
+        },
+        class: {
+          subtitle: 'The Class attribute is used to assign the group of css classes that you want to apply to the element',
+          class: 'class1 class2'
+        },
+        type: {
+          subtitle: 'The Type attribute has different uses: for the buttons it assigns the type of button, for #input elements it is used to specify the type of text field, and for elements such as: #embed, #link, #object, #script, #source and #style serves to place the familiar MIME type'
+        },
+        to: {
+          subtitle: 'In HTML you may have known it as href, in Daft it is just a simple "To" and serves to specify the URL of a link'
+        },
+        src: {
+          subtitle: 'The well-known src attribute in HTML is used to call an image using its local path or link',
+          img: 'myimage',
+          alert: 'This attribute is NO LONGER required to place images since Daft has a specialized function for that: img()'
+        },
+        size: {
+          subtitle: 'The Size attribute is used to modify the initial width of our element, it works in: #input, #select and #hr'
+        },
+        width: {
+          subtitle: 'The Width attribute helps us to modify the width of our elements'
+        },
+        height: {
+          subtitle: 'The Height attribute serves to modify the height of our elements'
+        },
+        newtab: {
+          subtitle: 'The newTab attribute is an alternative to placing target="_blank" as in HTML and serves to make a link open in a new tab'
+        },
+        val: {
+          subtitle: 'The Val attribute performs the same action as value in HTML',
+          name: 'name'
+        },
+        more: {
+          title: 'More attributes',
+          subtitle: 'Obviously there are more attributes but that is already a matter of HTML, just remember that the attributes in Daft start with capital letters if the name of the attribute is a single word like the attribute "rows" in Daft is:',
+          subtitle2: 'BUT if the name of the attribute IS A COMPOSITION OF 2 WORDS then we make use of CamelCase\'s rules: <a href="https://wikipedia.org/wiki/Camel_case" target="_blank" class="ft-green bold">wikipedia.org</a>, for example the" cellpadding "attribute in Daft is like this:'
+        }
+      },
+      variables: {
+        title: 'Declaration of variables',
+        subtitle: 'We know that in JavaScript there are 3 types of variables: <span class="bold">var</span>, <span class="bold">let</span> and <span class="bold">const</span>, Daft being a JavaScript extension allows you to still use these methods BUT Daft presents you with a much better way to work with variables',
+        result: 'Result:',
+        hello: 'Hello!',
+        and: 'and Hello!',
+        human: 'human',
+        name: 'name',
+        age: 'age',
+        error: "Cannot convert type 'int' to 'string'",
+        def: {
+          title: 'def variables',
+          subtitle: 'In Daft we use the reserved word <span class="bold">def</span> to define a new variable (Daft will automatically know when it is better to transpile to <span class="bold">var</span> or <span class="bold">let</span>)',
+          subtitle2: 'With the previous code we can see the use of "def", some mathematical operations and we can also notice that Daft is a language <span class="ft-green">strongly typed</span> so that we cannot add a number to a text'
+        },
+        const: {
+          title: 'Constants',
+          subtitle: 'The constants are variables that once defined its value can no longer change, in Daft we wanted to preserve the way they are defined in JavaScript:',
+          subtitle2: 'We can see that we CANNOT redefine the value of a constant and this is not the only thing to learn about variables in Daft: continue with the next lesson to learn about Typing'
+        }
       }
-    }
+    },
 }

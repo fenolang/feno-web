@@ -97,59 +97,66 @@
         <p class="ft13 link mb-1">Layouts</p>
       </router-link>
       <router-link :to="localePath('docs-layouts')+'#appview'" v-if="onLayouts">
-        <p class="ft13 link mb-1"><Tab/>La función appView</p>
+        <p class="ft13 link mb-1"><Tab/>{{ $t('docs.menu.layouts.app') }}</p>
       </router-link>
       <router-link :to="localePath('docs-layouts')+'#layout'" v-if="onLayouts">
-        <p class="ft13 link mb-1"><Tab/>La propiedad Layout</p>
+        <p class="ft13 link mb-1"><Tab/>{{ $t('docs.menu.layouts.prop') }}</p>
       </router-link>
       <router-link :to="localePath('docs-attributes')">
-        <p class="ft13 link mb-1">Atributos</p>
+        <p class="ft13 link mb-1">{{ $t('docs.menu.attr') }}</p>
       </router-link>
       <router-link :to="localePath('docs-attributes')+'#click'" v-if="onAttr">
         <p class="ft13 link mb-1"><Tab/>Click</p>
       </router-link>
-      <router-link :to="localePath('docs-attributes')" v-if="onAttr">
+      <router-link :to="localePath('docs-attributes')+'#keyup'" v-if="onAttr">
         <p class="ft13 link mb-1"><Tab/>keyUp</p>
       </router-link>
-      <router-link :to="localePath('docs-attributes')" v-if="onAttr">
+      <router-link :to="localePath('docs-attributes')+'#keydown'" v-if="onAttr">
         <p class="ft13 link mb-1"><Tab/>keyDown</p>
       </router-link>
-      <router-link :to="localePath('docs-attributes')" v-if="onAttr">
+      <router-link :to="localePath('docs-attributes')+'#name'" v-if="onAttr">
         <p class="ft13 link mb-1"><Tab/>Name</p>
       </router-link>
-      <router-link :to="localePath('docs-attributes')" v-if="onAttr">
+      <router-link :to="localePath('docs-attributes')+'#id'" v-if="onAttr">
         <p class="ft13 link mb-1"><Tab/>Id</p>
       </router-link>
-      <router-link :to="localePath('docs-attributes')" v-if="onAttr">
+      <router-link :to="localePath('docs-attributes')+'#class'" v-if="onAttr">
         <p class="ft13 link mb-1"><Tab/>Class</p>
       </router-link>
-      <router-link :to="localePath('docs-attributes')" v-if="onAttr">
+      <router-link :to="localePath('docs-attributes')+'#type'" v-if="onAttr">
         <p class="ft13 link mb-1"><Tab/>Type</p>
       </router-link>
-      <router-link :to="localePath('docs-attributes')" v-if="onAttr">
+      <router-link :to="localePath('docs-attributes')+'#to'" v-if="onAttr">
         <p class="ft13 link mb-1"><Tab/>To</p>
       </router-link>
-      <router-link :to="localePath('docs-attributes')" v-if="onAttr">
+      <router-link :to="localePath('docs-attributes')+'#src'" v-if="onAttr">
         <p class="ft13 link mb-1"><Tab/>Src</p>
       </router-link>
-      <router-link :to="localePath('docs-attributes')" v-if="onAttr">
+      <router-link :to="localePath('docs-attributes')+'#size'" v-if="onAttr">
         <p class="ft13 link mb-1"><Tab/>Size</p>
       </router-link>
-      <router-link :to="localePath('docs-attributes')" v-if="onAttr">
+      <router-link :to="localePath('docs-attributes')+'#width'" v-if="onAttr">
         <p class="ft13 link mb-1"><Tab/>Width</p>
       </router-link>
-      <router-link :to="localePath('docs-attributes')" v-if="onAttr">
+      <router-link :to="localePath('docs-attributes')+'#height'" v-if="onAttr">
         <p class="ft13 link mb-1"><Tab/>Height</p>
       </router-link>
-      <router-link :to="localePath('docs-attributes')" v-if="onAttr">
+      <router-link :to="localePath('docs-attributes')+'#newtab'" v-if="onAttr">
         <p class="ft13 link mb-1"><Tab/>newTab</p>
       </router-link>
-      <router-link :to="localePath('docs-attributes')" v-if="onAttr">
+      <router-link :to="localePath('docs-attributes')+'#val'" v-if="onAttr">
         <p class="ft13 link mb-1"><Tab/>Val</p>
       </router-link>
       <router-link :to="localePath('docs-variables')">
         <p class="ft13 link mb-1">Variables</p>
       </router-link>
+      <router-link :to="localePath('docs-variables')+'#def'" v-if="onVariables">
+        <p class="ft13 link mb-1"><Tab/>{{ $t('docs.menu.variables.def') }}</p>
+      </router-link>
+      <router-link :to="localePath('docs-variables')+'#const'" v-if="onVariables">
+        <p class="ft13 link mb-1"><Tab/>{{ $t('docs.menu.variables.const') }}</p>
+      </router-link>
+
     </div>
   </div>
 </template>
@@ -172,6 +179,7 @@
     onMsf:boolean = false;
     onLayouts:boolean = false;
     onAttr:boolean = false;
+    onVariables:boolean = false;
 
     created() {
       let path:string = this.$route.path;
@@ -189,6 +197,8 @@
         this.onLayouts = true;
       } else if (path.indexOf('attributes') != -1) {
         this.onAttr = true;
+      } else if (path.indexOf('variables') != -1) {
+        this.onVariables = true;
       }
     }
   }
