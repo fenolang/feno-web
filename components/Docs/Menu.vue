@@ -156,7 +156,15 @@
       <router-link :to="localePath('docs-variables')+'#const'" v-if="onVariables">
         <p class="ft13 link mb-1"><Tab/>{{ $t('docs.menu.variables.const') }}</p>
       </router-link>
-
+      <router-link :to="localePath('docs-typing')">
+        <p class="ft13 link mb-1">Typing</p>
+      </router-link>
+      <router-link :to="localePath('docs-typing')">
+        <p class="ft13 link mb-1">Classes</p>
+      </router-link>
+      <router-link :to="localePath('docs-typing')">
+        <p class="ft13 link mb-1">Functions</p>
+      </router-link>
     </div>
   </div>
 </template>
