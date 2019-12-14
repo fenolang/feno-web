@@ -162,8 +162,20 @@
       <router-link :to="localePath('docs-classes')">
         <p class="ft13 link mb-1">Classes</p>
       </router-link>
+      <router-link :to="localePath('docs-classes')+'#create'" v-if="onClasses">
+        <p class="ft13 link mb-1"><Tab/>Creating a class</p>
+      </router-link>
+      <router-link :to="localePath('docs-classes')+'#super'" v-if="onClasses">
+        <p class="ft13 link mb-1"><Tab/>Inheritance</p>
+      </router-link>
       <router-link :to="localePath('docs-functions')">
         <p class="ft13 link mb-1">Functions</p>
+      </router-link>
+      <router-link :to="localePath('docs-functions')+'#create'" v-if="onFunctions">
+        <p class="ft13 link mb-1"><Tab/>Creating a function</p>
+      </router-link>
+      <router-link :to="localePath('docs-functions')+'#params'" v-if="onFunctions">
+        <p class="ft13 link mb-1"><Tab/>Params</p>
       </router-link>
     </div>
   </div>
@@ -188,6 +200,8 @@
     onLayouts:boolean = false;
     onAttr:boolean = false;
     onVariables:boolean = false;
+    onClasses:boolean = false;
+    onFunctions:boolean = false;
 
     created() {
       let path:string = this.$route.path;
@@ -207,6 +221,10 @@
         this.onAttr = true;
       } else if (path.indexOf('variables') != -1) {
         this.onVariables = true;
+      } else if (path.indexOf('classes') != -1) {
+        this.onClasses = true;
+      } else if (path.indexOf('functions') != -1) {
+        this.onFunctions = true;
       }
     }
   }

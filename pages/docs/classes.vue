@@ -23,7 +23,7 @@
                         </v-flex>
                         <v-flex xs12>
                             <div class="spacing">
-                                <Title>Creando una clase</Title>
+                                <Title id="create">Creando una clase</Title>
                                 <p class="ft13 lTXTgrey">
                                     Vamos a definir una simple clase:
                                 </p>
@@ -50,7 +50,7 @@
                         </v-flex>
                         <v-flex xs12>
                             <div class="spacing">
-                                <Title>Heredación</Title>
+                                <Title id="super">Heredación</Title>
                                 <p class="ft13 lTXTgrey">
                                     La heredación es clave en la programación orientada a objetos y es muy fácil de implementar en Daft:
                                 </p>
@@ -128,6 +128,8 @@ export default class Classes extends Vue {
             icon: "#",
             truncate: 100
         };
+        anchors.add('#create');
+        anchors.add('#super');
     }
 }
 
