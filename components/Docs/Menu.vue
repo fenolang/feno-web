@@ -159,10 +159,10 @@
       <router-link :to="localePath('docs-typing')">
         <p class="ft13 link mb-1">Typing</p>
       </router-link>
-      <router-link :to="localePath('docs-typing')">
+      <router-link :to="localePath('docs-classes')">
         <p class="ft13 link mb-1">Classes</p>
       </router-link>
-      <router-link :to="localePath('docs-typing')">
+      <router-link :to="localePath('docs-functions')">
         <p class="ft13 link mb-1">Functions</p>
       </router-link>
     </div>
