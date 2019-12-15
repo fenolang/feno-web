@@ -641,6 +641,86 @@ export default {
         subtitle: 'Las constantes son variables que una vez definido su valor éste ya no puede volver a cambiar, en Daft quisimos preservar la manera en la que se definen en JavaScript:',
         subtitle2: 'Podemos ver que NO podemos redefinir el valor de una constante y ésto no es lo único que hay que aprender sobre variables en Daft: continúa con la siguiente lección para aprender sobre Tipado'
       }
+    },
+    types: {
+      title: "Tipado",
+      subtitle: "Daft es un lenguaje fuertemente tipado, lo que significa que cada variable cuenta con un tipo fijo y éste debe de respetarse. No es necesario colocar el tipo cuando se declara una variable ya que Daft lo hace automáticamente pero sí que puedes hacerlo si quieres",
+      hw: "Hola Mundo!",
+      string: {
+        subtitle: "String es el tipo que Daft proporciona para las variables de tipo texto y así es como lo utilizamos:",
+        subtitle2: "Las dos variables van a producir el mismo resultado tan sólo que arriba decidimos colocar el tipo manualmente mientras abajo internamente Daft ya le ha colocado el tipo String por nosotros :)",
+        var: "hola"
+      },
+      number: {
+        subtitle: 'Number es el tipo indicado para nuestras variables de tipo númerico',
+        var: "edad"
+      },
+      bool: {
+        subtitle: "Boolean es el tipo indicado para nuestras variables de tipo booleano o decisión",
+        var: "resultado"
+      },
+      array: {
+        subtitle: "Array es el tipo indicado para nuestras variables que serán grupos de datos",
+        var: "vector",
+        var2: "multi_vector",
+        alert: "¡Aún no existen las interfaces en Daft por lo tanto aún no podemos especificar los tipos permitidos en un Array!"
+      },
+      object: {
+        subtitle: "Object es el tipo indicado para nuestros objetos simples",
+        var: "persona"
+      },
+      any: {
+        subtitle: "Any es el tipo indicado a usar cuando no sabemos qué dato estamos recibiendo y manejando (Muy útil en el uso de librerías de terceros)",
+        var: "ejemplo",
+        string: "Mejor soy string",
+        comment: "Ningún error"
+      }
+    },
+    class: {
+      title: "Clases",
+      subtitle: "Daft ofrece una experiencia especial al momento de trabajar con programación orientada a objetos",
+      user: "Usuario",
+      msg: "msj",
+      hw: "Hola Mundo!",
+      greet: "saludar",
+      greeting: "saludo",
+      example: "ejemplo",
+      hello: "Hola Amigo!",
+      name: "nombre",
+      programmer: "Programador",
+      person: "Persona",
+      coffee_func: "tomarCafe",
+      coffee: "está tomando café!",
+      result: "Resultado:",
+      me: "yo",
+      create: {
+        title: "Creando una clase",
+        subtitle: "Vamos a definir una simple clase:",
+        subtitle2: 'La sintaxis es muy sencilla. Creamos una clase llamada Usuario con 3 elementos iniciales: Una propiedad llamada saludo, un método constructor y un método llamado saludar. Te podrás dar cuenta que podemos acceder a las propiedades de la instancia mediante <span class="bold">this</span>. <br><br> Finalmente creamos un objeto con la palabra <span class="bold">new</span> y el nombre de la clase, le mandamos un parámetro tipo texto y finalmente ejecutamos la función saludar() propia de la instancia.'
+      },
+      super: {
+        title: "Heredación",
+        subtitle: "La heredación es clave en la programación orientada a objetos y es muy fácil de implementar en Daft:",
+        subtitle2: 'Declaramos una primera clase llamada "Persona" con un método constructor que asigna valor a la propiedad "nombre". Después declaramos otra clase llamada "Programador" que hereda la clase Persona con la palabra reservada <span class="bold">extends</span> aquí sólo creamos un método llamado "tomarCafe" que muestra un mensaje en pantalla. <br> <br> Finalmente creamos un objeto de la clase Programador y asignamos un valor a la propiedad que está declarada en la clase Persona y es heredada, ejecutamos el método tomarCafe() y obtenemos el resultado en la consola.',
+        result: "Ésto es todo por el momento, todo lo demás es actualmente IGUAL a JavaScript así que no nos queda más que contarte, actualmente éstamos trabajando por ofrecer una experiencia mucho mejor y sobre todo completa con la programación orientada a objetos pero por ahora fuera de ésto todo es igual a como lo hacemos en JS :)."
+      }
+    },
+    func: {
+      title: "Funciones",
+      subtitle: "Las funciones son probablemente una de las cosas más importantes en un lenguaje y en Daft no es la excepción.",
+      hw: "Hola Mundo!",
+      msg2: "mensaje",
+      show: "mostrar",
+      create: {
+        title: "Escribiendo una función",
+        subtitle: "Vamos a crear una simple función para mostrar una alerta en pantalla:",
+        subtitle2: 'Declaramos una nueva función con la palabra <span class="bold">func</span> y llamamos por su nombre "mostrar()" para ejecutarla'
+      },
+      params: {
+        title: "Parámetros",
+        subtitle: 'Los parámetros son datos que podemos enviar a nuestra función para utilizarlos. Y también podemos aplicarles un tipo para mejorar la lectura de nuestro código, Ahora vamos a crear una función que haga uso de un parámetro llamado "mensaje", checa el siguiente código:',
+
+      }
     }
   },
 }

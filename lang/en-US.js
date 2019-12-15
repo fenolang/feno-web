@@ -633,6 +633,86 @@ export default {
           subtitle: 'The constants are variables that once defined its value can no longer change, in Daft we wanted to preserve the way they are defined in JavaScript:',
           subtitle2: 'We can see that we CANNOT redefine the value of a constant and this is not the only thing to learn about variables in Daft: continue with the next lesson to learn about Typing'
         }
+      },
+      types: {
+        title: "Typing",
+        subtitle: "Daft is a strongly typed language, which means that each variable has a fixed type and it must be respected. It is not necessary to place the type when a variable is declared since Daft does it automatically but you can do it if you want",
+        hw: "Hello World!",
+        string: {
+          subtitle: "String is the type that Daft provides for text variables and this is how we use it:",
+          subtitle2: "The two variables will produce the same result, only above that we decided to place the type manually while internally Daft has already placed the String type for us :)",
+          var: "hello"
+        },
+        number: {
+          subtitle: 'Number is the type indicated for our numeric type variables',
+          var: "age"
+        },
+        bool: {
+          subtitle: "Boolean is the type indicated for our Boolean or decision variables ",
+          var: "result"
+        },
+        array: {
+          subtitle: "Array is the type indicated for our variables that will be data groups",
+          var: "vector",
+          var2: "multi_vector",
+          alert: "There are no interfaces in Daft yet, so we still cannot specify the types allowed in an Array!"
+        },
+        object: {
+          subtitle: "Object is the type indicated for our simple objects",
+          var: "person"
+        },
+        any: {
+          subtitle: "Any is the type to use when we do not know what data we are receiving and handling (Very useful in the use of third-party libraries :)",
+          var: "example",
+          string: "I'm a string now",
+          comment: "No errors here"
+        }
+      },
+      class: {
+        title: "Classes",
+        subtitle: "Daft offers a special experience when working with object-oriented programming",
+        user: "User",
+        msg: "msg",
+        hw: "Hello World!",
+        greet: "greet",
+        greeting: "greeting",
+        example: "example",
+        hello: "Hello World!",
+        name: "name",
+        programmer: "Programmer",
+        person: "Person",
+        coffee_func: "drinkCoffee",
+        coffee: "is drinking coffee!",
+        result: "Result:",
+        me: "me",
+        create: {
+          title: "Creating a class",
+          subtitle: "Let's define a simple class:",
+          subtitle2: 'The syntax is very simple. We create a class called User with 3 initial elements: A property called greeting, a constructor method and a method called greet. You will realize that we can access the properties of the instance through <span class="bold">this</span>. <br> <br> Finally we create an object with the word <span class="bold">new</span> and the class name, we send it a text parameter and finally execute the greet() function of the instance.'
+        },
+        super: {
+          title: "Inheritance",
+          subtitle: "Inheritance is key in object-oriented programming and is very easy to implement in Daft:",
+          subtitle2: 'We declare a first class called "Person" with a constructor method that assigns value to the "name" property. Then we declare another class called "Programmer" that inherits the Person class with the reserved word <span class="bold">extends</span> here we only create a method called "drinkCoffee" that displays a message on the screen. <br> <br> Finally we create an object of the Programmer class and assign a value to the property that is declared in the Person class and is inherited, execute the drinkCoffee() method and obtain the result in the console.',
+          result: "This is all for the moment, everything else is currently EQUAL to JavaScript so we have no more to tell you, we are currently working to offer a much better experience and especially complete with object-oriented programming but for now out of this all It's the same as we do in JS :)."
+        }
+      },
+      func: {
+        title: "Functions",
+        subtitle: "Functions are probably one of the most important things in a language and in Daft it is no exception.",
+        hw: "Hello World!",
+        msg2: "message",
+        show: "show",
+        create: {
+          title: "Writing a function",
+          subtitle: "We will create a simple function to display an alert on the screen:",
+          subtitle2: 'We declare a new function with the word <span class="bold">func</span> and call by name "show()" to execute it'
+        },
+        params: {
+          title: "Parameters",
+          subtitle: 'The parameters are data that we can send to our function to use them. And we can also apply a type to improve the reading of our code, Now we are going to create a function that makes use of a parameter called "message", check the following code:',
+  
+        }
       }
     },
 }

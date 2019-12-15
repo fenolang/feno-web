@@ -15,43 +15,42 @@
                     <v-layout row wrap>
                         <v-flex xs12>
                             <div class="spacing pt20">
-                                <p class="ft35 bold">Funciones</p>
+                                <p class="ft35 bold">{{ $t('docs.func.title') }}</p>
                                 <p class="ft13 lTXTgrey">
-                                    Las funciones son probablemente una de las cosas más importantes en un lenguaje y en Daft no es la excepción.
+                                    {{ $t('docs.func.subtitle') }}
                                 </p>
                             </div>
                         </v-flex>
                         <v-flex xs12>
                             <div class="spacing">
-                                <Title id="create">Escribiendo una función</Title>
+                                <Title id="create">{{ $t('docs.func.create.title') }}</Title>
                                 <p class="ft13 lTXTgrey">
-                                    Vamos a crear una simple función para mostrar una alerta en pantalla:
+                                    {{ $t('docs.func.create.subtitle') }}
                                 </p>
                                 <CodeBox>
                                     <Attr>new</Attr> <Func name="Daft"></Func> { <br>
-                                        <Tab/> <El>func</El> <Func name="mostrar"></Func> { <br>
-                                            <Tab/><Tab/> <Func name="msg"><String>"Hola Mundo!"</String></Func> <br>
+                                        <Tab/> <El>func</El> <Func :name="$t('docs.func.show')"></Func> { <br>
+                                            <Tab/><Tab/> <Func name="msg"><String>"{{ $t('docs.func.hw') }}"</String></Func> <br>
                                         <Tab/>} <br> <br>
-                                        <Tab/> <Func name="mostrar"></Func>; <br>
+                                        <Tab/> <Func :name="$t('docs.func.show')"></Func>; <br>
                                     }
                                 </CodeBox>
-                                <p class="mt20 ft13 lTXTgrey">
-                                    Declaramos una nueva función con la palabra <span class="bold">func</span> y llamamos por su nombre "mostrar()" para ejecutarla
+                                <p class="mt20 ft13 lTXTgrey" v-html="$t('docs.func.create.subtitle2')">
                                 </p>
                             </div>
                         </v-flex>
                         <v-flex xs12 class="mb30">
                             <div class="spacing">
-                                <Subtitle id="params">Parámetros</Subtitle>
+                                <Subtitle id="params">{{ $t('docs.func.params.title') }}</Subtitle>
                                 <p class="ft13 lTXTgrey">
-                                    Los parámetros son datos que podemos enviar a nuestra función para utilizarlos. Y también podemos aplicarles un tipo para mejorar la lectura de nuestro código, Ahora vamos a crear una función que haga uso de un parámetro llamado "mensaje", checa el siguiente código:
+                                    {{ $t('docs.func.params.subtitle') }}
                                 </p>
                                 <CodeBox>
                                     <Attr>new</Attr> <Func name="Daft"></Func> { <br>
-                                        <Tab/> <El>func</El> <Func name="mostrar"><Attr>String</Attr> mensaje</Func> { <br>
-                                            <Tab/><Tab/> <Func name="msg">mensaje</Func> <br>
+                                        <Tab/> <El>func</El> <Func :name="$t('docs.func.show')"><Attr>String</Attr> {{ $t('docs.func.msg2') }}</Func> { <br>
+                                            <Tab/><Tab/> <Func name="msg">{{ $t('docs.func.msg2') }}</Func> <br>
                                         <Tab/>} <br> <br>
-                                        <Tab/> <Func name="mostrar"><String>"Hola Mundo!"</String></Func>; <br>
+                                        <Tab/> <Func :name="$t('docs.func.show')"><String>"{{ $t('docs.func.hw') }}"</String></Func>; <br>
                                     }
                                 </CodeBox>
                             </div>
