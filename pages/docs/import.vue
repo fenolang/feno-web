@@ -25,8 +25,24 @@
                             <div class="spacing">
                                 <Title>Cómo importar en Daft</Title>
                                 <CodeBox>
-                                    
+                                    <Key>import</Key> * <El>as</El> Archivo <Key>from</Key> <String>"./script.daft"</String> <br> <br>
+                                    Archivo.<Func name="run"></Func>
                                 </CodeBox>
+                                <p class="mt20 ft13 lTXTgrey">
+                                    Así estamos importando un archivo completo dentro de otro archivo y como puedes ver podemos acceder a sus funciones
+                                </p>
+                            </div>
+                        </v-flex>
+                        <v-flex xs12 class="mb30">
+                            <div class="spacing">
+                                <Subtitle>Importar funciones concretas</Subtitle>
+                                <CodeBox>
+                                    <Key>import</Key> { <El>run</El> } <Key>from</Key> <String>"./script.daft"</String> <br> <br>
+                                    <Func name="run"></Func>
+                                </CodeBox>
+                                <p class="mt20 ft13 lTXTgrey">
+                                    Como puedes ver estamos importando unicamente la función run() que se encuentra en el archivo "script.daft" y la estamos ejecutando al final
+                                </p>
                             </div>
                         </v-flex>
                     </v-layout>
@@ -41,7 +57,7 @@ import { Vue, Component } from 'vue-property-decorator';
 import { Action, namespace } from 'vuex-class';
 import Menu from '@/components/Docs/Menu.vue';
 import { Title, Subtitle } from '@/components/Tools/index';
-import { Tag, Tab, El, String, Attr, Comment, Mark, CodeBox } from '@/components/Code/index';
+import { Tag, Tab, El, String, Attr, Comment, Mark, CodeBox, Func, Key } from '@/components/Code/index';
 import { Doc, Head, Dmeta } from '@/components/Code/Instances/index';
 
 const anchorJS = require('anchor-js');
@@ -53,7 +69,7 @@ const MenuModule = namespace('menu');
     components: {
         Menu,
         Title, Subtitle,
-        CodeBox, Tag, Tab, El, String, Mark,
+        CodeBox, Tag, Tab, El, String, Mark, Func, Key,
         Doc, Head, Dmeta,
     }
 })

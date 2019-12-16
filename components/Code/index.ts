@@ -8,7 +8,8 @@ import CodeBox from '@/components/code-box.vue';
 import Tab from '@/components/Code/Tab.vue';
 import Func from '@/components/Code/Func.vue';
 import Mark from '@/components/Code/Mark.vue';
+import Key from '@/components/Code/Key.vue';
 
 export {
-    El, Tag, String, Viewer, Comment, Attr, Tab, CodeBox, Func, Mark
+    El, Tag, String, Viewer, Comment, Attr, Tab, CodeBox, Func, Mark, Key
 };
