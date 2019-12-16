@@ -12,15 +12,17 @@
   },
   "dependencies": {
     "@nuxtjs/axios": "^5.3.6",
-    "anchor-js": "^4.2.1",
+    "anchor-js": "^4.2.2",
     "cross-env": "^5.2.0",
     "express": "^4.16.4",
     "nuxt": "^2.0.0",
-    "nuxt-i18n": "^6.3.0"
+    "nuxt-i18n": "^6.4.1",
+    "vue": "^2.6.11",
+    "vue-template-compiler": "^2.6.11"
   },
   "devDependencies": {
-    "@nuxt/typescript-build": "^0.3.2",
-    "@nuxtjs/vuetify": "^1.0.0",
+    "@nuxt/typescript-build": "^0.3.10",
+    "@nuxtjs/vuetify": "^1.9.1",
     "nodemon": "^1.18.9",
     "vue-property-decorator": "^8.3.0",
     "vuex-class": "^0.3.2"
