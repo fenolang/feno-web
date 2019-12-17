@@ -23,7 +23,7 @@
                         </v-flex>
                         <v-flex xs12>
                             <div class="spacing">
-                                <Title>String</Title>
+                                <Title id="string">String</Title>
                                 <p class="ft13 lTXTgrey">
                                     {{ $t('docs.types.string.subtitle') }}
                                 </p>
@@ -40,7 +40,7 @@
                         </v-flex>
                         <v-flex xs12>
                             <div class="spacing">
-                                <Title>Number</Title>
+                                <Title id="number">Number</Title>
                                 <p class="ft13 lTXTgrey">
                                     {{ $t('docs.types.number.subtitle') }}
                                 </p>
@@ -54,7 +54,7 @@
                         </v-flex>
                         <v-flex xs12> 
                             <div class="spacing">
-                                <Title>Boolean</Title>
+                                <Title id="bool">Boolean</Title>
                                 <p class="ft13 lTXTgrey">
                                     {{ $t('docs.types.bool.subtitle') }}
                                 </p>
@@ -68,7 +68,7 @@
                         </v-flex>
                         <v-flex>
                             <div class="spacing">
-                                <Title>Array</Title>
+                                <Title id="array">Array</Title>
                                 <p class="ft13 lTXTgrey">
                                     {{ $t('docs.types.array.subtitle') }}
                                 </p>
@@ -89,7 +89,7 @@
                         </v-flex>
                         <v-flex xs12>
                             <div class="spacing">
-                                <Title>Object</Title>
+                                <Title id="obj">Object</Title>
                                 <p class="ft13 lTXTgrey">
                                     {{ $t('docs.types.object.subtitle') }}
                                 </p>
@@ -104,7 +104,7 @@
                         </v-flex>
                         <v-flex xs12 class="mb30">
                             <div class="spacing">
-                                <Title>Any</Title>
+                                <Title id="any">Any</Title>
                                 <p class="ft13 lTXTgrey">
                                     {{ $t('docs.types.any.subtitle') }}
                                 </p>
@@ -161,6 +161,12 @@ export default class Typing extends Vue {
             icon: "#",
             truncate: 100
         };
+        anchors.add('#string');
+        anchors.add('#number');
+        anchors.add('#bool');
+        anchors.add('#array');
+        anchors.add('#obj');
+        anchors.add('#any');
     }
 }
 

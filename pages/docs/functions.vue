@@ -99,6 +99,8 @@ export default class Functions extends Vue {
             icon: "#",
             truncate: 100
         };
+        anchors.add('#create');
+        anchors.add('#params');
     }
 }
 

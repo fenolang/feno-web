@@ -253,42 +253,91 @@
         </p>
       </router-link>
       <router-link :to="localePath('docs-typing')">
-        <p class="ft13 link mb-1">Typing</p>
+        <p class="ft13 link mb-1">{{ $t('docs.menu.type') }}</p>
+      </router-link>
+      <router-link :to="localePath('docs-typing')+'#string'" v-if="onTyping">
+        <p class="ft13 link mb-1">
+          <Tab />String
+        </p>
+      </router-link>
+      <router-link :to="localePath('docs-typing')+'#number'" v-if="onTyping">
+        <p class="ft13 link mb-1">
+          <Tab />Number
+        </p>
+      </router-link>
+      <router-link :to="localePath('docs-typing')+'#bool'" v-if="onTyping">
+        <p class="ft13 link mb-1">
+          <Tab />Boolean
+        </p>
+      </router-link>
+      <router-link :to="localePath('docs-typing')+'#array'" v-if="onTyping">
+        <p class="ft13 link mb-1">
+          <Tab />Array
+        </p>
+      </router-link>
+      <router-link :to="localePath('docs-typing')+'#obj'" v-if="onTyping">
+        <p class="ft13 link mb-1">
+          <Tab />Object
+        </p>
+      </router-link>
+      <router-link :to="localePath('docs-typing')+'#any'" v-if="onTyping">
+        <p class="ft13 link mb-1">
+          <Tab />Any
+        </p>
       </router-link>
       <router-link :to="localePath('docs-classes')">
-        <p class="ft13 link mb-1">Classes</p>
+        <p class="ft13 link mb-1">{{ $t('docs.menu.class.name') }}</p>
       </router-link>
       <router-link :to="localePath('docs-classes')+'#create'" v-if="onClasses">
         <p class="ft13 link mb-1">
-          <Tab />Creating a class
+          <Tab />
+          {{ $t('docs.menu.class.create') }}
         </p>
       </router-link>
       <router-link :to="localePath('docs-classes')+'#super'" v-if="onClasses">
         <p class="ft13 link mb-1">
-          <Tab />Inheritance
+          <Tab />
+          {{ $t('docs.menu.class.super') }}
         </p>
       </router-link>
       <router-link :to="localePath('docs-functions')">
-        <p class="ft13 link mb-1">Functions</p>
+        <p class="ft13 link mb-1">{{ $t('docs.menu.func.name') }}</p>
       </router-link>
       <router-link :to="localePath('docs-functions')+'#create'" v-if="onFunctions">
         <p class="ft13 link mb-1">
-          <Tab />Creating a function
+          <Tab />
+          {{ $t('docs.menu.func.create') }}
         </p>
       </router-link>
       <router-link :to="localePath('docs-functions')+'#params'" v-if="onFunctions">
         <p class="ft13 link mb-1">
-          <Tab />Params
+          <Tab />
+          {{ $t('docs.menu.func.params') }}
         </p>
       </router-link>
       <router-link :to="localePath('docs-conditionals')">
-        <p class="ft13 link mb-1">Conditionals</p>
+        <p class="ft13 link mb-1">{{ $t('docs.menu.condition') }}</p>
+      </router-link>
+      <router-link :to="localePath('docs-conditionals')+'#if'" v-if="onConditionals">
+        <p class="ft13 link mb-1">
+          <Tab />If
+        </p>
+      </router-link>
+      <router-link :to="localePath('docs-conditionals')+'#else'" v-if="onConditionals">
+        <p class="ft13 link mb-1">
+          <Tab />Else
+        </p>
+      </router-link>
+      <router-link :to="localePath('docs-conditionals')+'#elif'" v-if="onConditionals">
+        <p class="ft13 link mb-1">
+          <Tab />Elif
+        </p>
       </router-link>
       <router-link :to="localePath('docs-scripts')">
         <p class="ft13 link mb-1">Scripts</p>
       </router-link>
       <router-link :to="localePath('docs-import')">
-        <p class="ft13 link mb-1">Import</p>
+        <p class="ft13 link mb-1">{{ $t('docs.menu.import') }}</p>
       </router-link>
     </div>
   </div>
@@ -314,6 +363,8 @@ export default class Menu extends Vue {
   onVariables: boolean = false;
   onClasses: boolean = false;
   onFunctions: boolean = false;
+  onTyping: boolean = false;
+  onConditionals: boolean = false;
 
   created() {
     let path: string = this.$route.path;
@@ -340,6 +391,10 @@ export default class Menu extends Vue {
       this.onClasses = true;
     } else if (path.indexOf("functions") != -1) {
       this.onFunctions = true;
+    } else if (path.indexOf("typing") != -1) {
+      this.onTyping = true;
+    } else if (path.indexOf("conditionals") != -1) {
+      this.onConditionals = true;
     }
   }
 }

@@ -15,44 +15,44 @@
           <v-layout row wrap>
             <v-flex xs12>
               <div class="spacing pt20">
-                <p class="ft35 bold">Condicionales</p>
+                <p class="ft35 bold">{{ $t('docs.cond.title') }}</p>
                 <p
                   class="ft13 lTXTgrey"
-                >Las sentencias condicionales son instrucciones o grupos de instrucciones que se ejecutarán o no de acuerdo a una condición</p>
+                >{{ $t('docs.cond.subtitle') }}</p>
               </div>
             </v-flex>
             <v-flex xs12>
               <div class="spacing">
-                <Title>Sentencia If</Title>
+                <Title id="if">{{ $t('docs.cond.if.title') }}</Title>
                 <p
                   class="ft13 lTXTgrey"
-                >La sentencia if es la más concida al ser la básica, escribamos una muy simple en Daft:</p>
+                >{{ $t('docs.cond.if.subtitle') }}</p>
                 <CodeBox>
                   <Attr>new</Attr> <Func name="Daft"></Func>{ <br />
-                    <Tab /> <El>def</El> edad = <Attr>17</Attr>; <br />
-                    <Tab /> <El>if</El>(edad &lt;= <Attr>17</Attr>) { <br />
-                        <Tab /><Tab /> <Func name="print"><String>"Eres menor de edad!"</String></Func> <br>
+                    <Tab /> <El>def</El> {{ $t('docs.cond.age') }} = <Attr>17</Attr>; <br />
+                    <Tab /> <El>if</El> ({{ $t('docs.cond.age') }} &lt;= <Attr>17</Attr>) { <br />
+                        <Tab /><Tab /> <Func name="print"><String>"{{ $t('docs.cond.menor') }}"</String></Func> <br>
                     <Tab/>}
                   <br />}
                 </CodeBox>
                 <p class="ft13 lTXTgrey mt20">
-                    Si corremos el código anterior obtendremos el mensaje "Eres menor de edad!" en la consola, ¿Por qué? Hemos declarado una variable con el valor: 17 y después hemos escrito una sentencia if que contiene la siguiente condición: "Si la variable edad tiene un valor de 17 o menor entonces realiza lo siguiente" y nosotros hemos escrito que despliegue con mensaje en la consola si se cumple la condición
+                    {{ $t('docs.cond.if.result') }}
                 </p>
               </div>
             </v-flex>
             <v-flex xs12>
                 <div class="spacing">
-                    <Title>Sentencia Else</Title>
+                    <Title id="else">{{ $t('docs.cond.else.title') }}</Title>
                     <p class="ft13 lTXTgrey">
-                        Cuando una condición se cumple entonces se ejecuta el contenido de la sentencia if PERO cuando la condición NO se cumple entonces se ejecuta el contenido de una sentencia llamada else
+                        {{ $t('docs.cond.else.subtitle') }}
                     </p>
                     <CodeBox>
                         <Attr>new</Attr> <Func name="Daft"></Func>{ <br />
-                            <Tab /> <El>def</El> edad = <Attr>17</Attr>; <br />
-                            <Tab /> <El>if</El> (edad &lt;= <Attr>17</Attr>) { <br />
-                                <Tab /><Tab /> <Func name="print"><String>"Eres menor de edad!"</String></Func> <br>
+                            <Tab /> <El>def</El> {{ $t('docs.cond.age') }} = <Attr>17</Attr>; <br />
+                            <Tab /> <El>if</El> ({{ $t('docs.cond.age') }} &lt;= <Attr>17</Attr>) { <br />
+                                <Tab /><Tab /> <Func name="print"><String>"{{ $t('docs.cond.menor') }}"</String></Func> <br>
                             <Tab/>} <El>else</El> { <br>
-                                <Tab/><Tab/> <Func name="print"><String>"Eres mayor de edad!"</String></Func> <br>
+                                <Tab/><Tab/> <Func name="print"><String>"{{ $t('docs.cond.mayor') }}"</String></Func> <br>
                             <Tab/>} <br>
                         }
                     </CodeBox>
@@ -60,21 +60,21 @@
             </v-flex>
             <v-flex xs12 class="mb30">
                 <div class="spacing">
-                    <Title>Sentencia Elif</Title>
+                    <Title id="elif">{{ $t('docs.cond.elif.title') }}</Title>
                     <p class="ft13 lTXTgrey">
-                        A veces necesitamos que si una sentencia if no se cumple entonces comprobar si se cumple otra más. Y para eso tenemos la sentencia "elif" que en simples palabras es como un else PERO esta sentencia sólo se ejecutará si la condición que contiene es verdadera:
+                        {{ $t('docs.cond.elif.subtitle') }}
                     </p>
                     <CodeBox>
                         <El>if</El> (x > y) { <br />
-                            <Tab /> <Func name="print"><String>"x es mayor que y!"</String></Func>; <br>
+                            <Tab /> <Func name="print"><String>"{{ $t('docs.cond.xmayory') }}"</String></Func>; <br>
                         } <El>elif</El> (x == y) { <br>
-                            <Tab/> <Func name="print"><String>"x es igual que y!"</String></Func>; <br>
+                            <Tab/> <Func name="print"><String>"{{ $t('docs.cond.xigualy') }}</String></Func>; <br>
                         } <El>else</El> { <br>
-                            <Tab/> <Func name="print"><String>"x es menor que y!"</String></Func>; <br>
+                            <Tab/> <Func name="print"><String>"{{ $t('docs.cond.xmenory') }}"</String></Func>; <br>
                         } <br>
                     </CodeBox>
                     <p class="mt20 lTXTgrey">
-                        Podemos colocar varios elif dentro de una sentencia if. Podemos ver que tenemos un if que evaluará si x es mayor que y, si es verdad entonces ejecutará su código, si no es verdad entonces pasará a la siguiente condición que hemos puesto, si ninguna de las condiciones es verdad entonces ejecutará el contenido del else
+                        {{ $t('docs.cond.elif.result') }}
                     </p>
                 </div>
             </v-flex>
@@ -157,6 +157,9 @@ export default class Base extends Vue {
       icon: "#",
       truncate: 100
     };
+    anchors.add('#if');
+    anchors.add('#else');
+    anchors.add('#elif');
   }
 }
 </script>

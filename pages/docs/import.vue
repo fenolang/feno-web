@@ -15,33 +15,33 @@
                     <v-layout row wrap>
                         <v-flex xs12>
                             <div class="spacing pt20">
-                                <p class="ft35 bold">Importar</p>
+                                <p class="ft35 bold">{{ $t('docs.import.title') }}</p>
                                 <p class="ft13 lTXTgrey">
-                                    Cuando nuestro proyecto va creciendo necesitamos separar funciones, características y demás en distintos scripts y después reutilizarlos dentro de otros archivos.
+                                    {{ $t('docs.import.subtitle') }}
                                 </p>
                             </div>
                         </v-flex>
                         <v-flex xs12>
                             <div class="spacing">
-                                <Title>Cómo importar en Daft</Title>
+                                <Title>{{ $t('docs.import.how.title') }}</Title>
                                 <CodeBox>
-                                    <Key>import</Key> * <El>as</El> Archivo <Key>from</Key> <String>"./script.daft"</String> <br> <br>
-                                    Archivo.<Func name="run"></Func>
+                                    <Key>import</Key> * <El>as</El> {{ $t('docs.import.file') }} <Key>from</Key> <String>"./script.daft"</String> <br> <br>
+                                    {{ $t('docs.import.file') }}.<Func name="run"></Func>
                                 </CodeBox>
                                 <p class="mt20 ft13 lTXTgrey">
-                                    Así estamos importando un archivo completo dentro de otro archivo y como puedes ver podemos acceder a sus funciones
+                                    {{ $t('docs.import.how.subtitle') }}
                                 </p>
                             </div>
                         </v-flex>
                         <v-flex xs12 class="mb30">
                             <div class="spacing">
-                                <Subtitle>Importar funciones concretas</Subtitle>
+                                <Subtitle>{{ $t('docs.import.func.title') }}</Subtitle>
                                 <CodeBox>
                                     <Key>import</Key> { <El>run</El> } <Key>from</Key> <String>"./script.daft"</String> <br> <br>
                                     <Func name="run"></Func>
                                 </CodeBox>
                                 <p class="mt20 ft13 lTXTgrey">
-                                    Como puedes ver estamos importando unicamente la función run() que se encuentra en el archivo "script.daft" y la estamos ejecutando al final
+                                    {{ $t('docs.import.func.subtitle') }}
                                 </p>
                             </div>
                         </v-flex>
