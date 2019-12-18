@@ -92,7 +92,7 @@ export default class DirectoryStructure extends Vue {
         padding-right: 30%;
     }
     .subtitle {
-        background: #99CA3E !important;
+        background: #47B984 !important;
         /*border-bottom: 3px solid #2c2e41 !important;*/
         width: 100px;
         height: 4px;

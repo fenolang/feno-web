@@ -121,10 +121,10 @@ export default class DocInstance extends Vue {
     }
     .txt-line:hover {
         border-bottom: 2px solid !important;
-        border-color: #99CA3E !important;
+        border-color: #47B984 !important;
     }
     .subtitle {
-        background: #99CA3E !important;
+        background: #47B984 !important;
         width: 100px;
         height: 4px;
         border: none;

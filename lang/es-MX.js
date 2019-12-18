@@ -26,7 +26,7 @@ export default {
         Con una sintaxis limpia, hermosa y más funciones, como componentes web, layouts, archivos de meta individuales, almacenamiento global, mejor SEO y mucho más, presentamos a Daft como la mejor opción para tu próximo sitio web &#x1F609; &#x1F49A;`,
     cards: [
       {
-        image: "/lang_banner.png",
+        image: "/code_banner.png",
         title: "Código Más Legible",
         content: `Más fácil, más legible, más fuerte, más explícito, un lenguaje mejor.
               Daft es un lenguaje totalmente preparado para hacerte la vida más fácil,
