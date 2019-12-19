@@ -355,6 +355,9 @@
       <router-link :to="localePath('docs-crystals')">
         <p class="ft13 link mb-1">Crystals</p>
       </router-link>
+      <router-link :to="localePath('docs-config-file')">
+        <p class="ft13 link mb-1">Configuration File</p>
+      </router-link>
     </div>
   </div>
 </template>
