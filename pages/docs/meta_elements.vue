@@ -153,7 +153,7 @@
                                 <p class="ft13 lTXTgrey">
                                     {{ $t('docs.meta.configure.subtitle') }}
                                 </p>
-                                <v-btn outlined class="border-btn">{{ $t('docs.meta.go') }}</v-btn>
+                                <v-btn outlined class="border-btn" :to="localePath('docs-config-file')">{{ $t('docs.meta.go') }}</v-btn>
                             </div>
                         </v-flex>
                         <v-flex xs12>
@@ -253,7 +253,7 @@
                                 <p class="ft13 lTXTgrey" v-html="$t('docs.meta.props.configure_nojs.sub')">
                                 </p>
                                 <br>
-                                <v-btn depressed class="bg3 dk">{{ $t('docs.meta.go') }}</v-btn>
+                                <v-btn depressed class="bg3 dk" :to="localePath('docs-config-file')">{{ $t('docs.meta.go') }}</v-btn>
                                 <Subtitle id="more">{{ $t('docs.meta.props.more.name') }}</Subtitle>
                                 <p class="ft13 lTXTgrey" v-html="$t('docs.meta.props.more.sub')"></p>
                                 <CodeBox>

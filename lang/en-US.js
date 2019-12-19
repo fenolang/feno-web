@@ -121,7 +121,14 @@ export default {
         params: "Params"
       },
       condition: "Conditionals",
-      import: "Import files"
+      import: "Import files",
+      export: {
+        name: "Export",
+        normal: "Normal",
+        def: "Default"
+      },
+      config: "Config file",
+      img_func: "Img function"
     },
     what: {
       sub: `Daft is a language that allows you to develop web pages in a much faster and more effective way.`,
@@ -783,6 +790,63 @@ export default {
         title: "Import specific functions",
         subtitle: 'As you can see we are only importing the run () function found in the file "script.daft" and we are executing it at the end'
       }
+    },
+    export: {
+      title: "Export",
+      subtitle: "Exporting in Daft is the same way you know so much:",
+      hello: "hello",
+      hello2: "hello2",
+      normal: {
+        title: "Normal export"
+      },
+      default: {
+        title: "Default export",
+        subtitle: "Useful when we need to export only one thing",
+        subtitle2: "Now we would have to import the function like this:"
+      }
+    },
+    crystals: {
+      subtitle: "Crystals are an exclusive feature offered by Daft to improve the interactivity of our code and leave the use of parameters to change the way our code works.",
+      code_change: "Code that changes",
+      func1: "function1",
+      func2: "function2",
+      res: "response",
+      hello: "hello",
+      bye: "goodbye",
+      normal: {
+        title: "As we normally do",
+        subtitle: "Imagine that we want the same code to work differently depends on the situation, for example: We have two functions and both call a third function, the objective is that the third function does different things depends on where it is called, so we do it with parameters:"
+      },
+      with: {
+        title: "With Crystals",
+        subtitle: 'Isn\'t it ...Amazing?! We import the crystals in the first line, in function 1 we send a crystal through the function<span class="bold">Crystals.send(<span class="italic">name of the crystal to be sent</span>)</span> that as the first parameter we send you the name of our crystal and as second the value it will have. <br> <br> In the second function we also send a crystal called "res" and as a value we send the function goodbye(). And in the third function we now only execute the crystal called "res" with the function <span class="bold">Crystals.exec("<span class="italic">name of the crystal to execute</span>")</span> and THAT\'S ALL!'
+      },
+      need: {
+        title: "Do I really need Crystals?",
+        subtitle: 'Personally, as a programmer, I often need my code to work in different ways according to the situation that arises and thus reuse my scripts as well as when we want to react to different situations we would have to send more types of parameters and therefore more unnecessary use of the Elif in our conditionals. That was the reason to create "Crystals": A way of telling our code how to act WITHOUT using parameters :))',
+        alert: 'Alert! The Crystals currently only work within the same file, they still do not work with external functions that matter BUT we are working on that;)'
+      }
+    },
+    config: {
+      title: "Configuration File",
+      subtitle: 'Every Daft project has a configuration file called: <span class="bold">daft.config.js</span> and is the configuration file that Daft takes for your project',
+      layout: "Default template:",
+      type: "Set the type of project:",
+      dist: "This will be the folder where your project will be transpiled",
+      styles: "This will be the folder for your styles, default: /styles",
+      scripts: "This will be the folder for your scripts, default: /scripts",
+      nojs: "Default Noscript:",
+      content: "Content..."
+    },
+    img: {
+      title: "Img Function",
+      subtitle: 'The img function is used to import images that are in the "/images" directory',
+      use: "Use",
+      myimg: "my_image",
+      img: "image",
+      class: "myclass",
+      params: "Params",
+      after: "Now you know a better and cleaner way to call your images with Daft;)"
     }
   },
 }

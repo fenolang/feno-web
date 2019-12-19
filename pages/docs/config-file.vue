@@ -15,28 +15,27 @@
                     <v-layout row wrap>
                         <v-flex xs12>
                             <div class="spacing pt20">
-                                <p class="ft35 bold">Archivo de Configuración</p>
-                                <p class="ft13 lTXTgrey">
-                                    Todo proyecto de Daft tiene un archivo de configuración llamado: <span class="bold">daft.config.js</span> y es el archivo encargado de la configuración que Daft toma para tu proyecto
+                                <p class="ft35 bold">{{ $t('docs.config.title') }}</p>
+                                <p class="ft13 lTXTgrey" v-html="$t('docs.config.subtitle')">
                                 </p>
                             </div>
                         </v-flex>
                         <v-flex xs12 class="mb30">
                             <div class="spacing">
-                                <Subtitle>Plantilla por defecto:</Subtitle>
+                                <Subtitle>{{ $t('docs.config.layout') }}</Subtitle>
                                 <CodeBox>
                                     <Key>module.exports</Key> { <br>
-                                        <Tab/> <Comment>// Establece el tipo de proyecto: ["app","web"]</Comment> <br>
+                                        <Tab/> <Comment>// {{ $t('docs.config.type') }} ["app","web"]</Comment> <br>
                                         <Tab/> <El>mode</El>: <String>"web"</String>, <br> <br>
-                                        <Tab/> <Comment>// Este será el folder donde se transpilará tu proyecto</Comment> <br>
+                                        <Tab/> <Comment>// {{ $t('docs.config.dist') }}</Comment> <br>
                                         <Tab/> <El>outDir</El>: <String>"/dist"</String>, <br> <br>
-                                        <Tab/> <Comment>// Este será el folder para tus estilos, default: /styles</Comment> <br>
+                                        <Tab/> <Comment>// {{ $t('docs.config.styles') }}</Comment> <br>
                                         <Tab/> <El>stylesDir</El>: <String>"/styles"</String>, <br> <br>
-                                        <Tab/> <Comment>// Este será el folder para tus scripts, default: /scripts</Comment> <br>
+                                        <Tab/> <Comment>// {{ $t('docs.config.scripts') }}</Comment> <br>
                                         <Tab/> <El>scriptsDir:</El> <String>"/scripts"</String>, <br> <br>
-                                        <Tab/> <Comment>// Noscript por defecto:</Comment> <br>
+                                        <Tab/> <Comment>// {{ $t('docs.config.nojs') }}</Comment> <br>
                                         <Tab/> <El>Noscript</El>: { <br>
-                                            <Tab/><Tab/> <Comment>// Contenido...</Comment> <br>
+                                            <Tab/><Tab/> <Comment>// {{ $t('docs.config.content') }}</Comment> <br>
                                         <Tab/>} <br>
                                     }
                                 </CodeBox>

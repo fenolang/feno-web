@@ -15,32 +15,32 @@
                     <v-layout row wrap>
                         <v-flex xs12>
                             <div class="spacing pt20">
-                                <p class="ft35 bold">Función Img()</p>
+                                <p class="ft35 bold">{{ $t('docs.img.title') }}</p>
                                 <p class="ft13 lTXTgrey">
-                                    La función img nos sirve para importar imágenes que se encuentran en el directorio "/images" 
+                                    {{ $t('docs.img.subtitle') }}
                                 </p>
                             </div>
                         </v-flex>
                         <v-flex xs12>
                             <div class="spacing">
-                                <Subtitle>Uso</Subtitle>
+                                <Subtitle>{{ $t('docs.img.use') }}</Subtitle>
                                 <CodeBox>
-                                    <Func name="img"><String>"mi_imagen.png"</String></Func>
+                                    <Func name="img"><String>"{{ $t('docs.img.myimg') }}.png"</String></Func>
                                 </CodeBox>
                             </div>
                         </v-flex>
                         <v-flex xs12>
                             <div class="spacing">
-                                <Subtitle>Parámetros</Subtitle>
+                                <Subtitle>{{ $t('docs.img.params') }}</Subtitle>
                                 <CodeBox>
-                                    <Func name="img"><String>"mi_imagen.png"</String></Func>.<Func><Attr>id</Attr>=<String>"imagen"</String> <Attr>class</Attr>=<String>"miclase"</String></Func>
+                                    <Func name="img"><String>"{{ $t('docs.img.myimg') }}.png"</String></Func>.<Func><Attr>id</Attr>=<String>"{{ $t('docs.img.img') }}"</String> <Attr>class</Attr>=<String>"{{ $t('docs.img.class') }}"</String></Func>
                                 </CodeBox>
                             </div>
                         </v-flex>
                         <v-flex xs12>
                             <div class="spacing">
                                 <p class="ft15 lTXTgrey">
-                                    Ahora conoces una mejor y más limpia forma de llamar a tus imágenes con Daft ;)
+                                    {{ $t('docs.img.after') }}
                                 </p>
                             </div>
                         </v-flex>

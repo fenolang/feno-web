@@ -238,7 +238,7 @@
         </p>
       </router-link>
       <router-link :to="localePath('docs-img')">
-        <p class="ft13 link mb-1">Función Img</p>
+        <p class="ft13 link mb-1">{{ $t('docs.menu.img_func') }}</p>
       </router-link>
       <router-link :to="localePath('docs-variables')">
         <p class="ft13 link mb-1">Variables</p>
@@ -343,23 +343,23 @@
         <p class="ft13 link mb-1">{{ $t('docs.menu.import') }}</p>
       </router-link>
       <router-link :to="localePath('docs-export')">
-        <p class="ft13 link mb-1">Export</p>
+        <p class="ft13 link mb-1">{{ $t('docs.menu.export.name') }}</p>
       </router-link>
       <router-link :to="localePath('docs-export')+'#normal'" v-if="onExport">
         <p class="ft13 link mb-1">
-          <Tab />Normal export
+          <Tab />{{ $t('docs.menu.export.normal') }}
         </p>
       </router-link>
       <router-link :to="localePath('docs-export')+'#default'" v-if="onExport">
         <p class="ft13 link mb-1">
-          <Tab />Default export
+          <Tab />{{ $t('docs.menu.export.def') }}
         </p>
       </router-link>
       <router-link :to="localePath('docs-crystals')">
         <p class="ft13 link mb-1">Crystals</p>
       </router-link>
       <router-link :to="localePath('docs-config-file')">
-        <p class="ft13 link mb-1">Configuration File</p>
+        <p class="ft13 link mb-1">{{ $t('docs.menu.config') }}</p>
       </router-link>
     </div>
   </div>

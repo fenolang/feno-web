@@ -15,54 +15,54 @@
           <v-layout row wrap>
             <v-flex xs12>
               <div class="spacing pt20">
-                <p class="ft35 bold">Exportar</p>
-                <p class="ft13 lTXTgrey">Exportar en Daft es de la misma forma que tanto conoces :</p>
+                <p class="ft35 bold">{{ $t('docs.export.title') }}</p>
+                <p class="ft13 lTXTgrey">{{ $t('docs.export.subtitle') }}</p>
               </div>
             </v-flex>
             <v-flex xs12>
               <div class="spacing">
-                <Subtitle>Exportar normalmente</Subtitle>
+                <Subtitle id="normal">{{ $t('docs.export.normal.title') }}</Subtitle>
                 <CodeBox>
                   <Key>export</Key>
-                  <El>function</El>
-                  <Func name="hola"></Func>{
+                  <El>func</El>
+                  <Func :name="$t('docs.export.hello')"></Func>{
                   <br />
                   <br />}
                 </CodeBox>
                 <CodeBox class="mt20">
-                  <El>function</El>
-                  <Func name="hola"></Func>{
+                  <El>func</El>
+                  <Func :name="$t('docs.export.hello')"></Func>{
                   <br />
                   <br />}
                   <br />
-                  <El>function</El>
-                  <Func name="hola2"></Func>{
+                  <El>func</El>
+                  <Func :name="$t('docs.export.hello2')"></Func>{
                   <br />
                   <br />}
                   <br />
                   <br />
                   <Key>export</Key>{
-                  <El>hola</El>,
-                  <El>hola2</El>}
+                  <El>{{ $t('docs.export.hello') }}</El>,
+                  <El>{{ $t('docs.export.hello2') }}</El>}
                 </CodeBox>
               </div>
             </v-flex>
             <v-flex xs12 class="mb30">
               <div class="spacing">
-                <Subtitle>Exportar por defecto</Subtitle>
-                <p class="ft13 lTXTgrey">Útil cuando necesitamos exportar una sola cosa</p>
+                <Subtitle id="default">{{ $t('docs.export.default.title') }}</Subtitle>
+                <p class="ft13 lTXTgrey">{{ $t('docs.export.default.subtitle') }}</p>
                 <CodeBox>
                   <Key>export</Key>
                   <El>default</El>
-                  <El>function</El>
-                  <Func name="hola"></Func>{
+                  <El>func</El>
+                  <Func :name="$t('docs.export.hello')"></Func>{
                   <br />
                   <br />}
                 </CodeBox>
-                <p class="mt20 ft13 lTXTgrey">Ahora tendríamos que importar la función así:</p>
+                <p class="mt20 ft13 lTXTgrey">{{ $t('docs.export.default.subtitle2') }}</p>
                 <CodeBox>
                   <Key>import</Key>
-                  <El>hola</El>
+                  <El>{{ $t('docs.export.hello') }}</El>
                   <Key>from</Key>
                   <String>"./script.daft"</String>;
                 </CodeBox>

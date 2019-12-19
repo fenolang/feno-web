@@ -125,7 +125,14 @@ export default {
         params: "Parámetros"
       },
       condition: "Condicionales",
-      import: "Importar archivos"
+      import: "Importar archivos",
+      export: {
+        name: "Exportar archivos",
+        normal: "Normal",
+        def: "Por Defecto"
+      },
+      config: "Archivo de configuración",
+      img_func: "Función Img"
     },
     what: {
       sub: `Daft es un lenguaje que trabaja sobre un marco de trabajo que te permite desarrollar páginas web de una manera mucho más rápida y efectiva.`,
@@ -790,6 +797,63 @@ export default {
         title: "Importar funciones concretas",
         subtitle: 'Como puedes ver estamos importando unicamente la función run() que se encuentra en el archivo "script.daft" y la estamos ejecutando al final'
       }
+    },
+    export: {
+      title: "Exportar",
+      subtitle: "Exportar en Daft es de la misma forma que tanto conoces:",
+      hello: "hola",
+      hello2: "hola2",
+      normal: {
+        title: "Exportar normalmente"
+      },
+      default: {
+        title: "Exportar por defecto",
+        subtitle: "Útil cuando necesitamos exportar una sola cosa",
+        subtitle2: "Ahora tendríamos que importar la función así:"
+      }
+    },
+    crystals: {
+      subtitle: "Los Cristales son una funcionalidad exclusiva que ofrece Daft para mejorar la interactividad de nuestro código y abandonar el uso de los parámetros para cambiar la forma en la que nuestro código funciona.",
+      code_change: "Código que cambia",
+      func1: "funcion1",
+      func2: "funcion2",
+      res: "respuesta",
+      hello: "saludar",
+      bye: "despedirse",
+      normal: {
+        title: "Como normalmente lo hacemos",
+        subtitle: "Imaginemos que queremos que el mismo código funcione de distinta manera depende la situación, por ejemplo: Tenemos dos funciones y las dos llaman a una tercera función, el objetivo es que la tercera función haga distintas cosas depende de dónde sea llamada, así lo hacemos con parámetros:"
+      },
+      with: {
+        title: "Con Cristales",
+        subtitle: 'Acaso no es... ¡¿Increíble?! Importamos los cristales en la primera línea, en la función 1 mandamos un cristal a través de la función <span class="bold">Crystals.send(<span class="italic">nombre del cristal que se va a mandar</span>)</span> que como primer parámetro le mandamos el nombre de nuestro cristal y como segundo el valor que tendrá. <br> <br> En la segunda función también mandamos un cristal llamado "res" y como valor le mandamos la función despedirse().Y en la tercera función ahora sólo ejecutamos el cristal llamado "res" con la función<span class= "bold" > Crystals.exec("<span class="italic">nombre del cristal a ejecutar</span>")</span> y ¡LISTO!'
+      },
+      need: {
+        title: "¿Realmente necesito los cristales?",
+        subtitle: 'Personalmente como programador muchas veces necesito que mi código funcione de distintas maneras de acuerdo a la situación que se presente y así reutilizar mis scripts además de que cuando queremos reaccionar ante diversas situaciones tendríamos que mandar más tipos de parametros y por lo tanto más uso innecesario del elif en nuestras condicionales. Ese fue el motivo para crear "Crystals": Una manera de decirle a nuestro código cómo actuar SIN usar parámetros :))',
+        alert: '¡Alerta! Los Cristales actualmente sólo funcionan dentro de un mismo archivo, aún no funcionan con funciones externas que importas PERO éstamos trabajando en eso ;)'
+      }
+    },
+    config: {
+      title: "Archivo de Configuración",
+      subtitle: 'Todo proyecto de Daft tiene un archivo de configuración llamado: <span class="bold">daft.config.js</span> y es el archivo encargado de la configuración que Daft toma para tu proyecto',
+      layout: "Plantilla por defecto:",
+      type: "Establece el tipo de proyecto:",
+      dist: "Este será el folder donde se transpilará tu proyecto",
+      styles: "Este será el folder para tus estilos, default: /styles",
+      scripts: "Este será el folder para tus scripts, default: /scripts",
+      nojs: "Noscript por defecto:",
+      content: "Contenido..."
+    },
+    img: {
+      title: "Función Img()",
+      subtitle: 'La función img nos sirve para importar imágenes que se encuentran en el directorio "/images" ',
+      use: "Uso",
+      myimg: "mi_imagen",
+      img: "imagen",
+      class: "miclase",
+      params: "Parámetros",
+      after: "Ahora conoces una mejor y más limpia forma de llamar a tus imágenes con Daft ;)"
     }
   },
 }
