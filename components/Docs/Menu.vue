@@ -237,6 +237,9 @@
           <Tab />Val
         </p>
       </router-link>
+      <router-link :to="localePath('docs-img')">
+        <p class="ft13 link mb-1">Función Img</p>
+      </router-link>
       <router-link :to="localePath('docs-variables')">
         <p class="ft13 link mb-1">Variables</p>
       </router-link>
