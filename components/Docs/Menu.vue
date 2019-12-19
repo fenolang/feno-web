@@ -339,6 +339,22 @@
       <router-link :to="localePath('docs-import')">
         <p class="ft13 link mb-1">{{ $t('docs.menu.import') }}</p>
       </router-link>
+      <router-link :to="localePath('docs-export')">
+        <p class="ft13 link mb-1">Export</p>
+      </router-link>
+      <router-link :to="localePath('docs-export')+'#normal'" v-if="onExport">
+        <p class="ft13 link mb-1">
+          <Tab />Normal export
+        </p>
+      </router-link>
+      <router-link :to="localePath('docs-export')+'#default'" v-if="onExport">
+        <p class="ft13 link mb-1">
+          <Tab />Default export
+        </p>
+      </router-link>
+      <router-link :to="localePath('docs-crystals')">
+        <p class="ft13 link mb-1">Crystals</p>
+      </router-link>
     </div>
   </div>
 </template>
@@ -365,6 +381,7 @@ export default class Menu extends Vue {
   onFunctions: boolean = false;
   onTyping: boolean = false;
   onConditionals: boolean = false;
+  onExport: boolean = false;
 
   created() {
     let path: string = this.$route.path;
@@ -395,6 +412,8 @@ export default class Menu extends Vue {
       this.onTyping = true;
     } else if (path.indexOf("conditionals") != -1) {
       this.onConditionals = true;
+    } else if (path.indexOf("export") != -1) {
+      this.onExport = true;
     }
   }
 }
