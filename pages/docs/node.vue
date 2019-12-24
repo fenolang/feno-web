@@ -16,7 +16,7 @@
                         <v-flex xs12>
                             <div class="spacing pt20">
                                 <v-img src="/node_banner.png" contain class="center-this"></v-img>
-                                <p class="ft35 bold">Daft + NodeJS</p>
+                                <p class="ft35 bold">Gentpy + NodeJS</p>
                                 <p class="ft15 lTXTgrey center-txt mb-1">
                                     Actualmente estamos trabajando en lograr una comunicación cómoda y fascinante entre estas dos tecnologías.
                                 </p>
@@ -25,7 +25,7 @@
                         <v-flex xs12>
                             <div class="spacing center-txt">
                                 <p class="ft15 lTXTgrey">
-                                    Actualmente Daft es un lenguaje puramente para el frontend pero si logramos una comunicación estable con NodeJS podríamos llegar a ver un Daft que sea capaz de trabajar en el servidor y realizar aplicaciones completas
+                                    Actualmente Gentpy es un lenguaje puramente para el frontend pero si logramos una comunicación estable con NodeJS podríamos llegar a ver un Gentpy que sea capaz de trabajar en el servidor y realizar aplicaciones completas
                                 </p>
                             </div>
                         </v-flex>
@@ -85,7 +85,7 @@ export default class Node extends Vue {
             { id: 0, classes: "border-btn", outlined: true, text: this.$t('btns.about'), route: "about" },
             { id: 1, classes: "bg3 shadows dk", text: this.$t('btns.docs'), route: "docs" },
             { id: 2, classes: "border-btn", outlined: true, text: this.$t('btns.examples') },
-            { id: 3, classes: "border-btn", outlined: true, text: "FAQ" }
+            { id: 3, classes: "border-btn", outlined: true, text: "FAQ", route: "faq" }
         ]);
         anchors.options = {
             placement: 'left',

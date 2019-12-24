@@ -28,7 +28,7 @@
                   class="ft13 lTXTgrey"
                 >{{ $t('docs.cond.if.subtitle') }}</p>
                 <CodeBox>
-                  <Attr>new</Attr> <Func name="Daft"></Func>{ <br />
+                  <Attr>new</Attr> <Func name="Gentpy"></Func>{ <br />
                     <Tab /> <El>def</El> {{ $t('docs.cond.age') }} = <Attr>17</Attr>; <br />
                     <Tab /> <El>if</El> ({{ $t('docs.cond.age') }} &lt;= <Attr>17</Attr>) { <br />
                         <Tab /><Tab /> <Func name="print"><String>"{{ $t('docs.cond.menor') }}"</String></Func> <br>
@@ -47,7 +47,7 @@
                         {{ $t('docs.cond.else.subtitle') }}
                     </p>
                     <CodeBox>
-                        <Attr>new</Attr> <Func name="Daft"></Func>{ <br />
+                        <Attr>new</Attr> <Func name="Gentpy"></Func>{ <br />
                             <Tab /> <El>def</El> {{ $t('docs.cond.age') }} = <Attr>17</Attr>; <br />
                             <Tab /> <El>if</El> ({{ $t('docs.cond.age') }} &lt;= <Attr>17</Attr>) { <br />
                                 <Tab /><Tab /> <Func name="print"><String>"{{ $t('docs.cond.menor') }}"</String></Func> <br>
@@ -150,7 +150,7 @@ export default class Base extends Vue {
         outlined: true,
         text: this.$t("btns.examples")
       },
-      { id: 3, classes: "border-btn", outlined: true, text: "FAQ" }
+      { id: 3, classes: "border-btn", outlined: true, text: "FAQ", route: "faq" }
     ]);
     anchors.options = {
       placement: "left",

@@ -83,31 +83,31 @@
           {{ $t('docs.menu.meta.functions') }}
         </p>
       </router-link>
-      <router-link :to="localePath('docs-daft_class')">
-        <p class="ft13 link mb-1">{{ $t('docs.menu.daft_class.name') }}</p>
+      <router-link :to="localePath('docs-gentpy_class')">
+        <p class="ft13 link mb-1">{{ $t('docs.menu.gentpy_class.name') }}</p>
       </router-link>
-      <router-link :to="localePath('docs-daft_class')+'#starting'" v-if="onDaftClass">
+      <router-link :to="localePath('docs-gentpy_class')+'#starting'" v-if="onGentpyClass">
         <p class="ft13 link mb-1">
           <Tab />
-          {{ $t('docs.menu.daft_class.start') }}
+          {{ $t('docs.menu.gentpy_class.start') }}
         </p>
       </router-link>
-      <router-link :to="localePath('docs-daft_class')+'#hello-world'" v-if="onDaftClass">
+      <router-link :to="localePath('docs-gentpy_class')+'#hello-world'" v-if="onGentpyClass">
         <p class="ft13 link mb-1">
           <Tab />
-          {{ $t('docs.menu.daft_class.hw') }}
+          {{ $t('docs.menu.gentpy_class.hw') }}
         </p>
       </router-link>
-      <router-link :to="localePath('docs-daft_class')+'#better-hw'" v-if="onDaftClass">
+      <router-link :to="localePath('docs-gentpy_class')+'#better-hw'" v-if="onGentpyClass">
         <p class="ft13 link mb-1">
           <Tab />
-          {{ $t('docs.menu.daft_class.better_hw') }}
+          {{ $t('docs.menu.gentpy_class.better_hw') }}
         </p>
       </router-link>
-      <router-link :to="localePath('docs-daft_class')+'#print-and-msg'" v-if="onDaftClass">
+      <router-link :to="localePath('docs-gentpy_class')+'#print-and-msg'" v-if="onGentpyClass">
         <p class="ft13 link mb-1">
           <Tab />
-          {{ $t('docs.menu.daft_class.functions') }}
+          {{ $t('docs.menu.gentpy_class.functions') }}
         </p>
       </router-link>
       <router-link :to="localePath('docs-meta_single_files')">
@@ -361,6 +361,9 @@
       <router-link :to="localePath('docs-config-file')">
         <p class="ft13 link mb-1">{{ $t('docs.menu.config') }}</p>
       </router-link>
+      <router-link :to="localePath('docs-node')">
+        <p class="ft13 link mb-1">Gentpy with Node</p>
+      </router-link>
     </div>
   </div>
 </template>
@@ -378,7 +381,7 @@ export default class Menu extends Vue {
   onInstallation: boolean = false;
   onDirectoryStructure: boolean = false;
   onMeta: boolean = false;
-  onDaftClass: boolean = false;
+  onGentpyClass: boolean = false;
   onMsf: boolean = false;
   onLayouts: boolean = false;
   onAttr: boolean = false;
@@ -400,8 +403,8 @@ export default class Menu extends Vue {
       this.onDirectoryStructure = true;
     } else if (path.indexOf("meta_elements") != -1) {
       this.onMeta = true;
-    } else if (path.indexOf("daft_class") != -1) {
-      this.onDaftClass = true;
+    } else if (path.indexOf("gentpy_class") != -1) {
+      this.onGentpyClass = true;
     } else if (path.indexOf("meta_single_files") != -1) {
       this.onMsf = true;
     } else if (path.indexOf("layouts") != -1) {

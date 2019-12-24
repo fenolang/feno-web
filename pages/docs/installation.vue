@@ -28,7 +28,7 @@
                                     ({{ $t('docs.install.cli.sub_2') }} <a href="https://nodejs.org/en/download/" target="_blank">NodeJS</a>)
                                 </p>
                                 <div class="h50 bg-dk space-code">
-                                    <p class="dk line">$ npm i -g <span class="ft-green line">daft-cli</span></p>
+                                    <p class="dk line">$ npm i -g <span class="ft-green line">gentpy-cli</span></p>
                                 </div>
                             </div>
                         </v-flex>
@@ -38,7 +38,7 @@
                                 {{ $t('docs.install.cli.create_project') }}
                                 </p>
                                 <div class="h50 bg-dk space-code">
-                                    <p class="dk line">$ daft <span class="ft-green line">create-new-project</span>
+                                    <p class="dk line">$ gentpy <span class="ft-green line">create-new-project</span>
                                     <span class="ft-yellow line">{{ $t('docs.install.cli.project_name') }}</span></p>
                                 </div>
                                 <p class="pt15 ft13 lTXTgrey">
@@ -63,7 +63,7 @@
                                         <li>Bulma</li>
                                         <li>Tailwind</li>
                                     </ul>
-                                    <li class="bold">{{ $t('docs.install.cli.daft_plugins') }}</li>
+                                    <li class="bold">{{ $t('docs.install.cli.gentpy_plugins') }}</li>
                                     <ul>
                                         <li>GFlow</li>
                                         <li>GStyled</li>
@@ -120,7 +120,7 @@
                                     {{ $t('docs.install.scratch.install_graph_nodemon') }}
                                 </p>
                                 <div class="h50 bg-dk space-code mb-3">
-                                    <p class="dk line">$ npm i <span class="ft-green line">daft nodemon</span> -D</p>
+                                    <p class="dk line">$ npm i <span class="ft-green line">gentpy nodemon</span> -D</p>
                                 </div>
                                 <p class="pt15 ft13 lTXTgrey" v-html="$t('docs.install.scratch.create_nodemon_json')">
                                 </p>
@@ -153,11 +153,11 @@
                                 </p>
                                 <div class="h70 bg-dk space-code">
                                     <p class="dk line">
-                                        <span class="ft-purple">const</span> Cactus = <span class="ft-red line">require</span>(<span class="string line">"daft"</span>); <br>
+                                        <span class="ft-purple">const</span> Cactus = <span class="ft-red line">require</span>(<span class="string line">"gentpy"</span>); <br>
                                         Cactus.<span class="ft-blue line">run</span>();
                                     </p>
                                 </div>
-                                <p class="pt15 ft13 lTXTgrey" v-html="$t('docs.install.scratch.create_index_daft')"></p>
+                                <p class="pt15 ft13 lTXTgrey" v-html="$t('docs.install.scratch.create_index_gentpy')"></p>
                                 <div class="h90 bg-dk space-code">
                                     <p class="dk line">
                                         <span class="ft-red line">box:</span> <br>
@@ -221,7 +221,7 @@ export default class Installation extends Vue {
             { id: 0, classes: "border-btn", outlined: true, text: this.$t('btns.about'), route: "about" },
             { id: 1, classes: "bg3 shadows dk", text: this.$t('btns.docs'), route: "docs" },
             { id: 2, classes: "border-btn", outlined: true, text: this.$t('btns.examples') },
-            { id: 3, classes: "border-btn", outlined: true, text: "FAQ" }
+            { id: 3, classes: "border-btn", outlined: true, text: "FAQ", route: "faq" }
         ]);
     }
 }

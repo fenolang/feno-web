@@ -6,7 +6,7 @@ module.exports = {
   ** Headers of the page
   */
   head: {
-    titleTemplate: 'Daft | The programming language for great web development.',
+    titleTemplate: 'Gentpy | The programming language for great web development.',
     title: process.env.npm_package_name || '',
     meta: [
       { charset: 'utf-8' },

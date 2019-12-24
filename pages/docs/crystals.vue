@@ -47,7 +47,7 @@
               <div class="spacing">
                 <Subtitle>{{ $t('docs.crystals.with.title') }}</Subtitle>
                 <CodeBox>
-                    <Key>import</Key> { <El>Crystals</El> } <Key>from</Key> <String>"daft"</String>; <br> <br>
+                    <Key>import</Key> { <El>Crystals</El> } <Key>from</Key> <String>"gentpy"</String>; <br> <br>
                     <El>func</El> <Func :name="$t('docs.crystals.func1')"></Func> { <br />
                     <Tab /> <Attr>Crystals</Attr>.<Func name="send"><String>"res"</String>, <String>"{{ $t('docs.crystals.hello') }}()"</String></Func><br />
                     } <br /> <br />
@@ -150,7 +150,7 @@ export default class Crystals extends Vue {
         outlined: true,
         text: this.$t("btns.examples")
       },
-      { id: 3, classes: "border-btn", outlined: true, text: "FAQ" }
+      { id: 3, classes: "border-btn", outlined: true, text: "FAQ", route: "faq" }
     ]);
     anchors.options = {
       placement: "left",

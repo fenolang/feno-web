@@ -64,7 +64,7 @@
                   <Key>import</Key>
                   <El>{{ $t('docs.export.hello') }}</El>
                   <Key>from</Key>
-                  <String>"./script.daft"</String>;
+                  <String>"./script.gentpy"</String>;
                 </CodeBox>
               </div>
             </v-flex>
@@ -142,7 +142,7 @@ export default class Export extends Vue {
         outlined: true,
         text: this.$t("btns.examples")
       },
-      { id: 3, classes: "border-btn", outlined: true, text: "FAQ" }
+      { id: 3, classes: "border-btn", outlined: true, text: "FAQ", route: "faq" }
     ]);
     anchors.options = {
       placement: "left",

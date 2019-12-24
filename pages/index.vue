@@ -3,7 +3,7 @@
     <v-flex xs12>
       <Banner />
     </v-flex>
-    <v-flex xs12>
+    <v-flex xs12 class="mt20">
       <v-container grid-list-md>
         <v-layout row wrap :justify-center="$vuetify.breakpoint.smAndDown">
           <v-flex xs10 md4>
@@ -59,11 +59,11 @@
         </v-layout>
       </v-container>
     </v-flex>
-    <v-flex xs12 class="mt-2">
+    <v-flex xs12 class="mt30">
       <div class="pt30 center-txt">
         <p class="ft30 bold ft-dk">
           {{ $t('index.what') }}
-          <span class="ft-green">Daft</span>?
+          <span class="ft-green">Gentpy</span>?
         </p>
       </div>
     </v-flex>
@@ -81,7 +81,7 @@
         </v-layout>
       </v-container>
     </v-flex>
-    <v-flex xs12 class="mb-4">
+    <v-flex xs12 class="mt50 mb50">
       <v-container grid-list-lg>
         <v-layout row wrap :justify-center="$vuetify.breakpoint.xsOnly">
           <v-flex xs10 md4 v-for="(item, index) in $t('index.cards')" :key="index">
@@ -96,7 +96,7 @@
         </v-layout>
       </v-container>
     </v-flex>
-    <v-flex xs12 class="mt-4 mb30">
+    <v-flex xs12 class="mt-4 mb50">
       <v-container grid-list-lg>
         <v-layout row wrap :justify-center="$vuetify.breakpoint.xsOnly">
           <v-flex xs10 md6>
@@ -174,7 +174,7 @@ export default class Index extends Vue {
         outlined: true,
         text: this.$t("btns.examples")
       },
-      { id: 3, classes: "border-btn", outlined: true, text: "FAQ" }
+      { id: 3, classes: "border-btn", outlined: true, text: "FAQ", route: "faq" }
     ]);
   }
 }

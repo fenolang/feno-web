@@ -25,7 +25,7 @@
                             <div class="spacing">
                                 <Title>{{ $t('docs.import.how.title') }}</Title>
                                 <CodeBox>
-                                    <Key>import</Key> * <El>as</El> {{ $t('docs.import.file') }} <Key>from</Key> <String>"./script.daft"</String> <br> <br>
+                                    <Key>import</Key> * <El>as</El> {{ $t('docs.import.file') }} <Key>from</Key> <String>"./script.gentpy"</String> <br> <br>
                                     {{ $t('docs.import.file') }}.<Func name="run"></Func>
                                 </CodeBox>
                                 <p class="mt20 ft13 lTXTgrey">
@@ -37,7 +37,7 @@
                             <div class="spacing">
                                 <Subtitle>{{ $t('docs.import.func.title') }}</Subtitle>
                                 <CodeBox>
-                                    <Key>import</Key> { <El>run</El> } <Key>from</Key> <String>"./script.daft"</String> <br> <br>
+                                    <Key>import</Key> { <El>run</El> } <Key>from</Key> <String>"./script.gentpy"</String> <br> <br>
                                     <Func name="run"></Func>
                                 </CodeBox>
                                 <p class="mt20 ft13 lTXTgrey">
@@ -82,7 +82,7 @@ export default class Import extends Vue {
             { id: 0, classes: "border-btn", outlined: true, text: this.$t('btns.about'), route: "about" },
             { id: 1, classes: "bg3 shadows dk", text: this.$t('btns.docs'), route: "docs" },
             { id: 2, classes: "border-btn", outlined: true, text: this.$t('btns.examples') },
-            { id: 3, classes: "border-btn", outlined: true, text: "FAQ" }
+            { id: 3, classes: "border-btn", outlined: true, text: "FAQ", route: "faq" }
         ]);
         anchors.options = {
             placement: 'left',

@@ -31,47 +31,47 @@
                         </ul>
                       </v-flex>
                       <v-flex xs12 class="mt-4">
-                        <p class="ft15 bold">{{ $t('docs.what.why_daft') }}</p>
+                        <p class="ft15 bold">{{ $t('docs.what.why_gentpy') }}</p>
                         <div class="spacing">
                           <p class="ft12 lTXTgrey">
-                            {{ $t('docs.what.why_daft_sub') }}
+                            {{ $t('docs.what.why_gentpy_sub') }}
                           </p>
                           <ul>
-                            <li v-for="(item, index) in $t('docs.what.why_daft_things')" :key="index">
+                            <li v-for="(item, index) in $t('docs.what.why_gentpy_things')" :key="index">
                               {{ item }}
                             </li>
                           </ul>
                         </div>
                       </v-flex>
                       <v-flex xs12 class="mt-4">
-                        <p class="ft15 bold">{{ $t('docs.what.daft_works') }}</p>
+                        <p class="ft15 bold">{{ $t('docs.what.gentpy_works') }}</p>
                         <div class="spacing">
                           <p class="ft12 lTXTgrey">
-                            {{ $t('docs.what.daft_works_2') }}
+                            {{ $t('docs.what.gentpy_works_2') }}
                           </p>
                         </div>
                       </v-flex>
                       <v-flex xs12 class="mt-4">
-                        <p class="ft15 bold">{{ $t('docs.what.daft_and_stack') }}</p>
+                        <p class="ft15 bold">{{ $t('docs.what.gentpy_and_stack') }}</p>
                         <div class="spacing">
                           <p class="ft12 lTXTgrey">
-                            {{ $t('docs.what.daft_and_stack_2') }}
+                            {{ $t('docs.what.gentpy_and_stack_2') }}
                           </p>
                         </div>
                       </v-flex>
                       <v-flex xs12 class="mt-4">
-                        <p class="ft15 bold">{{ $t('docs.what.daft_and_web') }}</p>
+                        <p class="ft15 bold">{{ $t('docs.what.gentpy_and_web') }}</p>
                         <div class="spacing">
                           <p class="ft12 lTXTgrey">
-                            {{ $t('docs.what.daft_and_web_2') }}
+                            {{ $t('docs.what.gentpy_and_web_2') }}
                           </p>
                         </div>
                       </v-flex>
                       <v-flex xs12 class="mt-4 mb-3">
-                        <p class="ft15 bold">{{ $t('docs.what.daft_and_electron') }}</p>
+                        <p class="ft15 bold">{{ $t('docs.what.gentpy_and_electron') }}</p>
                         <div class="spacing">
                           <p class="ft12 lTXTgrey">
-                            {{ $t('docs.what.daft_and_electron_2') }}
+                            {{ $t('docs.what.gentpy_and_electron_2') }}
                           </p>
                         </div>
                       </v-flex>
@@ -103,7 +103,7 @@ export default class DocsIndex extends Vue {
             { id: 0, classes: "border-btn", outlined: true, text: this.$t('btns.about'), route: "about" },
             { id: 1, classes: "bg3 shadows dk", text: this.$t('btns.docs'), route: "docs" },
             { id: 2, classes: "border-btn", outlined: true, text: this.$t('btns.examples') },
-            { id: 3, classes: "border-btn", outlined: true, text: "FAQ" }
+            { id: 3, classes: "border-btn", outlined: true, text: "FAQ", route: "faq" }
         ])
     }
 }

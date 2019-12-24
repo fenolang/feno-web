@@ -28,7 +28,7 @@
                                     {{ $t('docs.class.create.subtitle') }}
                                 </p>
                                 <CodeBox>
-                                    <Attr>new</Attr> <Func name="Daft"></Func> { <br>
+                                    <Attr>new</Attr> <Func name="Gentpy"></Func> { <br>
                                         <Tab/> <El>class</El> <Attr>{{ $t('docs.class.user') }}</Attr> { <br>
                                             <Tab/><Tab/> <El>def</El> <Attr>String</Attr> {{ $t('docs.class.greeting') }}; <br> <br>
                                             <Tab/><Tab/> <Func name="constructor"><Attr>String</Attr> {{ $t('docs.class.msg') }}</Func> { <br>
@@ -53,7 +53,7 @@
                                     {{ $t('docs.class.super.subtitle') }}
                                 </p>
                                 <CodeBox>
-                                    <Attr>new</Attr> <Func name="Daft"></Func> { <br>
+                                    <Attr>new</Attr> <Func name="Gentpy"></Func> { <br>
                                         <Tab/> <El>class</El> <Attr>{{ $t('docs.class.person') }}</Attr> { <br>
                                             <Tab/><Tab/> <El>def</El> <Attr>String</Attr> {{ $t('docs.class.name') }}; <br> <br>
                                             <Tab/><Tab/> <Func name="constructor"><Attr>String</Attr> param</Func> { <br>
@@ -117,7 +117,7 @@ export default class Classes extends Vue {
             { id: 0, classes: "border-btn", outlined: true, text: this.$t('btns.about'), route: "about" },
             { id: 1, classes: "bg3 shadows dk", text: this.$t('btns.docs'), route: "docs" },
             { id: 2, classes: "border-btn", outlined: true, text: this.$t('btns.examples') },
-            { id: 3, classes: "border-btn", outlined: true, text: "FAQ" }
+            { id: 3, classes: "border-btn", outlined: true, text: "FAQ", route: "faq" }
         ]);
         anchors.options = {
             placement: 'left',

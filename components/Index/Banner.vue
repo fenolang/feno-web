@@ -3,9 +3,9 @@
     <v-layout row wrap>
       <v-flex xs12>
         <div class="h350 STwhite pt60 center-txt pl30">
-          <v-img contain height="45" src="/new-logo.png"></v-img>
-          <span class="ft60 bold ft-dk underline">Daft</span>
-          <div class="sub-padding mt15">
+          <v-img contain height="64" src="/logo.png"></v-img>
+          <span class="ft60 bold ft-dk underline">Gentpy</span>
+          <div class="sub-padding mt30">
             <p class="lTXTgrey ft15">{{ $t('banner.subtitle') }}</p>
           </div>
           <v-btn elevation="1" class="bg3 shadoww" dark>

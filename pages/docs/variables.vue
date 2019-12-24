@@ -25,7 +25,7 @@
                                 <Title id="def">{{ $t('docs.variables.def.title') }}</Title>
                                 <p class="ft13 lTXTgrey" v-html="$t('docs.variables.def.subtitle')"></p>
                                 <CodeBox>
-                                    <Attr>new</Attr> <Func name="Daft"></Func> { <br>
+                                    <Attr>new</Attr> <Func name="Gentpy"></Func> { <br>
                                     <Tab/> <El>def</El> x = <Attr>10</Attr>; <br>
                                     <Tab/> <Func name="print">x</Func> <Comment>// {{ $t('docs.variables.result') }} 10</Comment> <br>
                                     <Tab/> <Func name="print">x * <Attr>2</Attr></Func> <Comment>// {{ $t('docs.variables.result') }} 20</Comment> <br>
@@ -43,7 +43,7 @@
                                     {{ $t('docs.variables.const.subtitle') }}
                                 </p>
                                 <CodeBox>
-                                    <Attr>new</Attr> <Func name="Daft"></Func> { <br>
+                                    <Attr>new</Attr> <Func name="Gentpy"></Func> { <br>
                                     <Tab/> <El>const</El> {{ $t('docs.variables.human') }} = { <br>
                                     <Tab/><Tab/> {{ $t('docs.variables.name') }}: <String>"Darlene"</String> <br>
                                     <Tab/><Tab/> {{ $t('docs.variables.age') }}: <Attr>22</Attr> <br>
@@ -101,7 +101,7 @@ export default class Variables extends Vue {
             { id: 0, classes: "border-btn", outlined: true, text: this.$t('btns.about'), route: "about" },
             { id: 1, classes: "bg3 shadows dk", text: this.$t('btns.docs'), route: "docs" },
             { id: 2, classes: "border-btn", outlined: true, text: this.$t('btns.examples') },
-            { id: 3, classes: "border-btn", outlined: true, text: "FAQ" }
+            { id: 3, classes: "border-btn", outlined: true, text: "FAQ", route: "faq" }
         ]);
         anchors.options = {
             placement: 'left',
