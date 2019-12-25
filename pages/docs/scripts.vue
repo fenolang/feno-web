@@ -20,7 +20,7 @@
                                     {{ $t('docs.scripts.subtitle') }}
                                 </p>
                                 <CodeBox>
-                                    <Attr>new</Attr> <Func name="Gentpy"></Func> { <br>
+                                    <Attr>new</Attr> <Func name="Feno"></Func> { <br>
                                         <Tab/> <Func name="print"><String>"{{ $t('docs.scripts.hw') }}"</String></Func>; <br>
                                     }
                                 </CodeBox>
@@ -58,7 +58,7 @@
                             <div class="spacing">
                                 <Title>{{ $t('docs.scripts.examples') }}</Title>
                                 <Subtitle>{{ $t('docs.scripts.pure') }}</Subtitle>
-                                <p class="ft13 lTXTgrey">script.gentpy:</p>
+                                <p class="ft13 lTXTgrey">script.feno:</p>
                                 <CodeBox>
                                     <El>def</El> <Attr>String</Attr> {{ $t('docs.scripts.text') }} = <String>"{{ $t('docs.scripts.hello') }}"</String>; <br>
                                     <Func name="print">{{ $t('docs.scripts.text') }}.<El>length</El></Func>; <Comment>// {{ $t('docs.scripts.result') }} 5</Comment>
@@ -73,13 +73,13 @@
                         <v-flex xs12>
                             <div class="spacing">
                                 <Subtitle>{{ $t('docs.scripts.class') }}</Subtitle>
-                                <p class="ft13 lTXTgrey">script.gentpy:</p>
+                                <p class="ft13 lTXTgrey">script.feno:</p>
                                 <CodeBox>
                                     <Doc>
                                         <Tag>p</Tag>{{ $t('docs.scripts.hw') }}<Tag>/p</Tag>
                                     </Doc>
                                     <br>
-                                    <Attr>new</Attr> <Func name="Gentpy"></Func> { <br>
+                                    <Attr>new</Attr> <Func name="Feno"></Func> { <br>
                                         <Tab/><El>def</El> <Attr>String</Attr> {{ $t('docs.scripts.text') }} = <String>"{{ $t('docs.scripts.hello') }}"</String>; <br>
                                         <Tab/><Func name="print">{{ $t('docs.scripts.text') }}.<El>length</El></Func>; <br>
                                     }
@@ -102,7 +102,7 @@
                         <v-flex xs12 class="mb30">
                             <div class="spacing">
                                 <Subtitle>{{ $t('docs.scripts.without') }}</Subtitle>
-                                <p class="ft13 lTXTgrey">script.gentpy:</p>
+                                <p class="ft13 lTXTgrey">script.feno:</p>
                                 <CodeBox>
                                     <Doc>
                                         <Tag>p</Tag>{{ $t('docs.scripts.hw') }}<Tag>/p</Tag>

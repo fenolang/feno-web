@@ -3,8 +3,8 @@
     <v-layout row wrap>
       <v-flex xs12>
         <div class="h350 STwhite pt60 center-txt pl30">
-          <v-img contain height="64" src="/logo.png"></v-img>
-          <span class="ft60 bold ft-dk underline">Gentpy</span>
+          <v-img contain height="64" src="/logo1.png"></v-img>
+          <span class="ft60 bold wh underline">Feno</span>
           <div class="sub-padding mt30">
             <p class="lTXTgrey ft15">{{ $t('banner.subtitle') }}</p>
           </div>
@@ -16,7 +16,7 @@
             <v-icon class="mr-2">mdi-github-circle</v-icon>Github
           </v-btn>
           <div class="pt20">
-            <v-icon class="ft-green" size="20">mdi-chevron-down</v-icon>
+            <v-icon class="txt-dk" size="20">mdi-chevron-down</v-icon>
           </div>
         </div>
       </v-flex>

@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class="pl20">
-      <p class="ft16 bold ft-green mb-1">{{ $t('docs.menu.intro') }}</p>
+      <p class="ft16 bold txt-dk mb-1">{{ $t('docs.menu.intro') }}</p>
       <router-link :to="localePath('docs')">
         <p class="ft13 link mb-1">{{ $t('docs.menu.what') }}</p>
       </router-link>
@@ -46,7 +46,7 @@
           {{ $t('docs.menu.files') }}
         </p>
       </router-link>
-      <p class="ft16 bold ft-green mt-2 mb-1">Getting Started</p>
+      <p class="ft16 bold txt-dk mt-2 mb-1">Getting Started</p>
       <router-link :to="localePath('docs-doc_instance')">
         <p class="ft13 link mb-1">{{ $t('docs.menu.doc') }}</p>
       </router-link>
@@ -83,31 +83,31 @@
           {{ $t('docs.menu.meta.functions') }}
         </p>
       </router-link>
-      <router-link :to="localePath('docs-gentpy_class')">
-        <p class="ft13 link mb-1">{{ $t('docs.menu.gentpy_class.name') }}</p>
+      <router-link :to="localePath('docs-feno_class')">
+        <p class="ft13 link mb-1">{{ $t('docs.menu.feno_class.name') }}</p>
       </router-link>
-      <router-link :to="localePath('docs-gentpy_class')+'#starting'" v-if="onGentpyClass">
+      <router-link :to="localePath('docs-feno_class')+'#starting'" v-if="onFenoClass">
         <p class="ft13 link mb-1">
           <Tab />
-          {{ $t('docs.menu.gentpy_class.start') }}
+          {{ $t('docs.menu.feno_class.start') }}
         </p>
       </router-link>
-      <router-link :to="localePath('docs-gentpy_class')+'#hello-world'" v-if="onGentpyClass">
+      <router-link :to="localePath('docs-feno_class')+'#hello-world'" v-if="onFenoClass">
         <p class="ft13 link mb-1">
           <Tab />
-          {{ $t('docs.menu.gentpy_class.hw') }}
+          {{ $t('docs.menu.feno_class.hw') }}
         </p>
       </router-link>
-      <router-link :to="localePath('docs-gentpy_class')+'#better-hw'" v-if="onGentpyClass">
+      <router-link :to="localePath('docs-feno_class')+'#better-hw'" v-if="onFenoClass">
         <p class="ft13 link mb-1">
           <Tab />
-          {{ $t('docs.menu.gentpy_class.better_hw') }}
+          {{ $t('docs.menu.feno_class.better_hw') }}
         </p>
       </router-link>
-      <router-link :to="localePath('docs-gentpy_class')+'#print-and-msg'" v-if="onGentpyClass">
+      <router-link :to="localePath('docs-feno_class')+'#print-and-msg'" v-if="onFenoClass">
         <p class="ft13 link mb-1">
           <Tab />
-          {{ $t('docs.menu.gentpy_class.functions') }}
+          {{ $t('docs.menu.feno_class.functions') }}
         </p>
       </router-link>
       <router-link :to="localePath('docs-meta_single_files')">
@@ -362,7 +362,7 @@
         <p class="ft13 link mb-1">{{ $t('docs.menu.config') }}</p>
       </router-link>
       <router-link :to="localePath('docs-node')">
-        <p class="ft13 link mb-1">Gentpy with Node</p>
+        <p class="ft13 link mb-1">Feno with Node</p>
       </router-link>
     </div>
   </div>
@@ -381,7 +381,7 @@ export default class Menu extends Vue {
   onInstallation: boolean = false;
   onDirectoryStructure: boolean = false;
   onMeta: boolean = false;
-  onGentpyClass: boolean = false;
+  onFenoClass: boolean = false;
   onMsf: boolean = false;
   onLayouts: boolean = false;
   onAttr: boolean = false;
@@ -403,8 +403,8 @@ export default class Menu extends Vue {
       this.onDirectoryStructure = true;
     } else if (path.indexOf("meta_elements") != -1) {
       this.onMeta = true;
-    } else if (path.indexOf("gentpy_class") != -1) {
-      this.onGentpyClass = true;
+    } else if (path.indexOf("feno_class") != -1) {
+      this.onFenoClass = true;
     } else if (path.indexOf("meta_single_files") != -1) {
       this.onMsf = true;
     } else if (path.indexOf("layouts") != -1) {

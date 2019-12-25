@@ -260,7 +260,7 @@
                                     <Tag>meta <Attr>name</Attr>=<String>"theme-color"</String> <Attr>content</Attr>=<String>"#0a8cbd"</String></Tag>
                                 </CodeBox>
                                 <p class="mt20 ft13 lTXTgrey">
-                                    {{ $t('docs.meta.props.in_gentpy') }}
+                                    {{ $t('docs.meta.props.in_feno') }}
                                 </p>
                                 <CodeBox>
                                     <String>"theme-color, #0a8cbd"</String>

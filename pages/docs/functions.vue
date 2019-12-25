@@ -28,7 +28,7 @@
                                     {{ $t('docs.func.create.subtitle') }}
                                 </p>
                                 <CodeBox>
-                                    <Attr>new</Attr> <Func name="Gentpy"></Func> { <br>
+                                    <Attr>new</Attr> <Func name="Feno"></Func> { <br>
                                         <Tab/> <El>func</El> <Func :name="$t('docs.func.show')"></Func> { <br>
                                             <Tab/><Tab/> <Func name="msg"><String>"{{ $t('docs.func.hw') }}"</String></Func> <br>
                                         <Tab/>} <br> <br>
@@ -46,7 +46,7 @@
                                     {{ $t('docs.func.params.subtitle') }}
                                 </p>
                                 <CodeBox>
-                                    <Attr>new</Attr> <Func name="Gentpy"></Func> { <br>
+                                    <Attr>new</Attr> <Func name="Feno"></Func> { <br>
                                         <Tab/> <El>func</El> <Func :name="$t('docs.func.show')"><Attr>String</Attr> {{ $t('docs.func.msg2') }}</Func> { <br>
                                             <Tab/><Tab/> <Func name="msg">{{ $t('docs.func.msg2') }}</Func> <br>
                                         <Tab/>} <br> <br>

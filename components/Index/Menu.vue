@@ -1,12 +1,12 @@
 <template>
     <div>
         <v-app-bar fixed flat app class="not" :class="vback">
-            <img height="24" src="/logo.png" class="mr-2">
+            <img height="24" src="/logo1.png" class="mr-2">
             <v-toolbar-title v-if="vtitle" :class="vcolor">
-                <nuxt-link :to="localePath('index')" class="no-decors home-link">Gentpy</nuxt-link> | {{ vtitle }}
+                <nuxt-link :to="localePath('index')" class="no-decors home-link">Feno</nuxt-link> | {{ vtitle }}
             </v-toolbar-title>
             <v-toolbar-title :class="vcolor" v-else>
-                <nuxt-link :to="localePath('index')" class="no-decors home-link">Gentpy</nuxt-link>
+                <nuxt-link :to="localePath('index')" class="no-decors home-link">Feno</nuxt-link>
             </v-toolbar-title>
             <v-spacer></v-spacer>
             <v-btn v-for="(item, index) in vbuttons" :key="index"

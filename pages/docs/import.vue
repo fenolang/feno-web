@@ -25,7 +25,7 @@
                             <div class="spacing">
                                 <Title>{{ $t('docs.import.how.title') }}</Title>
                                 <CodeBox>
-                                    <Key>import</Key> * <El>as</El> {{ $t('docs.import.file') }} <Key>from</Key> <String>"./script.gentpy"</String> <br> <br>
+                                    <Key>import</Key> * <El>as</El> {{ $t('docs.import.file') }} <Key>from</Key> <String>"./script.feno"</String> <br> <br>
                                     {{ $t('docs.import.file') }}.<Func name="run"></Func>
                                 </CodeBox>
                                 <p class="mt20 ft13 lTXTgrey">
@@ -37,7 +37,7 @@
                             <div class="spacing">
                                 <Subtitle>{{ $t('docs.import.func.title') }}</Subtitle>
                                 <CodeBox>
-                                    <Key>import</Key> { <El>run</El> } <Key>from</Key> <String>"./script.gentpy"</String> <br> <br>
+                                    <Key>import</Key> { <El>run</El> } <Key>from</Key> <String>"./script.feno"</String> <br> <br>
                                     <Func name="run"></Func>
                                 </CodeBox>
                                 <p class="mt20 ft13 lTXTgrey">

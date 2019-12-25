@@ -47,7 +47,7 @@
               <div class="spacing">
                 <Subtitle>{{ $t('docs.crystals.with.title') }}</Subtitle>
                 <CodeBox>
-                    <Key>import</Key> { <El>Crystals</El> } <Key>from</Key> <String>"gentpy"</String>; <br> <br>
+                    <Key>import</Key> { <El>Crystals</El> } <Key>from</Key> <String>"feno"</String>; <br> <br>
                     <El>func</El> <Func :name="$t('docs.crystals.func1')"></Func> { <br />
                     <Tab /> <Attr>Crystals</Attr>.<Func name="send"><String>"res"</String>, <String>"{{ $t('docs.crystals.hello') }}()"</String></Func><br />
                     } <br /> <br />

@@ -28,7 +28,7 @@
                                     {{ $t('docs.class.create.subtitle') }}
                                 </p>
                                 <CodeBox>
-                                    <Attr>new</Attr> <Func name="Gentpy"></Func> { <br>
+                                    <Attr>new</Attr> <Func name="Feno"></Func> { <br>
                                         <Tab/> <El>class</El> <Attr>{{ $t('docs.class.user') }}</Attr> { <br>
                                             <Tab/><Tab/> <El>def</El> <Attr>String</Attr> {{ $t('docs.class.greeting') }}; <br> <br>
                                             <Tab/><Tab/> <Func name="constructor"><Attr>String</Attr> {{ $t('docs.class.msg') }}</Func> { <br>
@@ -53,7 +53,7 @@
                                     {{ $t('docs.class.super.subtitle') }}
                                 </p>
                                 <CodeBox>
-                                    <Attr>new</Attr> <Func name="Gentpy"></Func> { <br>
+                                    <Attr>new</Attr> <Func name="Feno"></Func> { <br>
                                         <Tab/> <El>class</El> <Attr>{{ $t('docs.class.person') }}</Attr> { <br>
                                             <Tab/><Tab/> <El>def</El> <Attr>String</Attr> {{ $t('docs.class.name') }}; <br> <br>
                                             <Tab/><Tab/> <Func name="constructor"><Attr>String</Attr> param</Func> { <br>

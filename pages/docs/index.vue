@@ -31,47 +31,47 @@
                         </ul>
                       </v-flex>
                       <v-flex xs12 class="mt-4">
-                        <p class="ft15 bold">{{ $t('docs.what.why_gentpy') }}</p>
+                        <p class="ft15 bold">{{ $t('docs.what.why_feno') }}</p>
                         <div class="spacing">
                           <p class="ft12 lTXTgrey">
-                            {{ $t('docs.what.why_gentpy_sub') }}
+                            {{ $t('docs.what.why_feno_sub') }}
                           </p>
                           <ul>
-                            <li v-for="(item, index) in $t('docs.what.why_gentpy_things')" :key="index">
+                            <li v-for="(item, index) in $t('docs.what.why_feno_things')" :key="index">
                               {{ item }}
                             </li>
                           </ul>
                         </div>
                       </v-flex>
                       <v-flex xs12 class="mt-4">
-                        <p class="ft15 bold">{{ $t('docs.what.gentpy_works') }}</p>
+                        <p class="ft15 bold">{{ $t('docs.what.feno_works') }}</p>
                         <div class="spacing">
                           <p class="ft12 lTXTgrey">
-                            {{ $t('docs.what.gentpy_works_2') }}
+                            {{ $t('docs.what.feno_works_2') }}
                           </p>
                         </div>
                       </v-flex>
                       <v-flex xs12 class="mt-4">
-                        <p class="ft15 bold">{{ $t('docs.what.gentpy_and_stack') }}</p>
+                        <p class="ft15 bold">{{ $t('docs.what.feno_and_stack') }}</p>
                         <div class="spacing">
                           <p class="ft12 lTXTgrey">
-                            {{ $t('docs.what.gentpy_and_stack_2') }}
+                            {{ $t('docs.what.feno_and_stack_2') }}
                           </p>
                         </div>
                       </v-flex>
                       <v-flex xs12 class="mt-4">
-                        <p class="ft15 bold">{{ $t('docs.what.gentpy_and_web') }}</p>
+                        <p class="ft15 bold">{{ $t('docs.what.feno_and_web') }}</p>
                         <div class="spacing">
                           <p class="ft12 lTXTgrey">
-                            {{ $t('docs.what.gentpy_and_web_2') }}
+                            {{ $t('docs.what.feno_and_web_2') }}
                           </p>
                         </div>
                       </v-flex>
                       <v-flex xs12 class="mt-4 mb-3">
-                        <p class="ft15 bold">{{ $t('docs.what.gentpy_and_electron') }}</p>
+                        <p class="ft15 bold">{{ $t('docs.what.feno_and_electron') }}</p>
                         <div class="spacing">
                           <p class="ft12 lTXTgrey">
-                            {{ $t('docs.what.gentpy_and_electron_2') }}
+                            {{ $t('docs.what.feno_and_electron_2') }}
                           </p>
                         </div>
                       </v-flex>

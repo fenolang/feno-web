@@ -64,7 +64,7 @@
                   <Key>import</Key>
                   <El>{{ $t('docs.export.hello') }}</El>
                   <Key>from</Key>
-                  <String>"./script.gentpy"</String>;
+                  <String>"./script.feno"</String>;
                 </CodeBox>
               </div>
             </v-flex>

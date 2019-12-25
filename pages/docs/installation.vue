@@ -23,12 +23,12 @@
                         </v-flex>
                         <v-flex xs12 id="cli">
                             <div class="spacing">
-                                <p class="ft25 ft-green">{{ $t('docs.install.cli.title') }}</p>
+                                <p class="ft25 ft">{{ $t('docs.install.cli.title') }}</p>
                                 <p class="ft13 lTXTgrey">{{ $t('docs.install.cli.sub') }} <span class="ft-red">NPM</span>
                                     ({{ $t('docs.install.cli.sub_2') }} <a href="https://nodejs.org/en/download/" target="_blank">NodeJS</a>)
                                 </p>
                                 <div class="h50 bg-dk space-code">
-                                    <p class="dk line">$ npm i -g <span class="ft-green line">gentpy-cli</span></p>
+                                    <p class="dk line">$ npm i -g <span class="ft line">feno-cli</span></p>
                                 </div>
                             </div>
                         </v-flex>
@@ -38,7 +38,7 @@
                                 {{ $t('docs.install.cli.create_project') }}
                                 </p>
                                 <div class="h50 bg-dk space-code">
-                                    <p class="dk line">$ gentpy <span class="ft-green line">create-new-project</span>
+                                    <p class="dk line">$ feno <span class="ft line">create-new-project</span>
                                     <span class="ft-yellow line">{{ $t('docs.install.cli.project_name') }}</span></p>
                                 </div>
                                 <p class="pt15 ft13 lTXTgrey">
@@ -63,7 +63,7 @@
                                         <li>Bulma</li>
                                         <li>Tailwind</li>
                                     </ul>
-                                    <li class="bold">{{ $t('docs.install.cli.gentpy_plugins') }}</li>
+                                    <li class="bold">{{ $t('docs.install.cli.feno_plugins') }}</li>
                                     <ul>
                                         <li>GFlow</li>
                                         <li>GStyled</li>
@@ -84,13 +84,13 @@
                                 </div>
                                 <p class="pt15 ft15 lTXTgrey">
                                     {{ $t('docs.install.cli.final') }}
-                                    <a href="http://localhost:8080" class="ft-green" target="_blank">http://localhost:8080</a>!
+                                    <a href="http://localhost:8080" class="ft" target="_blank">http://localhost:8080</a>!
                                 </p>
                             </div>
                         </v-flex>
                         <v-flex xs12 id="scratch">
                             <div class="spacing">
-                                <p class="ft25 ft-green">{{ $t('docs.install.scratch.title') }}</p>
+                                <p class="ft25 ft">{{ $t('docs.install.scratch.title') }}</p>
                                 <p class="ft13 lTXTgrey">
                                     {{ $t('docs.install.scratch.sub') }}
                                 </p>
@@ -120,7 +120,7 @@
                                     {{ $t('docs.install.scratch.install_graph_nodemon') }}
                                 </p>
                                 <div class="h50 bg-dk space-code mb-3">
-                                    <p class="dk line">$ npm i <span class="ft-green line">gentpy nodemon</span> -D</p>
+                                    <p class="dk line">$ npm i <span class="ft line">feno nodemon</span> -D</p>
                                 </div>
                                 <p class="pt15 ft13 lTXTgrey" v-html="$t('docs.install.scratch.create_nodemon_json')">
                                 </p>
@@ -153,11 +153,11 @@
                                 </p>
                                 <div class="h70 bg-dk space-code">
                                     <p class="dk line">
-                                        <span class="ft-purple">const</span> Cactus = <span class="ft-red line">require</span>(<span class="string line">"gentpy"</span>); <br>
+                                        <span class="ft-purple">const</span> Cactus = <span class="ft-red line">require</span>(<span class="string line">"feno"</span>); <br>
                                         Cactus.<span class="ft-blue line">run</span>();
                                     </p>
                                 </div>
-                                <p class="pt15 ft13 lTXTgrey" v-html="$t('docs.install.scratch.create_index_gentpy')"></p>
+                                <p class="pt15 ft13 lTXTgrey" v-html="$t('docs.install.scratch.create_index_feno')"></p>
                                 <div class="h90 bg-dk space-code">
                                     <p class="dk line">
                                         <span class="ft-red line">box:</span> <br>
@@ -173,11 +173,11 @@
                                 </div>
                                 <p class="pt15 ft15 lTXTgrey">
                                     {{ $t('docs.install.scratch.running_project') }}
-                                    <a href="http://localhost:8080" class="ft-green" target="_blank">http://localhost:8080</a>
+                                    <a href="http://localhost:8080" class="ft" target="_blank">http://localhost:8080</a>
                                 </p>
                                 <p class="ft15 lTXTgrey">
                                     {{ $t('docs.install.scratch.continue_docs') }}
-                                    <router-link to="/docs/directory-structure" class="ft-green">
+                                    <router-link to="/docs/directory-structure" class="ft">
                                         {{ $t('docs.menu.directory_structure') }}
                                     </router-link>
                                 </p>

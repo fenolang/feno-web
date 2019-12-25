@@ -9,52 +9,38 @@
           <v-flex xs10 md4>
             <p class="ft15 bold">
               Define your
-              <span class="ft-green">components</span>
+              <span class="txt-dk">components</span>
             </p>
-            <EditorBox>
-              <El>doc:</El>{
-              <br />&nbsp;&nbsp;&nbsp;
-              <Tag>h1</Tag>This is my component
-              <Tag>/h1</Tag>
-              <br />&nbsp;&nbsp;&nbsp;
-              <Tag>
-                p
-                <Attr>class</Attr>=
-                <String>"myclass"</String>
-              </Tag>Hello Again
-              <Tag>/p</Tag>
-              <br />}
-            </EditorBox>
+            <CodeBox>
+              <Doc>
+                <Tag>h1</Tag>This is my component<Tag>/h1</Tag> <br>
+                <Tab/> <Tag>p <Attr>class</Attr>=<String>"myclass"</String></Tag>Hello Again<Tag>/p</Tag>
+              </Doc>
+            </CodeBox>
           </v-flex>
           <v-flex xs10 md4>
             <p class="ft15 bold">
               Define
-              <span class="ft-green">docs</span> and call your components
+              <span class="txt-dk">docs</span> and call your components
             </p>
-            <EditorBox>
-              <El>doc:</El>{
-              <br />&nbsp;&nbsp;&nbsp;
-              <Tag>h1</Tag>My Main Page
-              <Tag>/h1</Tag>
-              <br />&nbsp;&nbsp;&nbsp;&nbsp;
-              <El>@call(</El>MyComponent
-              <El>)</El>
-              <br />}
-            </EditorBox>
+            <CodeBox>
+              <Doc>
+                <Tag>h1</Tag>My Main Page<Tag>/h1</Tag> <br>
+                <Tab/> <El>@call(</El>MyComponent<El>)</El>
+              </Doc>
+            </CodeBox>
           </v-flex>
           <v-flex xs10 md4>
             <p class="ft15 bold">
               Define your
-              <span class="ft-green">meta in single-files</span>
+              <span class="txt-dk">meta in single-files</span>
             </p>
-            <EditorBox>
-              <El>meta:</El>[
-              <br />&nbsp;&nbsp;&nbsp;
-              <String>"author, YahirGNz"</String>,
-              <br />&nbsp;&nbsp;&nbsp;
-              <String>"description, This is my description"</String>
-              <br />]
-            </EditorBox>
+            <CodeBox>
+              <El>meta:</El> [ <br />
+              <Tab/> <String>"author, YahirGNz"</String>, <br />
+              <Tab/> <String>"description, This is my description"</String> <br />
+              ]
+            </CodeBox>
           </v-flex>
         </v-layout>
       </v-container>
@@ -63,7 +49,7 @@
       <div class="pt30 center-txt">
         <p class="ft30 bold ft-dk">
           {{ $t('index.what') }}
-          <span class="ft-green">Gentpy</span>?
+          <span class="txt-dk">Feno</span>?
         </p>
       </div>
     </v-flex>
@@ -103,7 +89,7 @@
             <div>
               <p class="ft40 bold ft-dk">{{ $t('index.support.title') }}</p>
               <p>{{ $t('index.support.sub') }}</p>
-              <v-btn class="shadows bg3 dk">{{ $t('btns.support') }}</v-btn>
+              <v-btn class="shadows bg dk">{{ $t('btns.support') }}</v-btn>
             </div>
           </v-flex>
           <v-flex xs10 md6>
@@ -113,13 +99,13 @@
       </v-container>
     </v-flex>
     <v-flex xs12>
-      <div class="h350 bg-dk pt40 pb30 center-txt">
+      <div class="h350 black pt40 pb30 center-txt">
         <p class="ft30 bold dk">{{ $t('suscribe.title') }}</p>
         <p class="dk">{{ $t('suscribe.subtitle') }}</p>
         <div class="bform">
           <v-text-field :label="$t('suscribe.email_label')" color="teal accent-4" dark outlined></v-text-field>
         </div>
-        <v-btn depressed class="bg3 dk bold">{{ $t('suscribe.btn') }}</v-btn>
+        <v-btn depressed class="bg dk bold">{{ $t('suscribe.btn') }}</v-btn>
       </div>
     </v-flex>
   </v-layout>
@@ -130,11 +116,8 @@ import { Vue, Component } from "vue-property-decorator";
 import { Action, namespace } from "vuex-class";
 import Banner from "@/components/Index/Banner.vue";
 // Editor components ->
-import EditorBox from "@/components/code-box.vue";
-import Attr from "@/components/Code/Attr.vue";
-import String from "@/components/Code/String.vue";
-import El from "@/components/Code/El.vue";
-import Tag from "@/components/Code/Tag.vue";
+import { Tag, Tab, El, String, Attr, Comment, Mark, CodeBox } from '@/components/Code/index';
+import { Doc, Head, Dmeta } from '@/components/Code/Instances/index';
 // <- ---- ->
 
 const MenuModule = namespace("menu");
@@ -142,11 +125,8 @@ const MenuModule = namespace("menu");
 @Component({
   components: {
     Banner,
-    EditorBox,
-    Attr,
-    String,
-    Tag,
-    El
+    CodeBox, Tag, Tab, El, String, Mark, Attr,
+    Doc, Head, Dmeta,
   }
 })
 export default class Index extends Vue {

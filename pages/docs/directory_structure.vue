@@ -21,10 +21,9 @@
                                 </p>
                             </div>
                         </v-flex>
-                        <v-flex xs12 id="directories">
+                        <v-flex xs12>
                             <div class="spacing">
-                                <p class="ft25 bold mb-2">{{ $t('docs.menu.directories') }}</p>
-                                <hr class="subtitle">
+                                <Title id="directories">{{ $t('docs.menu.directories') }}</Title>
                                 <div v-for="(item, index) in $t('docs.structure.folders')" :key="index">
                                     <p class="ft20 mb-2" v-html="item.title"></p>
                                     <hr class="mark-this">
@@ -32,10 +31,9 @@
                                 </div>
                             </div>
                         </v-flex>
-                        <v-flex xs12 class="mt-3" id="files">
+                        <v-flex xs12 class="mt-3">
                             <div class="spacing">
-                                <p class="ft25 bold mb-2">{{ $t('docs.menu.files') }}</p>
-                                <hr class="subtitle">
+                                <Subtitle id="files">{{ $t('docs.menu.files') }}</Subtitle>
                                 <div v-for="(item, index) in $t('docs.structure.files')" :key="index">
                                     <p class="ft20 mb-2" v-html="item.title"></p>
                                     <hr class="mark-this">
@@ -54,6 +52,7 @@
 import { Vue, Component } from 'vue-property-decorator';
 import { Action, namespace } from 'vuex-class';
 import Menu from '@/components/Docs/Menu.vue';
+import { Title, Subtitle } from '@/components/Tools/index';
 
 const anchorJS = require('anchor-js');
 const anchors = new anchorJS();
@@ -62,7 +61,8 @@ const MenuModule = namespace('menu');
 
 @Component({
     components: {
-        Menu
+        Menu,
+        Title, Subtitle
     }
 })
 
@@ -90,21 +90,5 @@ export default class DirectoryStructure extends Vue {
 <style>
     .spacing {
         padding-right: 30%;
-    }
-    .subtitle {
-        background: #47B984 !important;
-        /*border-bottom: 3px solid #2c2e41 !important;*/
-        width: 100px;
-        height: 4px;
-        border: none;
-        margin-bottom: 30px;
-    }
-    .mark-this {
-        background: #2c2e41 !important;
-        /*border-bottom: 3px solid #2c2e41 !important;*/
-        width: 60px;
-        height: 3px;
-        border: none;
-        margin-bottom: 30px;
     }
 </style>

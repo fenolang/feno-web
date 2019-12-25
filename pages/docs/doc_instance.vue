@@ -21,8 +21,7 @@
                         </v-flex>
                         <v-flex xs12>
                             <div class="spacing">
-                                <p class="ft25 mb-2">{{ $t('docs.doc.define.title') }}</p>
-                                <hr class="subtitle">
+                                <Title>{{ $t('docs.doc.define.title') }}</Title>
                                 <p class="ft13 lTXTgrey">
                                     {{ $t('docs.doc.define.subtitle') }}
                                 </p>
@@ -42,8 +41,7 @@
                         </v-flex>
                         <v-flex xs12 class="mb-2">
                             <div class="spacing">
-                                <p class="ft20 mb-2">{{ $t('docs.doc.why.title') }}</p>
-                                <hr class="mark-this">
+                                <Subtitle>{{ $t('docs.doc.why.title') }}</Subtitle>
                                 <p class="ft13 lTXTgrey">
                                     {{ $t('docs.doc.why.subtitle') }}
                                 </p>
@@ -59,11 +57,10 @@
                         </v-flex>
                         <v-flex xs12 class="mb-4">
                             <div class="spacing">
-                                <p class="ft20 mb-2">{{ $t('docs.doc.where_head.title') }}</p>
-                                <hr class="mark-this">
+                                <Subtitle>{{ $t('docs.doc.where_head.title') }}</Subtitle>
                                 <p class="ft15 lTXTgrey">
                                     <span v-html="$t('docs.doc.where_head.subtitle')"></span>
-                                    <router-link class="ft-green bold txt-line" to="/" v-html="$t('docs.head.title')"></router-link>
+                                    <router-link class="txt-dk bold txt-line" to="/" v-html="$t('docs.head.title')"></router-link>
                                 </p>
                             </div>
                         </v-flex>
@@ -77,6 +74,7 @@
 <script lang="ts">
 import { Vue, Component } from 'vue-property-decorator';
 import { Action, namespace } from 'vuex-class';
+import { Title, Subtitle } from '@/components/Tools/index';
 import Menu from '@/components/Docs/Menu.vue';
 import codebox from '@/components/code-box.vue';
 import Tag from '@/components/Code/Tag.vue';
@@ -89,7 +87,8 @@ const MenuModule = namespace('menu');
     components: {
         Menu,
         'code-box': codebox,
-        Tag, El, Comment
+        Tag, El, Comment,
+        Title, Subtitle
     }
 })
 
@@ -112,23 +111,9 @@ export default class DocInstance extends Vue {
     .spacing {
         padding-right: 30%;
     }
-    .mark-this {
-        background: #2c2e41 !important;
-        width: 60px;
-        height: 3px;
-        border: none;
-        margin-bottom: 30px;
-    }
     .txt-line:hover {
         border-bottom: 2px solid !important;
-        border-color: #47B984 !important;
-    }
-    .subtitle {
-        background: #47B984 !important;
-        width: 100px;
-        height: 4px;
-        border: none;
-        margin-bottom: 30px;
+        border-color: #000 !important;
     }
     .line {
         font-family: 'Consolas' !important;

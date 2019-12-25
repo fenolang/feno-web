@@ -25,7 +25,7 @@
                                 <Title id="def">{{ $t('docs.variables.def.title') }}</Title>
                                 <p class="ft13 lTXTgrey" v-html="$t('docs.variables.def.subtitle')"></p>
                                 <CodeBox>
-                                    <Attr>new</Attr> <Func name="Gentpy"></Func> { <br>
+                                    <Attr>new</Attr> <Func name="Feno"></Func> { <br>
                                     <Tab/> <El>def</El> x = <Attr>10</Attr>; <br>
                                     <Tab/> <Func name="print">x</Func> <Comment>// {{ $t('docs.variables.result') }} 10</Comment> <br>
                                     <Tab/> <Func name="print">x * <Attr>2</Attr></Func> <Comment>// {{ $t('docs.variables.result') }} 20</Comment> <br>
@@ -43,7 +43,7 @@
                                     {{ $t('docs.variables.const.subtitle') }}
                                 </p>
                                 <CodeBox>
-                                    <Attr>new</Attr> <Func name="Gentpy"></Func> { <br>
+                                    <Attr>new</Attr> <Func name="Feno"></Func> { <br>
                                     <Tab/> <El>const</El> {{ $t('docs.variables.human') }} = { <br>
                                     <Tab/><Tab/> {{ $t('docs.variables.name') }}: <String>"Darlene"</String> <br>
                                     <Tab/><Tab/> {{ $t('docs.variables.age') }}: <Attr>22</Attr> <br>

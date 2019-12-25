@@ -16,7 +16,7 @@ export default class Viewer extends Vue {}
 
 <style scoped>
 .header {
-  background: #47B984 !important;
+  background: #000 !important;
   color: #fff;
   padding: 5px !important;
   border-radius: 2px;

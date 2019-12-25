@@ -6,10 +6,10 @@
       <nuxt />
     </v-content>
     <v-footer padless>
-      <v-card flat tile width="100%" class="center-txt bg-dk pt20 pb20">
+      <v-card flat tile width="100%" class="center-txt black pt20 pb20">
         <span class="dk">
           Copyright &copy; 2019
-          <span class="ft-green bold">YahirGNz</span>
+          <span class="ft ft15 bold">YahirGNz</span>
         </span>
       </v-card>
     </v-footer>
@@ -30,7 +30,7 @@ export default class Default extends Vue {}
 
 <style scoped>
 .line {
-  background: #47B984 !important;
+  background: #000 !important;
   width: 100%;
   height: 3px;
 }

@@ -77,7 +77,7 @@
                             <div class="spacing">
                                 <Subtitle>{{ $t('docs.head.elements.styles.title') }}</Subtitle>
                                 <p class="ft13 lTXTgrey" v-html="$t('docs.head.elements.styles.subtitle')"></p>
-                                <v-btn outlined block class="border-btn mb-4"
+                                <v-btn outlined block class="border mb-4"
                                 v-for="(item, index) in $t('docs.head.elements.styles.btns')" :key="index"
                                 v-html="item.text" :to="localePath(item.route)+item.id"></v-btn>
                             </div>
@@ -86,7 +86,7 @@
                             <div class="spacing">
                                 <Subtitle>Scripts</Subtitle>
                                 <p class="ft13 lTXTgrey" v-html="$t('docs.head.elements.scripts.subtitle')"></p>
-                                <v-btn outlined block class="border-btn mb-4"
+                                <v-btn outlined block class="border mb-4"
                                 v-for="(item, index) in $t('docs.head.elements.scripts.btns')" :key="index"
                                 v-html="item.text" :to="localePath(item.route)+item.id"></v-btn>
                             </div>
@@ -107,9 +107,9 @@
                         </v-flex>
                         <v-flex>
                             <div class="spacing mt20 mb40">
-                                <p class="ft25 ft-dk bold">{{ $t('docs.head.continue.title') }} <span class="ft-green">#meta</span>!</p>
+                                <p class="ft25 ft-dk bold">{{ $t('docs.head.continue.title') }} <span class="txt-dk">#meta</span>!</p>
                                 <p class="ft13 lTXTgrey mb-0">{{ $t('docs.head.continue.subtitle') }}</p> <br>
-                                <v-btn outlined class="border-btn bold" :to="localePath('docs-meta_elements')">{{ $t('docs.head.continue.btn') }}</v-btn>
+                                <v-btn outlined class="border bold" :to="localePath('docs-meta_elements')">{{ $t('docs.head.continue.btn') }}</v-btn>
                             </div>
                         </v-flex>
                     </v-layout>
@@ -155,23 +155,9 @@ export default class HeadInstance extends Vue {
     .spacing {
         padding-right: 30%;
     }
-    .mark-this {
-        background: #2c2e41 !important;
-        width: 60px;
-        height: 3px;
-        border: none;
-        margin-bottom: 30px;
-    }
     .txt-line:hover {
         border-bottom: 2px solid !important;
-        border-color: #47B984 !important;
-    }
-    .subtitle {
-        background: #47B984 !important;
-        width: 100px;
-        height: 4px;
-        border: none;
-        margin-bottom: 30px;
+        border-color: #000 !important;
     }
     .line {
         font-family: 'Consolas' !important;
