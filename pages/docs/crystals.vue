@@ -1,83 +1,68 @@
 <template>
   <div>
     <v-layout row wrap>
-      <v-flex xs3>
-        <v-container grid-list-lg>
-          <v-layout row wrap>
-            <v-flex xs12>
-              <Menu />
-            </v-flex>
-          </v-layout>
-        </v-container>
+      <v-flex xs12>
+        <div class="spacing pt20">
+          <p class="ft35 bold">Crystals</p>
+          <p class="ft13 lTXTgrey">{{ $t('docs.crystals.subtitle') }}</p>
+        </div>
       </v-flex>
-      <v-flex xs9>
-        <v-container grid-list-lg>
-          <v-layout row wrap>
-            <v-flex xs12>
-              <div class="spacing pt20">
-                <p class="ft35 bold">Crystals</p>
-                <p class="ft13 lTXTgrey">{{ $t('docs.crystals.subtitle') }}</p>
-              </div>
-            </v-flex>
-            <v-flex xs12>
-              <div class="spacing">
-                <Title>{{ $t('docs.crystals.code_change') }}</Title>
-                <Subtitle>{{ $t('docs.crystals.normal.title') }}</Subtitle>
-                <p
-                  class="ft13 lTXTgrey"
-                >{{ $t('docs.crystals.normal.subtitle') }}</p>
-                <CodeBox>
-                  <El>func</El> <Func :name="$t('docs.crystals.func1')"></Func> { <br />
-                  <Tab /> <Func :name="$t('docs.crystals.res')"><Attr>1</Attr></Func>; <br />
-                  } <br /> <br />
-                  <El>func</El> <Func :name="$t('docs.crystals.func2')"></Func> { <br>
-                    <Tab/> <Func :name="$t('docs.crystals.res')"><Attr>2</Attr></Func>; <br>
-                  } <br> <br>
-                    <El>func</El> <Func :name="$t('docs.crystals.res')">res</Func> { <br>
-                        <Tab/> <El>if</El> (res == 1) { <br>
-                            <Tab/><Tab/> <Func :name="$t('docs.crystals.hello')"></Func>; <br>
-                        <Tab/>} <El>elif</El> (res == 2) { <br>
-                            <Tab/><Tab/> <Func :name="$t('docs.crystals.bye')"></Func>; <br>
-                        <Tab/>} <br>
-                    }
-                </CodeBox>
-              </div>
-            </v-flex>
-            <v-flex xs12>
-              <div class="spacing">
-                <Subtitle>{{ $t('docs.crystals.with.title') }}</Subtitle>
-                <CodeBox>
-                    <Key>import</Key> { <El>Crystals</El> } <Key>from</Key> <String>"feno"</String>; <br> <br>
-                    <El>func</El> <Func :name="$t('docs.crystals.func1')"></Func> { <br />
-                    <Tab /> <Attr>Crystals</Attr>.<Func name="send"><String>"res"</String>, <String>"{{ $t('docs.crystals.hello') }}()"</String></Func><br />
-                    } <br /> <br />
-                    <El>func</El> <Func :name="$t('docs.crystals.func2')"></Func> { <br>
-                        <Tab/> <Attr>Crystals</Attr>.<Func name="send"><String>"res"</String>, <String>"{{ $t('docs.crystals.bye') }}()"</String></Func> <br>
-                    } <br> <br>
-                    <El>func</El> <Func :name="$t('docs.crystals.res')"></Func> { <br>
-                        <Tab/> <Attr>Crystals</Attr>.<Func name="exec"><String>"res"</String></Func> <br>
-                    }
-                </CodeBox>
-                <p class="mt20 ft13 lTXTgrey" v-html="$t('docs.crystals.with.subtitle')"></p>
-              </div>
-            </v-flex>
-            <v-flex xs12>
-                <div class="spacing">
-                    <Title>{{ $t('docs.crystals.need.title') }}</Title>
-                    <p class="ft15 lTXTgrey">
-                        {{ $t('docs.crystals.need.subtitle') }}
-                    </p>
-                </div>
-            </v-flex>
-            <v-flex xs12 class="mb30">
-                <div class="spacing">
-                    <v-alert type="warning" border="left" outlined>
-                        {{ $t('docs.crystals.need.alert') }}
-                    </v-alert>
-                </div>
-            </v-flex>
-          </v-layout>
-        </v-container>
+      <v-flex xs12>
+        <div class="spacing">
+          <Title>{{ $t('docs.crystals.code_change') }}</Title>
+          <Subtitle>{{ $t('docs.crystals.normal.title') }}</Subtitle>
+          <p
+            class="ft13 lTXTgrey"
+          >{{ $t('docs.crystals.normal.subtitle') }}</p>
+          <CodeBox>
+            <El>func</El> <Func :name="$t('docs.crystals.func1')"></Func> { <br />
+            <Tab /> <Func :name="$t('docs.crystals.res')"><Attr>1</Attr></Func>; <br />
+            } <br /> <br />
+            <El>func</El> <Func :name="$t('docs.crystals.func2')"></Func> { <br>
+              <Tab/> <Func :name="$t('docs.crystals.res')"><Attr>2</Attr></Func>; <br>
+            } <br> <br>
+              <El>func</El> <Func :name="$t('docs.crystals.res')">res</Func> { <br>
+                  <Tab/> <El>if</El> (res == 1) { <br>
+                      <Tab/><Tab/> <Func :name="$t('docs.crystals.hello')"></Func>; <br>
+                  <Tab/>} <El>elif</El> (res == 2) { <br>
+                      <Tab/><Tab/> <Func :name="$t('docs.crystals.bye')"></Func>; <br>
+                  <Tab/>} <br>
+              }
+          </CodeBox>
+        </div>
+      </v-flex>
+      <v-flex xs12>
+        <div class="spacing">
+          <Subtitle>{{ $t('docs.crystals.with.title') }}</Subtitle>
+          <CodeBox>
+              <Key>import</Key> { <El>Crystals</El> } <Key>from</Key> <String>"feno"</String>; <br> <br>
+              <El>func</El> <Func :name="$t('docs.crystals.func1')"></Func> { <br />
+              <Tab /> <Attr>Crystals</Attr>.<Func name="send"><String>"res"</String>, <String>"{{ $t('docs.crystals.hello') }}()"</String></Func><br />
+              } <br /> <br />
+              <El>func</El> <Func :name="$t('docs.crystals.func2')"></Func> { <br>
+                  <Tab/> <Attr>Crystals</Attr>.<Func name="send"><String>"res"</String>, <String>"{{ $t('docs.crystals.bye') }}()"</String></Func> <br>
+              } <br> <br>
+              <El>func</El> <Func :name="$t('docs.crystals.res')"></Func> { <br>
+                  <Tab/> <Attr>Crystals</Attr>.<Func name="exec"><String>"res"</String></Func> <br>
+              }
+          </CodeBox>
+          <p class="mt20 ft13 lTXTgrey" v-html="$t('docs.crystals.with.subtitle')"></p>
+        </div>
+      </v-flex>
+      <v-flex xs12>
+          <div class="spacing">
+              <Title>{{ $t('docs.crystals.need.title') }}</Title>
+              <p class="ft15 lTXTgrey">
+                  {{ $t('docs.crystals.need.subtitle') }}
+              </p>
+          </div>
+      </v-flex>
+      <v-flex xs12 class="mb30">
+          <div class="spacing">
+              <v-alert type="warning" border="left" outlined>
+                  {{ $t('docs.crystals.need.alert') }}
+              </v-alert>
+          </div>
       </v-flex>
     </v-layout>
   </div>
@@ -86,7 +71,6 @@
 <script lang="ts">
 import { Vue, Component } from "vue-property-decorator";
 import { Action, namespace } from "vuex-class";
-import Menu from "@/components/Docs/Menu.vue";
 import { Title, Subtitle } from "@/components/Tools/index";
 import {
   Tag,
@@ -108,8 +92,8 @@ const anchors = new anchorJS();
 const MenuModule = namespace("menu");
 
 @Component({
+  layout: 'doc',
   components: {
-    Menu,
     Title,
     Subtitle,
     CodeBox,

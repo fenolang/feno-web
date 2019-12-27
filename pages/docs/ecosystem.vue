@@ -1,77 +1,62 @@
 <template>
   <div>
     <v-layout row wrap>
-      <v-flex xs3>
-        <v-container grid-list-lg>
-          <v-layout row wrap>
-            <v-flex xs12>
-              <Menu />
-            </v-flex>
-          </v-layout>
-        </v-container>
+      <v-flex xs12>
+        <div class="pt20 spacing">
+          <p class="ft35 bold">{{ $t('docs.menu.ecosystem') }}</p>
+          <p class="ft15 lTXTgrey">
+            {{ $t('docs.eco.sub') }}
+          </p>
+        </div>
       </v-flex>
-      <v-flex xs9>
-        <v-container grid-list-lg>
-          <v-layout row wrap>
-            <v-flex xs12>
-              <div class="pt20 spacing">
-                <p class="ft35 bold">{{ $t('docs.menu.ecosystem') }}</p>
-                <p class="ft15 lTXTgrey">
-                  {{ $t('docs.eco.sub') }}
-                </p>
+      <v-flex xs12>
+        <v-layout row wrap>
+          <v-flex xs3>
+            <v-card outlined class="card">
+              <v-img class="STwhite pt20" height="80">
+                <v-img src="/logo.png" height="40" contain></v-img>
+              </v-img>
+              <div class="pl10 pt5 pr5">
+                <p class="ft15 bold">Cactus Language</p>
               </div>
-            </v-flex>
-            <v-flex xs12>
-              <v-layout row wrap>
-                <v-flex xs3>
-                  <v-card outlined class="card">
-                    <v-img class="STwhite pt20" height="80">
-                      <v-img src="/logo.png" height="40" contain></v-img>
-                    </v-img>
-                    <div class="pl10 pt5 pr5">
-                      <p class="ft15 bold">Cactus Language</p>
-                    </div>
-                  </v-card>
-                </v-flex>
-                <v-flex xs3>
-                  <v-card outlined class="card">
-                    <v-img class="STwhite pt20" height="80">
-                      <v-img src="/gflow.png" height="40" contain></v-img>
-                    </v-img>
-                    <div class="pl10 pt5 pr5">
-                      <p class="ft15 bold">GFlow</p>
-                    </div>
-                  </v-card>
-                </v-flex>
-                <v-flex xs3>
-                  <v-card outlined class="card">
-                    <v-img class="gs-banner" height="80">
-                      <div class="pt25 dk center-txt">
-                        <p class="ft20 bold gs-font">GStyled</p>
-                      </div>
-                    </v-img>
-                    <div class="pt5 pl10 pr5">
-                      <p class="ft15 bold">GStyled</p>
-                    </div>
-                  </v-card>
-                </v-flex>
-              </v-layout>
-            </v-flex>
-            <v-flex xs12 v-for="(item, index) in $t('docs.eco.cards')" :key="index">
-              <div :class="item.class">
-                <p class="ft30">{{ item.title }}</p>
-                <p class="ft13 lTXTgrey">{{ item.content }}</p>
+            </v-card>
+          </v-flex>
+          <v-flex xs3>
+            <v-card outlined class="card">
+              <v-img class="STwhite pt20" height="80">
+                <v-img src="/gflow.png" height="40" contain></v-img>
+              </v-img>
+              <div class="pl10 pt5 pr5">
+                <p class="ft15 bold">GFlow</p>
               </div>
-            </v-flex>
-            <v-flex xs12>
-              <div class="pt10 pb20 spacing">
-                <p class="ft13 lTXTgrey">
-                  {{ $t('docs.eco.last_text') }}
-                </p>
+            </v-card>
+          </v-flex>
+          <v-flex xs3>
+            <v-card outlined class="card">
+              <v-img class="gs-banner" height="80">
+                <div class="pt25 dk center-txt">
+                  <p class="ft20 bold gs-font">GStyled</p>
+                </div>
+              </v-img>
+              <div class="pt5 pl10 pr5">
+                <p class="ft15 bold">GStyled</p>
               </div>
-            </v-flex>
-          </v-layout>
-        </v-container>
+            </v-card>
+          </v-flex>
+        </v-layout>
+      </v-flex>
+      <v-flex xs12 v-for="(item, index) in $t('docs.eco.cards')" :key="index">
+        <div :class="item.class">
+          <p class="ft30">{{ item.title }}</p>
+          <p class="ft13 lTXTgrey">{{ item.content }}</p>
+        </div>
+      </v-flex>
+      <v-flex xs12>
+        <div class="pt10 pb20 spacing">
+          <p class="ft13 lTXTgrey">
+            {{ $t('docs.eco.last_text') }}
+          </p>
+        </div>
       </v-flex>
     </v-layout>
   </div>
@@ -80,14 +65,11 @@
 <script lang="ts">
   import { Vue, Component } from 'vue-property-decorator';
   import { Action, namespace } from 'vuex-class';
-  import Menu from '~/components/Docs/Menu.vue';
 
   const MenuModule = namespace('menu');
 
   @Component({
-    components: {
-      Menu
-    }
+    layout: 'doc'
   })
 
   export default class Ecosystem extends Vue {

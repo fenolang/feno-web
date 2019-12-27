@@ -134,14 +134,15 @@ export default {
       sub: `Feno is a language that allows you to develop web pages in a much faster and more effective way.`,
       what_i_need: "What i need?",
       what_i_need_2: "You don't need much, Feno and its entire ecosystem is based on the following:",
-      why_feno: "Why use Feno and not Html?",
-      why_feno_sub: `When you use Feno you improve your productivity to the fullest by advancing in your project. With Feno you can define the structure and marking of your site with a simpler syntax and more advantages than HTML. Feno provides you with new tools to improve the interaction of your project with CSS styles and finally Feno has a much simpler and more powerful syntax to program EVERYTHING you imagine. When using Feno you have the following benefits:`,
+      why_feno: "Why use Feno?",
+      why_feno_sub: `Using Feno is to improve your productivity to the maximum when developing a website. With Feno you can increase the interactivity of your site to the fullest in addition to slightly modifying the HTML markup to make it more readable and understandable to the first. Feno provides you with new tools to improve the interaction of your project with CSS styles by being able to configure how they are going to work and finally Feno has a much simpler and more powerful syntax to program EVERYTHING you imagine. When using Feno you have the following benefits: `,
       why_feno_things: [
         "Simpler syntax",
         "Cleaner code",
         "Faster development",
         "Most understandable structure",
         "Better scalable projects",
+        "Strong typing",
         "Component Oriented Programming",
         "Definition of Meta in Individual Files",
         "Effective Error Detection",
@@ -153,8 +154,6 @@ export default {
       ],
       feno_works: "Does Feno work everywhere?",
       feno_works_2: `No, Feno is dedicated to work in a specific work environment, it is currently impossible to implement Feno to other work environments with different folders, files, etc. But, it could happen in the future;)`,
-      feno_and_stack: "Can I leave HTML, JS and CSS using Feno?",
-      feno_and_stack_2: `Can you stop using HTML? YES! Can you stop using JavaScript? Yes! Can you stop using CSS? NO! Emmm ... What? Feno serves to do the same thing as HTML in a much better way and with better extra functionalities, it serves to do the same as JavaScript with fewer errors, cleaner and scalable code but its purpose is not to define the design of your site, it does It offers new features that improve the writing of your style sheets but you still have to make use of CSS.`,
       feno_and_web: "Does Feno only serve to develop websites?",
       feno_and_web_2: `Absolutely not, by means of a configuration that you can find in the documentation you can inform Feno that you will develop an application in the style of NodeJS, Feno will stop transpilating to simple JavaScript and will start transpilating to NodeJS.`,
       feno_and_electron: "Can I develop desktop applications with Feno?",
@@ -176,7 +175,7 @@ export default {
         {
           class: "spacing",
           title: "GStyled",
-          content: `GStyled is a framework that provides us with a large number of Feno components already stylized with CSS and JavaScript ready for you to use in addition to implementing specialized functions and new concepts for Feno such as: GSC (Feno Styles Config) that helps us explicitly specify how our style sheets will be communicated, in which .cct files they will work and even add variables and properties to our styles by managing the code cleanliness again and taking your project to the next level.`
+          content: `GStyled is a framework that provides us with a large number of Feno components already stylized with CSS and JavaScript ready for you to use in addition to implementing specialized functions and new concepts for Feno such as: GSC (Feno Styles Config) that helps us explicitly specify how our style sheets will be communicated, in which .feno files they will work and even add variables and properties to our styles by managing the code cleanliness again and taking your project to the next level.`
         }
       ],
       last_text: `All the documentation of all these tools are on this site and you can learn from scratch to control the 3 as a professional ;)`
@@ -226,7 +225,7 @@ export default {
         create_folders: "Then we must create the folders that make up the framework with the following commands:",
         back_to_main_folder: "Once created we must go to the main folder",
         create_index_js: `Now that we are at the root of the project we must create a file called <span class="bold">index.js</span> in it contains:`,
-        create_index_feno: `And now we can create our first page of our project, to start add a file called <span class="bold">index.cct</span> inside the folder <span class="bold">scripts</span> e insert the following into:`,
+        create_index_feno: `And now we can create our first page of our project, to start add a file called <span class="bold">index.feno</span> inside the folder <span class="bold">scripts</span> e insert the following into:`,
         hello_world: "Hello World",
         run_project: "Finally we just have to run the following command to execute our project",
         running_project: "And ready! Your new project with Feno is running in",
@@ -264,7 +263,7 @@ export default {
         },
         {
           title: "Nodemon.json File",
-          desc: `The file called <span class="bold">nodemon.json</span> is the file that is responsible for configuring the nodemon dependency to observe the changes in the <span class="bold">.cct</span> files from Feno, you will never touch it in life ...`
+          desc: `The file called <span class="bold">nodemon.json</span> is the file that is responsible for configuring the nodemon dependency to observe the changes in the <span class="bold">.feno</span> files from Feno, you will never touch it in life ...`
         },
         {
           title: "Package.json File",

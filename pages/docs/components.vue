@@ -1,75 +1,60 @@
 <template>
     <div>
         <v-layout row wrap>
-            <v-flex xs3>
-                <v-container grid-list-lg>
-                    <v-layout row wrap>
-                        <v-flex xs12>
-                            <Menu />
-                        </v-flex>
-                    </v-layout>
-                </v-container>
+            <v-flex xs12>
+                <div class="spacing pt20">
+                    <p class="ft35 bold">{{ $t('docs.compos.title') }}</p>
+                    <p class="ft13 lTXTgrey">
+                        {{ $t('docs.compos.subtitle') }}
+                    </p>
+                </div>
             </v-flex>
-            <v-flex xs9>
-                <v-container grid-list-lg>
-                    <v-layout row wrap>
-                        <v-flex xs12>
-                            <div class="spacing pt20">
-                                <p class="ft35 bold">{{ $t('docs.compos.title') }}</p>
-                                <p class="ft13 lTXTgrey">
-                                    {{ $t('docs.compos.subtitle') }}
-                                </p>
-                            </div>
-                        </v-flex>
-                        <v-flex xs12>
-                            <div class="spacing">
-                                <Title>{{ $t('docs.compos.create.title') }}</Title>
-                                <p class="ft13 lTXTgrey">
-                                    {{ $t('docs.compos.create.subtitle') }}
-                                </p>
-                                <CodeBox>
-                                    <Doc>
-                                        <Tag>button</Tag>{{ $t('docs.compos.btn') }}<Tag>/button</Tag>
-                                    </Doc>
-                                </CodeBox>
-                                <p class="mt20 ft13 lTXTgrey">
-                                    {{ $t('docs.compos.create.go_to') }} <span class="bold">call()</span>
-                                </p>
-                                <CodeBox>
-                                    <Head>
-                                        <Tab/><El>title:</El> <String>"{{ $t('docs.compos.my_page') }}"</String>
-                                    </Head>
-                                    <Doc>
-                                        <Tag>h1</Tag>{{ $t('docs.compos.welcome') }}<Tag>/h1</Tag> <br>
-                                        <Tab/> <Func name="call"><String>"{{ $t('docs.compos.btn_name') }}"</String></Func>
-                                    </Doc>
-                                </CodeBox>
-                                <v-alert class="mt20" type="warning" border="left" outlined>
-                                    {{ $t('docs.compos.create.alert') }}
-                                </v-alert>
-                                <p class="mt20 ft13 lTXTgrey">
-                                    {{ $t('docs.compos.create.res') }}
-                                </p>
-                                <CodeBox>
-                                    <Head>
-                                        <Tab/><El>title:</El> <String>"{{ $t('docs.compos.my_page') }}"</String>
-                                    </Head>
-                                    <Doc>
-                                        <Tag>h1</Tag>{{ $t('docs.compos.welcome') }}<Tag>/h1</Tag> <br>
-                                        <Tab/> <Tag>button</Tag>{{ $t('docs.compos.btn') }}<Tag>/button</Tag>
-                                    </Doc>
-                                </CodeBox>
-                            </div>
-                        </v-flex>
-                        <v-flex xs12 class="mb40">
-                            <div class="spacing">
-                                <p class="ft15 lTXTgrey">
-                                    {{ $t('docs.compos.create.continue') }}
-                                </p>
-                            </div>
-                        </v-flex>
-                    </v-layout>
-                </v-container>
+            <v-flex xs12>
+                <div class="spacing">
+                    <Title>{{ $t('docs.compos.create.title') }}</Title>
+                    <p class="ft13 lTXTgrey">
+                        {{ $t('docs.compos.create.subtitle') }}
+                    </p>
+                    <CodeBox>
+                        <Doc>
+                            <Tag>button</Tag>{{ $t('docs.compos.btn') }}<Tag>/button</Tag>
+                        </Doc>
+                    </CodeBox>
+                    <p class="mt20 ft13 lTXTgrey">
+                        {{ $t('docs.compos.create.go_to') }} <span class="bold">call()</span>
+                    </p>
+                    <CodeBox>
+                        <Head>
+                            <Tab/><El>title:</El> <String>"{{ $t('docs.compos.my_page') }}"</String>
+                        </Head>
+                        <Doc>
+                            <Tag>h1</Tag>{{ $t('docs.compos.welcome') }}<Tag>/h1</Tag> <br>
+                            <Tab/> <Func name="call"><String>"{{ $t('docs.compos.btn_name') }}"</String></Func>
+                        </Doc>
+                    </CodeBox>
+                    <v-alert class="mt20" type="warning" border="left" outlined>
+                        {{ $t('docs.compos.create.alert') }}
+                    </v-alert>
+                    <p class="mt20 ft13 lTXTgrey">
+                        {{ $t('docs.compos.create.res') }}
+                    </p>
+                    <CodeBox>
+                        <Head>
+                            <Tab/><El>title:</El> <String>"{{ $t('docs.compos.my_page') }}"</String>
+                        </Head>
+                        <Doc>
+                            <Tag>h1</Tag>{{ $t('docs.compos.welcome') }}<Tag>/h1</Tag> <br>
+                            <Tab/> <Tag>button</Tag>{{ $t('docs.compos.btn') }}<Tag>/button</Tag>
+                        </Doc>
+                    </CodeBox>
+                </div>
+            </v-flex>
+            <v-flex xs12 class="mb40">
+                <div class="spacing">
+                    <p class="ft15 lTXTgrey">
+                        {{ $t('docs.compos.create.continue') }}
+                    </p>
+                </div>
             </v-flex>
         </v-layout>
     </div>
@@ -78,7 +63,6 @@
 <script lang="ts">
 import { Vue, Component } from 'vue-property-decorator';
 import { Action, namespace } from 'vuex-class';
-import Menu from '@/components/Docs/Menu.vue';
 import { Title, Subtitle } from '@/components/Tools/index';
 import { Tag, Tab, El, String, Attr, Comment, Mark, Func, CodeBox } from '@/components/Code/index';
 import { Doc, Head, Dmeta } from '@/components/Code/Instances/index';
@@ -89,8 +73,8 @@ const anchors = new anchorJS();
 const MenuModule = namespace('menu');
 
 @Component({
+    layout: 'doc',
     components: {
-        Menu,
         Title, Subtitle,
         CodeBox, Tag, Tab, El, String, Mark, Func,
         Doc, Head, Dmeta,

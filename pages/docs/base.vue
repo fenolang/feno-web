@@ -1,28 +1,8 @@
 <template>
     <div>
         <v-layout row wrap>
-            <v-flex xs3>
-                <v-container grid-list-lg>
-                    <v-layout row wrap>
-                        <v-flex xs12>
-                            <Menu />
-                        </v-flex>
-                    </v-layout>
-                </v-container>
-            </v-flex>
-            <v-flex xs9>
-                <v-container grid-list-lg>
-                    <v-layout row wrap>
-                        <v-flex xs12>
-                            <div class="spacing pt20">
-                                <p class="ft35 bold">Base</p>
-                                <p class="ft13 lTXTgrey">
-                                    
-                                </p>
-                            </div>
-                        </v-flex>
-                    </v-layout>
-                </v-container>
+            <v-flex xs12>
+
             </v-flex>
         </v-layout>
     </div>
@@ -31,7 +11,6 @@
 <script lang="ts">
 import { Vue, Component } from 'vue-property-decorator';
 import { Action, namespace } from 'vuex-class';
-import Menu from '@/components/Docs/Menu.vue';
 import { Title, Subtitle } from '@/components/Tools/index';
 import { Tag, Tab, El, String, Attr, Comment, Mark, CodeBox } from '@/components/Code/index';
 import { Doc, Head, Dmeta } from '@/components/Code/Instances/index';
@@ -42,8 +21,8 @@ const anchors = new anchorJS();
 const MenuModule = namespace('menu');
 
 @Component({
+    layout: 'doc',
     components: {
-        Menu,
         Title, Subtitle,
         CodeBox, Tag, Tab, El, String, Mark,
         Doc, Head, Dmeta,

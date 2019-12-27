@@ -139,13 +139,14 @@ export default {
       what_i_need: "¿Qué necesito?",
       what_i_need_2: "No necesitas mucho, Feno y todo su ecosistema está basado en los siguientes:",
       why_feno: "¿Porqué utilizar Feno?",
-      why_feno_sub: `Utilizar Feno es mejorar tu productividad al máximo al desarrollar un sitio web. Con Feno puedes definir la estructura y el marcado de tu sitio con una sintaxis más sencilla y más ventajas que HTML. Feno te proporciona nuevas herramientas para mejorar la interacción de tu proyecto con los estilos CSS y por último Feno cuenta con una sintaxis mucho más sencilla y poderosa para programar TODO lo que imagines. Al utilizar Feno cuentas con: `,
+      why_feno_sub: `Utilizar Feno es mejorar tu productividad al máximo al desarrollar un sitio web. Con Feno puedes aumentar la interactividad de tu sitio al máximo además de modificar un poco el marcado de HTML para hacerlo más legible y comprendible a la primera. Feno te proporciona nuevas herramientas para mejorar la interacción de tu proyecto con los estilos CSS al poder configurar cómo éstos van a trabajar y por último Feno cuenta con una sintaxis mucho más sencilla y poderosa para programar TODO lo que imagines. Al utilizar Feno cuentas con: `,
       why_feno_things: [
         "Sintaxis más sencilla",
         "Código más limpio",
         "Más rapidez",
         "Estructura más entendible",
         "Proyectos mejor escalables",
+        "Tipado fuerte",
         "Programación Orientada a Componentes",
         "Definición de Meta en Archivos individuales",
         "Detección de errores eficaz",
@@ -157,8 +158,6 @@ export default {
       ],
       feno_works: "¿Feno funciona en todos lados?",
       feno_works_2: `No, Feno está dedicadamente desarrollado para trabajar en un entorno de trabajo específico, actualmente es imposible implementar Feno a otros entornos de trabajo con distintas carpetas, archivos, etc. Pero, podría suceder en el futuro ;)`,
-      feno_and_stack: "¿Al usar Feno puedo dejar HTML, JS y CSS?",
-      feno_and_stack_2: `¿Puedes dejar de utilizar HTML? ¡SÍ! ¿Puedes dejar de utilizar JavaScript? ¡Sí! ¿Puedes dejar de utilizar CSS? ¡NO! Emmm... ¿Qué? Feno sirve para hacer lo mismo que HTML de una manera mucho mejor y con mejores funcionalidades extra, sirve para realizar lo mismo que JavaScript con menos errores, código más limpio y escalable pero su propósito no es definir el diseño de tu sitio, sí que te ofrece nuevas funciones que mejoran la escritura de tus hojas de estilo pero aún así tendrás que hacer uso de CSS.`,
       feno_and_web: `¿Feno sólo sirve para desarrollar sitios web?`,
       feno_and_web_2: `Absolutamente no, mediante una configuración que puedes encontrar en la documentación puedes informarle a Feno que desarrollarás una aplicación al estilo de NodeJS, Feno dejará de transpilarse a simple JavaScript y comenzará a transpilarse a NodeJS.`,
       feno_and_electron: `¿Puedo desarrollar aplicaciones de escritorio con Feno?`,
@@ -180,7 +179,7 @@ export default {
         {
           class: "spacing",
           title: "GStyled",
-          content: `GStyled es un framework que nos proporciona una gran cantidad de componentes de Feno ya estilizados con CSS y JavaScript listos para que tu los utilices además de implementar funciones especializadas y conceptos nuevos para Feno como: DSC (Feno Styles Config) que nos ayuda a especificar explícitamente como se comunicarán nuestras hojas de estilos, en qué archivos .cct funcionarán e incluso añadir variables y propiedades a nuestros estilos manejando de nuevo la limpieza del código y llevar tu proyecto al siguiente nivel.`
+          content: `GStyled es un framework que nos proporciona una gran cantidad de componentes de Feno ya estilizados con CSS y JavaScript listos para que tu los utilices además de implementar funciones especializadas y conceptos nuevos para Feno como: DSC (Feno Styles Config) que nos ayuda a especificar explícitamente como se comunicarán nuestras hojas de estilos, en qué archivos .feno funcionarán e incluso añadir variables y propiedades a nuestros estilos manejando de nuevo la limpieza del código y llevar tu proyecto al siguiente nivel.`
         }
       ],
       last_text: `Toda la documentación de todas éstas herramientas están en éste sitio y puedes aprender desde cero a controlar los 3 como un profesional ;)`
@@ -233,7 +232,7 @@ export default {
         create_folders: "Después debemos crear las carpetas que conforman el framework con los siguientes comandos:",
         back_to_main_folder: "Una vez creadas debemos salir a la carpeta principal",
         create_index_js: `Ahora que estamos en la raíz del proyecto debemos crear un archivo llamado <span class="bold">index.js</span> dentro contenga:`,
-        create_index_feno: `Y ahora podemos crear nuestra primera página de nuestro proyecto, para comenzar agrega un archivo llamado <span class="bold">index.cct</span> dentro de la carpeta <span class="bold">scripts</span> e inserta lo siguiente dentro:`,
+        create_index_feno: `Y ahora podemos crear nuestra primera página de nuestro proyecto, para comenzar agrega un archivo llamado <span class="bold">index.feno</span> dentro de la carpeta <span class="bold">scripts</span> e inserta lo siguiente dentro:`,
         hello_world: "Hola Mundo",
         run_project: "Finalmente tan sólo debemos correr el siguiente comando para ejecutar nuestro proyecto",
         running_project: "¡Y listo! Tu nuevo proyecto con Feno está corriendo en",
@@ -271,7 +270,7 @@ export default {
         },
         {
           title: "Archivo nodemon.json",
-          desc: `El archivo llamado <span class="bold">nodemon.json</span> es el archivo que se encarga de configurar la dependencia nodemon para que observe los cambios en los archivos <span class="bold">.cct</span> de Feno, jamás en la vida lo tocarás...`
+          desc: `El archivo llamado <span class="bold">nodemon.json</span> es el archivo que se encarga de configurar la dependencia nodemon para que observe los cambios en los archivos <span class="bold">.feno</span> de Feno, jamás en la vida lo tocarás...`
         },
         {
           title: "Archivo package.json",

@@ -5,9 +5,6 @@
       <router-link :to="localePath('docs')">
         <p class="ft13 link mb-1">{{ $t('docs.menu.what') }}</p>
       </router-link>
-      <router-link :to="localePath('docs-ecosystem')">
-        <p class="ft13 link mb-1">{{ $t('docs.menu.ecosystem') }}</p>
-      </router-link>
       <router-link :to="localePath('docs-lifecycle')">
         <p class="ft13 link mb-1">{{ $t('docs.menu.lifecycle') }}</p>
       </router-link>
@@ -16,7 +13,7 @@
       </router-link>
       <router-link :to="localePath('docs-installation')+'#cli'" v-if="onInstallation">
         <p class="ft13 link mb-1">
-          <Tab />Cactus CLI
+          <Tab />Feno CLI
         </p>
       </router-link>
       <router-link :to="localePath('docs-installation')+'#scratch'" v-if="onInstallation">
@@ -392,37 +389,65 @@ export default class Menu extends Vue {
   onConditionals: boolean = false;
   onExport: boolean = false;
 
-  created() {
+  clear(): void {
+    this.onInstallation = false;
+    this.onDirectoryStructure = false;
+    this.onMeta = false;
+    this.onFenoClass = false;
+    this.onMsf = false;
+    this.onLayouts = false;
+    this.onAttr = false;
+    this.onVariables = false;
+    this.onClasses = false;
+    this.onFunctions = false;
+    this.onTyping = false;
+    this.onConditionals = false;
+    this.onExport = false;
+  }
+
+  beforeUpdate() {
     let path: string = this.$route.path;
-    if (path == "/docs/installation" || path == "/es/docs/installation") {
+    if (path.indexOf('installation') != -1) {
+      this.clear();
       this.onInstallation = true;
-    } else if (
-      path == "/docs/directory_structure" ||
-      path == "/es/docs/directory_structure"
-    ) {
+    } else if (path.indexOf('directory_structure') != -1) {
+      this.clear();
       this.onDirectoryStructure = true;
     } else if (path.indexOf("meta_elements") != -1) {
+      this.clear();
       this.onMeta = true;
     } else if (path.indexOf("feno_class") != -1) {
+      this.clear();
       this.onFenoClass = true;
     } else if (path.indexOf("meta_single_files") != -1) {
+      this.clear();
       this.onMsf = true;
     } else if (path.indexOf("layouts") != -1) {
+      this.clear();
       this.onLayouts = true;
     } else if (path.indexOf("attributes") != -1) {
+      this.clear();
       this.onAttr = true;
     } else if (path.indexOf("variables") != -1) {
+      this.clear();
       this.onVariables = true;
     } else if (path.indexOf("classes") != -1) {
+      this.clear();
       this.onClasses = true;
     } else if (path.indexOf("functions") != -1) {
+      this.clear();
       this.onFunctions = true;
     } else if (path.indexOf("typing") != -1) {
+      this.clear();
       this.onTyping = true;
     } else if (path.indexOf("conditionals") != -1) {
+      this.clear();
       this.onConditionals = true;
     } else if (path.indexOf("export") != -1) {
+      this.clear();
       this.onExport = true;
+    } else {
+      this.clear();
     }
   }
 }
