@@ -2251,15 +2251,15 @@ alert-btn:hover {
 }
 
 .ft13 {
-    font-size: 13px;
+    font-size: 13px !important;
 }
 
 .ft14 {
-    font-size: 14px;
+    font-size: 14px !important;
 }
 
 .ft15 {
-    font-size: 15px;
+    font-size: 15px !important;
 }
 
 .ft16 {

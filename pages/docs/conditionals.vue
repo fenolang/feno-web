@@ -132,7 +132,7 @@ export default class Base extends Vue {
         id: 2,
         classes: "border-btn",
         outlined: true,
-        text: this.$t("btns.examples")
+        text: this.$t("btns.roadmap")
       },
       { id: 3, classes: "border-btn", outlined: true, text: "FAQ", route: "faq" }
     ]);

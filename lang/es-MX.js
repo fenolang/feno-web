@@ -7,11 +7,11 @@ export default {
   btns: {
     about: "Acerca De",
     docs: "Documentación",
-    examples: "Ejemplos",
+    roadmap: "Ruta del proyecto",
     support: "Apoyar"
   },
   banner: {
-    subtitle: "Basic Easy Lovely Language for Awesome people",
+    subtitle: "El lenguaje de programación para el buen desarrollo web",
     btn: "Comenzar"
   },
   suscribe: {

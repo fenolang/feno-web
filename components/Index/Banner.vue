@@ -8,11 +8,11 @@
           <div class="sub-padding mt30">
             <p class="lTXTgrey ft15">{{ $t('banner.subtitle') }}</p>
           </div>
-          <v-btn elevation="1" class="bg3 shadoww" dark>
+          <v-btn elevation="1" class="bg3 shadoww" dark :to="localePath('docs')">
             <v-icon class="mr-2">mdi-rocket</v-icon>
             {{ $t('banner.btn') }}
           </v-btn>
-          <v-btn outlined class="border-btn-dk ft-dk">
+          <v-btn outlined class="border-btn-dk ft-dk" href="https://github.com/fenolang/feno" target="_blank">
             <v-icon class="mr-2">mdi-github-circle</v-icon>Github
           </v-btn>
           <div class="pt20">

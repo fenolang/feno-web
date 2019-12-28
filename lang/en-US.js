@@ -7,7 +7,7 @@ export default {
   btns: {
     about: "About",
     docs: "Docs",
-    examples: "Examples",
+    roadmap: "Roadmap",
     support: "Donate love"
   },
   banner: {

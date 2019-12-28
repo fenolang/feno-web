@@ -44,7 +44,7 @@
             </v-flex>
             <v-flex xs12>
                 <div class="spacing">
-                    <Title>{{ $t('docs.scripts.examples') }}</Title>
+                    <Title>{{ $t('docs.scripts.roadmap') }}</Title>
                     <Subtitle>{{ $t('docs.scripts.pure') }}</Subtitle>
                     <p class="ft13 lTXTgrey">script.feno:</p>
                     <CodeBox>
@@ -145,7 +145,7 @@ export default class Scripts extends Vue {
         this.setButtons([
             { id: 0, classes: "border-btn", outlined: true, text: this.$t('btns.about'), route: "about" },
             { id: 1, classes: "bg3 shadows dk", text: this.$t('btns.docs'), route: "docs" },
-            { id: 2, classes: "border-btn", outlined: true, text: this.$t('btns.examples') },
+            { id: 2, classes: "border-btn", outlined: true, text: this.$t('btns.roadmap'), route: "roadmap" },
             { id: 3, classes: "border-btn", outlined: true, text: "FAQ", route: "faq" }
         ]);
         anchors.options = {
