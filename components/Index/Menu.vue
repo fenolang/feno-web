@@ -9,17 +9,17 @@
                 <nuxt-link :to="localePath('index')" class="no-decors home-link">Feno</nuxt-link>
             </v-toolbar-title>
             <v-spacer></v-spacer>
-            <span v-if="$vuetify.breakpoint.mdAndUp">
+            <div v-if="$vuetify.breakpoint.mdAndUp">
                 <v-btn v-for="(item, index) in vbuttons" :key="index"
                 :color="item.color" :class="item.classes" class="mr-2"
                 :depressed="item.flat" :outlined="item.outlined"
                 :to="localePath(item.route)">{{ item.text }}</v-btn>
-            </span>
-            <span v-if="$vuetify.breakpoint.smAndDown">
+            </div>
+            <div v-else>
                 <v-btn icon class="TXTblack" @click="mobileMenu = true">
                     <v-icon>mdi-menu</v-icon>
                 </v-btn>
-            </span>
+            </div>
         </v-app-bar>
         <v-navigation-drawer app temporary v-model="mobileMenu">
             <v-layout row wrap>
