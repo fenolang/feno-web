@@ -103,4 +103,10 @@ export default class DocInstance extends Vue {
         font-family: 'Consolas' !important;
         font-size: 13px !important;
     }
+    @media (max-width: 1000px) {
+        .spacing {
+            padding-left: 10%;
+            padding-right: 10%;
+        }
+    }
 </style>

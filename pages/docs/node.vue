@@ -24,13 +24,16 @@
                     </p>
                 </div>
             </v-flex>
-            <v-flex xs12>
+            <v-flex xs12 :class="$vuetify.breakpoint.smAndDown ? 'mb30' : ''">
                 <div class="spacing">
-                    <v-btn depressed class="dk bold" color="blue" target="_blank" href="https://www.paypal.me/yahirgnz">
+                    <v-btn depressed class="dk bold" color="light-blue darken-4" target="_blank" href="https://www.paypal.me/yahirgnz"
+                    :block="$vuetify.breakpoint.smAndDown"
+                    :class="$vuetify.breakpoint.smAndDown ? 'mb-3' : ''">
                         <v-icon>mdi-paypal</v-icon>
                         &nbsp;&nbsp;Donar en Paypal
                     </v-btn>
-                    <v-btn depressed class="dk bold" color="orange darken-4" target="_blank" href="https://www.patreon.com/yahirgnz">
+                    <v-btn depressed class="dk bold" color="amber darken-4" target="_blank" href="https://www.patreon.com/yahirgnz"
+                    :block="$vuetify.breakpoint.smAndDown">
                         <v-icon>mdi-patreon</v-icon>
                         &nbsp;&nbsp;Ser patreon
                     </v-btn>

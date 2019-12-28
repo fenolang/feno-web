@@ -62,7 +62,7 @@ export default class Base extends Vue {
         {
             color: "grey",
             icon: 'mdi-rocket',
-            name: 'v0.7s.0 Beta Release <span class="bold">(Hungry)</span>',
+            name: 'v0.7.0 Beta Release <span class="bold">(Hungry)</span>',
             text: `La actualización que lleva por nombre "Hungry" incluirá las funciones y elementos suficientes para terminar con la fase beta.`,
             news: [
                 "Introducción completa de los Cristales",

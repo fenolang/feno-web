@@ -1,50 +1,35 @@
 <template>
     <div>
         <v-layout row wrap>
-            <v-flex xs3>
-                <v-container grid-list-lg>
-                    <v-layout row wrap>
-                        <v-flex xs12>
-                            <Menu />
-                        </v-flex>
-                    </v-layout>
-                </v-container>
+            <v-flex xs12>
+                <div class="spacing pt20">
+                    <p class="ft35 bold">FAQ</p>
+                </div>
             </v-flex>
-            <v-flex xs9>
-                <v-container grid-list-lg>
-                    <v-layout row wrap>
-                        <v-flex xs12>
-                            <div class="spacing pt20">
-                                <p class="ft35 bold">FAQ</p>
-                            </div>
-                        </v-flex>
-                        <v-flex xs12>
-                            <div class="spacing">
-                                <p class="ft20 txt-dk">¿Cuándo saldrá la versión 1.0?</p>
-                                <p class="ft13 lTXTgrey">
-                                    Aún no lo sabemos, quedan muchas cosas por hacer pero lo anunciaremos en nuestro <router-link :to="localePath('roadmap')" class="txt-dk">Roadmap</router-link> y en nuestras redes sociales :)
-                                </p>
-                            </div>
-                        </v-flex>
-                        <v-flex xs12 v-for="(item, index) in ask_group" :key="index">
-                            <v-layout row wrap>
-                                <!-- TÍTULO -->
-                                <v-flex xs12>
-                                    <div class="spacing">
-                                        <Subtitle>{{ item.name }}</Subtitle>
-                                    </div>
-                                </v-flex>
-                                <!-- PREGUNTAS -->
-                                <v-flex xs12 v-for="(ask, index) in item.asks" :key="index">
-                                    <div class="spacing">
-                                        <p class="ft15 txt-dk">{{ ask.name }}</p>
-                                        <p class="ft13 lTXTgrey" v-html="ask.answer"></p>
-                                    </div>
-                                </v-flex>
-                            </v-layout>
-                        </v-flex>
-                    </v-layout>
-                </v-container>
+            <v-flex xs12>
+                <div class="spacing">
+                    <p class="ft20 txt-dk">¿Cuándo saldrá la versión 1.0?</p>
+                    <p class="ft13 lTXTgrey">
+                        Aún no lo sabemos, quedan muchas cosas por hacer pero lo anunciaremos en nuestro <router-link :to="localePath('roadmap')" class="txt-dk">Roadmap</router-link> y en nuestras redes sociales :)
+                    </p>
+                </div>
+            </v-flex>
+            <v-flex xs12 v-for="(item, index) in ask_group" :key="index">
+                <v-layout row wrap>
+                    <!-- TÍTULO -->
+                    <v-flex xs12>
+                        <div class="spacing">
+                            <Subtitle>{{ item.name }}</Subtitle>
+                        </div>
+                    </v-flex>
+                    <!-- PREGUNTAS -->
+                    <v-flex xs12 v-for="(ask, index) in item.asks" :key="index">
+                        <div class="spacing">
+                            <p class="ft15 txt-dk">{{ ask.name }}</p>
+                            <p class="ft13 lTXTgrey" v-html="ask.answer"></p>
+                        </div>
+                    </v-flex>
+                </v-layout>
             </v-flex>
         </v-layout>
     </div>
@@ -53,7 +38,6 @@
 <script lang="ts">
 import { Vue, Component } from 'vue-property-decorator';
 import { Action, namespace } from 'vuex-class';
-import Menu from '@/components/Docs/Menu.vue';
 import { Title, Subtitle } from '@/components/Tools/index';
 import { Tag, Tab, El, String, Attr, Comment, Mark, CodeBox } from '@/components/Code/index';
 import { Doc, Head, Dmeta } from '@/components/Code/Instances/index';
@@ -64,8 +48,8 @@ const anchors = new anchorJS();
 const MenuModule = namespace('menu');
 
 @Component({
+    layout: 'doc',
     components: {
-        Menu,
         Title, Subtitle,
         CodeBox, Tag, Tab, El, String, Mark,
         Doc, Head, Dmeta,

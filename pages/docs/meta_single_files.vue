@@ -46,7 +46,7 @@
                     </p>
                     <CodeBox>
                         <Head>
-                        <Tab/><Attr>title:</Attr> <String>"{{ $t('docs.msf.my_page') }}"</String>
+                        <Tab/><Attr>title:</Attr> <String>"{{ $t('docs.msf.my_web') }}"</String>
                         </Head>
                         <Doc>
                             <Tag>p</Tag>{{ $t('docs.msf.welcome') }}<Tag>/p</Tag>

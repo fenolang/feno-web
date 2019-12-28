@@ -4,12 +4,12 @@
     <v-content class="STwhite">
       <div class="line"></div>
       <v-layout row wrap>
-          <v-flex xs3>
+          <v-flex xs3 v-if="$vuetify.breakpoint.mdAndUp">
             <v-container>
               <DocsMenu/>
             </v-container>
           </v-flex>
-          <v-flex xs9>
+          <v-flex xs12 md9>
               <v-container grid-list-lg>
                   <nuxt />
               </v-container>

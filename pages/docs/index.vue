@@ -10,16 +10,20 @@
               </div>
           </v-flex>
         <v-flex xs12>
-          <p class="ft15 bold">{{ $t('docs.what.what_i_need') }}</p>
-          <p class="ft12 lTXTgrey">{{ $t('docs.what.what_i_need_2') }}</p>
-          <ul>
-            <li>JavaScript</li>
-            <li>HTML</li>
-            <li>CSS</li>
-          </ul>
+          <div class="spacing">
+            <p class="ft15 bold">{{ $t('docs.what.what_i_need') }}</p>
+            <p class="ft12 lTXTgrey">{{ $t('docs.what.what_i_need_2') }}</p>
+            <ul>
+              <li>JavaScript</li>
+              <li>HTML</li>
+              <li>CSS</li>
+            </ul>
+          </div>
         </v-flex>
         <v-flex xs12 class="mt-4">
-          <p class="ft15 bold">{{ $t('docs.what.why_feno') }}</p>
+          <div class="spacing">
+            <p class="ft15 bold">{{ $t('docs.what.why_feno') }}</p>
+          </div>
           <div class="spacing">
             <p class="ft12 lTXTgrey">
               {{ $t('docs.what.why_feno_sub') }}
@@ -32,24 +36,24 @@
           </div>
         </v-flex>
         <v-flex xs12 class="mt-4">
-          <p class="ft15 bold">{{ $t('docs.what.feno_works') }}</p>
           <div class="spacing">
+            <p class="ft15 bold">{{ $t('docs.what.feno_works') }}</p>
             <p class="ft12 lTXTgrey">
               {{ $t('docs.what.feno_works_2') }}
             </p>
           </div>
         </v-flex>
         <v-flex xs12 class="mt-4">
-          <p class="ft15 bold">{{ $t('docs.what.feno_and_web') }}</p>
           <div class="spacing">
+            <p class="ft15 bold">{{ $t('docs.what.feno_and_web') }}</p>
             <p class="ft12 lTXTgrey">
               {{ $t('docs.what.feno_and_web_2') }}
             </p>
           </div>
         </v-flex>
         <v-flex xs12 class="mt-4 mb-3">
-          <p class="ft15 bold">{{ $t('docs.what.feno_and_electron') }}</p>
           <div class="spacing">
+            <p class="ft15 bold">{{ $t('docs.what.feno_and_electron') }}</p>
             <p class="ft12 lTXTgrey">
               {{ $t('docs.what.feno_and_electron_2') }}
             </p>
@@ -90,5 +94,11 @@ export default class DocsIndex extends Vue {
     }
     .spacing {
         padding-right: 30%;
+    }
+    @media (max-width: 1000px) {
+      .spacing {
+        padding-left: 10%;
+        padding-right: 10%;
+      }
     }
 </style>

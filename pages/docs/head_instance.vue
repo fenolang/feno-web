@@ -87,7 +87,7 @@
                         <El>head:</El> { <br>
                         &nbsp;&nbsp;<El>title:</El> <String>"{{ $t('docs.head.elements.meta.title') }}"</String> <br>
                         &nbsp;&nbsp;<El>meta:</El> [ <br>
-                        &nbsp;&nbsp;&nbsp;&nbsp;<String>"description, {{ $t('docs.head.elements.meta.description') }}"</String> <br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;<String>"description, {{ $t('docs.head.elements.meta.desc') }}"</String> <br>
                         &nbsp;&nbsp;] <br>
                         }
                     </code-box>
@@ -138,6 +138,12 @@ export default class HeadInstance extends Vue {
 <style>
     .spacing {
         padding-right: 30%;
+    }
+    @media (max-width: 1000px) {
+        .spacing {
+            padding-left: 10%;
+            padding-right: 10%;
+        }
     }
     .txt-line:hover {
         border-bottom: 2px solid !important;

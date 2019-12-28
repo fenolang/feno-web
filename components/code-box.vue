@@ -33,4 +33,11 @@ export default class CodeBox extends Vue {}
 .spacing {
   padding-right: 30%;
 }
+
+@media (max-width: 1000px) {
+  .spacing {
+    padding-left: 10%;
+    padding-right: 10%;
+  }
+}
 </style>

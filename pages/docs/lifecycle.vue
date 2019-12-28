@@ -12,10 +12,13 @@
             <v-flex xs12 class="mb40">
                 <v-layout row wrap justify-center>
                     <v-flex xs10 md10>
-                        <v-timeline :dense="$vuetify.breakpoint.mdAndDown">
+                        <v-timeline :dense="$vuetify.breakpoint.smAndDown">
                             <v-timeline-item :color="item.color" :small="true" v-for="(item, index) in times" :key="index">
                                 <span slot="opposite" v-html="item.name"></span>
                                 <v-card outlined>
+                                    <v-card-title v-if="$vuetify.breakpoint.smAndDown" class="ft15"
+                                    v-html="item.name">
+                                    </v-card-title>
                                     <v-card-text v-html="item.text"></v-card-text>
                                 </v-card>
                             </v-timeline-item>
@@ -104,5 +107,11 @@ export default class Lifecycle extends Vue {
 <style>
     .spacing {
         padding-right: 30%;
+    }
+    @media (max-width: 1000px) {
+        .spacing {
+            padding-left: 10%;
+            padding-right: 10%;
+        }
     }
 </style>
