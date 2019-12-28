@@ -6,21 +6,21 @@
                     <v-img src="/node_banner.png" contain class="center-this"></v-img>
                     <p class="ft35 bold">Feno + NodeJS</p>
                     <p class="ft15 lTXTgrey center-txt mb-1">
-                        Actualmente estamos trabajando en lograr una comunicación cómoda y fascinante entre estas dos tecnologías.
+                        {{ $t('docs.node.subtitle') }}
                     </p>
                 </div>
             </v-flex>
             <v-flex xs12>
                 <div class="spacing center-txt">
                     <p class="ft15 lTXTgrey">
-                        Actualmente Feno es un lenguaje puramente para el frontend pero si logramos una comunicación estable con NodeJS podríamos llegar a ver un Feno que sea capaz de trabajar en el servidor y realizar aplicaciones completas
+                        {{ $t('docs.node.subtitle2') }}
                     </p>
                 </div>
             </v-flex>
             <v-flex xs12>
                 <div class="spacing center-txt">
                     <p class="ft15 lTXTgrey">
-                        Puedes apoyar el proyecto en Patreon y ser un contribuidor activo del proyecto o también puedes realizar donaciones a mi paypal. Toda ayuda se agradece para continuar con el proyecto, ¡Gracias! :')
+                        {{ $t('docs.node.subtitle3') }}
                     </p>
                 </div>
             </v-flex>
@@ -30,12 +30,12 @@
                     :block="$vuetify.breakpoint.smAndDown"
                     :class="$vuetify.breakpoint.smAndDown ? 'mb-3' : ''">
                         <v-icon>mdi-paypal</v-icon>
-                        &nbsp;&nbsp;Donar en Paypal
+                        &nbsp;&nbsp;{{ $t('docs.node.paypal') }}
                     </v-btn>
                     <v-btn depressed class="dk bold" color="amber darken-4" target="_blank" href="https://www.patreon.com/yahirgnz"
                     :block="$vuetify.breakpoint.smAndDown">
                         <v-icon>mdi-patreon</v-icon>
-                        &nbsp;&nbsp;Ser patreon
+                        &nbsp;&nbsp;{{ $t('docs.node.patreon') }}
                     </v-btn>
                 </div>
             </v-flex>

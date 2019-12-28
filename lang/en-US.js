@@ -22,8 +22,24 @@ export default {
   },
   index: {
     what: "What is",
-    what_content: `Feno is a programming language totally dedicated to good web development, providing several features and increasing the scalability of your projects. Feno is a transpiled language to JavaScript and HTML so that the browser can understand the code.<br><br>
-        With a clean, beautiful syntax and more features such as web components, layouts, meta single files, global storage, better SEO and much more we present Feno as your best choice for your next website &#x1F609; &#x1F49A;`,
+    what_content: `Feno is a programming language totally dedicated to good web development, providing several features and increasing the scalability of your projects. Feno is a transpiled language to JavaScript and HTML so that the browser can understand the code.<br><br> With a clean, beautiful syntax and more features such as web components, layouts, meta single files, global storage, better SEO and much more we present Feno as your best choice for your next website &#x1F609; &#x1F49A;`,
+    code_slots: {
+      op1: {
+        title: "Define your components",
+        this: "This is my component",
+        class: "myclass",
+        hello: "Hello Again"
+      },
+      op2: {
+        title: "Define docs and call your components",
+        main: "My main page",
+        comp: "MyComponent"
+      },
+      op3: {
+        title: "Define your meta in sigle-files",
+        desc: "This is my description"
+      }
+    },
     cards: [
       {
         image: "/code_banner.png",
@@ -846,6 +862,136 @@ export default {
       class: "myclass",
       params: "Params",
       after: "Now you know a better and cleaner way to call your images with Feno;)"
+    },
+    node: {
+      subtitle: "We are currently working on a comfortable and fascinating communication between these two technologies.",
+      subtitle2: "Currently Feno is a purely frontend language but if we achieve a stable communication with NodeJS we could get to see a Feno that is able to work on the server and make complete applications.",
+      subtitle3: "You can support the project in Patreon and be an active contributor to the project or you can also make donations to my paypal. All help is appreciated to continue with the project, Thank you! :')",
+      paypal: "Donate on Paypal",
+      patreon: "Be Patreon"
     }
   },
+  roadmap: {
+    title: "Roadmap",
+    subtitle: "We are always working on improving Feno, improving each functionality and adding many new ones to offer you a much more capable language for your projects. Here we show you the roadmap of our project, from the updates we already launched to the next versions we have planned: (This list can change at any time)",
+    high: "Highlights:",
+    versions: [
+      {
+        color: 'deep-orange',
+        icon: 'mdi-cat',
+        name: 'v1.0 Release <span class="bold">(Felino)</span>',
+        text: `The official 1.0 update of Feno: "Felino" gives rise to the same name of the language, this version will be 100% stable, without errors and with all the necessary functions to give strength and power to your project. We still don't know when the departure date will be but we will announce it everywhere;)`
+      },
+      {
+        color: "grey",
+        icon: 'mdi-rocket',
+        name: 'v0.7.0 Beta Release <span class="bold">(Hungry)</span>',
+        text: `The update called "Hungry" will include the functions and elements sufficient to end the beta phase.`,
+        news: [
+          "Complete introduction of Crystals",
+          "Introduction of Layouts",
+          "And much more..."
+        ]
+      },
+      {
+        color: "indigo",
+        icon: 'mdi-rocket',
+        name: "v0.6.5 Beta Release",
+        text: `Version 0.6.5 is a version planned to improve the stability and functioning of the language.`,
+        news: [
+          "200% speed improvement",
+          "Declaration of components easier",
+          "Props rewritten from scratch",
+          "More complete typing",
+          "Conditionals"
+        ]
+      },
+      {
+        color: "green",
+        icon: "mdi-check-bold",
+        name: "v0.6.0 Beta Release",
+        text: `The first official version of Feno available to everyone. It only includes the basic functions such as: Components, Meta files, Instances, Variables and little else.`
+      }
+    ]
+  },
+  faq: {
+    when_comes: "When will version 1.0 come out?",
+    answer: 'We do not know yet, there are many things to do but we will announce it in our',
+    road: "Roadmap",
+    answer2: 'and in our social networks :)',
+    ask_group: [
+      {
+        name: "JAVASCRIPT",
+        asks: [
+          {
+            name: "Why should I leave JS and use Feno?",
+            answer: 'Feno is made for people who like or are interested in JavaScript BUT they don\'t love it, so Feno is an extension of JS that solves all its errors, offers better functions and improves its capacity ;)'
+          },
+          {
+            name: "Can I use JS libraries with Feno?",
+            answer: 'Yes! Feno maintains perfect compatibility with libraries developed for JavaScript'
+          },
+          {
+            name: "Can Feno work together with JS?",
+            answer: 'Clear! But it\'s not necessary and you shouldn\'t do it anymore'
+          },
+          {
+            name: "I have a giant project in JS, can I easily migrate to Feno?",
+            answer: 'Absolutely! You can migrate incredibly easy since Feno supports JS code, just run your project just as it is with Feno and it will run without any problems. Then in your time you can change the code to achieve a 100% project built with Feno ;).'
+          },
+          {
+            name: "What do you think of TypeScript?",
+            answer: 'We love TypeScript! In fact, the Feno core is built with TypeScript. Now, Feno and TS share certain characteristics and certain objectives BUT each one has a somewhat different central objective, Feno aims to offer the new features of web development (components, layouts, etc.), strong typing and a much easier syntax of Learn and remember as well as introducing new functions never seen before Feno has many functions that TypeScript does not. Why? because both point to something different BUT both have the objective of improving the web'
+          }
+        ]
+      },
+      {
+        name: "USE",
+        asks: [
+          {
+            name: "Does Feno work on the server?",
+            answer: 'Feno\'s goal is not to work on the server but possibly in the future we will consider expanding the language and reaching more fields.'
+          },
+          {
+            name: "Do I need a special editor or IDE to use Feno?",
+            answer: 'No. You can use any editor or environment to program in Feno BUT you do need a special folder structure so that Feno can work perfectly, although in the future this could disappear.'
+          },
+          {
+            name: "Does Feno work in all browsers?",
+            answer: 'No browser can understand the syntax of Feno BUT remember that your code is launched as JavaScript for the browser so we could say yes.'
+          },
+          {
+            name: "Can I develop content for Feno?",
+            answer: 'Clear! You can contact us and we will immediately announce your library or framework on this site, we are currently thinking of developing a tool that helps the community to upload and install packages related to the world of Feno :)'
+          }
+        ]
+      },
+      {
+        name: "SINTAXIS",
+        asks: [
+          {
+            name: "Why does Feno work through instances?",
+            answer: 'We spent a LONG time thinking about the way we wanted the code to be organized in Feno and the most comfortable way was the use of instances (doc, head, etc). So that the code will be divided into several parts and maintain a clean and readable code.'
+          },
+          {
+            name: "Crystals are something new, what do they transpile?",
+            answer: 'The Crystals are transpiled to code with parameters, the objective of The Crystals is that you no longer have to send and receive parameters to change the way your applications act but since browsers do not understand Feno code the crystals are transpiled to code with parameters (as currently performed).'
+          },
+          {
+            name: "Will there be syntax changes in future versions?",
+            answer: 'We always try to improve Feno therefore if we find a better and more comfortable way to write some function we will make it possible BUT no change breaks the stability of your project, we do not like to break the compatibility so abruptly (Angular cof cof ..)'
+          }
+        ]
+      },
+      {
+        name: "OTHER",
+        asks: [
+          {
+            name: "Why \"Feno\"?",
+            answer: 'This project has gone through an incredibly BIG list of names. While thinking about what the final name would be, I realized that in the neighborhood where I reside it is almost impossible to go outside and not see a cat. "Feno" is an abbreviation of "Felino" (Feline in spanish) and the logo is an origami-style cat, Long live the cats and felines!'
+          }
+        ]
+      }
+    ]
+  }
 }

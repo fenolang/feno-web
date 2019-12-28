@@ -22,8 +22,24 @@ export default {
   },
   index: {
     what: "¿Qué es",
-    what_content: `Feno es un lenguaje de programación totalmente dedicado al buen desarrollo web, que proporciona varias funciones y aumenta la escalabilidad de tus proyectos. Feno es un lenguaje transpilado a HTML, CSS y JavaScript para que el navegador pueda entender el código.<br><br>
-        Con una sintaxis limpia, hermosa y más funciones, como componentes web, layouts, archivos de meta individuales, almacenamiento global, mejor SEO y mucho más, presentamos a Feno como la mejor opción para tu próximo sitio web &#x1F609; &#x1F49A;`,
+    what_content: `Feno es un lenguaje de programación totalmente dedicado al buen desarrollo web, que proporciona varias funciones y aumenta la escalabilidad de tus proyectos. Feno es un lenguaje transpilado a HTML, CSS y JavaScript para que el navegador pueda entender el código.<br><br> Con una sintaxis limpia, hermosa y más funciones, como componentes web, layouts, archivos de meta individuales, almacenamiento global, mejor SEO y mucho más, presentamos a Feno como la mejor opción para tu próximo sitio web &#x1F609; &#x1F49A;`,
+    code_slots: {
+      op1: {
+        title: "Define componentes",
+        this: "Este es mi componente",
+        class: "miclase",
+        hello: "Hola de nuevo"
+      },
+      op2: {
+        title: "Define documentos y llama a tus componentes",
+        main: "Mi página principal",
+        comp: "MiComponente"
+      },
+      op3: {
+        title: "Define tu meta en archivos individuales",
+        desc: "Esta es mi descripción"
+      }
+    },
     cards: [
       {
         image: "/code_banner.png",
@@ -853,6 +869,136 @@ export default {
       class: "miclase",
       params: "Parámetros",
       after: "Ahora conoces una mejor y más limpia forma de llamar a tus imágenes con Feno ;)"
+    },
+    node: {
+      subtitle: "Actualmente estamos trabajando en lograr una comunicación cómoda y fascinante entre estas dos tecnologías.",
+      subtitle2: "Actualmente Feno es un lenguaje puramente para el frontend pero si logramos una comunicación estable con NodeJS podríamos llegar a ver un Feno que sea capaz de trabajar en el servidor y realizar aplicaciones completas.",
+      subtitle3: "Puedes apoyar el proyecto en Patreon y ser un contribuidor activo del proyecto o también puedes realizar donaciones a mi paypal. Toda ayuda se agradece para continuar con el proyecto, ¡Gracias! :')",
+      paypal: "Donar en Paypal",
+      patreon: "Ser patreon"
     }
   },
+  roadmap: {
+    title: "Ruta del proyecto",
+    subtitle: "Éstamos siempre trabajando en mejorar Feno, mejorando cada funcionalidad y agregando muchas nuevas para ofrecerte un lenguaje mucho más capaz para tus proyectos. Aquí te mostramos la ruta de nuestro proyecto, desde las actualizaciones que ya lanzamos hasta las próximas versiones que tenemos planeadas: (Ésta lista puede cambiar en cualquier momento)",
+    high: "Destacado:",
+    versions: [
+      {
+        color: 'deep-orange',
+        icon: 'mdi-cat',
+        name: 'v1.0 Release <span class="bold">(Felino)</span>',
+        text: `La actualización 1.0 oficial de Feno: "Felino" da origen a el mismo nombre del lenguaje, esta versión será 100% estable, sin errores y ya con todas las funciones necesarias para brindarle fuerza y poder a tu proyecto. Aún no sabemos cuándo será la fecha de salida pero lo anunciaremos en todos lados ;)`
+      },
+      {
+        color: "grey",
+        icon: 'mdi-rocket',
+        name: 'v0.7.0 Beta Release <span class="bold">(Hungry)</span>',
+        text: `La actualización que lleva por nombre "Hungry" incluirá las funciones y elementos suficientes para terminar con la fase beta.`,
+        news: [
+          "Introducción completa de los Cristales",
+          "Introducción de los Layouts",
+          "Y mucho más..."
+        ]
+      },
+      {
+        color: "indigo",
+        icon: 'mdi-rocket',
+        name: "v0.6.5 Beta Release",
+        text: `La versión 0.6.5 es una versión planeada para mejorar la estabilidad y funcionamiento de el lenguaje.`,
+        news: [
+          "Mejora en la rápidez al 200%",
+          "Declaración de componentes más fácil",
+          "Props re-escritas desde cero",
+          "Tipado más completo",
+          "Condicionales"
+        ]
+      },
+      {
+        color: "green",
+        icon: "mdi-check-bold",
+        name: "v0.6.0 Beta Release",
+        text: `La primera versión oficial de Feno disponible para todos. Sólo incluye las funciones básicas como: Componentes, Meta archivos, Instancias, Variables y poco más.`
+      }
+    ]
+  },
+  faq: {
+    when_comes: "¿Cuándo saldrá la versión 1.0?",
+    answer: 'Aún no lo sabemos, quedan muchas cosas por hacer pero lo anunciaremos en nuestra',
+    road: "Ruta del proyecto",
+    answer2: 'y en nuestras redes sociales :)',
+    ask_group: [
+      {
+        name: "JAVASCRIPT",
+        asks: [
+          {
+            name: "¿Porqué debería dejar JS y usar Feno?",
+            answer: 'Feno está hecho para las personas a las que les gusta o les atrae JavaScript PERO no les encanta, por lo que Feno es una extensión de JS que soluciona todos sus errores, ofrece mejores funciones y mejora la capacidad de este mismo ;)'
+          },
+          {
+            name: "¿Puedo utilizar librerías de JS con Feno?",
+            answer: '¡Sí! Feno mantiene una compatibilidad perfecta con las librerías desarrolladas para JavaScript'
+          },
+          {
+            name: "¿Feno puede trabajar en conjunto a JS?",
+            answer: '¡Claro! Pero no es algo necesario y ya no deberías hacerlo'
+          },
+          {
+            name: "Tengo un proyecto gigante en JS, ¿Puedo migrar fácilmente a Feno?",
+            answer: '¡Absolutamente! Puedes migrar increíblemente fácil ya que Feno admite código JS, tan sólo corre tu proyecto tal como está con Feno y correrá sin ningún problema. Después poco a poco a tu tiempo puedes ir cambiando el código hasta lograr un proyecto 100% construído con Feno ;).'
+          },
+          {
+            name: "¿Qué piensan de TypeScript?",
+            answer: '¡Nos encanta TypeScript! De hecho, el core de Feno está construído con TypeScript. Ahora, Feno y TS comparten ciertas características y ciertos objetivos PERO cada una tiene un objetivo central algo distinto, Feno tiene como objetivo ofrecer las nuevas características de el desarrollo web (componentes, layouts, etc), tipado fuerte y una sintaxis mucho más fácil de aprender y recordar además de introducir nuevas funciones nunca antes vistas. Feno tiene muchisimas funciones que TypeScript no ¿Por qué? porque ambos apuntan a algo distinto PERO ambos tienen el objetivo de mejorar la web'
+          }
+        ]
+      },
+      {
+        name: "USO",
+        asks: [
+          {
+            name: "¿Feno funciona en el servidor?",
+            answer: 'El objetivo de Feno no es trabajar en el servidor pero posiblemente a futuro pensemos expandir el lenguaje y llegar a más campos.'
+          },
+          {
+            name: "¿Necesito un editor o IDE especial para usar Feno?",
+            answer: 'No. Puedes utilizar cualquier editor o entorno para programar en Feno PERO sí que necesitas por ahora una estructura de carpetas especial para que Feno pueda trabajar perfectamente, aunque a futuro ésto podría desaparecer.'
+          },
+          {
+            name: "¿Feno funciona en todos los navegadores?",
+            answer: 'Ningún navegador puede entender la sintaxis de Feno PERO recuerda que tu código se lanza como JavaScript para el navegador así que podríamos decir que sí.'
+          },
+          {
+            name: "¿Puedo desarrollar contenido para Feno?",
+            answer: '¡Claro! Puedes contactarnos e inmediatamente anunciaremos tu librería o framework en este sitio, actualmente estamos pensando en desarrollar una herramienta que ayude a la comunidad a subir e instalar paquetes relacionados con el mundo de Feno :)'
+          }
+        ]
+      },
+      {
+        name: "SINTAXIS",
+        asks: [
+          {
+            name: "¿Porqué Feno funciona a través de instancias?",
+            answer: 'Estuvimos un LARGO tiempo pensando en la manera en la que queríamos que se organizara el código en Feno y la manera más cómoda fue la utilización de instancias (doc, head, etc). De tal manera que el código quedara dividido en varias partes y mantener un código limpio y legible.'
+          },
+          {
+            name: "Los Cristales son algo nuevo, ¿A qué se transpilan?",
+            answer: 'Los Cristales se transpilan a código con parámetros, el objetivo de Los Cristales es que ya no tengas que mandar y recibir parámetros para cambiar la manera en la que actúan tus aplicaciones pero como los navegadores no entienden código Feno los cristales se transpilan a código con parámetros (como actualmente se realiza).'
+          },
+          {
+            name: "¿Habrá cambios de sintaxis en futuras versiones?",
+            answer: 'Siempre tratamos de mejorar Feno por lo tanto si encontramos una mejor y más cómoda manera de escribir alguna función lo haremos posible PERO ningún cambio rompera la estabilidad de tu proyecto, no nos gusta romper la compatibilidad de forma tan brusca (Angular cof cof..)'
+          }
+        ]
+      },
+      {
+        name: "OTROS",
+        asks: [
+          {
+            name: "¿Porqué \"Feno\"?",
+            answer: 'Este proyecto ha pasado por una lista increíblemente GRANDE de nombres. Mientras pensaba en cuál sería el nombre definitivo me dí cuenta que en el barrio en el que resido es casi imposible salir y no ver un gato. "Feno" es una abreviación de "Felino" y el logo es una gato estilo origami, ¡Vivan los gatos!'
+          }
+        ]
+      }
+    ]
+  }
 }

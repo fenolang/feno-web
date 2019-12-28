@@ -1,4 +1,5 @@
 <template>
+<no-ssr>
   <v-app dark>
     <Menu />
     <v-content class="STwhite">
@@ -25,6 +26,7 @@
       </v-card>
     </v-footer>
   </v-app>
+  </no-ssr>
 </template>
 
 <script lang="ts">

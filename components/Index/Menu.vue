@@ -9,26 +9,28 @@
                 <nuxt-link :to="localePath('index')" class="no-decors home-link">Feno</nuxt-link>
             </v-toolbar-title>
             <v-spacer></v-spacer>
-            <div v-if="$vuetify.breakpoint.mdAndUp">
-                <v-btn v-for="(item, index) in vbuttons" :key="index"
-                :color="item.color" :class="item.classes" class="mr-2"
-                :depressed="item.flat" :outlined="item.outlined"
-                :to="localePath(item.route)">{{ item.text }}</v-btn>
-            </div>
-            <div v-else>
-                <v-btn icon class="TXTblack" @click="mobileMenu = true">
-                    <v-icon>mdi-menu</v-icon>
-                </v-btn>
-            </div>
+            <no-ssr>
+                <div v-if="$vuetify.breakpoint.mdAndUp">
+                    <v-btn v-for="(item, index) in vbuttons" :key="index"
+                    :color="item.color" :class="item.classes" class="mr-2"
+                    :depressed="item.flat" :outlined="item.outlined"
+                    :to="localePath(item.route)">{{ item.text }}</v-btn>
+                </div>
+                <div v-else>
+                    <v-btn icon class="TXTblack" @click="mobileMenu = true">
+                        <v-icon>mdi-menu</v-icon>
+                    </v-btn>
+                </div>
+            </no-ssr>
         </v-app-bar>
         <v-navigation-drawer app temporary v-model="mobileMenu">
             <v-layout row wrap>
                 <v-flex xs12>
                     <div class="pt20 pl30">
                         <p class="ft bold ft18">Inicio</p>
-                        <router-link :to="localePath('about')"><p class="link">Acerca De</p></router-link>
-                        <router-link :to="localePath('docs')"><p class="link">Documentación</p></router-link>
-                        <router-link :to="localePath('roadmap')"><p class="link">Ruta del proyecto</p></router-link>
+                        <router-link :to="localePath('about')"><p class="link">{{ $t('btns.about') }}</p></router-link>
+                        <router-link :to="localePath('docs')"><p class="link">{{ $t('btns.docs') }}</p></router-link>
+                        <router-link :to="localePath('roadmap')"><p class="link">{{ $t('btns.roadmap') }}</p></router-link>
                         <router-link :to="localePath('faq')"><p class="link">FAQ</p></router-link>
                     </div>
                 </v-flex>
@@ -37,7 +39,7 @@
                 </v-flex>
                 <v-flex xs12 v-if="isOnDocs">
                     <div class="pt20 pl10 pb20">
-                        <p class="ft pl20 bold ft18">Documentación</p>
+                        <p class="ft pl20 bold ft18">{{ $t('btns.docs') }}</p>
                         <DocsMenu/>            
                     </div>
                 </v-flex>

@@ -8,37 +8,34 @@
         <v-layout row wrap :justify-center="$vuetify.breakpoint.smAndDown">
           <v-flex xs10 md4>
             <p class="ft15 bold">
-              Define your
-              <span class="txt-dk">components</span>
+              {{ $t('index.code_slots.op1.title') }}
             </p>
             <CodeBox>
               <Doc>
-                <Tag>h1</Tag>This is my component<Tag>/h1</Tag> <br>
-                <Tab/> <Tag>p <Attr>class</Attr>=<String>"myclass"</String></Tag>Hello Again<Tag>/p</Tag>
+                <Tag>h1</Tag>{{ $t('index.code_slots.op1.this') }}<Tag>/h1</Tag> <br>
+                <Tab/> <Tag>p <Attr>class</Attr>=<String>"{{ $t('index.code_slots.op1.class') }}"</String></Tag>{{ $t('index.code_slots.op1.class') }}<Tag>/p</Tag>
               </Doc>
             </CodeBox>
           </v-flex>
           <v-flex xs10 md4>
             <p class="ft15 bold">
-              Define
-              <span class="txt-dk">docs</span> and call your components
+              {{ $t('index.code_slots.op2.title') }}
             </p>
             <CodeBox>
               <Doc>
-                <Tag>h1</Tag>My Main Page<Tag>/h1</Tag> <br>
-                <Tab/> <El>@call(</El>MyComponent<El>)</El>
+                <Tag>h1</Tag>{{ $t('index.code_slots.op2.main') }}<Tag>/h1</Tag> <br>
+                <Tab/> <El>@call(</El>{{ $t('index.code_slots.op2.comp') }}<El>)</El>
               </Doc>
             </CodeBox>
           </v-flex>
           <v-flex xs10 md4>
             <p class="ft15 bold">
-              Define your
-              <span class="txt-dk">meta in single-files</span>
+              {{ $t('index.code_slots.op3.title') }}
             </p>
             <CodeBox>
               <El>meta:</El> [ <br />
               <Tab/> <String>"author, YahirGNz"</String>, <br />
-              <Tab/> <String>"description, This is my description"</String> <br />
+              <Tab/> <String>"description, {{ $t('index.code_slots.op3.desc') }}"</String> <br />
               ]
             </CodeBox>
           </v-flex>
