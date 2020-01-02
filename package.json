@@ -1,7 +1,7 @@
 {
-  "name": "darl",
-  "version": "1.0.0",
-  "description": "The official Darl website",
+  "name": "feno",
+  "version": "0.6.6",
+  "description": "The official Feno website",
   "author": "YahirGNz",
   "private": true,
   "scripts": {

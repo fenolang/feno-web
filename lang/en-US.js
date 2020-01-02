@@ -993,5 +993,9 @@ export default {
         ]
       }
     ]
+  },
+  support: {
+    title: "Support Feno",
+    subtitle: "Only i am in charge of this great project so your donation would help me incredibly and i would appreciate it a lot. Now, you can support me in Patreon through a subscription every month (Includes benefits for you or your company) or you can support me through one-time donations in PayPal. Anyway THANK YOU for being here :')"
   }
 }

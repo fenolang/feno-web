@@ -13,6 +13,7 @@
       "allowJs": true,
       "sourceMap": true,
       "strict": true,
+      "noImplicitThis": true,
       "noEmit": true,
       "baseUrl": ".",
       "paths": {
@@ -23,10 +24,15 @@
           "./*"
         ]
       },
+      "typeRoots": [
+        "./node_modules/@types",
+        "./node_modules/vuetify/types"
+      ],
       "types": [
         "@types/node",
         "@nuxt/types",
-        "nuxt-i18n"
+        "nuxt-i18n",
+        "vuetify"
       ]
     },
     "exclude": [

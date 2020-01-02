@@ -9,19 +9,13 @@
                 <nuxt-link :to="localePath('index')" class="no-decors home-link">Feno</nuxt-link>
             </v-toolbar-title>
             <v-spacer></v-spacer>
-            <no-ssr>
-                <div v-if="$vuetify.breakpoint.mdAndUp">
-                    <v-btn v-for="(item, index) in vbuttons" :key="index"
-                    :color="item.color" :class="item.classes" class="mr-2"
-                    :depressed="item.flat" :outlined="item.outlined"
-                    :to="localePath(item.route)">{{ item.text }}</v-btn>
-                </div>
-                <div v-else>
-                    <v-btn icon class="TXTblack" @click="mobileMenu = true">
-                        <v-icon>mdi-menu</v-icon>
-                    </v-btn>
-                </div>
-            </no-ssr>
+            <v-btn v-if="$vuetify.breakpoint.mdAndUp" text color="black" :to="localePath('about')" class="bold menu-link">{{ $t('btns.about') }}</v-btn>
+            <v-btn v-if="$vuetify.breakpoint.mdAndUp" text color="black" :to="localePath('docs')" class="bold menu-link">{{ $t('btns.docs') }}</v-btn>
+            <v-btn v-if="$vuetify.breakpoint.mdAndUp" text color="black" :to="localePath('roadmap')" class="bold menu-link">{{ $t('btns.roadmap') }}</v-btn>
+            <v-btn v-if="$vuetify.breakpoint.mdAndUp" text color="black" :to="localePath('faq')" class="bold menu-link">FAQ</v-btn>
+            <v-btn v-if="$vuetify.breakpoint.smAndDown" icon color="black" class="menu-link" @click="mobileMenu = true">
+                <v-icon>mdi-menu</v-icon>
+            </v-btn>
         </v-app-bar>
         <v-navigation-drawer app temporary v-model="mobileMenu">
             <v-layout row wrap>
@@ -47,6 +41,12 @@
         </v-navigation-drawer>
     </div>
 </template>
+
+<style scoped>
+.menu-link:hover {
+    color: #47B984 !important;
+}
+</style>
 
 <script lang="ts">
 import { Vue, Component } from 'vue-property-decorator';

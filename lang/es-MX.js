@@ -1000,5 +1000,9 @@ export default {
         ]
       }
     ]
+  },
+  support: {
+    title: "Apoya a Feno",
+    subtitle: "Tan sólo yo estoy a cargo de este gran proyecto así que me ayudaría increíblemente tu donación y la apreciaría un montón. Ahora, puedes apoyarme en Patreon mediante una suscripción cada mes (Incluye beneficios para ti o tu empresa) o puedes apoyarme mediante donaciones de una sola vez en PayPal. De todas formas GRACIAS por estar aquí :')"
   }
 }

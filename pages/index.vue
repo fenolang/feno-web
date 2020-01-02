@@ -86,7 +86,7 @@
             <div>
               <p class="ft40 bold ft-dk">{{ $t('index.support.title') }}</p>
               <p>{{ $t('index.support.sub') }}</p>
-              <v-btn class="shadows bg dk">{{ $t('btns.support') }}</v-btn>
+              <v-btn class="shadows bg dk" :to="localePath('donate')">{{ $t('btns.support') }}</v-btn>
             </div>
           </v-flex>
           <v-flex xs10 md6>
