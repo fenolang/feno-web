@@ -1,4 +1,4 @@
-# fenolang.heroku.com
+# fenolang.herokuapp.com
 This is the official website of Feno programming language.
 
 ## Want to help with the translation?
