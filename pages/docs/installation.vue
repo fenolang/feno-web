@@ -27,7 +27,7 @@
                     {{ $t('docs.install.cli.create_project') }}
                     </p>
                     <CodeBox>
-                        $ feno <span class="ft">create-new</span>
+                        $ fe <span class="ft">create-new</span>
                         <Attr>{{ $t('docs.install.cli.project_name') }}</Attr>
                     </CodeBox>
                     <p class="pt15 ft13 lTXTgrey">
