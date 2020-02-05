@@ -18,11 +18,11 @@
     "nuxt": "^2.0.0",
     "nuxt-i18n": "^6.4.1",
     "vue": "^2.6.11",
-    "vue-template-compiler": "^2.6.11"
+    "vue-template-compiler": "^2.6.11",
+    "@nuxtjs/vuetify": "^1.9.1"
   },
   "devDependencies": {
     "@nuxt/typescript-build": "^0.3.10",
-    "@nuxtjs/vuetify": "^1.9.1",
     "nodemon": "^1.18.9",
     "vue-property-decorator": "^8.3.0",
     "vuex-class": "^0.3.2"
