@@ -14,7 +14,7 @@
                     <p class="ft13 lTXTgrey" v-html="$t('docs.variables.def.subtitle')"></p>
                     <CodeBox>
                         <Attr>new</Attr> <Func name="Feno"></Func> { <br>
-                        <Tab/> <El>def</El> x = <Attr>10</Attr>; <br>
+                        <Tab/> <El>def</El> <Attr>Number</Attr> x = <Attr>10</Attr>; <br>
                         <Tab/> <Func name="print">x</Func> <Comment>// {{ $t('docs.variables.result') }} 10</Comment> <br>
                         <Tab/> <Func name="print">x * <Attr>2</Attr></Func> <Comment>// {{ $t('docs.variables.result') }} 20</Comment> <br>
                         <Tab/> <Func name="print">x + <String>"{{ $t('docs.variables.hello') }}"</String></Func> <Comment>// Error: {{ $t('docs.variables.error') }}</Comment> <br>

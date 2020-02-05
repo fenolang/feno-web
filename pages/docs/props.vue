@@ -16,16 +16,16 @@
                         {{ $t('docs.props.newone.subtitle') }}
                     </p>
                     <CodeBox>
-                        <Func name="call"><String>"{{ $t('docs.props.compo') }}"</String>, { <El>prop</El>:<String>"{{ $t('docs.props.hw') }}"</String> }</Func>
+                        <Func :name="'@'+$t('docs.props.compo')"><Attr>my_prop</Attr>=<String>"{{ $t('docs.props.hw') }}"</String></Func>
                     </CodeBox>
                     <p class="mt20 ft13 lTXTgrey">
                         {{ $t('docs.props.newone.subtitle2') }}
                     </p>
                     <CodeBox>
-                        <Doc>
-                            <Tag>h1</Tag><Attr>$</Attr>{ <Attr>prop</Attr> }<Tag>/h1</Tag> <br>
-                            <Tab/><Tag>p</Tag>{{ $t('docs.props.welcome') }}<Tag>p</Tag>
-                        </Doc>
+                        <Attr>declare</Attr> <Func name="Component"><String>"{{ $t('docs.props.compo') }}"</String>, { <br>
+                            <Tab/> <Tag>h1</Tag>{{ props.<El>my_prop</El> }}<Tag>/h1</Tag> <br>
+                            <Tab/><Tag>p</Tag>{{ $t('docs.props.welcome') }}<Tag>p</Tag> <br>
+                        }</Func>
                     </CodeBox>
                     <p class="mt20 ft13 lTXTgrey" v-html="$t('docs.props.newone.result')">
                     </p>
@@ -42,17 +42,17 @@
                     <p class="ft13 lTXTgrey">{{ $t('docs.props.two.doc') }}</p>
                     <CodeBox class="line">
                         <Doc>
-                            <Func name="call"><String>"{{ $t('docs.props.compo') }}"</String>, { <El>prop1</El>:<String>"{{ $t('docs.props.hello') }}"</String>, <El>prop2</El>:<String>"{{ $t('docs.props.bye') }}"</String> }</Func>
+                            <Func :name="'@'+$t('docs.props.compo')"><Attr>prop1</Attr>=<String>"{{ $t('docs.props.hello') }}"</String> <Attr>prop2</Attr>=<String>"{{ $t('docs.props.bye') }}"</String></Func>
                         </Doc>
                     </CodeBox>
                     <p class="mt20 ft13 lTXTgrey">
                         {{ $t('docs.props.two.com') }}
                     </p>
                     <CodeBox class="line">
-                        <Doc>
-                            <Tag>h1</Tag><Attr>$</Attr>{ <Attr>prop1</Attr> }<Tag>/h1</Tag> <br>
-                            <Tab/> <Tag>h3</Tag><Attr>$</Attr>{ <Attr>prop2</Attr> }<Tag>/h3</Tag>
-                        </Doc>
+                        <Attr>declare</Attr> <Func name="Component"><String>"my_component"</String>, { <br>
+                            <Tab/> <Tag>h1</Tag>{{ props.<El>prop1</El> }}<Tag>/h1</Tag> <br>
+                            <Tab/> <Tag>h3</Tag>{{ props.<El>prop2</El> }}<Tag>/h3</Tag> <br>
+                        }</Func>
                     </CodeBox>
                     <p class="mt20 ft13 lTXTgrey">
                         {{ $t('docs.props.two.res') }}

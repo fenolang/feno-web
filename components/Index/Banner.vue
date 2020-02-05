@@ -3,31 +3,28 @@
     <v-layout row wrap>
       <v-flex xs12>
         <v-layout row wrap>
-          <v-flex xs12 v-if="smAndDown">
-              <v-img contain :width="mdAndUp ? 400 : 150"
-              src="/geometric_design.png"
-              :class="smAndDown ? 'center-this mt30' : ''"></v-img>
-          </v-flex>
-          <v-flex xs12 md6>
-            <v-container grid-list-lg>
-              <div class="title-padding">
-                <p class="bold mb-1" :class="mdAndUp ? 'ft80' : 'ft50'">Feno</p>
-                <p class="pb10" :class="mdAndUp ? 'ft20' : 'ft18'">
-                  {{ $t('banner.subtitle') }}
-                </p>
-                <v-btn rounded large depressed class="bg dk bold mr-1" :to="localePath('docs')">
-                  <v-icon class="mr-3">mdi-rocket</v-icon>
-                  {{ $t('banner.btn') }}
-                </v-btn>
-                <v-btn rounded large outlined class="border-btn-dk ft-dk bold" target="_blank" href="https://github.com/fenolang/feno">
-                  <v-icon class="mr-2">mdi-github-circle</v-icon>
-                  Github
-                </v-btn>
-              </div>
-            </v-container>
-          </v-flex>
-          <v-flex md6 v-if="mdAndUp">
-            <v-img contain width="400" src="/geometric_design.png"></v-img>
+          <v-flex xs12>
+            <v-img src="/cat4.jpg" :height="mdAndUp ? 500 : 400">
+              <v-layout row wrap>
+                <v-flex xs12>
+                  <div class="center-txt pt80" :class="mdAndUp ? '' : 'spacing'">
+                    <p class="ft-medium mb-0 ft-color" :class="mdAndUp ? 'ft80' : 'ft60'">Feno</p>
+                    <p class="ft-medium upCase dk" :class="mdAndUp ? 'ft16' : 'ft12'">
+                      {{ $t('banner.subtitle') }}
+                    </p>
+                    <v-btn rounded large depressed class="bg dk bold mr-1" :to="localePath('docs')">
+                      <v-icon class="mr-3">mdi-rocket</v-icon>
+                      {{ $t('banner.btn') }}
+                    </v-btn>
+                    <br v-if="smAndDown"><br v-if="smAndDown">
+                    <v-btn rounded large depressed class="STblack dk bold" target="_blank" href="https://github.com/fenolang/feno">
+                      <v-icon class="mr-2">mdi-github-circle</v-icon>
+                      Github
+                    </v-btn>
+                  </div>
+                </v-flex>
+              </v-layout>
+            </v-img>
           </v-flex>
         </v-layout>
       </v-flex>
@@ -37,10 +34,14 @@
 
 <script lang="ts">
 import { Vue, Component } from "vue-property-decorator";
+import { CodeBox, Func, String } from "@/components/Code/index";
 import Screens from '@/components/screens.vue';
 
 @Component({
-  mixins: [Screens]
+  mixins: [Screens],
+  components: {
+    CodeBox, Func, String
+  }
 })
 
 export default class Banner extends Vue {
@@ -49,6 +50,10 @@ export default class Banner extends Vue {
 </script>
 
 <style scoped>
+.ft-color {
+  color: #F6AF91 !important;
+}
+
 .banner-title {
   font-weight: bold;
   font-size: 80px;
@@ -71,17 +76,17 @@ export default class Banner extends Vue {
   animation-duration: 1s;
   animation-delay: 2s;
   transition: all 0.3s ease !important;
-  border-bottom: 6px solid #47B984;
+  border-bottom: 6px solid #F6AF91;
 }
 
 @keyframes anima {
   from {
     transition: all 0.3s ease !important;
-    border-bottom: 0px solid #47B984;
+    border-bottom: 0px solid #F6AF91;
   }
   to {
     transition: all 0.3s ease !important;
-    border-bottom: 6px solid #47B984;
+    border-bottom: 6px solid #F6AF91;
   }
 }
 

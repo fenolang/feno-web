@@ -1,94 +1,71 @@
 @font-face {
-    font-family: "Codec";
-    src: url('../../fonts/Menlo-Regular.ttf');
+    font-family: "Helvetica";
+    src: url('../../fonts/regular.otf');
 }
 
 @font-face {
-    font-family: "Rubik";
-    src: url('../../fonts/Rubik-Regular.ttf');
+    font-family: "HelveticaItalic";
+    src: url('../../fonts/italic.ttf');
 }
 
 @font-face {
-    font-family: "RubikItalic";
-    src: url('../../fonts/Rubik-Italic.ttf');
+    font-family: "HelveticaMedium";
+    src: url('../../fonts/medium.otf');
 }
 
 @font-face {
-    font-family: "RubikMedium";
-    src: url('../../fonts/Rubik-Medium.ttf');
+    font-family: "HelveticaLight";
+    src: url('../../fonts/light-lt.otf');
 }
 
 @font-face {
-    font-family: "RubikMediumItalic";
-    src: url('../../fonts/Rubik-MediumItalic.ttf');
+    font-family: "HelveticaLightItalic";
+    src: url('../../fonts/light-italic.ttf');
 }
 
 @font-face {
-    font-family: "RubikLight";
-    src: url('../../fonts/Rubik-Light.ttf');
+    font-family: "HelveticaBold";
+    src: url('../../fonts/bold.otf');
 }
 
 @font-face {
-    font-family: "RubikLightItalic";
-    src: url('../../fonts/Rubik-LightItalic.ttf');
+    font-family: "HelveticaBoldItalic";
+    src: url('../../fonts/bold-italic.ttf');
 }
 
 @font-face {
-    font-family: "RubikBold";
-    src: url('../../fonts/Rubik-Bold.ttf');
-}
-
-@font-face {
-    font-family: "RubikBoldItalic";
-    src: url('../../fonts/Rubik-BoldItalic.ttf');
-}
-
-@font-face {
-    font-family: "RubikBlack";
-    src: url('../../fonts/Rubik-Black.ttf');
-}
-
-@font-face {
-    font-family: "RubikBlackItalic";
-    src: url('../../fonts/Rubik-BlackItalic.ttf');
+    font-family: "HelveticaExtraLight";
+    src: url('../../fonts/xlight.otf');
 }
 
 * {
-    font-family: "Rubik" !important;
+    font-family: "Helvetica" !important;
 }
 
 .ft-ita {
-    font-family: "RubikItalic" !important;
+    font-family: "HelveticaItalic" !important;
 }
 
 .ft-light {
-    font-family: "RubikLight" !important;
+    font-family: "HelveticaLight" !important;
 }
 
 .ft-bold {
-    font-family: "RubikBold" !important;
+    font-family: "HelveticaBold" !important;
 }
 
 .ft-light-ita {
-    font-family: "RubikLightItalic" !important;
+    font-family: "HelveticaLightItalic" !important;
 }
 
 .ft-bold-ita {
-    font-family: "RubikBoldItalic" !important;
+    font-family: "HelveticaBoldItalic" !important;
 }
 
 .ft-medium {
-    font-family: "RubikMedium" !important;
+    font-family: "HelveticaMedium" !important;
 }
 
-.ft-medium-ita {
-    font-family: "RubikMediumItalic" !important;
-}
-
-.ft-black {
-    font-family: "RubikBlack" !important;
-}
-
-.ft-black-ita {
-    font-family: "RubikBlackItalic" !important;
+.ft-xlight {
+    font-family: "HelveticaExtraLight" !important;
 }

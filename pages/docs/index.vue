@@ -12,7 +12,7 @@
         <v-flex xs12>
           <div class="spacing">
             <p class="ft15 bold">{{ $t('docs.what.what_i_need') }}</p>
-            <p class="ft12 lTXTgrey">{{ $t('docs.what.what_i_need_2') }}</p>
+            <p class="ft13 lTXTgrey">{{ $t('docs.what.what_i_need_2') }}</p>
             <ul>
               <li>JavaScript</li>
               <li>HTML</li>
@@ -25,7 +25,7 @@
             <p class="ft15 bold">{{ $t('docs.what.why_feno') }}</p>
           </div>
           <div class="spacing">
-            <p class="ft12 lTXTgrey">
+            <p class="ft13 lTXTgrey">
               {{ $t('docs.what.why_feno_sub') }}
             </p>
             <ul class="mt30 mb30">
@@ -38,7 +38,7 @@
         <v-flex xs12 class="mt-4">
           <div class="spacing">
             <p class="ft15 bold">{{ $t('docs.what.feno_works') }}</p>
-            <p class="ft12 lTXTgrey">
+            <p class="ft13 lTXTgrey">
               {{ $t('docs.what.feno_works_2') }}
             </p>
           </div>
@@ -46,7 +46,7 @@
         <v-flex xs12 class="mt-4">
           <div class="spacing">
             <p class="ft15 bold">{{ $t('docs.what.feno_and_web') }}</p>
-            <p class="ft12 lTXTgrey">
+            <p class="ft13 lTXTgrey">
               {{ $t('docs.what.feno_and_web_2') }}
             </p>
           </div>
@@ -54,7 +54,7 @@
         <v-flex xs12 class="mt-4 mb-3">
           <div class="spacing">
             <p class="ft15 bold">{{ $t('docs.what.feno_and_electron') }}</p>
-            <p class="ft12 lTXTgrey">
+            <p class="ft13 lTXTgrey">
               {{ $t('docs.what.feno_and_electron_2') }}
             </p>
           </div>

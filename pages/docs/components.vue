@@ -16,12 +16,12 @@
                         {{ $t('docs.compos.create.subtitle') }}
                     </p>
                     <CodeBox>
-                        <Doc>
-                            <Tag>button</Tag>{{ $t('docs.compos.btn') }}<Tag>/button</Tag>
-                        </Doc>
+                        <Attr>declare</Attr> <Func name="Component"><String>"{{ $t('docs.compos.btn_name') }}"</String>, { <br>
+                            <Tab/> <Tag>button</Tag>{{ $t('docs.compos.btn') }}<Tag>/button</Tag> <br>
+                        }</Func>
                     </CodeBox>
                     <p class="mt20 ft13 lTXTgrey">
-                        {{ $t('docs.compos.create.go_to') }} <span class="bold">call()</span>
+                        {{ $t('docs.compos.create.go_to') }}
                     </p>
                     <CodeBox>
                         <Head>
@@ -29,7 +29,7 @@
                         </Head>
                         <Doc>
                             <Tag>h1</Tag>{{ $t('docs.compos.welcome') }}<Tag>/h1</Tag> <br>
-                            <Tab/> <Func name="call"><String>"{{ $t('docs.compos.btn_name') }}"</String></Func>
+                            <Tab/> <Func :name="'@'+$t('docs.compos.btn_name')"></Func>
                         </Doc>
                     </CodeBox>
                     <v-alert class="mt20" type="warning" border="left" outlined>
@@ -76,7 +76,7 @@ const MenuModule = namespace('menu');
     layout: 'doc',
     components: {
         Title, Subtitle,
-        CodeBox, Tag, Tab, El, String, Mark, Func,
+        CodeBox, Tag, Tab, El, String, Mark, Func, Attr,
         Doc, Head, Dmeta,
     }
 })

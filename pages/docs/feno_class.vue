@@ -19,9 +19,9 @@
                         <Doc>
                             <Comment>#- {{ $t('docs.feno_class.comment') }} -#</Comment>
                         </Doc> <br>
-                        <Attr>new</Attr> <Func name="Feno"></Func> { <br>
-                        <br>
-                        }
+                        <Attr>new</Attr> <Func name="Feno">{ <br>
+                            <br>
+                        }</Func>
                     </CodeBox>
                 </div>
             </v-flex>
@@ -32,9 +32,9 @@
                         {{ $t('docs.feno_class.hw.subtitle') }}
                     </p>
                     <CodeBox>
-                        <Attr>new</Attr> <Func name="Feno"></Func> { <br>
+                        <Attr>new</Attr> <Func name="Feno">{ <br>
                             <Tab/><El>print</El>(<String>"{{ $t('docs.feno_class.hw.val') }}"</String>) <br>
-                        }
+                        }</Func>
                     </CodeBox>
                     <p class="mt20 ft13 lTXTgrey" v-html="$t('docs.feno_class.hw.result')"></p>
                 </div>
@@ -45,9 +45,9 @@
                     <p class="ft13 lTXTgrey" v-html="$t('docs.feno_class.better_hw.subtitle')">
                     </p>
                     <CodeBox>
-                        <Attr>new</Attr> <Func name="Feno"></Func> { <br>
+                        <Attr>new</Attr> <Func name="Feno">{ <br>
                             <Tab/><El>msg</El>(<String>"{{ $t('docs.feno_class.better_hw.val') }}"</String>) <br>
-                        }
+                        }</Func>
                     </CodeBox>
                     <p class="mt20 ft13 lTXTgrey" v-html="$t('docs.feno_class.better_hw.result')"></p>
                 </div>

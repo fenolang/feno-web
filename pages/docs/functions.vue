@@ -16,12 +16,12 @@
                         {{ $t('docs.func.create.subtitle') }}
                     </p>
                     <CodeBox>
-                        <Attr>new</Attr> <Func name="Feno"></Func> { <br>
-                            <Tab/> <El>func</El> <Func :name="$t('docs.func.show')"></Func> { <br>
-                                <Tab/><Tab/> <Func name="msg"><String>"{{ $t('docs.func.hw') }}"</String></Func> <br>
-                            <Tab/>} <br> <br>
+                        <Attr>new</Attr> <Func name="Feno">{ <br>
+                            <Tab/><El>fun</El> {{ $t('docs.func.show') }}: <br>
+                                <Tab/> <Tab/> <Func name="msg"><String>"{{ $t('docs.func.hw') }}"</String></Func> <br>
+                            <Tab/> } <br> <br>
                             <Tab/> <Func :name="$t('docs.func.show')"></Func>; <br>
-                        }
+                        }</Func>
                     </CodeBox>
                     <p class="mt20 ft13 lTXTgrey" v-html="$t('docs.func.create.subtitle2')">
                     </p>
@@ -34,12 +34,12 @@
                         {{ $t('docs.func.params.subtitle') }}
                     </p>
                     <CodeBox>
-                        <Attr>new</Attr> <Func name="Feno"></Func> { <br>
-                            <Tab/> <El>func</El> <Func :name="$t('docs.func.show')"><Attr>String</Attr> {{ $t('docs.func.msg2') }}</Func> { <br>
+                        <Attr>new</Attr> <Func name="Feno">{ <br>
+                            <Tab/> <El>fun</El> {{$t('docs.func.show')}}(<El>{{ $t('docs.func.msg2') }}</El>): <br>
                                 <Tab/><Tab/> <Func name="msg">{{ $t('docs.func.msg2') }}</Func> <br>
-                            <Tab/>} <br> <br>
+                            <Tab/> } <br> <br>
                             <Tab/> <Func :name="$t('docs.func.show')"><String>"{{ $t('docs.func.hw') }}"</String></Func>; <br>
-                        }
+                        }</Func>
                     </CodeBox>
                 </div>
             </v-flex>

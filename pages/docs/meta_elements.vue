@@ -91,77 +91,6 @@
                     </CodeBox>
                 </div>
             </v-flex>
-            <v-flex xs12>
-                <div class="spacing">
-                    <Title id="functions">{{ $t('docs.meta.func.title') }}</Title>
-                    <p class="ft13 lTXTgrey">{{ $t('docs.meta.func.subtitle') }}</p>
-                </div>
-            </v-flex>
-            <v-flex xs12>
-                <div class="spacing">
-                    <Subtitle id="style"><span v-html="$t('docs.meta.style.title')"></span></Subtitle>
-                    <p class="ft13 lTXTgrey" v-html="$t('docs.meta.style.subtitle')"></p>
-                    <CodeBox>
-                        <Head>
-                            <Tab/><El>title:</El> <String>"{{ $t('docs.meta.mtitle') }}"</String>, <br>
-                            <Tab/><Dmeta>
-                            <Tab/><Tab/> <Func name="style"><String>"{{ $t('docs.meta.style.file') }}"</String></Func>
-                            </Dmeta>
-                        </Head>
-                        <Doc>
-                            <Comment>#- {{ $t('docs.meta.comment') }} -#</Comment>
-                        </Doc>
-                    </CodeBox>
-                    <p class="ft13 lTXTgrey mt20" v-html="$t('docs.meta.style.benefits')">
-                    </p>
-                    <v-alert type="error" border="left" outlined v-html="$t('docs.meta.style.alert')"></v-alert>
-                </div>
-            </v-flex>
-            <v-flex xs12>
-                <div class="spacing">
-                    <Subtitle>{{ $t('docs.meta.call_file.title') }}</Subtitle>
-                    <p class="ft13 lTXTgrey">
-                        {{ $t('docs.meta.call_file.subtitle') }}
-                    </p>
-                    <CodeBox>
-                        <Func name="style"><String>"{{ $t('docs.meta.call_file.route1') }}"</String></Func>
-                    </CodeBox>
-                    <p class="ft13 lTXTgrey mt20" v-html="$t('docs.meta.call_file.outside')"></p>
-                    <CodeBox>
-                        <Func name="style"><String>"{{ $t('docs.meta.call_file.route2') }}"</String></Func>
-                    </CodeBox>
-                    <p class="ft13 lTXTgrey mt20">
-                        {{ $t('docs.meta.call_file.rules') }}
-                    </p>
-                </div>
-            </v-flex>
-            <v-flex xs12>
-                <div class="spacing">
-                    <Subtitle>{{ $t('docs.meta.configure.title') }}</Subtitle>
-                    <p class="ft13 lTXTgrey">
-                        {{ $t('docs.meta.configure.subtitle') }}
-                    </p>
-                    <v-btn outlined class="border-btn" :to="localePath('docs-config-file')">{{ $t('docs.meta.go') }}</v-btn>
-                </div>
-            </v-flex>
-            <v-flex xs12>
-                <div class="spacing">
-                    <Subtitle id="import"><span v-html="$t('docs.meta.import.title')"></span></Subtitle>
-                    <p class="ft13 lTXTgrey" v-html="$t('docs.meta.import.subtitle')"></p>
-                    <CodeBox>
-                        <Head>
-                            <Tab/><El>title:</El> <String>"{{ $t('docs.meta.mtitle') }}"</String>, <br>
-                            <Tab/><Dmeta>
-                            <Tab/><Tab/> <Func name="import"><String>"{{ $t('docs.meta.import.file') }}"</String></Func>
-                            </Dmeta>
-                        </Head>
-                        <Doc>
-                            <Comment>#- {{ $t('docs.meta.comment') }} -#</Comment>
-                        </Doc>
-                    </CodeBox>
-                    <v-alert class="mt20" type="warning" border="left" outlined v-html="$t('docs.meta.import.alert')"></v-alert>
-                </div>
-            </v-flex>
             <v-flex xs12 class="mb30">
                 <div class="spacing">
                     <Title>{{ $t('docs.meta.props.title') }}</Title>
@@ -173,7 +102,7 @@
                         <Head>
                             <Tab/><El>title:</El> <String>"{{ $t('docs.meta.mtitle') }}"</String>, <br>
                             <Tab/><Dmeta>
-                            <Tab/><Tab/> <Mark><String>"charset, utf-8"</String></Mark>
+                            <Tab/><Tab/> <Mark><String>"charset:utf-8"</String></Mark>
                             </Dmeta>
                         </Head>
                         <Doc>
@@ -212,36 +141,6 @@
                     <Subtitle id="base">{{ $t('docs.meta.props.base.name') }}</Subtitle>
                     <p class="ft13 lTXTgrey" v-html="$t('docs.meta.props.base.sub')">
                     </p>
-                    <Subtitle id="noscript">{{ $t('docs.meta.props.noscript.name') }}</Subtitle>
-                    <p class="ft13 lTXTgrey">
-                        {{ $t('docs.meta.props.noscript.sub') }}
-                    </p>
-                    <CodeBox :mark="true" class="mt30">
-                        <Head>
-                            <Tab/><El>title:</El> <String>"{{ $t('docs.meta.mtitle') }}"</String>, <br>
-                            <Tab/><Dmeta>
-                            <Mark>
-                                <Tab/><Tab/> <El>noscript:</El> { <br>
-                                <Tab/><Tab/><Tab/> <Tag>p</Tag>{{ $t('docs.meta.props.noscript.dont_js') }}<Tag>/p</Tag> <br>
-                                <Tab/><Tab/> } <br>
-                            </Mark>
-                            </Dmeta>
-                        </Head>
-                        <Doc>
-                            <Comment>#- {{ $t('docs.meta.comment') }} -#</Comment>
-                        </Doc>
-                    </CodeBox>
-                    <v-alert outlined type="warning" border="left" class="mt-4" v-html="$t('docs.meta.props.noscript.alert')">
-                    </v-alert>
-                    <Subtitle id="noscript-default">{{ $t('docs.meta.props.nojs_default.name') }}</Subtitle>
-                    <p class="ft13 lTXTgrey">
-                        {{ $t('docs.meta.props.nojs_default.sub') }}
-                    </p>
-                    <Subtitle>{{ $t('docs.meta.props.configure_nojs.name') }}</Subtitle>
-                    <p class="ft13 lTXTgrey" v-html="$t('docs.meta.props.configure_nojs.sub')">
-                    </p>
-                    <br>
-                    <v-btn depressed class="bg3 dk" :to="localePath('docs-config-file')">{{ $t('docs.meta.go') }}</v-btn>
                     <Subtitle id="more">{{ $t('docs.meta.props.more.name') }}</Subtitle>
                     <p class="ft13 lTXTgrey" v-html="$t('docs.meta.props.more.sub')"></p>
                     <CodeBox>

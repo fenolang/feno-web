@@ -3,8 +3,8 @@
         <v-layout row wrap>
             <v-flex xs12>
                 <div class="spacing pt20">
-                    <v-img src="/node_banner.png" contain class="center-this"></v-img>
-                    <p class="ft35 bold">Feno + NodeJS</p>
+                    <v-img src="/node_banner.png" width="500" contain class="center-this"></v-img>
+                    <p class="ft35 bold mt40">Feno + NodeJS</p>
                     <p class="ft15 lTXTgrey center-txt mb-1">
                         {{ $t('docs.node.subtitle') }}
                     </p>

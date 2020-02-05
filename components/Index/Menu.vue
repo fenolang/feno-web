@@ -1,19 +1,15 @@
 <template>
     <div>
-        <v-app-bar fixed flat app class="not" :class="vback">
-            <img height="24" src="/logo1.png" class="mr-2">
-            <v-toolbar-title v-if="vtitle" :class="vcolor">
-                <nuxt-link :to="localePath('index')" class="no-decors home-link">Feno</nuxt-link> | {{ vtitle }}
-            </v-toolbar-title>
-            <v-toolbar-title :class="vcolor" v-else>
-                <nuxt-link :to="localePath('index')" class="no-decors home-link">Feno</nuxt-link>
-            </v-toolbar-title>
+        <v-app-bar fixed flat app class="not STblack">
+            <nuxt-link :to="localePath('index')" style="line-height:0;">
+                <img height="30" src="/cream-logo.png">
+            </nuxt-link>
             <v-spacer></v-spacer>
-            <v-btn v-if="$vuetify.breakpoint.mdAndUp" text color="black" :to="localePath('about')" class="bold menu-link">{{ $t('btns.about') }}</v-btn>
-            <v-btn v-if="$vuetify.breakpoint.mdAndUp" text color="black" :to="localePath('docs')" class="bold menu-link">{{ $t('btns.docs') }}</v-btn>
-            <v-btn v-if="$vuetify.breakpoint.mdAndUp" text color="black" :to="localePath('roadmap')" class="bold menu-link">{{ $t('btns.roadmap') }}</v-btn>
-            <v-btn v-if="$vuetify.breakpoint.mdAndUp" text color="black" :to="localePath('faq')" class="bold menu-link">FAQ</v-btn>
-            <v-btn v-if="$vuetify.breakpoint.smAndDown" icon color="black" class="menu-link" @click="mobileMenu = true">
+            <v-btn v-if="$vuetify.breakpoint.mdAndUp" text color="white" :to="localePath('about')" class="bold menu-link">{{ $t('btns.about') }}</v-btn>
+            <v-btn v-if="$vuetify.breakpoint.mdAndUp" text color="white" :to="localePath('docs')" class="bold menu-link">{{ $t('btns.docs') }}</v-btn>
+            <v-btn v-if="$vuetify.breakpoint.mdAndUp" text color="white" :to="localePath('roadmap')" class="bold menu-link">{{ $t('btns.roadmap') }}</v-btn>
+            <v-btn v-if="$vuetify.breakpoint.mdAndUp" text color="white" :to="localePath('faq')" class="bold menu-link">FAQ</v-btn>
+            <v-btn v-if="$vuetify.breakpoint.smAndDown" icon color="white" class="menu-link" @click="mobileMenu = true">
                 <v-icon>mdi-menu</v-icon>
             </v-btn>
         </v-app-bar>
@@ -44,7 +40,7 @@
 
 <style scoped>
 .menu-link:hover {
-    color: #47B984 !important;
+    color: #F6AF91 !important;
 }
 </style>
 

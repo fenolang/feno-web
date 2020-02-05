@@ -1,6 +1,13 @@
 <template>
   <div>
     <div class="pl20">
+      <!-- VERSION --> 
+
+      <div class="version">
+        <p>v1.0.0</p>
+      </div>
+
+      <!-- VERSION -->
       <p class="ft16 bold txt-dk mb-1">{{ $t('docs.menu.intro') }}</p>
       <router-link :to="localePath('docs')">
         <p class="ft13 link mb-1">{{ $t('docs.menu.what') }}</p>
@@ -43,15 +50,18 @@
           {{ $t('docs.menu.files') }}
         </p>
       </router-link>
-      <p class="ft16 bold txt-dk mt-2 mb-1">Getting Started</p>
+      <p class="ft16 bold txt-dk mt-2 mb-1">{{ $t('docs.menu.start') }}</p>
       <router-link :to="localePath('docs-doc_instance')">
         <p class="ft13 link mb-1">{{ $t('docs.menu.doc') }}</p>
       </router-link>
       <router-link :to="localePath('docs-head_instance')">
         <p class="ft13 link mb-1">{{ $t('docs.menu.head') }}</p>
       </router-link>
-      <router-link :to="localePath('docs-styles_instance')">
+      <router-link :to="localePath('docs-styles_function')">
         <p class="ft13 link mb-1">{{ $t('docs.menu.styles') }}</p>
+      </router-link>
+      <router-link :to="localePath('docs-import_function')">
+        <p class="ft13 link mb-1">{{ $t('docs.menu.scripts') }}</p>
       </router-link>
       <router-link :to="localePath('docs-meta_elements')">
         <p class="ft13 link mb-1">{{ $t('docs.menu.meta.name') }}</p>
@@ -72,12 +82,6 @@
         <p class="ft13 link mb-1">
           <Tab />
           {{ $t('docs.menu.meta.author') }}
-        </p>
-      </router-link>
-      <router-link :to="localePath('docs-meta_elements')+'#functions'" v-if="onMeta">
-        <p class="ft13 link mb-1">
-          <Tab />
-          {{ $t('docs.menu.meta.functions') }}
         </p>
       </router-link>
       <router-link :to="localePath('docs-feno_class')">
@@ -179,49 +183,9 @@
           <Tab />keyDown
         </p>
       </router-link>
-      <router-link :to="localePath('docs-attributes')+'#name'" v-if="onAttr">
-        <p class="ft13 link mb-1">
-          <Tab />Name
-        </p>
-      </router-link>
-      <router-link :to="localePath('docs-attributes')+'#id'" v-if="onAttr">
-        <p class="ft13 link mb-1">
-          <Tab />Id
-        </p>
-      </router-link>
-      <router-link :to="localePath('docs-attributes')+'#class'" v-if="onAttr">
-        <p class="ft13 link mb-1">
-          <Tab />Class
-        </p>
-      </router-link>
-      <router-link :to="localePath('docs-attributes')+'#type'" v-if="onAttr">
-        <p class="ft13 link mb-1">
-          <Tab />Type
-        </p>
-      </router-link>
       <router-link :to="localePath('docs-attributes')+'#to'" v-if="onAttr">
         <p class="ft13 link mb-1">
           <Tab />To
-        </p>
-      </router-link>
-      <router-link :to="localePath('docs-attributes')+'#src'" v-if="onAttr">
-        <p class="ft13 link mb-1">
-          <Tab />Src
-        </p>
-      </router-link>
-      <router-link :to="localePath('docs-attributes')+'#size'" v-if="onAttr">
-        <p class="ft13 link mb-1">
-          <Tab />Size
-        </p>
-      </router-link>
-      <router-link :to="localePath('docs-attributes')+'#width'" v-if="onAttr">
-        <p class="ft13 link mb-1">
-          <Tab />Width
-        </p>
-      </router-link>
-      <router-link :to="localePath('docs-attributes')+'#height'" v-if="onAttr">
-        <p class="ft13 link mb-1">
-          <Tab />Height
         </p>
       </router-link>
       <router-link :to="localePath('docs-attributes')+'#newtab'" v-if="onAttr">
@@ -285,7 +249,7 @@
           <Tab />Any
         </p>
       </router-link>
-      <router-link :to="localePath('docs-classes')">
+      <!--<router-link :to="localePath('docs-classes')">
         <p class="ft13 link mb-1">{{ $t('docs.menu.class.name') }}</p>
       </router-link>
       <router-link :to="localePath('docs-classes')+'#create'" v-if="onClasses">
@@ -299,7 +263,7 @@
           <Tab />
           {{ $t('docs.menu.class.super') }}
         </p>
-      </router-link>
+      </router-link>-->
       <router-link :to="localePath('docs-functions')">
         <p class="ft13 link mb-1">{{ $t('docs.menu.func.name') }}</p>
       </router-link>
@@ -352,14 +316,14 @@
           <Tab />{{ $t('docs.menu.export.def') }}
         </p>
       </router-link>
-      <router-link :to="localePath('docs-crystals')">
-        <p class="ft13 link mb-1">Crystals</p>
+      <router-link :to="localePath('docs-cubes')">
+        <p class="ft13 link mb-1">Cubes</p>
       </router-link>
       <router-link :to="localePath('docs-config-file')">
         <p class="ft13 link mb-1">{{ $t('docs.menu.config') }}</p>
       </router-link>
       <router-link :to="localePath('docs-node')">
-        <p class="ft13 link mb-1">Feno with Node</p>
+        <p class="ft13 link mb-1">{{ $t('docs.menu.feno_with_node') }}</p>
       </router-link>
     </div>
   </div>

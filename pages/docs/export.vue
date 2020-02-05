@@ -12,19 +12,19 @@
           <Subtitle id="normal">{{ $t('docs.export.normal.title') }}</Subtitle>
           <CodeBox>
             <Key>export</Key>
-            <El>func</El>
-            <Func :name="$t('docs.export.hello')"></Func>{
+            <El>fun</El>
+            {{$t('docs.export.hello')}}:
             <br />
             <br />}
           </CodeBox>
           <CodeBox class="mt20">
-            <El>func</El>
-            <Func :name="$t('docs.export.hello')"></Func>{
+            <El>fun</El>
+            {{$t('docs.export.hello')}}:
             <br />
             <br />}
             <br />
-            <El>func</El>
-            <Func :name="$t('docs.export.hello2')"></Func>{
+            <El>fun</El>
+            {{$t('docs.export.hello2')}}:
             <br />
             <br />}
             <br />
@@ -42,8 +42,8 @@
           <CodeBox>
             <Key>export</Key>
             <El>default</El>
-            <El>func</El>
-            <Func :name="$t('docs.export.hello')"></Func>{
+            <El>fun</El>
+            {{$t('docs.export.hello')}}:
             <br />
             <br />}
           </CodeBox>

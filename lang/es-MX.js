@@ -2,8 +2,8 @@ export default {
   v: "VERSIÓN 0.5",
   name: "feno",
   name_capital: "Feno",
-  name_upper: "DAFT",
-  name_style: "D A F T",
+  name_upper: "FENO",
+  name_style: "F E N O",
   btns: {
     about: "Acerca De",
     docs: "Documentación",
@@ -11,7 +11,7 @@ export default {
     support: "Apoyar"
   },
   banner: {
-    subtitle: "El lenguaje de programación para el buen desarrollo web",
+    subtitle: "El JavaScript para el buen desarrollo web",
     btn: "Comenzar"
   },
   suscribe: {
@@ -23,46 +23,23 @@ export default {
   index: {
     what: "¿Qué es",
     what_content: `Feno es un lenguaje de programación totalmente dedicado al buen desarrollo web, que proporciona varias funciones y aumenta la escalabilidad de tus proyectos. Feno es un lenguaje transpilado a HTML, CSS y JavaScript para que el navegador pueda entender el código.<br><br> Con una sintaxis limpia, hermosa y más funciones, como componentes web, layouts, archivos de meta individuales, almacenamiento global, mejor SEO y mucho más, presentamos a Feno como la mejor opción para tu próximo sitio web &#x1F609; &#x1F49A;`,
-    code_slots: {
-      op1: {
-        title: "Define componentes",
-        this: "Este es mi componente",
-        class: "miclase",
-        hello: "Hola de nuevo"
+    cards: {
+      intro: {
+        text: "Y todo lo que puedes hacer"
       },
-      op2: {
-        title: "Define documentos y llama a tus componentes",
-        main: "Mi página principal",
-        comp: "MiComponente"
+      easy: {
+        title: "Sencillo. Rápido. Escalable.",
+        text: "Feno está preparado para ser sencillo para cualquier persona, cuenta con una sintaxis sencilla que pueda ser entendible al primer vistazo, lo que nos proporciona proyectos mucho más fáciles de mantener y escalar."
       },
-      op3: {
-        title: "Define tu meta en archivos individuales",
-        desc: "Esta es mi descripción"
+      strong: {
+        title: "Fuerte y capaz.",
+        text: "Diseñamos cada parte de Feno para lograr crear un lenguaje fuerte y capaz de realizar cualquier tarea. Por eso proporcionamos un conjunto de herramientas realmente grande para ti: Tipado fuerte, Variables computadas, Componentes, Layouts, Archivos Meta, Módulos, Cubos y mucho más."
+      },
+      errors: {
+        title: "¿Errores en ejecución? ¿Eso se come?",
+        text: "Los errores durante ejecución típicos de JavaScript no existen más en Feno. Tu código antes de ser transpilado es extremadamente inspeccionado y verificado, de esta forma NADA se ejecuta si no se comprueba que funciona."
       }
     },
-    cards: [
-      {
-        image: "/code_banner.png",
-        title: "Código Más Legible",
-        content: `Más fácil, más legible, más fuerte, más explícito, un lenguaje mejor.
-              Feno es un lenguaje totalmente preparado para hacerte la vida más fácil,
-              construído con TypeScript y transpilado a HTML, CSS y JavaScript.`
-      },
-      {
-        image: "/components_banner.png",
-        title: "Orientado a Componentes",
-        content: `Feno acepta de una manera muy fluída la programación basada en componentes, mejora el
-              código de tu sitio web al dividirlo en pedazos de código reutilizables y asimismo incrementa
-              la limpieza de tu proyecto asombrosamente.`
-      },
-      {
-        image: "/scalable_banner.png",
-        title: "100% Escalable",
-        content: `Cuando trabajamos en un proyecto no importa sólo lanzar la primera versión sino también
-              mantener el código y actualizarlo más y más. Al trabajar con Feno ésto se vuelve mucho más fácil
-              al contar con todo lo necesario.`
-      }
-    ],
     support: {
       title: "Apoya a Feno",
       sub: `Trabajar con Feno es totalmente gratis, por lo tanto puedes realizar una donación 
@@ -84,6 +61,7 @@ export default {
   docs: {
     menu: {
       intro: "Introducción",
+      start: "Empezando",
       what: "¿Qué es Feno?",
       ecosystem: "Ecosistema",
       lifecycle: "Ciclo de Vida",
@@ -94,13 +72,13 @@ export default {
       files: "Archivos",
       doc: "Instancia Document",
       head: "Instancia Head",
-      styles: "Instancia Styles",
+      styles: "Función Styles",
+      scripts: "Llamar scripts",
       meta: {
         name: "Elementos del Meta",
         structure: "Estructura de propiedades",
         desc: "Propiedad Description",
-        author: "Propiedad Author",
-        functions: "Funciones de importación",
+        author: "Propiedad Author"
       },
       feno_class: {
         name: "La Clase Feno",
@@ -148,6 +126,7 @@ export default {
         def: "Por Defecto"
       },
       config: "Archivo de configuración",
+      feno_with_node: "Feno + NodeJS",
       img_func: "Función Img"
     },
     what: {
@@ -216,14 +195,13 @@ export default {
         questions: [
           "Nombre de tu proyecto",
           "Descripción del proyecto",
-          "Tu Nombre",
-          "¿Qué tipo de proyecto crearás?"
+          "Tu Nombre"
         ],
-        app_type: [
+        /*app_type: [
           "Página web",
           "Aplicación web",
           "Aplicación de NodeJS"
-        ],
+        ],*/
         design_framework: "Framework de Diseño",
         feno_plugins: "Complementos de Feno",
         after_questions: `Después de contestar inicializará el proceso de creación de tu proyecto, cuando termine tendrás que
@@ -243,14 +221,10 @@ export default {
           description: "Tu descripción",
           author: "Tu nombre"
         },
-        install_Feno_nodemon: `Después es hora de instalar Feno y nodemon ejecutando el siguiente comando:`,
-        create_nodemon_json: `Después es hora de crear un archivo llamado <span class="bold">nodemon.json</span> que contenga lo siguiente:`,
-        create_folders: "Después debemos crear las carpetas que conforman el framework con los siguientes comandos:",
-        back_to_main_folder: "Una vez creadas debemos salir a la carpeta principal",
-        create_index_js: `Ahora que estamos en la raíz del proyecto debemos crear un archivo llamado <span class="bold">index.js</span> dentro contenga:`,
         create_index_feno: `Y ahora podemos crear nuestra primera página de nuestro proyecto, para comenzar agrega un archivo llamado <span class="bold">index.feno</span> dentro de la carpeta <span class="bold">scripts</span> e inserta lo siguiente dentro:`,
         hello_world: "Hola Mundo",
-        run_project: "Finalmente tan sólo debemos correr el siguiente comando para ejecutar nuestro proyecto",
+        execute_init: "Ahora vamos a nuestra consola y ejecutamos lo siguiente:",
+        execute_feno: "Después de lo anterior notarás que se crearán varias carpetas y archivos, sólo nos queda ejecutar el siguiente comando en nuestra consola para poner en marcha nuestro proyecto:",
         running_project: "¡Y listo! Tu nuevo proyecto con Feno está corriendo en",
         continue_docs: "Si quieres saber más de cada carpeta y su función continúa visitando"
       }
@@ -267,12 +241,20 @@ export default {
           desc: `La carpeta llamada <span class="bold">components</span> es el sitio en donde debes colocar todos los componentes de tu sitio web`
         },
         {
+          title: "Carpeta Layouts",
+          desc: `La carpeta llamada <span class="bold">layouts</span> es el sitio en donde debes colocar todos los layouts/plantillas de tu sitio web`
+        },
+        {
           title: "Carpeta Meta",
           desc: `La carpeta llamada <span class="bold">meta</span> es donde debemos colocar todos los archivos individuales de meta para nuestras páginas de Feno`
         },
         {
           title: "Carpeta Styles",
           desc: `La carpeta llamada <span class="bold">styles</span> es donde debemos colocar todos los estilos que conforman nuestro sitio, ejemplo: los archivos CSS`
+        },
+        {
+          title: "Carpeta Scripts",
+          desc: `La carpeta <span class="bold">scripts</span> es donde colocamos nuestros scripts, nada de marcado sólo código`
         },
         {
           title: "Carpeta Images",
@@ -335,10 +317,9 @@ export default {
         },
         styles: {
           title: "Estilos",
-          subtitle: 'Para importar estilos que definiste en un archivo <span class="bold">.css</span> externo utilizamos la función <span class="bold txt-dk">style()</span> mientras que si quieres definir estilos en el mismo archivo utilizamos la instancia <span class="bold txt-dk">#styles</span>:',
+          subtitle: 'Para importar estilos en Feno utilizamos la función <span class"bold txt-dk">styles()</span> tanto para definir estilos en el mismo archivo como para llamar hojas de estilo externas:',
           btns: [
-            { text: 'Ver más sobre la función&nbsp;<span class="bold">style()</span>', route: "docs-meta_elements", id: "#style" },
-            { text: 'Ver más sobre la instancia&nbsp;<span class="bold">#styles</span>', route: "docs-styles_instance" }
+            { text: 'Ver más sobre la función&nbsp;<span class="bold">styles()</span>', route: "docs-styles_function", id: "" }
           ]
         },
         scripts: {
@@ -346,7 +327,7 @@ export default {
           subtitle: 'Para importar scripts externos de Feno utilizamos la función <span class="bold txt-dk">import()</span> y para definir un script en el mismo archivo llamamos a la clase <span class="bold txt-dk">{ Feno }</span>',
           btns: [
             { text: 'Ver más sobre la función&nbsp;<span class="bold">import()</span>', route: "docs-meta_elements", id: "#import" },
-            { text: 'Ver más sobre la clase&nbsp;<span class="bold">{ Feno }</span>', route: "docs-feno_class" }
+            { text: 'Ver más sobre la clase&nbsp;<span class="bold">{ Feno }</span>', route: "docs-feno_class", id:"" }
           ]
         },
         meta: {
@@ -362,22 +343,31 @@ export default {
       }
     },
     styles: {
-      title: 'Instancia <span class="txt-dk">#Styles</span>',
-      subtitle: "Ya aprendímos sobre la instancia #Doc y la instancia #Head, ahora es momento de profundizar en la tercera y última instancia de Feno: #Styles",
-      defining: {
-        title: "Definiendo la instacia",
-        subtitle: "La instancia #Styles nos sirve para definir estilos CSS en el mismo archivo, se coloca dentro de la instancia #Head y así es su correcto uso:",
-        class: "mi_clase",
-        here_mark: "Aquí va nuestro marcado",
-        alert: "¡Recuerda que la instancia #Styles SÓLO puede ser definida dentro de la instancia #Head! Si lo haces de otra manera recibirás un error de compilación"
+      title: 'Función <span class="txt-dk">Styles()</span>',
+      subtitle: "La función styles() nos ayuda a definir nuestros estilos en el mismo archivo y también a llamar estilos externos.",
+      use: "Uso",
+      ext: {
+        title: "Llamar estilos externos",
+        subtitle: "Puedes ver del lado de la izquierda el código en Feno y de la derecha el resultado en HTML"
       },
-      under: {
-        title: "Entendiendo la instancia",
-        subtitle: "Cuando queremos insertar estilos css en nuestros documentos y no llamar a un archivo externo es cuando usamos la instancia #Styles, con el código anterior en realidad lo que Feno internamente está produciendo para el navegador es lo siguiente:"
+      inside: {
+        title: "Definir estilos en el mismo archivo",
+        subtitle: "Puedes ver del lado de la izquierda el código en Feno y de la derecha el resultado en HTML"
       },
-      clean_title: "¡Quiero mis estilos en archivos separados!",
-      clean_subtitle: '¡No hay problema! Para personas como tú amantes de la limpieza Feno cuenta con la función <span class="txt-dk">style()</span> Sigue con la documentación para saber más y más de el mejor lenguaje que puedes utilizar para desarrollar tu próximo proyecto',
-      continue: "Continuar con la documentación"
+      config: {
+        title: "Configurar directorio por defecto",
+        subtitle: "En el archivo de configuración de Feno podemos configurar cuál será la carpeta de estilos que utilizaremos por defecto"
+      },
+      result: "Y ahora obtendremos el siguiente resultado:"
+    },
+    import_scripts: {
+      title: "Llamar scripts",
+      subtitle: "Puedes llamar a otros archivos .feno dentro de tus páginas. Ejemplos:",
+      config: {
+        title: "Configurar directorio por defecto",
+        subtitle: "En el archivo de configuración de Feno podemos configurar cuál será la carpeta de scripts que utilizaremos por defecto"
+      },
+      result: "Y ahora obtendremos el siguiente resultado:"
     },
     meta: {
       title: "Elementos del Meta",
@@ -408,35 +398,6 @@ export default {
       under: {
         title: "Entendiendo el elemento #Meta",
         subtitle: "Mientras nosotros en Feno tan sólo éstamos llenando un elemento con propiedades internamente lo que está sucediendo es lo siguiente: (Tomando como ejemplo que queremos utilizar la propiedad #description y #author)"
-      },
-      func: {
-        title: "Funciones de importación",
-        subtitle: 'Feno cuenta con 2 funciones especializadas para importar archivos externos con contenido para tu documento:'
-      },
-      style: {
-        title: 'Función <span class="txt-dk">style()</span>',
-        subtitle: 'La función <span class="txt-dk">style()</span> nos ayuda a importar hojas de estilo de CSS, ¿Cómo lo hacemos? Checa lo siguiente',
-        file: 'nombre_del_archivo_css',
-        benefits: '¿Viste eso? No hace falta colocar la extensión: <span class="bold">.css</span> ni siquiera colocar la ruta en donde se encuentra el archivo, nada más y nada menos que sólo el nombre del archivo.',
-        alert: '<span class="bold">¡ALERTA!</span> Sólo para los archivos que se encuentren dentro de la carpeta <span class="bold">styles</span> no es necesario colocar la ruta, si tu archivo <span class="bold">NO</span> se encuentra dentro de ésta carpeta o se encuentra en una subcarpeta de ésta misma tienes las siguientes opciones:'
-      },
-      call_file: {
-        title: "Llamar a el archivo desde otra ruta",
-        subtitle: 'Si tu archivo .css no se encuentra en la carpeta styles entonces SÍ debes colocar una ruta, supongamos que nuestro archivo se encuentra dentro de la carpeta styles PERO se encuentra dentro de una subcarpeta llamada "index", haríamos algo como ésto:',
-        route1: './index/mi_archivo',
-        outside: 'De nuevo recuerda que no es necesario colocar la extensión ".css", tan sólo colocamos un punto al inicio y comenzamos a colocar la ruta hacia el archivo. <br> Ahora, si nuestro archivo de estilos está FUERA totalmente de la carpeta styles y se encuentra en una carpeta llamada por ejemplo: "tools", hacemos algo como lo siguiente:',
-        route2: '/tools/mi_archivo',
-        rules: 'Es importante que notes que cuando nuestro archivo de estilos esté fuera totalmente de la carpeta styles directamente colocamos la ruta con una barra: "/", PERO si en cambio nuestro archivo se encuentra en una subcarpeta dentro de la carpeta styles empezamos la ruta con un punto y barra como: "./"'
-      },
-      configure: {
-        title: "Configurar otra carpeta para los estilos",
-        subtitle: "Si no quieres utilizar la carpeta styles por defecto para tus estilos puedes configurar otra carpeta para utilizarla por defecto para que Feno ubique tus archivos .css, mira la sección de #Estilos en la guía del archivo de configuración de Feno:",
-      },
-      import: {
-        title: 'Función <span class="txt-dk">#import</span>',
-        subtitle: 'La función <span class="txt-dk">import()</span> realiza la misma función que la función <span class="txt-dk">style()</span> PERO esta función sólo funciona para archivos con extensión: <span class="bold">.feno</span>, la sintaxis es muy sencilla:',
-        file: 'nombre_del_archivo_feno',
-        alert: 'Si quieres llamar a un archivo que está fuera de la carpeta <span class="bold">scripts</span> puedes hacer lo mismo que indicamos aquí ( Sólo cambiaría la función style() por import() )'
       },
       props: {
         title: 'Propiedades',
@@ -540,9 +501,9 @@ export default {
       btn_name: 'miboton',
       create: {
         title: 'Creando nuestro primer componente',
-        subtitle: 'Nos dirigiremos a la carpeta llamada "components" y dentro crearemos un nuevo archivo llamado por ejemplo: "miboton.feno" y dentro colocaremos el siguiente contenido:',
-        go_to: 'Ahora iremos a nuestra página principal: "index.feno" y llamaremos a nuestro componente mediante la función:',
-        alert: 'Los componentes SÓlO aceptan la instancia #Doc, si colocas un head o meta en un componente verás un error de compilación',
+        subtitle: 'Nos dirigiremos a la carpeta llamada "components" y dentro crearemos un nuevo archivo (no importa cómo lo llamemos) y dentro colocaremos el siguiente código: (Dentro de las comillas colocaremos el nombre de nuestro componente)',
+        go_to: 'Ahora iremos a nuestra página principal: "index.feno" y llamaremos a nuestro componente siguiendo la siguiente regla: "@nombre-del-componente()"',
+        alert: 'Los componentes NO aceptan ninguna instancia, si colocas un doc, head o meta en un componente verás un error de compilación',
         res: '¡Y listo! Feno llamará a el componente "miboton" en la página "index" por lo tanto aunque no lo veamos el documento final que se transpilará para el navegador será el siguiente:',
         continue: 'Éste fue un ejemplo muy sencillo de cómo crear componentes ya que obviamente puedes lograr cosas mucho más complejas e incluso crear componentes interactivos con propiedades, ¡Sigue aprendiendo en la siguiente lección!'
       }
@@ -556,9 +517,9 @@ export default {
       bye: 'Adiós!',
       newone: {
         title: 'Mandando y recibiendo datos',
-        subtitle: 'Para mandar una prop a un componente debemos mandarle un objeto y dentro el nombre de la prop y su valor:',
+        subtitle: 'Para mandar una prop a un componente tan sólo debemos mandarle atributos con valores, ejemplo:',
         subtitle2: 'De esta manera éstamos mandando una propiedad llamada "prop" con un valor de "Hola Mundo!". La mitad del trabajo está hecha ahora sólo falta RECIBIR ese valor que enviamos. Para eso hacemos algo como lo siguiente:',
-        result: 'Y así le decimos a Feno que éstamos esperando una propiedad llamada prop y queremos que la coloque antes de nuestro mensaje que dice "Bienvenido amigo", tan sólo con "${}" y entre corchetes colocar el nombre de la propiedad que quieres colocar. <br> <br> Tomando en cuenta que ya mandamos una propiedad con su valor y ya la recibimos en el componente, lo que veremos en el navegador será lo siguiente:'
+        result: 'Y así le decimos a Feno que éstamos esperando una propiedad llamada "my_prop" y queremos que la coloque antes de nuestro mensaje que dice "Bienvenido amigo", tan sólo con dobles corchetes "{{}}" y en medio llamamos por medio del objeto "props" a nuestra prop, ejemplo: "props.otra_prop".<br> <br> Tomando en cuenta que ya mandamos una propiedad con su valor y ya la recibimos en el componente, lo que veremos en el navegador será lo siguiente:'
       },
       two: {
         title: 'Mandando y recibiendo 2 props',
@@ -679,11 +640,10 @@ export default {
     },
     types: {
       title: "Tipado",
-      subtitle: "Feno es un lenguaje fuertemente tipado, lo que significa que cada variable cuenta con un tipo fijo y éste debe de respetarse. No es necesario colocar el tipo cuando se declara una variable ya que Feno lo hace automáticamente pero sí que puedes hacerlo si quieres",
+      subtitle: "Feno es un lenguaje fuertemente tipado, lo que significa que cada variable cuenta con un tipo fijo y éste debe de respetarse. ES NECESARIO colocar el tipo siempre que se declare una variable, de lo contrario no funcionará correctamente.",
       hw: "Hola Mundo!",
       string: {
         subtitle: "String es el tipo que Feno proporciona para las variables de tipo texto y así es como lo utilizamos:",
-        subtitle2: "Las dos variables van a producir el mismo resultado tan sólo que arriba decidimos colocar el tipo manualmente mientras abajo internamente Feno ya le ha colocado el tipo String por nosotros :)",
         var: "hola"
       },
       number: {
@@ -698,7 +658,7 @@ export default {
         subtitle: "Array es el tipo indicado para nuestras variables que serán grupos de datos",
         var: "vector",
         var2: "multi_vector",
-        alert: "¡Aún no existen las interfaces en Feno por lo tanto aún no podemos especificar los tipos permitidos en un Array!"
+        alert: "¡Aún no existen las interfaces en Feno por lo tanto aún no podemos especificar los tipos permitidos en un Array u Objeto!"
       },
       object: {
         subtitle: "Object es el tipo indicado para nuestros objetos simples",
@@ -749,7 +709,7 @@ export default {
       create: {
         title: "Escribiendo una función",
         subtitle: "Vamos a crear una simple función para mostrar una alerta en pantalla:",
-        subtitle2: 'Declaramos una nueva función con la palabra <span class="bold">func</span> y llamamos por su nombre "mostrar()" para ejecutarla'
+        subtitle2: 'Declaramos una nueva función con la palabra <span class="bold">fun</span> y llamamos por su nombre "mostrar()" para ejecutarla'
       },
       params: {
         title: "Parámetros",
@@ -767,7 +727,7 @@ export default {
       xmenory: "¡x es menor a y!",
       if: {
         title: "Sentencia If",
-        subtitle: "La sentencia if es la más conocida al ser la básica, escribamos una muy simple en Feno:",
+        subtitle: "La sentencia if es la más conocida al ser la básica, NO ES NECESARIO colocar los paréntesis pero puede hacerse, escribamos una muy simple en Feno:",
         result: 'Si corremos el código anterior obtendremos el mensaje "Eres menor de edad!" en la consola, ¿Por qué? Hemos declarado una variable con el valor: 17 y después hemos escrito una sentencia if que contiene la siguiente condición: "Si la variable edad tiene un valor de 17 o menor entonces realiza lo siguiente" y nosotros hemos escrito que despliegue con mensaje en la consola si se cumple la condición'
       },
       else: {
@@ -790,9 +750,9 @@ export default {
       hello: "Hola!",
       files: {
         title: "Archivos Feno",
-        subtitle: 'Sabemos que para codificar en Feno necesitamos crear un archivo <span class="bold">.feno</span> y aparte necesitamos crear una instancia pero esto SÓLO lo debemos de realizar si vamos a colocar HTML en el mismo archivo. Si NO vamos a colocar HTML en el mismo archivo entonces no hay necesidad de colocar ninguna instancia, por ejemplo:',
-        subtitle2: "¿Observaste que no colocamos la clase Feno? El código anterior funcionará perfectamente y será transpilado a un archivo de javascript, PERO, ¿Qué pasa si hacemos lo siguiente?",
-        subtitle3: "Al compilar el código anterior Feno notará que colocaste la instancia #DOC por lo que automáticamente este archivo ya NO se transpilará a un archivo .js sino a uno .html, después buscará si declaraste la clase de Feno y si no lo hiciste terminará de transpilar y lanzará tu código al navegador como total y puro marcado de HTML."
+        subtitle: 'Sabemos que para codificar en Feno necesitamos crear un archivo <span class="bold">.feno</span> y aparte necesitamos crear una instancia pero esto SÓLO lo debemos de realizar si vamos a colocar HTML en el mismo archivo. Si NO vamos a colocar HTML en el mismo archivo entonces creamos un script dentro de la carpeta /scripts y colocamos lo siguiente:',
+        subtitle2: "¿Observaste que no colocamos la clase Feno? Eso es porque estamos creando UN SCRIPT, el código anterior funcionará perfectamente y será transpilado a un archivo de javascript, PERO, ¿Qué pasa si hacemos lo siguiente?",
+        subtitle3: "Al compilar el código anterior Feno notará que colocaste la instancia #DOC dentro de un script por lo tanto te lanzaŕa una advertencia ya que estarías utilizando marcado HTML en el lugar equivocado. Recuerda que nuestro marcado va en la carpeta \"pages\" y nuestros scripts en \"scripts\"."
       },
       examples: "Ejemplos de transpilación",
       pure: "Feno puro",
@@ -827,7 +787,7 @@ export default {
         subtitle2: "Ahora tendríamos que importar la función así:"
       }
     },
-    crystals: {
+    cubes: {
       subtitle: "Los Cristales son una funcionalidad exclusiva que ofrece Feno para mejorar la interactividad de nuestro código y abandonar el uso de los parámetros para cambiar la forma en la que nuestro código funciona.",
       code_change: "Código que cambia",
       func1: "funcion1",
@@ -841,11 +801,11 @@ export default {
       },
       with: {
         title: "Con Cristales",
-        subtitle: 'Acaso no es... ¡¿Increíble?! Importamos los cristales en la primera línea, en la función 1 mandamos un cristal a través de la función <span class="bold">Crystals.send(<span class="italic">nombre del cristal que se va a mandar</span>)</span> que como primer parámetro le mandamos el nombre de nuestro cristal y como segundo el valor que tendrá. <br> <br> En la segunda función también mandamos un cristal llamado "res" y como valor le mandamos la función despedirse().Y en la tercera función ahora sólo ejecutamos el cristal llamado "res" con la función<span class= "bold" > Crystals.exec("<span class="italic">nombre del cristal a ejecutar</span>")</span> y ¡LISTO!'
+        subtitle: 'Acaso no es... ¡¿Increíble?! Importamos los cristales en la primera línea, en la función 1 mandamos un cristal a través de la función <span class="bold">Cubes.send(<span class="italic">nombre del cristal que se va a mandar</span>)</span> que como primer parámetro le mandamos el nombre de nuestro cristal y como segundo el valor que tendrá. <br> <br> En la segunda función también mandamos un cristal llamado "res" y como valor le mandamos la función despedirse().Y en la tercera función ahora sólo ejecutamos el cristal llamado "res" con la función<span class= "bold" > Cubes.exec("<span class="italic">nombre del cristal a ejecutar</span>")</span> y ¡LISTO!'
       },
       need: {
         title: "¿Realmente necesito los cristales?",
-        subtitle: 'Personalmente como programador muchas veces necesito que mi código funcione de distintas maneras de acuerdo a la situación que se presente y así reutilizar mis scripts además de que cuando queremos reaccionar ante diversas situaciones tendríamos que mandar más tipos de parametros y por lo tanto más uso innecesario del elif en nuestras condicionales. Ese fue el motivo para crear "Crystals": Una manera de decirle a nuestro código cómo actuar SIN usar parámetros :))',
+        subtitle: 'Personalmente como programador muchas veces necesito que mi código funcione de distintas maneras de acuerdo a la situación que se presente y así reutilizar mis scripts además de que cuando queremos reaccionar ante diversas situaciones tendríamos que mandar más tipos de parametros y por lo tanto más uso innecesario del elif en nuestras condicionales. Ese fue el motivo para crear "Cubes": Una manera de decirle a nuestro código cómo actuar SIN usar parámetros :))',
         alert: '¡Alerta! Los Cristales actualmente sólo funcionan dentro de un mismo archivo, aún no funcionan con funciones externas que importas PERO éstamos trabajando en eso ;)'
       }
     },
@@ -884,46 +844,83 @@ export default {
     high: "Destacado:",
     versions: [
       {
-        color: 'deep-orange',
-        icon: 'mdi-cat',
-        name: 'v1.0 Release <span class="bold">(Felino)</span>',
-        text: `La actualización 1.0 oficial de Feno: "Felino" da origen a el mismo nombre del lenguaje, esta versión será 100% estable, sin errores y ya con todas las funciones necesarias para brindarle fuerza y poder a tu proyecto. Aún no sabemos cuándo será la fecha de salida pero lo anunciaremos en todos lados ;)`
+        color: "grey",
+        icon: "mdi-rocket",
+        name: "v1.1.0 Release",
+        text: "La versión 1.1 cambiará muchas cosas, pero habrá que esperar para eso;)"
       },
       {
-        color: "grey",
-        icon: 'mdi-rocket',
-        name: 'v0.7.0 Beta Release <span class="bold">(Hungry)</span>',
-        text: `La actualización que lleva por nombre "Hungry" incluirá las funciones y elementos suficientes para terminar con la fase beta.`,
+        color: "green",
+        icon: "mdi-check-bold",
+        name: "v1.0.0 Release",
+        text: "La versión 1.0 oficial contiene TODO lo necesario para comenzar un proyecto con Feno, la estabilidad completa, rápidez y un completo paquete de herramientas que mejorarán nuestra productividad al máximo.",
         news: [
-          "Introducción completa de los Cristales",
-          "Introducción de los Layouts",
-          "Y mucho más..."
+          "Exportación de proyectos",
+          "¡Cubos!",
+          "Y más..."
         ]
       },
       {
-        color: "indigo",
-        icon: 'mdi-rocket',
-        name: "v0.6.5 Beta Release",
-        text: `La versión 0.6.5 es una versión planeada para mejorar la estabilidad y funcionamiento de el lenguaje.`,
+        color: "green",
+        icon: "mdi-check-bold",
+        name: "v0.9.0 Beta Release",
+        text: "La versión 0.9.0 es última beta de Feno, por lo tanto incluye demasiadas mejoras, novedades y cambios.",
+        news: [
+          "¡Funciones!",
+          "¡Condicionales!",
+          "Importar y exportar",
+          "Archivo de configuración",
+          "¡Constantes!",
+          "Y más..."
+        ]
+      },
+      {
+        color: 'green',
+        icon: 'mdi-check-bold',
+        name: 'v0.8.0 Beta Release',
+        text: `La versión 0.8 incluye muchas nuevas mejoras además de mejorar la rápidez de transpilación`,
+        news: [
+          "¡Layouts!",
+          "¡Atributos!",
+          "¡Variables!",
+          "¡Tipado fuerte!",
+          "Y más..."
+        ]
+      },
+      {
+        color: "green",
+        icon: 'mdi-check-bold',
+        name: 'v0.7.0 Beta Release',
+        text: `La actualización 0.7.0 incluye nuevas funciones y elementos necesarios.`,
+        news: [
+          "Introducción del Noscript",
+          "¡Componentes!",
+          "¡Props!",
+          "No más errores de indentación"
+        ]
+      },
+      {
+        color: "green",
+        icon: 'mdi-check-bold',
+        name: "v0.6.2 Beta Release",
+        text: `La versión 0.6.2 es una versión planeada para mejorar la estabilidad y funcionamiento de el lenguaje.`,
         news: [
           "Mejora en la rápidez al 200%",
-          "Declaración de componentes más fácil",
-          "Props re-escritas desde cero",
-          "Tipado más completo",
-          "Condicionales"
+          "Llamar a estilos y scripts de distintas rutas.",
+          "Feno ahora escrito en ES6."
         ]
       },
       {
         color: "green",
         icon: "mdi-check-bold",
         name: "v0.6.0 Beta Release",
-        text: `La primera versión oficial de Feno disponible para todos. Sólo incluye las funciones básicas como: Componentes, Meta archivos, Instancias, Variables y poco más.`
+        text: `La primera versión oficial de Feno disponible para todos. Sólo incluye las funciones básicas.`
       }
     ]
   },
   faq: {
     when_comes: "¿Cuándo saldrá la versión 1.0?",
-    answer: 'Aún no lo sabemos, quedan muchas cosas por hacer pero lo anunciaremos en nuestra',
+    answer: '¡YA SALIÓ! Y está disponible para todos ustedes en NPM. Para más actualizaciones te puedes informar en nuestra',
     road: "Ruta del proyecto",
     answer2: 'y en nuestras redes sociales :)',
     ask_group: [

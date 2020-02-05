@@ -16,12 +16,12 @@
             class="ft13 lTXTgrey"
           >{{ $t('docs.cond.if.subtitle') }}</p>
           <CodeBox>
-            <Attr>new</Attr> <Func name="Feno"></Func>{ <br />
-              <Tab /> <El>def</El> {{ $t('docs.cond.age') }} = <Attr>17</Attr>; <br />
-              <Tab /> <El>if</El> ({{ $t('docs.cond.age') }} &lt;= <Attr>17</Attr>) { <br />
+            <Attr>new</Attr> <Func name="Feno">{ <br>
+              <Tab /> <El>def</El> <Attr>Number</Attr> {{ $t('docs.cond.age') }} = <Attr>17</Attr>; <br />
+              <Tab /> <El>if</El> {{ $t('docs.cond.age') }} &lt;= <Attr>17</Attr>: <br />
                   <Tab /><Tab /> <Func name="print"><String>"{{ $t('docs.cond.menor') }}"</String></Func> <br>
-              <Tab/>}
-            <br />}
+              <Tab/>} <br>
+            }</Func>
           </CodeBox>
           <p class="ft13 lTXTgrey mt20">
               {{ $t('docs.cond.if.result') }}
@@ -35,14 +35,14 @@
                   {{ $t('docs.cond.else.subtitle') }}
               </p>
               <CodeBox>
-                  <Attr>new</Attr> <Func name="Feno"></Func>{ <br />
-                      <Tab /> <El>def</El> {{ $t('docs.cond.age') }} = <Attr>17</Attr>; <br />
-                      <Tab /> <El>if</El> ({{ $t('docs.cond.age') }} &lt;= <Attr>17</Attr>) { <br />
-                          <Tab /><Tab /> <Func name="print"><String>"{{ $t('docs.cond.menor') }}"</String></Func> <br>
-                      <Tab/>} <El>else</El> { <br>
-                          <Tab/><Tab/> <Func name="print"><String>"{{ $t('docs.cond.mayor') }}"</String></Func> <br>
-                      <Tab/>} <br>
-                  }
+                <Attr>new</Attr> <Func name="Feno">{ <br>
+                  <Tab /> <El>def</El> <Attr>Number</Attr> {{ $t('docs.cond.age') }} = <Attr>17</Attr>; <br />
+                  <Tab /> <El>if</El> {{ $t('docs.cond.age') }} &lt;= <Attr>17</Attr>: <br />
+                      <Tab /><Tab /> <Func name="print"><String>"{{ $t('docs.cond.menor') }}"</String></Func> <br>
+                  <Tab/>} <El>else</El>: <br>
+                      <Tab/><Tab/> <Func name="print"><String>"{{ $t('docs.cond.mayor') }}"</String></Func> <br>
+                  <Tab/>} <br>
+                }</Func>
               </CodeBox>
           </div>
       </v-flex>
@@ -53,11 +53,11 @@
                   {{ $t('docs.cond.elif.subtitle') }}
               </p>
               <CodeBox>
-                  <El>if</El> (x > y) { <br />
+                  <El>if</El> x > y: <br />
                       <Tab /> <Func name="print"><String>"{{ $t('docs.cond.xmayory') }}"</String></Func>; <br>
-                  } <El>elif</El> (x == y) { <br>
+                  } <El>elif</El> x == y: <br>
                       <Tab/> <Func name="print"><String>"{{ $t('docs.cond.xigualy') }}</String></Func>; <br>
-                  } <El>else</El> { <br>
+                  } <El>else</El>: <br>
                       <Tab/> <Func name="print"><String>"{{ $t('docs.cond.xmenory') }}"</String></Func>; <br>
                   } <br>
               </CodeBox>

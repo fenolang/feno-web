@@ -16,14 +16,10 @@
                         {{ $t('docs.types.string.subtitle') }}
                     </p>
                     <CodeBox>
-                        <Attr>new</Attr> <Func name="Feno"></Func> { <br>
+                        <Attr>new</Attr> <Func name="Feno">{ <br>
                             <Tab/> <El>def</El> <Attr>String</Attr> {{ $t('docs.types.string.var') }} = <String>"{{ $t('docs.types.hw') }}"</String>; <br>
-                            <Tab/> <El>def</El> {{ $t('docs.types.string.var') }}2 = <String>"{{ $t('docs.types.hw') }}"</String>; <br>
-                        }
+                        }</Func>
                     </CodeBox>
-                    <p class="ft13 lTXTgrey mt20">
-                        {{ $t('docs.types.string.subtitle2') }}
-                    </p>
                 </div>
             </v-flex>
             <v-flex xs12>
@@ -33,10 +29,9 @@
                         {{ $t('docs.types.number.subtitle') }}
                     </p>
                     <CodeBox>
-                        <Attr>new</Attr> <Func name="Feno"></Func> { <br>
+                        <Attr>new</Attr> <Func name="Feno">{ <br>
                             <Tab/> <El>def</El> <Attr>Number</Attr> {{ $t('docs.types.number.var') }} = <Attr>17</Attr>; <br>
-                            <Tab/> <El>def</El> {{ $t('docs.types.number.var') }}2 = <Attr>17</Attr>; <br>
-                        }
+                        }</Func>
                     </CodeBox>
                 </div>
             </v-flex>
@@ -47,10 +42,9 @@
                         {{ $t('docs.types.bool.subtitle') }}
                     </p>
                     <CodeBox>
-                        <Attr>new</Attr> <Func name="Feno"></Func> { <br>
+                        <Attr>new</Attr> <Func name="Feno">{ <br>
                             <Tab/> <El>def</El> <Attr>Boolean</Attr> {{ $t('docs.types.bool.var') }} = <Attr>true</Attr>; <br>
-                            <Tab/> <El>def</El> {{ $t('docs.types.bool.var') }}2 = <Attr>false</Attr>; <br>
-                        }
+                        }</Func>
                     </CodeBox>
                 </div>
             </v-flex>
@@ -61,14 +55,9 @@
                         {{ $t('docs.types.array.subtitle') }}
                     </p>
                     <CodeBox>
-                        <Attr>new</Attr> <Func name="Feno"></Func> { <br>
+                        <Attr>new</Attr> <Func name="Feno">{ <br>
                             <Tab/> <El>def</El> <Attr>Array</Attr> {{ $t('docs.types.array.var') }} = [<String>""</String>]; <br>
-                            <Tab/> <El>def</El> [] {{ $t('docs.types.array.var') }}2 = [<String>""</String>]; <br>
-                            <Tab/> <El>def</El> {{ $t('docs.types.array.var') }}3 = [<String>""</String>]; <br> <br>
-                            <Tab/> <El>def</El> <Attr>Array</Attr>[] {{ $t('docs.types.array.var2') }} = [<String>""</String>,<String>""</String>]; <br>
-                            <Tab/> <El>def</El> [][] {{ $t('docs.types.array.var2') }}2 = [<String>""</String>,<String>""</String>]; <br>
-                            <Tab/> <El>def</El> {{ $t('docs.types.array.var2') }}3 = [<String>""</String>,<String>""</String>]; <br>
-                        }
+                        }</Func>
                     </CodeBox>
                     <v-alert class="mt20" type="warning" border="left" outlined>
                         {{ $t('docs.types.array.alert') }}
@@ -82,11 +71,9 @@
                         {{ $t('docs.types.object.subtitle') }}
                     </p>
                     <CodeBox>
-                        <Attr>new</Attr> <Func name="Feno"></Func> { <br>
+                        <Attr>new</Attr> <Func name="Feno">{ <br>
                             <Tab/> <El>def</El> <Attr>Object</Attr> {{ $t('docs.types.object.var') }} = {}; <br>
-                            <Tab/> <El>def</El> {} {{ $t('docs.types.object.var') }}3 = {}; <br>
-                            <Tab/> <El>def</El> {{ $t('docs.types.object.var') }}2 = {}; <br>
-                        }
+                        }</Func>
                     </CodeBox>
                 </div>
             </v-flex>
@@ -97,11 +84,11 @@
                         {{ $t('docs.types.any.subtitle') }}
                     </p>
                     <CodeBox>
-                        <Attr>new</Attr> <Func name="Feno"></Func> { <br>
+                        <Attr>new</Attr> <Func name="Feno">{ <br>
                             <Tab/> <El>def</El> <Attr>Any</Attr> {{ $t('docs.types.any.var') }} = <Attr>true</Attr>; <br>
                             <Tab/> {{ $t('docs.types.any.var') }} = <String>"{{ $t('docs.types.any.string') }}"</String>; <Comment>// {{ $t('docs.types.any.comment') }}</Comment> <br>
                             <Tab/> {{ $t('docs.types.any.var') }} = <Attr>5</Attr>; <Comment>// {{ $t('docs.types.any.comment') }}</Comment> <br>
-                        }
+                        }</Func>
                     </CodeBox>
                 </div>
             </v-flex>

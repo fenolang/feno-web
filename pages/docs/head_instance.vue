@@ -13,14 +13,14 @@
                     <p class="ft13 lTXTgrey">
                         {{ $t('docs.head.define.subtitle') }}
                     </p>
-                    <code-box class="line">
+                    <CodeBox class="line">
                         <El>head:</El> { <br>
                         &nbsp;&nbsp;<Comment>#- {{ $t('docs.head.define.content') }} -#</Comment> <br>
                         } <br>
                         <El>doc:</El> { <br>
                         &nbsp;&nbsp;<Comment>#- {{ $t('docs.head.define.structure') }} -#</Comment> <br>
                         }
-                    </code-box>
+                    </CodeBox>
                 </div>
             </v-flex>
             <v-flex xs12>
@@ -36,7 +36,7 @@
                     <p class="ft13 lTXTgrey">
                         {{ $t('docs.head.under.subtitle') }}
                     </p>
-                    <code-box>
+                    <CodeBox>
                         <Tag>!doctype html</Tag> <br>
                         <Tag>html</Tag> <br>
                         &nbsp;&nbsp;<Tag>head</Tag> <br>
@@ -46,7 +46,7 @@
                         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<Comment>&lt;!-- {{ $t('docs.head.define.structure') }} --&gt;</Comment> <br>
                         &nbsp;&nbsp;<Tag>/body</Tag> <br>
                         <Tag>/html</Tag>
-                    </code-box>
+                    </CodeBox>
                 </div>
             </v-flex>
             <v-flex xs12>
@@ -54,11 +54,11 @@
                     <Title>{{ $t('docs.head.elements.title') }}</Title>
                     <Subtitle>Title</Subtitle>
                     <p class="ft13 lTXTgrey" v-html="$t('docs.head.elements.title_el.subtitle')"></p>
-                    <code-box class="line">
+                    <CodeBox class="line">
                         <El>head:</El> { <br>
                         &nbsp;&nbsp;<El>title:</El> <String>"{{ $t('docs.head.elements.title_el.string') }}"</String> <br>
                         }
-                    </code-box>
+                    </CodeBox>
                 </div>
             </v-flex> 
             <v-flex xs12>
@@ -81,16 +81,49 @@
             </v-flex>
             <v-flex xs12>
                 <div class="spacing">
+                    <Subtitle id="noscript">{{ $t('docs.meta.props.noscript.name') }}</Subtitle>
+                    <p class="ft13 lTXTgrey">
+                        {{ $t('docs.meta.props.noscript.sub') }}
+                    </p>
+                    <CodeBox :mark="true" class="mt30">
+                        <Head>
+                            <Tab/><El>title:</El> <String>"{{ $t('docs.meta.mtitle') }}"</String>, <br>
+                            <Tab/>
+                            <Mark>
+                                <El>noscript:</El> { <br>
+                                <Tab/> <Tag>p</Tag>{{ $t('docs.meta.props.noscript.dont_js') }}<Tag>/p</Tag> <br>
+                                } <br>
+                            </Mark>
+                        </Head>
+                        <Doc>
+                            <Comment>#- {{ $t('docs.meta.comment') }} -#</Comment>
+                        </Doc>
+                    </CodeBox>
+                    <v-alert outlined type="warning" border="left" class="mt-4" v-html="$t('docs.meta.props.noscript.alert')">
+                    </v-alert>
+                    <Subtitle id="noscript-default">{{ $t('docs.meta.props.nojs_default.name') }}</Subtitle>
+                    <p class="ft13 lTXTgrey">
+                        {{ $t('docs.meta.props.nojs_default.sub') }}
+                    </p>
+                    <Subtitle>{{ $t('docs.meta.props.configure_nojs.name') }}</Subtitle>
+                    <p class="ft13 lTXTgrey" v-html="$t('docs.meta.props.configure_nojs.sub')">
+                    </p>
+                    <br>
+                    <v-btn depressed class="bg3 dk" :to="localePath('docs-config-file')">{{ $t('docs.meta.go') }}</v-btn>
+                </div>
+            </v-flex>
+            <v-flex xs12>
+                <div class="spacing">
                     <Subtitle>Meta</Subtitle>
                     <p class="ft13 lTXTgrey">{{ $t('docs.head.elements.meta.subtitle') }}</p>
-                    <code-box>
+                    <CodeBox>
                         <El>head:</El> { <br>
                         &nbsp;&nbsp;<El>title:</El> <String>"{{ $t('docs.head.elements.meta.title') }}"</String> <br>
                         &nbsp;&nbsp;<El>meta:</El> [ <br>
                         &nbsp;&nbsp;&nbsp;&nbsp;<String>"description, {{ $t('docs.head.elements.meta.desc') }}"</String> <br>
                         &nbsp;&nbsp;] <br>
                         }
-                    </code-box>
+                    </CodeBox>
                 </div>
             </v-flex>
             <v-flex>
@@ -108,7 +141,8 @@
 import { Vue, Component } from 'vue-property-decorator';
 import { Action, namespace } from 'vuex-class';
 import { Title, Subtitle } from '@/components/Tools/index';
-import { CodeBox, Tag, El, Comment, String } from '@/components/Code/index';
+import { CodeBox, Tag, El, Comment, String, Mark, Tab } from '@/components/Code/index';
+import { Head, Doc } from '@/components/Code/Instances/index';
 
 const MenuModule = namespace('menu');
 
@@ -116,8 +150,9 @@ const MenuModule = namespace('menu');
     layout: 'doc',
     components: {
         Title, Subtitle,
-        'code-box': CodeBox,
-        Tag, El, Comment, String
+        CodeBox,
+        Tag, El, Comment, String, Mark, Tab,
+        Head, Doc
     }
 })
 

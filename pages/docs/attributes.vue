@@ -45,102 +45,11 @@
             </v-flex>
             <v-flex xs12>
                 <div class="spacing">
-                    <Subtitle id="name">Name</Subtitle>
-                    <p class="ft13 lTXTgrey">{{ $t('docs.attr.name.subtitle') }}</p>
-                    <CodeBox>
-                        <Doc>
-                            <Tag>p <Mark><Attr>Name</Attr>=<String>"{{ $t('docs.attr.mytext') }}"</String></Mark></Tag>{{ $t('docs.attr.hello') }}<Tag>/p</Tag>
-                        </Doc>
-                    </CodeBox>
-                </div>
-            </v-flex>
-            <v-flex xs12>
-                <div class="spacing">
-                    <Subtitle id="id">Id</Subtitle>
-                    <p class="ft13 lTXTgrey">{{ $t('docs.attr.id.subtitle') }}</p>
-                    <CodeBox>
-                        <Doc>
-                            <Tag>p <Mark><Attr>Id</Attr>=<String>"{{ $t('docs.attr.mytext') }}"</String></Mark></Tag>{{ $t('docs.attr.hello') }}<Tag>/p</Tag>
-                        </Doc>
-                    </CodeBox>
-                </div>
-            </v-flex>
-            <v-flex xs12>
-                <div class="spacing">
-                    <Subtitle id="class">Class</Subtitle>
-                    <p class="ft13 lTXTgrey">{{ $t('docs.attr.class.subtitle') }}</p>
-                    <CodeBox>
-                        <Doc>
-                            <Tag>p <Mark><Attr>Class</Attr>=<String>"{{ $t('docs.attr.class.class') }}"</String></Mark></Tag>{{ $t('docs.attr.hello') }}<Tag>/p</Tag>
-                        </Doc>
-                    </CodeBox>
-                </div>
-            </v-flex>
-            <v-flex xs12>
-                <div class="spacing">
-                    <Subtitle id="type">Type</Subtitle>
-                    <p class="ft13 lTXTgrey">{{ $t('docs.attr.type.subtitle') }}</p>
-                    <CodeBox>
-                        <Doc>
-                            <Tag>input <Mark><Attr>Type</Attr>=<String>"password"</String></Mark></Tag>
-                        </Doc>
-                    </CodeBox>
-                </div>
-            </v-flex>
-            <v-flex xs12>
-                <div class="spacing">
                     <Subtitle id="to">To</Subtitle>
                     <p class="ft13 lTXTgrey">{{ $t('docs.attr.to.subtitle') }}</p>
                     <CodeBox>
                         <Doc>
                             <Tag>a <Mark><Attr>To</Attr>=<String>"https://www.w3schools.com"</String></Mark></Tag>{{ $t('docs.attr.hello') }}<Tag>/a</Tag>
-                        </Doc>
-                    </CodeBox>
-                </div>
-            </v-flex>
-            <v-flex xs12>
-                <div class="spacing">
-                    <Subtitle id="src">Src</Subtitle>
-                    <p class="ft13 lTXTgrey">{{ $t('docs.attr.src.subtitle') }}</p>
-                    <CodeBox>
-                        <Doc>
-                            <Tag>input <Attr>Type</Attr>=<String>"image"</String> <Mark><Attr>Src</Attr>=<String>"/images/{{ $t('docs.attr.src.img') }}.png"</String></Mark></Tag>
-                        </Doc>
-                    </CodeBox>
-                    <v-alert class="mt20" type="warning" border="left" outlined>
-                        {{ $t('docs.attr.src.alert') }}
-                    </v-alert>
-                </div>
-            </v-flex>
-            <v-flex xs12>
-                <div class="spacing">
-                    <Subtitle id="size">Size</Subtitle>
-                    <p class="ft13 lTXTgrey">{{ $t('docs.attr.size.subtitle') }}</p>
-                    <CodeBox>
-                        <Doc>
-                            <Tag>hr <Mark><Attr>Size</Attr>=<String>"50"</String></Mark></Tag>
-                        </Doc>
-                    </CodeBox>
-                </div>
-            </v-flex>
-            <v-flex xs12>
-                <div class="spacing">
-                    <Subtitle id="width">Width</Subtitle>
-                    <p class="ft13 lTXTgrey">{{ $t('docs.attr.width.subtitle') }}</p>
-                    <CodeBox>
-                        <Doc>
-                            <Tag>input <Attr>Type</Attr>=<String>"image"</String> <Mark><Attr>Width</Attr>=<String>"48"</String></Mark></Tag>
-                        </Doc>
-                    </CodeBox>
-                </div>
-            </v-flex>
-            <v-flex xs12>
-                <div class="spacing">
-                    <Subtitle id="height">Height</Subtitle>
-                    <p class="ft13 lTXTgrey">{{ $t('docs.attr.height.subtitle') }}</p>
-                    <CodeBox>
-                        <Doc>
-                            <Tag>input <Attr>Type</Attr>=<String>"image"</String> <Mark><Attr>Height</Attr>=<String>"48"</String></Mark></Tag>
                         </Doc>
                     </CodeBox>
                 </div>
@@ -156,33 +65,13 @@
                     </CodeBox>
                 </div>
             </v-flex>
-            <v-flex xs12>
+            <v-flex xs12 class="mb30">
                 <div class="spacing">
                     <Subtitle id="val">Val</Subtitle>
                     <p class="ft13 lTXTgrey">{{ $t('docs.attr.val.subtitle') }}</p>
                     <CodeBox>
                         <Doc>
-                            <Tag>input <Attr>Type</Attr>=<String>"text"</String> <Attr>Name</Attr>=<String>"{{ $t('docs.attr.val.name') }}"</String> <Attr>Val</Attr>=<String>"Giorgio Moroder"</String></Tag>
-                        </Doc>
-                    </CodeBox>
-                </div>
-            </v-flex>
-            <v-flex xs12 class="mb30">
-                <div class="spacing">
-                    <Subtitle id="more">{{ $t('docs.attr.more.title') }}</Subtitle>
-                    <p class="ft13 lTXTgrey">
-                        {{ $t('docs.attr.more.subtitle') }}
-                    </p>
-                    <CodeBox>
-                        <Doc>
-                            <Tag>textarea <Attr>Cols</Attr>=<String>"50"</String></Tag><Tag>/textarea</Tag>
-                        </Doc>
-                    </CodeBox>
-                    <p class="mt20 ft13 lTXTgrey" v-html="$t('docs.attr.more.subtitle2')">
-                    </p>
-                    <CodeBox>
-                        <Doc>
-                            <Tag>table <Attr>cellPadding</Attr>=<String>"10"</String></Tag><Tag>/table</Tag>
+                            <Tag>input <Attr>Type</Attr>=<String>"text"</String> <Attr>Name</Attr>=<String>"{{ $t('docs.attr.val.name') }}"</String> <Mark><Attr>Val</Attr>=<String>"Giorgio Moroder"</String></Mark></Tag>
                         </Doc>
                     </CodeBox>
                 </div>

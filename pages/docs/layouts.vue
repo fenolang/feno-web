@@ -42,9 +42,9 @@
                         <Doc>
                             <Tag>p</Tag>{{ $t('docs.layouts.page') }}<Tag>/p</Tag>
                         </Doc>
-                        <Attr>new</Attr> <Func name="Feno"></Func> { <br>
-                        <Tab/> <Attr>this</Attr>.<El>layout</El> = <String>"design"</String>; <br>
-                        }
+                        <Attr>new</Attr> <Func name="Feno">{ <br>
+                            <Tab/> <Attr>this</Attr>.<El>layout</El> = <String>"design"</String> <br>
+                        }</Func>
                     </CodeBox>
                 </div>
             </v-flex>

@@ -2,8 +2,8 @@ export default {
   v: "VERSION 0.5",
   name: "feno",
   name_capital: "Feno",
-  name_upper: "DAFT",
-  name_style: "D A F T",
+  name_upper: "FENO",
+  name_style: "F E N O",
   btns: {
     about: "About",
     docs: "Docs",
@@ -11,7 +11,7 @@ export default {
     support: "Donate love"
   },
   banner: {
-    subtitle: "The programming language for great web development.",
+    subtitle: "A JavaScript for great web development.",
     btn: "Get Started"
   },
   suscribe: {
@@ -23,46 +23,23 @@ export default {
   index: {
     what: "What is",
     what_content: `Feno is a programming language totally dedicated to good web development, providing several features and increasing the scalability of your projects. Feno is a transpiled language to JavaScript and HTML so that the browser can understand the code.<br><br> With a clean, beautiful syntax and more features such as web components, layouts, meta single files, global storage, better SEO and much more we present Feno as your best choice for your next website &#x1F609; &#x1F49A;`,
-    code_slots: {
-      op1: {
-        title: "Define your components",
-        this: "This is my component",
-        class: "myclass",
-        hello: "Hello Again"
+    cards: {
+      intro: {
+        text: "And all you can do"
       },
-      op2: {
-        title: "Define docs and call your components",
-        main: "My main page",
-        comp: "MyComponent"
+      easy: {
+        title: "Simple. Quick. Scalable",
+        text: "Feno is prepared to be simple for anyone, it has a simple syntax that can be understandable at first glance, which gives us much easier to maintain and scale projects."
       },
-      op3: {
-        title: "Define your meta in sigle-files",
-        desc: "This is my description"
+      strong: {
+        title: "Strong and capable.",
+        text: "We design each part of Feno to create a strong and capable language to perform any task. That's why we provide a really great toolset for you: Strong typing, Computed variables, Components, Layouts, Meta Files, Modules, Cubes and much more."
+      },
+      errors: {
+        title: "What are errors during execution? Can be eaten?",
+        text: "Typical JavaScript execution errors no longer exist in Feno. Your code before being transpiled is extremely inspected and verified, so NOTHING is executed if it is not proven to work."
       }
     },
-    cards: [
-      {
-        image: "/code_banner.png",
-        title: "More Legible Code",
-        content: `A new language, easier, more readable, stronger, more explicit, a better language.
-              Feno is a language fully prepared to make your life easier,
-              Built with TypeScript and transpiled to HTML and JavaScript.`
-      },
-      {
-        image: "/components_banner.png",
-        title: "Component-Oriented",
-        content: `Feno accepts in a very fluid way the programming based on components, improves the 
-              code of your website by dividing it into reusable pieces of code and also increases 
-              the amazing cleaning of your project.`
-      },
-      {
-        image: "/scalable_banner.png",
-        title: "100% Scalable",
-        content: `When we work on a project, it is not only important to launch the first version but also 
-              keep the code and update it more and more. When working with Feno this becomes much easier 
-              by having everything you need.`
-      }
-    ],
     support: {
       title: "Support Feno",
       sub: `Working with Feno is totally free, so you can make a donation 
@@ -80,6 +57,7 @@ export default {
   docs: {
     menu: {
       intro: "Introduction",
+      start: "Getting Started",
       what: "What is Feno?",
       ecosystem: "Ecosystem",
       lifecycle: "Lifecycle",
@@ -90,13 +68,13 @@ export default {
       files: "Files",
       doc: "Document Instance",
       head: "Head Instance",
-      styles: "Styles Instance",
+      styles: "Styles Function",
+      scripts: "Call scripts",
       meta: {
         name: "Meta Elements",
         structure: "Property Structure",
         desc: "Description property",
-        author: "Author property",
-        functions: "Import functions",
+        author: "Author property"
       },
       feno_class: {
         name: "The Feno Class",
@@ -144,7 +122,8 @@ export default {
         def: "Default"
       },
       config: "Config file",
-      img_func: "Img function"
+      img_func: "Img function",
+      feno_with_node: "Feno with NodeJS"
     },
     what: {
       sub: `Feno is a language that allows you to develop web pages in a much faster and more effective way.`,
@@ -212,14 +191,13 @@ export default {
         questions: [
           "Name of your project",
           "Project description",
-          "Your name",
-          "What type of project will you create?"
+          "Your name"
         ],
-        app_type: [
+        /*app_type: [
           "Web page",
           "Web application",
           "NodeJS application"
-        ],
+        ],*/
         design_framework: "Select your design framework",
         feno_plugins: "Select Feno libraries and frameworks",
         after_questions: `After answering, it will initialize the process of creating your project, when finished you will have to go to the command console and type the following commands`,
@@ -236,14 +214,10 @@ export default {
           description: "Your project description",
           author: "Your name"
         },
-        install_Feno_nodemon: `Then it is time to install Feno and nodemon by running the following command:`,
-        create_nodemon_json: `Then it's time to create a file called <span class="bold">nodemon.json</span> that contains the following:`,
-        create_folders: "Then we must create the folders that make up the framework with the following commands:",
-        back_to_main_folder: "Once created we must go to the main folder",
-        create_index_js: `Now that we are at the root of the project we must create a file called <span class="bold">index.js</span> in it contains:`,
         create_index_feno: `And now we can create our first page of our project, to start add a file called <span class="bold">index.feno</span> inside the folder <span class="bold">scripts</span> e insert the following into:`,
         hello_world: "Hello World",
-        run_project: "Finally we just have to run the following command to execute our project",
+        execute_init: "Now we go to our console and execute the following:",
+        execute_feno: "After the above you will notice that some folders and files will be created, we can only execute the following command in our console to launch our project:",
         running_project: "And ready! Your new project with Feno is running in",
         continue_docs: "If you want to know more about each folder and its function continue visiting"
       }
@@ -260,12 +234,20 @@ export default {
           desc: `The folder called <span class="bold">components</span> is the place where you should place all the components of your website`
         },
         {
+          title: "Layouts Folder",
+          desc: `The folder called <span class="bold">layouts</span> is the place where you should place all the layouts of your website`
+        },
+        {
           title: "Meta Folder",
           desc: `The folder called <span class="bold">meta</span> is where we should place all the individual meta files for our Feno pages`
         },
         {
           title: "Styles Folder",
           desc: `The folder called <span class="bold">styles</span> is where we must place all the styles that make up our site, example: CSS files`
+        },
+        {
+          title: "Scripts Folder",
+          desc: `The <span class="bold">scripts</span> folder is where we place our scripts, only feno code`
         },
         {
           title: "Images Folder",
@@ -328,10 +310,9 @@ export default {
         },
         styles: {
           title: "Styles",
-          subtitle: 'To import styles that you defined in an external <span class="bold">.css</span> file we use the <span class="bold txt-dk">style()</span> function while if you want to define styles in the same file we use the <span class="bold txt-dk"># styles</span> instance:',
+          subtitle: 'To import styles into Feno we use the <span class="bold txt-dk">styles()</span> function to help us define styles in the same file as to call external style sheets:',
           btns: [
-            { text: 'See more about the&nbsp;<span class="bold">style()</span>&nbsp;function', route: "docs-meta_elements", id: "#style" },
-            { text: 'See more about the&nbsp;<span class="bold">#styles</span>&nbsp;instance', route: "docs-styles_instance" }
+            { text: 'See more about the&nbsp;<span class="bold">styles()</span>&nbsp;function', route: "docs-styles_function", id:"" }
           ]
         },
         scripts: {
@@ -339,7 +320,7 @@ export default {
           subtitle: 'To import external Feno scripts we use the <span class="bold txt-dk">import()</span> function and to define a script in the same file we call the <span class="bold txt-dk">{ Feno }</span> class',
           btns: [
             { text: 'See more about the&nbsp;<span class="bold">import()</span>&nbsp;function', route: "docs-meta_elements", id: "#import" },
-            { text: 'See more about the&nbsp;<span class="bold">{ Feno }</span>&nbsp;class', route: "docs-feno_class" }
+            { text: 'See more about the&nbsp;<span class="bold">{ Feno }</span>&nbsp;class', route: "docs-feno_class", id: "" }
           ]
         },
         meta: {
@@ -355,22 +336,31 @@ export default {
       }
     },
     styles: {
-      title: '<span class="txt-dk">#Styles</span> Instance',
-      subtitle: "We already learned about the #Doc instance and the #Head instance, now it's time to delve into the third and last instance of Feno: #Styles",
-      defining: {
-        title: "Defining the instance",
-        subtitle: "The #Styles instance helps us to define CSS styles in the same file, it is placed inside the #Head instance and thus its correct use:",
-        class: "my_class",
-        here_mark: "Here will go our html",
-        alert: "Remember that the #Styles instance can ONLY be defined within the #Head instance! If you do otherwise you will receive a compilation error!"
+      title: 'Styles() Function',
+      subtitle: "The styles() function helps us define our styles in the same file and also call external styles.",
+      use: "Uso",
+      ext: {
+        title: "Call extern styles",
+        subtitle: "You can see on the left the code in Feno and on the right the result in HTML"
       },
-      under: {
-        title: "Understanding the instance",
-        subtitle: "When we want to insert css styles into our documents and not call an external file, it is when we use the #Styles instance, with the previous code actually what Feno is producing internally for the browser is the following:"
+      inside: {
+        title: "Define styles in the same file",
+        subtitle: "You can see on the left the code in Feno and on the right the result in HTML"
       },
-      clean_title: "I want my styles in separate files!",
-      clean_subtitle: 'No problem! For people like you cleaning enthusiasts Feno has the function <span class="txt-dk">style()</span> Follow the documentation to know more and more of the best language you can use to develop your next project',
-      continue: "Continue with the documentation"
+      config: {
+        title: "Configure default directory",
+        subtitle: "In the Feno configuration file we can configure which style folder we will use by default"
+      },
+      result: "And now we will get the following result:"
+    },
+    import_scripts: {
+      title: "Call scripts",
+      subtitle: "You can call other .feno files within your pages. Examples:",
+      config: {
+        title: "Configure default directory",
+        subtitle: "In the Feno configuration file we can configure which folder we will use for scripts by default"
+      },
+      result: "And now we will get the following result:"
     },
     meta: {
       title: "Meta Elements",
@@ -400,35 +390,6 @@ export default {
       under: {
         title: "Understanding the #Meta element",
         subtitle: "While we in Feno are only filling an element with properties internally what is happening is the following: (Taking as an example that we want to use the #description and #author property)"
-      },
-      func: {
-        title: "Import functions",
-        subtitle: 'Feno has 2 specialized functions to import external files with content for your document:'
-      },
-      style: {
-        title: 'The <span class="txt-dk">style()</span> function',
-        subtitle: 'The <span class="txt-dk">style()</span> function helps us import CSS style sheets, how do we do it? Check out the following',
-        file: 'css_file_name',
-        benefits: 'Did you see that? It is not necessary to place the extension: <span class="bold">.css</span> or even place the path where the file is located, nothing more and nothing less than just the name of the file.',
-        alert: '<span class="bold">ALERT!</span> Only for the files inside the <span class="bold">styles</span> folder it is not necessary to place the path, if your file <span class="bold">IS NOT</span> in this folder or is in a subfolder of the same you have the following options:'
-      },
-      call_file: {
-        title: "Call the file from another path",
-        subtitle: 'If your .css file is not in the styles folder then YES you must place a path, suppose our file is in the styles folder BUT it is in a subfolder called "index", we would do something like this:',
-        route1: './index/my_file',
-        outside: 'Again remember that it is not necessary to place the extension ".css", just place a point at the beginning and start placing the path to the file. <br> Now, if our style file is totally OUT of the styles folder and is in a folder called for example: "tools", we do something like the following:',
-        route2: '/tools/my_file',
-        rules: 'It is important that you notice that when our style file is completely out of the styles folder we directly place the path with a bar: "/", BUT if instead our file is in a subfolder inside the styles folder we start the path with a point and bar as: "./"'
-      },
-      configure: {
-        title: "Configure another folder for styles",
-        subtitle: "If you do not want to use the default styles folder for your styles you can configure another folder to use it by default so that Feno locates your .css files, see the #Styles section in the Feno configuration file guide:",
-      },
-      import: {
-        title: 'The <span class="txt-dk">#import</span> function',
-        subtitle: 'The <span class = "txt-dk"> import () </span> function performs the same as the <span class = "txt-dk"> style () </span> function BUT this function only works for files with extension: <span class="bold">.feno</span>, the syntax is very simple:',
-        file: 'feno_file_name',
-        alert: 'If you want to call a file that is outside the <span class="bold">scripts</span> folder you can do the same as indicated here (Just change the style() function to import())'
       },
       props: {
         title: 'Properties',
@@ -525,7 +486,7 @@ export default {
     },
     compos: {
       title: 'Components',
-      subtitle: 'The components are reusable pieces of code that we can import into our pages to reduce repetitive code and improve cleanliness in our project',
+      subtitle: 'We will go to the folder called "components" and inside we will create a new file (no matter what we call it) and inside we will place the following code: (Inside the quotes we will place the name of our component)',
       btn: 'Press this button',
       welcome: 'Welcome to my website',
       my_page: 'My website',
@@ -533,8 +494,8 @@ export default {
       create: {
         title: 'Creating our first component',
         subtitle: 'We will go to the folder called "components" and inside we will create a new file called for example: "miboton.feno" and inside we will place the following content:',
-        go_to: 'Now we will go to our main page: "index.feno" and call our component through the function:',
-        alert: 'The components ONLY accept the #Doc instance, if you put a head or meta in a component you will see a compilation error',
+        go_to: 'Now we will go to our main page: "index.feno" and call our component following the following rule: "@component-name()"',
+        alert: 'The components do NOT accept any instance, if you put a doc, head or meta in a component you will see a compilation error',
         res: 'And ready! Feno will call the component "mybutton" on the "index" page so even if we don\'t see it, the final document that will be transpired for the browser will be the following:',
         continue: 'This was a very simple example of how to create components since you can obviously achieve much more complex things and even create interactive components with properties, keep learning in the next lesson!'
       }
@@ -548,9 +509,9 @@ export default {
       bye: 'Goodbye!',
       newone: {
         title: 'Sending and receiving data',
-        subtitle: 'To send a prop to a component you must send an object and within the name of the prop and its value:',
+        subtitle: 'To send a prop to a component we just have to send attributes with values, example:',
         subtitle2: 'In this way we are sending a property called "prop" with a value of "Hello World!". Half of the work is done now, we just need to RECEIVE that value we send. For that we do something like the following:',
-        result: 'And so we tell Feno that we are waiting for a property called prop and we want him to place it before our message that says "Welcome buddy", just with "${}" and in square brackets place the name of the property you want to place. <br> <br> Taking into account that we already send a property with its value and we already receive it in the component, what we will see in the browser will be the following:'
+        result: 'And so we tell Feno that we are waiting for a property called "my_prop" and we want to place it before our message that says "Welcome buddy", only with double square brackets "{{}}" and in the middle we call through the object "props" to our prop, example: "props.another_prop". <br> <br> Taking into account that we already send a property with its value and we already receive it in the component, what we will see in the browser will be the following:'
       },
       two: {
         title: 'Sending and receiving 2 props',
@@ -671,11 +632,10 @@ export default {
     },
     types: {
       title: "Typing",
-      subtitle: "Feno is a strongly typed language, which means that each variable has a fixed type and it must be respected. It is not necessary to place the type when a variable is declared since Feno does it automatically but you can do it if you want",
+      subtitle: "Feno is a strongly typed language, which means that each variable has a fixed type and it must be respected. IT IS NECESSARY to place the type whenever a variable is declared, otherwise it will not work correctly.",
       hw: "Hello World!",
       string: {
         subtitle: "String is the type that Feno provides for text variables and this is how we use it:",
-        subtitle2: "The two variables will produce the same result, only above that we decided to place the type manually while internally Feno has already placed the String type for us :)",
         var: "hello"
       },
       number: {
@@ -690,7 +650,7 @@ export default {
         subtitle: "Array is the type indicated for our variables that will be data groups",
         var: "vector",
         var2: "multi_vector",
-        alert: "There are no interfaces in Feno yet, so we still cannot specify the types allowed in an Array!"
+        alert: "There are no interfaces in Feno yet, so we still cannot specify the types allowed in an Array or an Object!"
       },
       object: {
         subtitle: "Object is the type indicated for our simple objects",
@@ -741,7 +701,7 @@ export default {
       create: {
         title: "Writing a function",
         subtitle: "We will create a simple function to display an alert on the screen:",
-        subtitle2: 'We declare a new function with the word <span class="bold">func</span> and call by name "show()" to execute it'
+        subtitle2: 'We declare a new function with the word <span class="bold">fun</span> and call by name "show()" to execute it'
       },
       params: {
         title: "Parameters",
@@ -760,7 +720,7 @@ export default {
       xmenory: "¡x is smaller than y!",
       if: {
         title: "If Sentence",
-        subtitle: "The if statement is the best known to be the basic one, let's write a very simple one in Feno:",
+        subtitle: "The if statement is the best known to be the basic one, It is NOT necessary to place the parentheses but it can be done, let's write a very simple one in Feno:",
         result: 'If we run the code above we will get the message "You are a minor!" on the console, why? We have declared a variable with the value: 17 and then we have written an if statement that contains the following condition: "If the age variable has a value of 17 or less then do the following" and we have told Feno to display a message in the console if the condition is met'
       },
       else: {
@@ -783,9 +743,9 @@ export default {
       hello: "Hello!",
       files: {
         title: "Feno Files",
-        subtitle: 'We know that to encode in Feno we need to create a file <span class="bold">.feno</span> and apart we need to create an instance but this should ONLY be done if we are going to place HTML in the same file. If we are NOT going to place HTML in the same file then there is no need to place any instance, for example:',
-        subtitle2: "Did you notice that we don't place the Feno class? The above code will work perfectly and will be transpiled to a javascript file, BUT, what happens if we do the following? ",
-        subtitle3: "When compiling the previous code, Feno will notice that you placed the #DOC instance so automatically this file will no longer be transpiled to a .js file but to an .html file, then it will search if you declared the Feno class and if you did not, it will end up transpiling and will launch your code to the browser as a total and pure HTML markup."
+        subtitle: 'We know that to encode in Feno we need to create a file <span class="bold">.feno</span> and apart we need to create an instance but this should ONLY be done if we are going to place HTML in the same file. If we are NOT going to place HTML in the same file then we create a script inside the / scripts folder and place the following:',
+        subtitle2: "Did you notice that we don't place the Feno class? That is because we are creating a script, the previous code will work perfectly and will be transpiled to a javascript file, BUT, what happens if we do the following?",
+        subtitle3: "When compiling the previous code, Feno will notice that you placed the #DOC instance inside a script, so it will give you a warning since you would be using HTML markup in the wrong place. Remember that our markup goes in the \"pages\" folder and our scripts in \"scripts\"."
       },
       examples: "Traspilation examples",
       pure: "Pure Feno",
@@ -820,8 +780,8 @@ export default {
         subtitle2: "Now we would have to import the function like this:"
       }
     },
-    crystals: {
-      subtitle: "Crystals are an exclusive feature offered by Feno to improve the interactivity of our code and leave the use of parameters to change the way our code works.",
+    cubes: {
+      subtitle: "Cubes are an exclusive feature offered by Feno to improve the interactivity of our code and leave the use of parameters to change the way our code works.",
       code_change: "Code that changes",
       func1: "function1",
       func2: "function2",
@@ -833,13 +793,13 @@ export default {
         subtitle: "Imagine that we want the same code to work differently depends on the situation, for example: We have two functions and both call a third function, the objective is that the third function does different things depends on where it is called, so we do it with parameters:"
       },
       with: {
-        title: "With Crystals",
-        subtitle: 'Isn\'t it ...Amazing?! We import the crystals in the first line, in function 1 we send a crystal through the function<span class="bold">Crystals.send(<span class="italic">name of the crystal to be sent</span>)</span> that as the first parameter we send you the name of our crystal and as second the value it will have. <br> <br> In the second function we also send a crystal called "res" and as a value we send the function goodbye(). And in the third function we now only execute the crystal called "res" with the function <span class="bold">Crystals.exec("<span class="italic">name of the crystal to execute</span>")</span> and THAT\'S ALL!'
+        title: "With Cubes",
+        subtitle: 'Isn\'t it ...Amazing?! We import the cubes in the first line, in function 1 we send a crystal through the function<span class="bold">Cubes.send(<span class="italic">name of the crystal to be sent</span>)</span> that as the first parameter we send you the name of our crystal and as second the value it will have. <br> <br> In the second function we also send a crystal called "res" and as a value we send the function goodbye(). And in the third function we now only execute the crystal called "res" with the function <span class="bold">Cubes.exec("<span class="italic">name of the crystal to execute</span>")</span> and THAT\'S ALL!'
       },
       need: {
-        title: "Do I really need Crystals?",
-        subtitle: 'Personally, as a programmer, I often need my code to work in different ways according to the situation that arises and thus reuse my scripts as well as when we want to react to different situations we would have to send more types of parameters and therefore more unnecessary use of the Elif in our conditionals. That was the reason to create "Crystals": A way of telling our code how to act WITHOUT using parameters :))',
-        alert: 'Alert! The Crystals currently only work within the same file, they still do not work with external functions that matter BUT we are working on that;)'
+        title: "Do I really need Cubes?",
+        subtitle: 'Personally, as a programmer, I often need my code to work in different ways according to the situation that arises and thus reuse my scripts as well as when we want to react to different situations we would have to send more types of parameters and therefore more unnecessary use of the Elif in our conditionals. That was the reason to create "Cubes": A way of telling our code how to act WITHOUT using parameters :))',
+        alert: 'Alert! The Cubes currently only work within the same file, they still do not work with external functions that matter BUT we are working on that;)'
       }
     },
     config: {
@@ -873,50 +833,87 @@ export default {
   },
   roadmap: {
     title: "Roadmap",
-    subtitle: "We are always working on improving Feno, improving each functionality and adding many new ones to offer you a much more capable language for your projects. Here we show you the roadmap of our project, from the updates we already launched to the next versions we have planned: (This list can change at any time)",
+    subtitle: "We are always working on improving Feno, improving each functionality and adding many new ones to offer you a much more capable language for your projects. Here we show you the route of our project, from the updates we already launched to the next versions we have planned: (This list can change at any time)",
     high: "Highlights:",
     versions: [
       {
-        color: 'deep-orange',
-        icon: 'mdi-cat',
-        name: 'v1.0 Release <span class="bold">(Felino)</span>',
-        text: `The official 1.0 update of Feno: "Felino" gives rise to the same name of the language, this version will be 100% stable, without errors and with all the necessary functions to give strength and power to your project. We still don't know when the departure date will be but we will announce it everywhere;)`
+        color: "grey",
+        icon: "mdi-rocket",
+        name: "v1.1.0 Release",
+        text: "Version 1.1 will change many things but we will have to wait for that;)"
       },
       {
-        color: "grey",
-        icon: 'mdi-rocket',
-        name: 'v0.7.0 Beta Release <span class="bold">(Hungry)</span>',
-        text: `The update called "Hungry" will include the functions and elements sufficient to end the beta phase.`,
+        color: "green",
+        icon: "mdi-check-bold",
+        name: "v1.0.0 Release",
+        text: "The official version 1.0 contains everything you need to start a project with Feno, complete stability, speed and a complete package of tools that will improve our productivity to the maximum.",
         news: [
-          "Complete introduction of Crystals",
-          "Introduction of Layouts",
+          "Project Exportation",
+          "¡Cubes!",
           "And much more..."
         ]
       },
       {
-        color: "indigo",
-        icon: 'mdi-rocket',
-        name: "v0.6.5 Beta Release",
-        text: `Version 0.6.5 is a version planned to improve the stability and functioning of the language.`,
+        color: "green",
+        icon: "mdi-check-bold",
+        name: "v0.9.0 Beta Release",
+        text: "Version 0.9.0 is the latest beta of Feno, therefore it includes too many improvements, news and changes.",
+        news: [
+          "Functions!",
+          "Conditionals!",
+          "Import and export",
+          "Configuration file",
+          "Constants!",
+          "And more..."
+        ]
+      },
+      {
+        color: 'green',
+        icon: 'mdi-check-bold',
+        name: 'v0.8.0 Beta Release',
+        text: `Version 0.8 includes many new improvements in addition to improving the speed of transpilation.`,
+        news: [
+          "Layouts!",
+          "Attributes!",
+          "Variables!",
+          "Strong typing!",
+          "And more..."
+        ]
+      },
+      {
+        color: "green",
+        icon: 'mdi-check-bold',
+        name: 'v0.7.0 Beta Release',
+        text: `Update 0.7.0 includes new features and necessary elements.`,
+        news: [
+          "Noscript introduction",
+          "Components!",
+          "Props!",
+          "No more indentation errors"
+        ]
+      },
+      {
+        color: "green",
+        icon: 'mdi-check-bold',
+        name: "v0.6.2 Beta Release",
+        text: `Version 0.6.2 is a version planned to improve the stability and functioning of the language.`,
         news: [
           "200% speed improvement",
-          "Declaration of components easier",
-          "Props rewritten from scratch",
-          "More complete typing",
-          "Conditionals"
+          "Call styles and scripts of different paths",
+          "Feno now written in ES6"
         ]
       },
       {
         color: "green",
         icon: "mdi-check-bold",
         name: "v0.6.0 Beta Release",
-        text: `The first official version of Feno available to everyone. It only includes the basic functions such as: Components, Meta files, Instances, Variables and little else.`
+        text: `The first official version of Feno available to everyone. It only includes the basic functions.`
       }
     ]
   },
   faq: {
     when_comes: "When will version 1.0 come out?",
-    answer: 'We do not know yet, there are many things to do but we will announce it in our',
+    answer: "IT'S OUT! And it is available to all of you at NPM. For more updates you can inform in our",
     road: "Roadmap",
     answer2: 'and in our social networks :)',
     ask_group: [
@@ -974,8 +971,8 @@ export default {
             answer: 'We spent a LONG time thinking about the way we wanted the code to be organized in Feno and the most comfortable way was the use of instances (doc, head, etc). So that the code will be divided into several parts and maintain a clean and readable code.'
           },
           {
-            name: "Crystals are something new, what do they transpile?",
-            answer: 'The Crystals are transpiled to code with parameters, the objective of The Crystals is that you no longer have to send and receive parameters to change the way your applications act but since browsers do not understand Feno code the crystals are transpiled to code with parameters (as currently performed).'
+            name: "Cubes are something new, what do they transpile?",
+            answer: 'The Cubes are transpiled to code with parameters, the objective of The Cubes is that you no longer have to send and receive parameters to change the way your applications act but since browsers do not understand Feno code the cubes are transpiled to code with parameters (as currently performed).'
           },
           {
             name: "Will there be syntax changes in future versions?",

@@ -3,29 +3,29 @@
     <v-layout row wrap>
       <v-flex xs12>
         <div class="spacing pt20">
-          <p class="ft35 bold">Crystals</p>
-          <p class="ft13 lTXTgrey">{{ $t('docs.crystals.subtitle') }}</p>
+          <p class="ft35 bold">Cubes</p>
+          <p class="ft13 lTXTgrey">{{ $t('docs.cubes.subtitle') }}</p>
         </div>
       </v-flex>
       <v-flex xs12>
         <div class="spacing">
-          <Title>{{ $t('docs.crystals.code_change') }}</Title>
-          <Subtitle>{{ $t('docs.crystals.normal.title') }}</Subtitle>
+          <Title>{{ $t('docs.cubes.code_change') }}</Title>
+          <Subtitle>{{ $t('docs.cubes.normal.title') }}</Subtitle>
           <p
             class="ft13 lTXTgrey"
-          >{{ $t('docs.crystals.normal.subtitle') }}</p>
+          >{{ $t('docs.cubes.normal.subtitle') }}</p>
           <CodeBox>
-            <El>func</El> <Func :name="$t('docs.crystals.func1')"></Func> { <br />
-            <Tab /> <Func :name="$t('docs.crystals.res')"><Attr>1</Attr></Func>; <br />
+            <El>fun</El> {{$t('docs.cubes.func1')}}: <br />
+            <Tab /> <Func :name="$t('docs.cubes.res')"><Attr>1</Attr></Func>; <br />
             } <br /> <br />
-            <El>func</El> <Func :name="$t('docs.crystals.func2')"></Func> { <br>
-              <Tab/> <Func :name="$t('docs.crystals.res')"><Attr>2</Attr></Func>; <br>
+            <El>fun</El> {{$t('docs.cubes.func2')}}: <br>
+              <Tab/> <Func :name="$t('docs.cubes.res')"><Attr>2</Attr></Func>; <br>
             } <br> <br>
-              <El>func</El> <Func :name="$t('docs.crystals.res')">res</Func> { <br>
-                  <Tab/> <El>if</El> (res == 1) { <br>
-                      <Tab/><Tab/> <Func :name="$t('docs.crystals.hello')"></Func>; <br>
-                  <Tab/>} <El>elif</El> (res == 2) { <br>
-                      <Tab/><Tab/> <Func :name="$t('docs.crystals.bye')"></Func>; <br>
+              <El>fun</El> {{$t('docs.cubes.res')}}(res): <br>
+                  <Tab/> <El>if</El> res == 1: <br>
+                      <Tab/><Tab/> <Func :name="$t('docs.cubes.hello')"></Func>; <br>
+                  <Tab/>} <El>elif</El> res == 2: <br>
+                      <Tab/><Tab/> <Func :name="$t('docs.cubes.bye')"></Func>; <br>
                   <Tab/>} <br>
               }
           </CodeBox>
@@ -33,34 +33,34 @@
       </v-flex>
       <v-flex xs12>
         <div class="spacing">
-          <Subtitle>{{ $t('docs.crystals.with.title') }}</Subtitle>
+          <Subtitle>{{ $t('docs.cubes.with.title') }}</Subtitle>
           <CodeBox>
-              <Key>import</Key> { <El>Crystals</El> } <Key>from</Key> <String>"feno"</String>; <br> <br>
-              <El>func</El> <Func :name="$t('docs.crystals.func1')"></Func> { <br />
-              <Tab /> <Attr>Crystals</Attr>.<Func name="send"><String>"res"</String>, <String>"{{ $t('docs.crystals.hello') }}()"</String></Func><br />
+              <El>fun</El> <Fun>{{$t('docs.cubes.func1')}}</Fun>: <br />
+              <Tab /> <Attr>mycube</Attr>.<Func name="send"><String>"res"</String>, <String>"{{ $t('docs.cubes.hello') }}()"</String></Func><br />
               } <br /> <br />
-              <El>func</El> <Func :name="$t('docs.crystals.func2')"></Func> { <br>
-                  <Tab/> <Attr>Crystals</Attr>.<Func name="send"><String>"res"</String>, <String>"{{ $t('docs.crystals.bye') }}()"</String></Func> <br>
+              <El>fun</El> <Fun>{{$t('docs.cubes.func2')}}:</Fun> <br>
+                  <Tab/> <Attr>mycube</Attr>.<Func name="send"><String>"res"</String>, <String>"{{ $t('docs.cubes.bye') }}()"</String></Func> <br>
               } <br> <br>
-              <El>func</El> <Func :name="$t('docs.crystals.res')"></Func> { <br>
-                  <Tab/> <Attr>Crystals</Attr>.<Func name="exec"><String>"res"</String></Func> <br>
+              <El>declare Cube</El> mycube: <br>
+                <Tab/> <Func name="wait"><String>res</String></Func> <br>
+                <!--<Tab/> <Attr>Cubes</Attr>.<Func name="exec"><String>"res"</String></Func> <br>-->
               }
           </CodeBox>
-          <p class="mt20 ft13 lTXTgrey" v-html="$t('docs.crystals.with.subtitle')"></p>
+          <p class="mt20 ft13 lTXTgrey" v-html="$t('docs.cubes.with.subtitle')"></p>
         </div>
       </v-flex>
       <v-flex xs12>
           <div class="spacing">
-              <Title>{{ $t('docs.crystals.need.title') }}</Title>
+              <Title>{{ $t('docs.cubes.need.title') }}</Title>
               <p class="ft15 lTXTgrey">
-                  {{ $t('docs.crystals.need.subtitle') }}
+                  {{ $t('docs.cubes.need.subtitle') }}
               </p>
           </div>
       </v-flex>
       <v-flex xs12 class="mb30">
           <div class="spacing">
               <v-alert type="warning" border="left" outlined>
-                  {{ $t('docs.crystals.need.alert') }}
+                  {{ $t('docs.cubes.need.alert') }}
               </v-alert>
           </div>
       </v-flex>
@@ -82,7 +82,8 @@ import {
   Mark,
   CodeBox,
   Func,
-  Key
+  Key,
+  Fun
 } from "@/components/Code/index";
 import { Doc, Head, Dmeta } from "@/components/Code/Instances/index";
 
@@ -107,10 +108,11 @@ const MenuModule = namespace("menu");
     Dmeta,
     Attr,
     Func,
-    Key
+    Key,
+    Fun
   }
 })
-export default class Crystals extends Vue {
+export default class Cubes extends Vue {
   @MenuModule.Action setButtons: any;
 
   mounted() {

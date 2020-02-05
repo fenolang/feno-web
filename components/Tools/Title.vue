@@ -7,7 +7,7 @@
 
 <style>
     .subtitle {
-        background: #47B984 !important;
+        background: #F6AF91 !important;
         width: 100px;
         height: 4px;
         border: none;

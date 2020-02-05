@@ -59,16 +59,16 @@
                         {{ $t('docs.msf.create.with_content') }}
                     </p>
                     <CodeBox>
-                        <Tab/><Dmeta>
-                            <Tab/><Tab/><String>"description, {{ $t('docs.msf.desc') }}"</String>
-                        </Dmeta>
+                        [ <br>
+                            <Tab/><String>"description, {{ $t('docs.msf.desc') }}"</String> <br>
+                        ]
                     </CodeBox>
                     <p class="mt20 ft15 lTXTgrey">
                         {{ $t('docs.msf.create.result') }}
                     </p>
                     <CodeBox>
                         <Head>
-                        <Tab/><Attr>title:</Attr> <String>"{{ $t('docs.msf.my_page') }}"</String>, <br>
+                        <Tab/><Attr>title:</Attr> <String>"{{ $t('docs.msf.my_web') }}"</String>, <br>
                         <Tab/><Dmeta>
                             <Tab/><Tab/><String>"description, {{ $t('docs.msf.desc') }}"</String>
                         </Dmeta>

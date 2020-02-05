@@ -2,6 +2,64 @@
     font-family: 'Roboto', sans-serif !important;
 }
 
+.spacing {
+    padding-right: 30%;
+}
+
+.spacing-1 {
+    padding-right: 10%;
+}
+
+.spacing-2 {
+    padding-right: 20%;
+}
+
+.spacing-movil {
+    padding-right: 0%;
+}
+
+@media (max-width: 600px) {
+    .spacing {
+        padding-right: 10%;
+        padding-left: 10%;
+    }
+    .spacing-1 {
+        padding-right: 10%;
+        padding-left: 10%;
+    }
+    .spacing-2 {
+        padding-right: 10%;
+        padding-left: 10%;
+    }
+
+    .spacing-movil {
+        padding-right: 10%;
+        padding-left: 10%;
+    }
+}
+
+.version {
+    margin-top: 10px;
+    margin-bottom: 20px;
+    display: inline-block;
+    padding: 3px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 5px;
+    border: 2px solid #F6AF91 !important;
+}
+
+.version:hover {
+    background: #F6AF91 !important;
+    color: #fff !important;
+}
+
+.version p {
+    margin-bottom: 0px !important;
+    font-weight: bold;
+    font-size: 12px;
+}
+
 .black {
     background: #181818 !important;
 }
@@ -14,12 +72,13 @@
 }
 
 .home-link {
-    color: #222831 !important;
+    /*color: #222831 !important;*/
+    color: #fff !important;
 }
 
 .home-link:hover {
     /*color: #0DBC82 !important;*/
-    color: #47B984 !important;
+    color: #F6AF91 !important;
 }
 
 .bform {
@@ -60,8 +119,8 @@
 }
 
 .border {
-    border-color: #47B984 !important;
-    color: #47B984 !important;
+    border-color: #F6AF91 !important;
+    color: #F6AF91 !important;
 }
 
 .border-btn-dk {
@@ -138,7 +197,7 @@
 }
 
 .bg {
-    background: #47B984 !important;
+    background: #F6AF91 !important;
 }
 
 .br3 {
@@ -195,7 +254,7 @@
 }
 
 .ft {
-    color: #47B984 !important;
+    color: #F6AF91 !important;
 }
 
 .ft-blue {
