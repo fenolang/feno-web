@@ -839,8 +839,14 @@ export default {
       {
         color: "grey",
         icon: "mdi-rocket",
+        name: "v1.2.0 Release",
+        text: "Version 1.2 will bring too many changes and news to Feno, we recommend you be attentive because it will be amazing :)"
+      },
+      {
+        color: "green",
+        icon: "mdi-check-bold",
         name: "v1.1.0 Release",
-        text: "Version 1.1 will change many things but we will have to wait for that;)"
+        text: "Version 1.1 came to solve all the important errors that version 1.0 brought, we currently recommend that you make use of version 1.1.2 exactly as it is the most stable version so far."
       },
       {
         color: "green",

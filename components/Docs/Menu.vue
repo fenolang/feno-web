@@ -4,7 +4,7 @@
       <!-- VERSION --> 
 
       <div class="version">
-        <p>v1.0.0</p>
+        <p>v1.1.2</p>
       </div>
 
       <!-- VERSION -->
