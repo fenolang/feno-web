@@ -221,7 +221,7 @@ export default {
           description: "Tu descripción",
           author: "Tu nombre"
         },
-        create_index_feno: `Y ahora podemos crear nuestra primera página de nuestro proyecto, para comenzar agrega un archivo llamado <span class="bold">index.feno</span> dentro de la carpeta <span class="bold">scripts</span> e inserta lo siguiente dentro:`,
+        create_index_feno: `Y ahora podemos empezar a escribir código en nuestro archivo <span class="bold">index.feno</span> localizado en la carpeta <span class="bold">/pages</span>`,
         hello_world: "Hola Mundo",
         execute_init: "Ahora vamos a nuestra consola y ejecutamos lo siguiente:",
         execute_feno: "Después de lo anterior notarás que se crearán varias carpetas y archivos, sólo nos queda ejecutar el siguiente comando en nuestra consola para poner en marcha nuestro proyecto:",

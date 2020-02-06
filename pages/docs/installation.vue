@@ -58,12 +58,6 @@
                     </p>
                     <CodeBox>
                         $ <El>cd</El> {{ $t('docs.install.cli.project_name') }} <br>
-                        $ npm i
-                    </CodeBox>
-                    <p class="pt15 ft13 lTXTgrey">
-                        {{ $t('docs.install.cli.install_dependencies') }}
-                    </p>
-                    <CodeBox>
                         $ npm run dev
                     </CodeBox>
                     <p class="pt15 ft15 lTXTgrey">
@@ -94,22 +88,23 @@
                             <String>{{ $t('docs.install.scratch.package_json.author') }}</String>, <br>
                             <Tab/> <El>"main"</El>: <String>"index.js"</String>, <br>
                             <Tab/> <El>"scripts"</El>: { <br>
-                                <Tab/><Tab/> <El>"dev"</El>: <String>"nodemon --watch src"</String>, <br>
+                                <Tab/><Tab/> <El>"dev"</El>: <String>"cross-env FENO_ENV=dev nodemon --watch src"</String>, <br>
                                 <Tab/><Tab/> <El>"init"</El>: <String>"npm explore feno -- npm run init"</String> <br>
                             <Tab/>} <br>
                         }
+                    </CodeBox>
+                    <p class="pt15 ft13 lTXTgrey">
+                        {{ $t('docs.install.scratch.execute_init') }}
+                    </p>
+                    <CodeBox>
+                        $ npm i feno nodemon cross-env <br>
+                        $ npm run init
                     </CodeBox>
                     <p class="pt15 ft13 lTXTgrey" v-html="$t('docs.install.scratch.create_index_feno')"></p>
                     <CodeBox>
                         <Doc>
                             <Tag>h1</Tag>{{ $t('docs.install.scratch.hello_world') }}<Tag>/h1</Tag>
                         </Doc>
-                    </CodeBox>
-                    <p class="pt15 ft13 lTXTgrey">
-                        {{ $t('docs.install.scratch.execute_init') }}
-                    </p>
-                    <CodeBox>
-                        $ npm run init
                     </CodeBox>
                     <p class="pt15 ft13 lTXTgrey">
                         {{ $t('docs.install.scratch.execute_feno') }}

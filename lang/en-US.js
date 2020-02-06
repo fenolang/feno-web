@@ -214,7 +214,7 @@ export default {
           description: "Your project description",
           author: "Your name"
         },
-        create_index_feno: `And now we can create our first page of our project, to start add a file called <span class="bold">index.feno</span> inside the folder <span class="bold">scripts</span> e insert the following into:`,
+        create_index_feno: `And now we can start writing code in our <span class="bold">index.feno</span> file located in the <span class="bold">/pages</span> folder.`,
         hello_world: "Hello World",
         execute_init: "Now we go to our console and execute the following:",
         execute_feno: "After the above you will notice that some folders and files will be created, we can only execute the following command in our console to launch our project:",
