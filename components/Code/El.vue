@@ -4,13 +4,10 @@
     </span>
 </template>
 
-<script lang="ts">
-import { Vue, Component, Prop } from 'vue-property-decorator';
-
-@Component
-
-export default class El extends Vue {
-    @Prop(String) readonly lt!: string
+<script>
+const anchorJS = require('anchor-js');
+export default {
+    props: ["lt"]
 }
 </script>
 

@@ -1,0 +1,39 @@
+/** COLORS {FONDO} **/
+
+* {
+    color: #fff;
+}
+
+.menu-link:hover {
+    color: #A2F7B5 !important;
+}
+
+.dark-color {
+    background: #010203 !important;
+}
+
+.c0 {
+    background: #A2F7B5 !important;
+}
+
+.c1 {
+    background: #7CEAA7 !important;
+}
+
+.c2 {
+    background: #5DDAA1 !important;
+}
+
+/** COLORES {TEXTO} **/
+
+.ft0 {
+    color: #A2F7B5 !important;
+}
+
+.ft1 {
+    color: #7CEAA7 !important;
+}
+
+.ft2 {
+    color: #5DDAA1 !important;
+}

@@ -13,6 +13,7 @@
 </template>
 
 <script>
+const anchorJS = require('anchor-js');
 export default {
   layout: 'empty',
   props: {

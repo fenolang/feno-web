@@ -2,7 +2,7 @@
 <no-ssr>
   <v-app dark>
     <Menu />
-    <v-content class="STwhite">
+    <v-content class="dark-color">
       <div class="line"></div>
       <v-layout row wrap>
           <v-flex xs3 v-if="$vuetify.breakpoint.mdAndUp">
@@ -29,17 +29,17 @@
   </no-ssr>
 </template>
 
-<script lang="ts">
+<script>
+const anchorJS = require('anchor-js');
 import Menu from "@/components/Index/Menu.vue";
 import DocsMenu from '@/components/Docs/Menu.vue';
-import { Vue, Component } from "vue-property-decorator";
 
-@Component({
+export default {  
   components: {
     Menu, DocsMenu
   }
-})
-export default class Default extends Vue {}
+}
+
 </script>
 
 <style scoped>

@@ -4,15 +4,6 @@
     </section>
 </template>
 
-<script lang="ts">
-import { Vue, Component } from 'vue-property-decorator';
-
-@Component
-
-export default class CodeBox extends Vue {
-}
-</script>
-
 <style>
     .markk {
         padding: 2px;

@@ -2,6 +2,18 @@
     font-family: 'Roboto', sans-serif !important;
 }
 
+.scolor {
+    color: #112C29 !important;
+}
+
+.scolor2 {
+    color: #F9C992 !important;
+}
+
+.ft150 {
+    font-size: 150px !important;
+}
+
 .spacing {
     padding-right: 30%;
 }

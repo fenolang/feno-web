@@ -1,21 +1,18 @@
-<script lang="ts">
-import { Vue, Component } from 'vue-property-decorator';
+<script>
+const anchorJS = require('anchor-js');
+export default {
+    computed: {
+        mdAndDown() {
+            return this.$vuetify.breakpoint.mdAndDown;
+        },
 
-@Component
+        mdAndUp() {
+            return this.$vuetify.breakpoint.mdAndUp;
+        },
 
-export default class Screens extends Vue {
-
-    get mdAndDown(): boolean {
-        return this.$vuetify.breakpoint.mdAndDown;
+        smAndDown() {
+            return this.$vuetify.breakpoint.smAndDown;
+        },
     }
-
-    get mdAndUp(): boolean {
-        return this.$vuetify.breakpoint.mdAndUp;
-    }
-
-    get smAndDown(): boolean {
-        return this.$vuetify.breakpoint.smAndDown;
-    }
-
 }
 </script>

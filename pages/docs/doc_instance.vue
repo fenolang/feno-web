@@ -13,11 +13,11 @@
                     <p class="ft13 lTXTgrey">
                         {{ $t('docs.doc.define.subtitle') }}
                     </p>
-                    <code-box class="line">
+                    <CodeBox class="line">
                         <El>doc:</El> {<br>
                         &nbsp;&nbsp;&nbsp;&nbsp;<Comment>#- {{ $t('docs.doc.define.our_content') }} -#</Comment><br>
                         }
-                    </code-box>
+                    </CodeBox>
                 </div>
             </v-flex>
             <v-flex xs12>
@@ -33,14 +33,14 @@
                     <p class="ft13 lTXTgrey">
                         {{ $t('docs.doc.why.subtitle') }}
                     </p>
-                    <code-box>
+                    <CodeBox>
                         <Tag>!doctype html</Tag> <br>
                         <Tag>html</Tag> <br>
                         &nbsp;&nbsp;<Tag>body</Tag> <br>
                         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<Comment>&lt;!-- {{ $t('docs.doc.define.our_content') }} --&gt;</Comment> <br>
                         &nbsp;&nbsp;<Tag>/body</Tag> <br>
                         <Tag>/html</Tag>
-                    </code-box>
+                    </CodeBox>
                 </div>
             </v-flex>
             <v-flex xs12 class="mb-4">
@@ -56,39 +56,23 @@
     </div>
 </template>
 
-<script lang="ts">
-import { Vue, Component } from 'vue-property-decorator';
-import { Action, namespace } from 'vuex-class';
-import { Title, Subtitle } from '@/components/Tools/index';
-import codebox from '@/components/code-box.vue';
-import Tag from '@/components/Code/Tag.vue';
-import El from '@/components/Code/El.vue';
-import Comment from '@/components/Code/Comment.vue';
+<script>
+const anchorJS = require('anchor-js');
+import { page } from '@/mixins/index'
 
-const MenuModule = namespace('menu');
-
-@Component({
+export default {
     layout: 'doc',
-    components: {
-        'code-box': codebox,
-        Tag, El, Comment,
-        Title, Subtitle
-    }
-})
-
-export default class DocInstance extends Vue {
-    @MenuModule.Action setButtons: any
+    mixins: [page],
 
     mounted() {
-        this.setButtons([
-            { id: 0, classes: "border-btn", outlined: true, text: this.$t('btns.about'), route: "about" },
-            { id: 1, classes: "bg3 shadows dk", text: this.$t('btns.docs'), route: "docs" },
-            { id: 2, classes: "border-btn", outlined: true, text: this.$t('btns.roadmap'), route: "roadmap" },
-            { id: 3, classes: "border-btn", outlined: true, text: "FAQ", route: "faq" }
-        ]);
+        const anchors = new anchorJS();
+        anchors.options = {
+            placement: 'left',
+            icon: "#",
+            truncate: 100
+        };
     }
 }
-
 </script>
 
 <style>

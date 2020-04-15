@@ -137,35 +137,21 @@
     </div>
 </template>
 
-<script lang="ts">
-import { Vue, Component } from 'vue-property-decorator';
-import { Action, namespace } from 'vuex-class';
-import { Title, Subtitle } from '@/components/Tools/index';
-import { CodeBox, Tag, El, Comment, String, Mark, Tab } from '@/components/Code/index';
-import { Head, Doc } from '@/components/Code/Instances/index';
+<script>
+const anchorJS = require('anchor-js');
+import { page } from '@/mixins/index'
 
-const MenuModule = namespace('menu');
-
-@Component({
+export default {
     layout: 'doc',
-    components: {
-        Title, Subtitle,
-        CodeBox,
-        Tag, El, Comment, String, Mark, Tab,
-        Head, Doc
-    }
-})
-
-export default class HeadInstance extends Vue {
-    @MenuModule.Action setButtons: any
+    mixins: [page],
 
     mounted() {
-        this.setButtons([
-            { id: 0, classes: "border-btn", outlined: true, text: this.$t('btns.about'), route: "about" },
-            { id: 1, classes: "bg3 shadows dk", text: this.$t('btns.docs'), route: "docs" },
-            { id: 2, classes: "border-btn", outlined: true, text: this.$t('btns.roadmap'), route: "roadmap" },
-            { id: 3, classes: "border-btn", outlined: true, text: "FAQ", route: "faq" }
-        ]);
+        const anchors = new anchorJS();
+        anchors.options = {
+            placement: 'left',
+            icon: "#",
+            truncate: 100
+        };
     }
 }
 </script>

@@ -2,14 +2,19 @@
     <div>
         <v-app-bar fixed flat app class="not STblack">
             <nuxt-link :to="localePath('index')" style="line-height:0;">
-                <img height="30" src="/cream-logo.png">
+                <img height="30" src="/logo.png" v-if="!isSiamese">
+                <img height="30" src="/slogo.png" v-else>
             </nuxt-link>
             <v-spacer></v-spacer>
-            <v-btn v-if="$vuetify.breakpoint.mdAndUp" text color="white" :to="localePath('about')" class="bold menu-link">{{ $t('btns.about') }}</v-btn>
-            <v-btn v-if="$vuetify.breakpoint.mdAndUp" text color="white" :to="localePath('docs')" class="bold menu-link">{{ $t('btns.docs') }}</v-btn>
-            <v-btn v-if="$vuetify.breakpoint.mdAndUp" text color="white" :to="localePath('roadmap')" class="bold menu-link">{{ $t('btns.roadmap') }}</v-btn>
-            <v-btn v-if="$vuetify.breakpoint.mdAndUp" text color="white" :to="localePath('faq')" class="bold menu-link">FAQ</v-btn>
-            <v-btn v-if="$vuetify.breakpoint.smAndDown" icon color="white" class="menu-link" @click="mobileMenu = true">
+            <v-btn v-if="$vuetify.breakpoint.mdAndUp" text :to="localePath('about')"
+            class="bold dk" :class="isSiamese ? 'slink' : 'menu-link'">{{ $t('btns.about') }}</v-btn>
+            <v-btn v-if="$vuetify.breakpoint.mdAndUp" text :to="localePath('docs')"
+            class="bold dk" :class="isSiamese ? 'slink' : 'menu-link'">{{ $t('btns.docs') }}</v-btn>
+            <v-btn v-if="$vuetify.breakpoint.mdAndUp" text :to="localePath('roadmap')"
+            class="bold dk" :class="isSiamese ? 'slink' : 'menu-link'">{{ $t('btns.roadmap') }}</v-btn>
+            <v-btn v-if="$vuetify.breakpoint.mdAndUp" text :to="localePath('faq')"
+            class="bold dk" :class="isSiamese ? 'slink' : 'menu-link'">FAQ</v-btn>
+            <v-btn v-if="$vuetify.breakpoint.smAndDown" icon class="menu-link" @click="mobileMenu = true">
                 <v-icon>mdi-menu</v-icon>
             </v-btn>
         </v-app-bar>
@@ -30,7 +35,7 @@
                 <v-flex xs12 v-if="isOnDocs">
                     <div class="pt20 pl10 pb20">
                         <p class="ft pl20 bold ft18">{{ $t('btns.docs') }}</p>
-                        <DocsMenu/>            
+                        <DocsMenu/>
                     </div>
                 </v-flex>
             </v-layout>
@@ -39,39 +44,38 @@
 </template>
 
 <style scoped>
-.menu-link:hover {
-    color: #F6AF91 !important;
+.slink:hover {
+    color: #F9C992 !important;
 }
 </style>
 
-<script lang="ts">
-import { Vue, Component } from 'vue-property-decorator';
-import { State, Action, namespace } from 'vuex-class';
+<script>
+const anchorJS = require('anchor-js');
 import DocsMenu from '@/components/Docs/Menu.vue';
 
-const MenuModule = namespace('menu');
-
-@Component({
+export default {
     components: {
         DocsMenu
+    },
+    data: () => ({
+        mobileMenu: false
+    }),
+    computed: {
+        isOnDocs() {
+            let route = this.$route.path;
+            if (route.indexOf('docs') != -1)
+                return true
+            else
+                return false
+        },
+
+        isSiamese() {
+            let route = this.$route.path;
+            if (route.indexOf('siamese') != -1)
+                return true
+            else
+                return false
+        }
     }
-})
-
-export default class Menu extends Vue {
-    @MenuModule.State vtitle:any
-    @MenuModule.State vback:any
-    @MenuModule.State vcolor:any
-    @MenuModule.State vbuttons:any
-
-    mobileMenu: boolean = false;
-
-    get isOnDocs(): boolean {
-        let route = this.$route.path;
-        if (route.indexOf('docs') != -1)
-            return true
-        else
-            return false
-    }
-
 }
 </script>

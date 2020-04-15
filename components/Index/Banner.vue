@@ -4,15 +4,17 @@
       <v-flex xs12>
         <v-layout row wrap>
           <v-flex xs12>
-            <v-img src="/cat4.jpg" :height="mdAndUp ? 500 : 400">
+            <v-img src="/cat1.jpg" gradient="to right, rgb(0, 0, 0), rgb(8, 8, 8)" :height="mdAndUp ? 600 : 400">
               <v-layout row wrap>
                 <v-flex xs12>
-                  <div class="center-txt pt80" :class="mdAndUp ? '' : 'spacing'">
-                    <p class="ft-medium mb-0 ft-color" :class="mdAndUp ? 'ft80' : 'ft60'">Feno</p>
-                    <p class="ft-medium upCase dk" :class="mdAndUp ? 'ft16' : 'ft12'">
-                      {{ $t('banner.subtitle') }}
+                  <div class="center-txt pt130" :class="mdAndUp ? '' : 'spacing'">
+                    <vue-typed-js :strings="titles" class="center-this d-block" :loop="true" :backSpeed="50" :backDelay="3000" fadeOutClass="ft-medium ft0">
+                      <span class="ft-medium mb-0 ft0 typing" :class="mdAndUp ? 'ft40' : 'ft60'" style="line-height: 2;"></span>
+                    </vue-typed-js>
+                    <p class="ft-medium dk" :class="mdAndUp ? 'ft16' : 'ft12'">
+                      Desarrolla tu siguiente proyecto con Feno, es simple, es rápido y es fuerte.
                     </p>
-                    <v-btn rounded large depressed class="bg dk bold mr-1" :to="localePath('docs')">
+                    <v-btn rounded large depressed class="c0 dk bold mr-1" :to="localePath('docs')">
                       <v-icon class="mr-3">mdi-rocket</v-icon>
                       {{ $t('banner.btn') }}
                     </v-btn>
@@ -32,31 +34,40 @@
   </div>
 </template>
 
-<script lang="ts">
-import { Vue, Component } from "vue-property-decorator";
+<script>
+const anchorJS = require('anchor-js');
 import { CodeBox, Func, String } from "@/components/Code/index";
 import Screens from '@/components/screens.vue';
 
-@Component({
+export default {
   mixins: [Screens],
   components: {
     CodeBox, Func, String
+  },
+  created() {
+  },
+  data() {
+    return {
+      words: [
+        'def String hello = "Hello World!"',
+        '&lt;p>{{ hello }}&lt;/p>'
+      ],
+      titles: [
+        "The JavaScript for great web development.",
+        "A different way to code web pages.",
+        "Easier, Better, Faster, Stronger.",
+        "Welcome to Feno."
+      ]
+    }
+  },
+  methods: {
   }
-})
-
-export default class Banner extends Vue {
-
 }
 </script>
 
 <style scoped>
-.ft-color {
-  color: #F6AF91 !important;
-}
-
-.banner-title {
-  font-weight: bold;
-  font-size: 80px;
+.g {
+  background: linear-gradient(to right, rgb(162, 247, 181), rgb(240, 210, 127));
 }
 
 .title-padding {

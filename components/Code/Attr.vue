@@ -4,15 +4,6 @@
     </span>
 </template>
 
-<script lang="ts">
-import { Vue, Component } from 'vue-property-decorator';
-
-@Component
-
-export default class Attr extends Vue {
-}
-</script>
-
 <style scoped>
     .attribute {
         color: #fbb129 !important;

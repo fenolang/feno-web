@@ -10,7 +10,7 @@ module.exports = {
     title: process.env.npm_package_name || '',
     meta: [
       { charset: 'utf-8' },
-      { name: 'viewport', content: 'width=device-width, initial-scale=1' },
+      { name: 'viewport', content: 'width=device-width, height=device-height, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0' },
       { hid: 'description', name: 'description', content: process.env.npm_package_description || '' }
     ],
     link: [
@@ -27,12 +27,14 @@ module.exports = {
   css: [
     '@/assets/css/oleo.css',
     '@/assets/css/colors.css',
+    '@/assets/css/palette.css',
     '@/assets/css/font.css'
   ],
   /*
   ** Plugins to load before mounting the App
   */
   plugins: [
+    '@/plugins/vuetyped'
   ],
   /*
   ** Nuxt.js dev-modules
@@ -46,7 +48,6 @@ module.exports = {
   modules: [
     // Doc: https://axios.nuxtjs.org/usage
     '@nuxtjs/axios',
-    '@nuxt/typescript-build',
     ['nuxt-i18n', {
       locales: [
         {

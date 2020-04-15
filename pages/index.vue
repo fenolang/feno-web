@@ -118,6 +118,18 @@
         </v-layout>
       </v-container>
     </v-flex>
+    <!-- FOLLOW -->
+    <v-flex xs12 class="mb50">
+      <v-img height="400" src="/cat1.jpg" >
+        <div class="pt100 center-txt">
+          <p class="bold dk" :class="smAndDown ? 'ft50' : 'ft70'">#FenoRules</p>
+          <div class="spacing-movil">
+            <p class="dk" :class="smAndDown ? 'ft13': 'ft20'">Únete a la conversación con <a class="bold" href="https://twitter.com/search?q=%23fenorules" target="_blank">#FenoRules</a> en Twitter, cuéntanos lo que piensas :)</p>
+          </div>
+          <v-btn depressed color="blue" class="bold dk" href="https://twitter.com/fenolang" target="_blank">Seguir a @Fenolang en Twitter</v-btn>
+        </div>
+      </v-img>
+    </v-flex>
     <!-- SUPPORT -->
     <v-flex xs12 class="mt-4 mb80">
       <v-container grid-list-lg>
@@ -149,56 +161,27 @@
   </v-layout>
 </template>
 
-<script lang="ts">
-import { Vue, Component } from "vue-property-decorator";
-import { Action, namespace } from "vuex-class";
-import Screens from '@/components/screens.vue';
-import Banner from "@/components/Index/Banner.vue";
+<script>
+const anchorJS = require('anchor-js');
+import Screens from '@/components/screens.vue'
+import Banner from "@/components/Index/Banner.vue"
+import { menu } from '@/mixins/index'
+
 // Editor components ->
-import { Tag, Tab, El, String, Attr, Comment, Mark, CodeBox, Fun, Key, Func } from '@/components/Code/index';
-import { Doc, Head, Dmeta } from '@/components/Code/Instances/index';
+import { Tag, Tab, El, String, Attr, Comment, Mark, CodeBox, Fun, Key, Func } from '@/components/Code/index'
+import { Doc, Head, Dmeta } from '@/components/Code/Instances/index'
 // <- ---- ->
 
-const MenuModule = namespace("menu");
-
-@Component({
+export default {
   components: {
     Banner,
     CodeBox, Tag, Tab, El, String, Mark, Attr, Fun, Key, Func, Comment,
     Doc, Head, Dmeta,
   },
-  mixins: [Screens]
-})
-export default class Index extends Vue {
-  @MenuModule.Action setConfig: any;
-  @MenuModule.Action setButtons: any;
 
-  mounted() {
-    this.setButtons([
-      {
-        id: 0,
-        classes: "border-btn",
-        outlined: true,
-        text: this.$t("btns.about"),
-        route: "about"
-      },
-      {
-        id: 1,
-        classes: "bg3 shadows dk",
-        text: this.$t("btns.docs"),
-        route: "docs"
-      },
-      {
-        id: 2,
-        classes: "border-btn",
-        outlined: true,
-        text: this.$t("btns.roadmap"),
-        route: "roadmap"
-      },
-      { id: 3, classes: "border-btn", outlined: true, text: "FAQ", route: "faq" }
-    ]);
-  }
+  mixins: [menu, Screens]
 }
+
 </script>
 
 <style scoped>

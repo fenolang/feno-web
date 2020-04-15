@@ -2,7 +2,7 @@
   <no-ssr>
     <v-app dark>
       <Menu />
-      <v-content class="STwhite">
+      <v-content class="dark-color">
         <div class="line"></div>
         <nuxt />
       </v-content>
@@ -10,7 +10,7 @@
         <v-card flat tile width="100%" class="center-txt black pt20 pb20">
           <span class="dk">
             Copyright &copy; 2019
-            <span class="ft ft15 bold">YahirGNz</span>
+            <span class="ft0 ft15 bold">YahirGNz</span>
           </span>
         </v-card>
       </v-footer>
@@ -18,16 +18,15 @@
   </no-ssr>
 </template>
 
-<script lang="ts">
+<script>
+const anchorJS = require('anchor-js');
 import Menu from "@/components/Index/Menu.vue";
-import { Vue, Component } from "vue-property-decorator";
 
-@Component({
+export default {
   components: {
     Menu
   }
-})
-export default class Default extends Vue {}
+}
 </script>
 
 <style scoped>

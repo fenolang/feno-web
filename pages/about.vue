@@ -36,29 +36,6 @@
     </div>
 </template>
 
-<script lang="ts">
-import { Vue, Component } from 'vue-property-decorator';
-import { Action, namespace } from 'vuex-class';
-
-const MenuModule = namespace('menu');
-
-@Component
-
-export default class About extends Vue {
-    @MenuModule.Action setButtons : any
-
-    mounted() {
-        this.setButtons([
-            { id: 0, classes: "border-btn", outlined: true, text: this.$t('btns.about'), route: "about" },
-            { id: 1, classes: "bg3 shadows dk", text: this.$t('btns.docs'), route: "docs" },
-            { id: 2, classes: "border-btn", outlined: true, text: this.$t('btns.roadmap'), route: "roadmap" },
-            { id: 3, classes: "border-btn", outlined: true, text: "FAQ", route: "faq" }
-        ])
-    }
-}
-
-</script>
-
 <style scoped>
     .profile {
         border: 3px solid #0DBC82 !important;

@@ -4,12 +4,10 @@
   </div>
 </template>
 
-<script lang="ts">
-import { Vue, Component, Prop } from "vue-property-decorator";
-
-@Component
-export default class CodeBox extends Vue {
-  @Prop(String) readonly h !: String;
+<script>
+const anchorJS = require('anchor-js');
+export default {
+    props: ["h"]
 }
 </script>
 

@@ -329,89 +329,89 @@
   </div>
 </template>
 
-<script lang="ts">
-import { Vue, Component } from "vue-property-decorator";
+<script>
+const anchorJS = require('anchor-js');
 import { Tab } from "@/components/Code/index";
 
-@Component({
+export default {
   components: {
     Tab
-  }
-})
-export default class Menu extends Vue {
-  onInstallation: boolean = false;
-  onDirectoryStructure: boolean = false;
-  onMeta: boolean = false;
-  onFenoClass: boolean = false;
-  onMsf: boolean = false;
-  onLayouts: boolean = false;
-  onAttr: boolean = false;
-  onVariables: boolean = false;
-  onClasses: boolean = false;
-  onFunctions: boolean = false;
-  onTyping: boolean = false;
-  onConditionals: boolean = false;
-  onExport: boolean = false;
-
-  clear(): void {
-    this.onInstallation = false;
-    this.onDirectoryStructure = false;
-    this.onMeta = false;
-    this.onFenoClass = false;
-    this.onMsf = false;
-    this.onLayouts = false;
-    this.onAttr = false;
-    this.onVariables = false;
-    this.onClasses = false;
-    this.onFunctions = false;
-    this.onTyping = false;
-    this.onConditionals = false;
-    this.onExport = false;
-  }
-
-  beforeUpdate() {
-    let path: string = this.$route.path;
-    if (path.indexOf('installation') != -1) {
-      this.clear();
-      this.onInstallation = true;
-    } else if (path.indexOf('directory_structure') != -1) {
-      this.clear();
-      this.onDirectoryStructure = true;
-    } else if (path.indexOf("meta_elements") != -1) {
-      this.clear();
-      this.onMeta = true;
-    } else if (path.indexOf("feno_class") != -1) {
-      this.clear();
-      this.onFenoClass = true;
-    } else if (path.indexOf("meta_single_files") != -1) {
-      this.clear();
-      this.onMsf = true;
-    } else if (path.indexOf("layouts") != -1) {
-      this.clear();
-      this.onLayouts = true;
-    } else if (path.indexOf("attributes") != -1) {
-      this.clear();
-      this.onAttr = true;
-    } else if (path.indexOf("variables") != -1) {
-      this.clear();
-      this.onVariables = true;
-    } else if (path.indexOf("classes") != -1) {
-      this.clear();
-      this.onClasses = true;
-    } else if (path.indexOf("functions") != -1) {
-      this.clear();
-      this.onFunctions = true;
-    } else if (path.indexOf("typing") != -1) {
-      this.clear();
-      this.onTyping = true;
-    } else if (path.indexOf("conditionals") != -1) {
-      this.clear();
-      this.onConditionals = true;
-    } else if (path.indexOf("export") != -1) {
-      this.clear();
-      this.onExport = true;
-    } else {
-      this.clear();
+  },
+  data: () => ({
+    onInstallation: false,
+    onDirectoryStructure: false,
+    onMeta: false,
+    onFenoClass: false,
+    onMsf: false,
+    onLayouts: false,
+    onAttr: false,
+    onVariables: false,
+    onClasses: false,
+    onFunctions: false,
+    onTyping: false,
+    onConditionals: false,
+    onExport: false
+  }),
+  methods: {
+    clear() {
+      this.onInstallation = false;
+      this.onDirectoryStructure = false;
+      this.onMeta = false;
+      this.onFenoClass = false;
+      this.onMsf = false;
+      this.onLayouts = false;
+      this.onAttr = false;
+      this.onVariables = false;
+      this.onClasses = false;
+      this.onFunctions = false;
+      this.onTyping = false;
+      this.onConditionals = false;
+      this.onExport = false;
+    },
+    beforeUpdate() {
+      let path = this.$route.path;
+      if (path.indexOf('installation') != -1) {
+        this.clear();
+        this.onInstallation = true;
+      } else if (path.indexOf('directory_structure') != -1) {
+        this.clear();
+        this.onDirectoryStructure = true;
+      } else if (path.indexOf("meta_elements") != -1) {
+        this.clear();
+        this.onMeta = true;
+      } else if (path.indexOf("feno_class") != -1) {
+        this.clear();
+        this.onFenoClass = true;
+      } else if (path.indexOf("meta_single_files") != -1) {
+        this.clear();
+        this.onMsf = true;
+      } else if (path.indexOf("layouts") != -1) {
+        this.clear();
+        this.onLayouts = true;
+      } else if (path.indexOf("attributes") != -1) {
+        this.clear();
+        this.onAttr = true;
+      } else if (path.indexOf("variables") != -1) {
+        this.clear();
+        this.onVariables = true;
+      } else if (path.indexOf("classes") != -1) {
+        this.clear();
+        this.onClasses = true;
+      } else if (path.indexOf("functions") != -1) {
+        this.clear();
+        this.onFunctions = true;
+      } else if (path.indexOf("typing") != -1) {
+        this.clear();
+        this.onTyping = true;
+      } else if (path.indexOf("conditionals") != -1) {
+        this.clear();
+        this.onConditionals = true;
+      } else if (path.indexOf("export") != -1) {
+        this.clear();
+        this.onExport = true;
+      } else {
+        this.clear();
+      }
     }
   }
 }

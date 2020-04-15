@@ -6,18 +6,14 @@
     </span>
 </template>
 
-<script lang="ts">
-import { Vue, Component } from 'vue-property-decorator';
+<script>
+const anchorJS = require('anchor-js');
 import { El, Tab } from '@/components/Code/index';
 
-@Component({
+export default {
     components: {
         El, Tab
     }
-})
-
-export default class Style extends Vue {
-
 }
 </script>
 

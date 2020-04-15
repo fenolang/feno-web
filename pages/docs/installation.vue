@@ -128,45 +128,25 @@
     </div>
 </template>
 
-<script lang="ts">
-import { Vue, Component } from 'vue-property-decorator';
-import { Action, namespace } from 'vuex-class';
-import { CodeBox, El, String, Attr, Func, Key, Tab, Tag } from '@/components/Code/index';
-import { Doc } from '@/components/Code/Instances/index';
+<script>
 const anchorJS = require('anchor-js');
-const anchors = new anchorJS();
+import { page } from '@/mixins/index'
 
-const MenuModule = namespace('menu');
-
-@Component({
+export default {
     layout: 'doc',
-    components: {
-        El, String, Attr, Func, Key, CodeBox, Tab, Tag,
-        Doc
-    }
-})
+    mixins: [page],
 
-export default class Installation extends Vue {
-    @MenuModule.Action setButtons: any
-
-    mounted()
-    {
+    mounted() {
+        const anchors = new anchorJS();
         anchors.options = {
             placement: 'left',
-            icon: '#',
+            icon: "#",
             truncate: 100
         };
         anchors.add('#cli');
         anchors.add('#scratch');
-        this.setButtons([
-            { id: 0, classes: "border-btn", outlined: true, text: this.$t('btns.about'), route: "about" },
-            { id: 1, classes: "bg3 shadows dk", text: this.$t('btns.docs'), route: "docs" },
-            { id: 2, classes: "border-btn", outlined: true, text: this.$t('btns.roadmap'), route: "roadmap" },
-            { id: 3, classes: "border-btn", outlined: true, text: "FAQ", route: "faq" }
-        ]);
     }
 }
-
 </script>
 
 <style>

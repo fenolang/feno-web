@@ -1,6 +1,6 @@
 {
   "name": "feno",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "The official Feno website",
   "author": "YahirGNz <yahirgnnz@gmail.com>",
   "private": true,
@@ -12,19 +12,16 @@
   },
   "dependencies": {
     "@nuxtjs/axios": "^5.3.6",
+    "@nuxtjs/vuetify": "^1.9.1",
     "anchor-js": "^4.2.2",
     "cross-env": "^5.2.0",
     "express": "^4.16.4",
+    "nodemon": "^1.18.9",
     "nuxt": "^2.0.0",
     "nuxt-i18n": "^6.4.1",
     "vue": "^2.6.11",
     "vue-template-compiler": "^2.6.11",
-    "@nuxtjs/vuetify": "^1.9.1",
-    "@nuxt/typescript-build": "^0.3.10",
-    "nodemon": "^1.18.9",
-    "vue-property-decorator": "^8.3.0",
-    "vuex-class": "^0.3.2"
+    "vue-typed-js": "^0.1.2"
   },
-  "devDependencies": {
-  }
+  "devDependencies": {}
 }
