@@ -13,6 +13,10 @@ export default {
         smAndDown() {
             return this.$vuetify.breakpoint.smAndDown;
         },
+
+        pcAndUp() {
+            return this.$vuetify.breakpoint.lgAndUp;
+        }
     }
 }
 </script>

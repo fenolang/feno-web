@@ -8,7 +8,7 @@
       </div>
 
       <!-- VERSION -->
-      <p class="ft16 bold txt-dk mb-1">{{ $t('docs.menu.intro') }}</p>
+      <p class="ft16 bold ft0 mt-4 mb-4">{{ $t('docs.menu.intro') }}</p>
       <router-link :to="localePath('docs')">
         <p class="ft13 link mb-1">{{ $t('docs.menu.what') }}</p>
       </router-link>
@@ -50,7 +50,7 @@
           {{ $t('docs.menu.files') }}
         </p>
       </router-link>
-      <p class="ft16 bold txt-dk mt-2 mb-1">{{ $t('docs.menu.start') }}</p>
+      <p class="ft16 bold ft0 mt-4 mb-4">{{ $t('docs.menu.start') }}</p>
       <router-link :to="localePath('docs-doc_instance')">
         <p class="ft13 link mb-1">{{ $t('docs.menu.doc') }}</p>
       </router-link>
@@ -417,11 +417,12 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 .link {
-  color: #000 !important;
+  color: #fff !important;
 }
+
 .link:hover {
-  color: #2c6d57 !important;
+    color: #FE612C !important;
 }
 </style>

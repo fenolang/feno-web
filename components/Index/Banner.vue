@@ -4,14 +4,14 @@
       <v-flex xs12>
         <v-layout row wrap>
           <v-flex xs12>
-            <v-img src="/cat1.jpg" gradient="to right, rgb(0, 0, 0), rgb(8, 8, 8)" :height="mdAndUp ? 600 : 400">
+            <v-img src="/fox1.jpg" gradient="rgb(8, 8, 8, .8), rgb(0, 0, 0)" :height="mdAndUp ? 600 : 400">
               <v-layout row wrap>
                 <v-flex xs12>
                   <div class="center-txt pt130" :class="mdAndUp ? '' : 'spacing'">
-                    <vue-typed-js :strings="titles" class="center-this d-block" :loop="true" :backSpeed="50" :backDelay="3000" fadeOutClass="ft-medium ft0">
-                      <span class="ft-medium mb-0 ft0 typing" :class="mdAndUp ? 'ft40' : 'ft60'" style="line-height: 2;"></span>
+                    <vue-typed-js :strings="titles" class="center-this d-block" :loop="true" :backSpeed="50" :backDelay="3000">
+                      <span class="ft-medium mb-0 typing ft0" :class="mdAndUp ? 'ft40' : 'ft20'" style="line-height: 2;"></span>
                     </vue-typed-js>
-                    <p class="ft-medium dk" :class="mdAndUp ? 'ft16' : 'ft12'">
+                    <p class="ft-medium dk" :class="mdAndUp ? 'ft16' : 'ft12 mt10 spacing'">
                       Desarrolla tu siguiente proyecto con Feno, es simple, es rápido y es fuerte.
                     </p>
                     <v-btn rounded large depressed class="c0 dk bold mr-1" :to="localePath('docs')">

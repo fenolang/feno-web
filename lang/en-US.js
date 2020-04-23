@@ -835,12 +835,22 @@ export default {
     title: "Roadmap",
     subtitle: "We are always working on improving Feno, improving each functionality and adding many new ones to offer you a much more capable language for your projects. Here we show you the route of our project, from the updates we already launched to the next versions we have planned: (This list can change at any time)",
     high: "Highlights:",
+    objectives: "Objectives:",
     versions: [
       {
         color: "grey",
         icon: "mdi-rocket",
-        name: "v1.2.0 Release",
-        text: "Version 1.2 will bring too many changes and news to Feno, we recommend you be attentive because it will be amazing :)"
+        name: "v2.0.0 Release",
+        text: "All the code recreated and reformulated from scratch, incorporating a new and better API, new syntax, new functions and faster are key features of the new Feno 2.0 update. This version marks a complete change in the way the Feno Core works, new capabilities and better results. We are currently actively working on this version, follow us on Medium and Twitter to stay on top of all the news.",
+        objectives: [
+          "A completely new API, easier, stronger and faster.",
+          "Support for CSS frameworks.",
+          "Testing functions.",
+          "Vectors.",
+          "Reactive properties.",
+          "Computed properties.",
+          "And much more..."
+        ]
       },
       {
         color: "green",
@@ -918,8 +928,8 @@ export default {
     ]
   },
   faq: {
-    when_comes: "When will version 1.0 come out?",
-    answer: "IT'S OUT! And it is available to all of you at NPM. For more updates you can inform in our",
+    when_comes: "When will version 2.0 come out?",
+    answer: "We still do not know, we are working every day to develop each of the objectives that we have set, not to mention that we have to carry out too many tests and prevent errors in an official launch. You can follow us on Medium and Twitter as @fenolang to get news instantly.",
     road: "Roadmap",
     answer2: 'and in our social networks :)',
     ask_group: [
@@ -928,15 +938,15 @@ export default {
         asks: [
           {
             name: "Why should I leave JS and use Feno?",
-            answer: 'Feno is made for people who like or are interested in JavaScript BUT they don\'t love it, so Feno is an extension of JS that solves all its errors, offers better functions and improves its capacity ;)'
+            answer: 'Feno is a JavaScript extension, we dedicate a lot of time and effort to improve the language, make things easier for everyone, offer an alternative, a better version to create your project. Do you want to see what the benefits are and enjoy them? Use Feno.'
           },
           {
             name: "Can I use JS libraries with Feno?",
-            answer: 'Yes! Feno maintains perfect compatibility with libraries developed for JavaScript'
+            answer: 'Off course! You can use JS libraries with Feno, we work to meet incredible compatibility every day.'
           },
           {
             name: "Can Feno work together with JS?",
-            answer: 'Clear! But it\'s not necessary and you shouldn\'t do it anymore'
+            answer: 'Obvious! You can use scripts written in Feno together with other scripts written in JavaScript, but we honestly do not recommend it as it is not necessary, everything you can do in a JS file you can do in a Feno file and much better.'
           },
           {
             name: "I have a giant project in JS, can I easily migrate to Feno?",
@@ -944,7 +954,7 @@ export default {
           },
           {
             name: "What do you think of TypeScript?",
-            answer: 'We love TypeScript! In fact, the Feno core is built with TypeScript. Now, Feno and TS share certain characteristics and certain objectives BUT each one has a somewhat different central objective, Feno aims to offer the new features of web development (components, layouts, etc.), strong typing and a much easier syntax of Learn and remember as well as introducing new functions never seen before Feno has many functions that TypeScript does not. Why? because both point to something different BUT both have the objective of improving the web'
+            answer: 'We love TypeScript! In fact, the Feno core is built with TypeScript. Now, Feno and TS share certain characteristics and certain objectives BUT each one has a somewhat different central objective, Feno aims to offer the new features of web development (components, layouts, etc.), strong typing and a much easier syntax of Learn and remember as well as introducing new functions never seen before Feno has many functions that TypeScript does not. Why? because both point to something different BUT both have the objective of improving the web.'
           }
         ]
       },
@@ -957,7 +967,7 @@ export default {
           },
           {
             name: "Do I need a special editor or IDE to use Feno?",
-            answer: 'No. You can use any editor or environment to program in Feno BUT you do need a special folder structure so that Feno can work perfectly, although in the future this could disappear.'
+            answer: 'No. You can use any text editor or environment to program in Feno BUT you do need a special folder structure for now so that Feno can work perfectly (Feno creates it automatically for you), although in the future this could disappear.'
           },
           {
             name: "Does Feno work in all browsers?",
@@ -965,7 +975,7 @@ export default {
           },
           {
             name: "Can I develop content for Feno?",
-            answer: 'Clear! You can contact us and we will immediately announce your library or framework on this site, we are currently thinking of developing a tool that helps the community to upload and install packages related to the world of Feno :)'
+            answer: 'Yeah! You can contact us and we will immediately announce your library or framework on this site, we are currently thinking of developing a tool that helps the community to upload and install packages related to the world of Feno :)'
           }
         ]
       },
@@ -974,11 +984,11 @@ export default {
         asks: [
           {
             name: "Why does Feno work through instances?",
-            answer: 'We spent a LONG time thinking about the way we wanted the code to be organized in Feno and the most comfortable way was the use of instances (doc, head, etc). So that the code will be divided into several parts and maintain a clean and readable code.'
+            answer: 'In the beginning of Feno, the best way to organize the code was through instances, so everything was divided into three parts and we maintained a correct cleaning. From version 2.0 this will change, so the intakes in Feno will no longer exist, everything will develop in one plane, which will make us write less, have to remember fewer things and the speed of Feno increases. Great, no?'
           },
           {
             name: "Cubes are something new, what do they transpile?",
-            answer: 'The Cubes are transpiled to code with parameters, the objective of The Cubes is that you no longer have to send and receive parameters to change the way your applications act but since browsers do not understand Feno code the cubes are transpiled to code with parameters (as currently performed).'
+            answer: 'The Cubes are transpiled into code with parameters, the objective of The Cubes is that you no longer have to send and receive parameters to change the way your applications operate, but since browsers do not understand Feno code, the cubes are transpiled into code with parameters (as it is currently done). Starting with version 2.0, there are now vectors that are an improved version of cubes and without the errors that they presently present.'
           },
           {
             name: "Will there be syntax changes in future versions?",
@@ -991,7 +1001,7 @@ export default {
         asks: [
           {
             name: "Why \"Feno\"?",
-            answer: 'This project has gone through an incredibly BIG list of names. While thinking about what the final name would be, I realized that in the neighborhood where I reside it is almost impossible to go outside and not see a cat. "Feno" is an abbreviation of "Felino" (Feline in spanish) and the logo is an origami-style cat, Long live the cats and felines!'
+            answer: 'This project has gone through an incredibly BIG list of names. I like cats, "FENO" is an abbreviation of "FELINO" (which means feline in Spanish), the interesting fact is that our color palette and images are of foxes and the fox is not a feline, oops.'
           }
         ]
       }

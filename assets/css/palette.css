@@ -4,8 +4,13 @@
     color: #fff;
 }
 
+.border-btn {
+    border-color: #FE612C !important;
+    color: #FE612C !important;
+}
+
 .menu-link:hover {
-    color: #A2F7B5 !important;
+    color: #FE612C !important;
 }
 
 .dark-color {
@@ -13,7 +18,7 @@
 }
 
 .c0 {
-    background: #A2F7B5 !important;
+    background: #FE612C !important;
 }
 
 .c1 {
@@ -27,7 +32,7 @@
 /** COLORES {TEXTO} **/
 
 .ft0 {
-    color: #A2F7B5 !important;
+    color: #FE612C !important;
 }
 
 .ft1 {

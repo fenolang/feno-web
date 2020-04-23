@@ -788,7 +788,7 @@ export default {
       }
     },
     cubes: {
-      subtitle: "Los Cristales son una funcionalidad exclusiva que ofrece Feno para mejorar la interactividad de nuestro código y abandonar el uso de los parámetros para cambiar la forma en la que nuestro código funciona.",
+      subtitle: "Los Cubos son una funcionalidad exclusiva que ofrece Feno para mejorar la interactividad de nuestro código y abandonar el uso de los parámetros para cambiar la forma en la que nuestro código funciona.",
       code_change: "Código que cambia",
       func1: "funcion1",
       func2: "funcion2",
@@ -800,13 +800,13 @@ export default {
         subtitle: "Imaginemos que queremos que el mismo código funcione de distinta manera depende la situación, por ejemplo: Tenemos dos funciones y las dos llaman a una tercera función, el objetivo es que la tercera función haga distintas cosas depende de dónde sea llamada, así lo hacemos con parámetros:"
       },
       with: {
-        title: "Con Cristales",
+        title: "Con Cubos",
         subtitle: 'Acaso no es... ¡¿Increíble?! Importamos los cristales en la primera línea, en la función 1 mandamos un cristal a través de la función <span class="bold">Cubes.send(<span class="italic">nombre del cristal que se va a mandar</span>)</span> que como primer parámetro le mandamos el nombre de nuestro cristal y como segundo el valor que tendrá. <br> <br> En la segunda función también mandamos un cristal llamado "res" y como valor le mandamos la función despedirse().Y en la tercera función ahora sólo ejecutamos el cristal llamado "res" con la función<span class= "bold" > Cubes.exec("<span class="italic">nombre del cristal a ejecutar</span>")</span> y ¡LISTO!'
       },
       need: {
         title: "¿Realmente necesito los cristales?",
         subtitle: 'Personalmente como programador muchas veces necesito que mi código funcione de distintas maneras de acuerdo a la situación que se presente y así reutilizar mis scripts además de que cuando queremos reaccionar ante diversas situaciones tendríamos que mandar más tipos de parametros y por lo tanto más uso innecesario del elif en nuestras condicionales. Ese fue el motivo para crear "Cubes": Una manera de decirle a nuestro código cómo actuar SIN usar parámetros :))',
-        alert: '¡Alerta! Los Cristales actualmente sólo funcionan dentro de un mismo archivo, aún no funcionan con funciones externas que importas PERO éstamos trabajando en eso ;)'
+        alert: '¡Alerta! Los Cubos actualmente sólo funcionan dentro de un mismo archivo, aún no funcionan con funciones externas que importas PERO éstamos trabajando en eso ;)'
       }
     },
     config: {
@@ -842,12 +842,22 @@ export default {
     title: "Ruta del proyecto",
     subtitle: "Éstamos siempre trabajando en mejorar Feno, mejorando cada funcionalidad y agregando muchas nuevas para ofrecerte un lenguaje mucho más capaz para tus proyectos. Aquí te mostramos la ruta de nuestro proyecto, desde las actualizaciones que ya lanzamos hasta las próximas versiones que tenemos planeadas: (Ésta lista puede cambiar en cualquier momento)",
     high: "Destacado:",
+    objectives: "Objetivos:",
     versions: [
       {
         color: "grey",
         icon: "mdi-rocket",
-        name: "v1.2.0 Release",
-        text: "La versión 1.2 traerá demasiados cambios y novedades a Feno, te recomendamos estar atento porque será increíble :)"
+        name: "v2.0.0 Release",
+        text: "Todo el código recreado y reformulado desde cero, incorporando una nueva y mejor API, nueva sintaxis, nuevas funciones y más rápidez son características clave de la nueva actualización 2.0 de Feno. Esta versión marca un cambio total en la forma de trabajar del Core de Feno, nuevas capacidades y mejores resultados. Actualmente estamos trabajando activamente en esta versión, síguenos en Medium y Twitter para estar al tanto de todas las noticias.",
+        objectives: [
+          "Una API completamente nueva, más fácil, fuerte y rápida.",
+          "Soporte para frameworks de CSS.",
+          "Funciones de testing.",
+          "Vectores.",
+          "Propiedades reactivas.",
+          "Propiedades computadas.",
+          "Y mucho más..."
+        ]
       },
       {
         color: "green",
@@ -925,8 +935,8 @@ export default {
     ]
   },
   faq: {
-    when_comes: "¿Cuándo saldrá la versión 1.0?",
-    answer: '¡YA SALIÓ! Y está disponible para todos ustedes en NPM. Para más actualizaciones te puedes informar en nuestra',
+    when_comes: "¿Cuándo saldrá la versión 2.0?",
+    answer: 'Aún no lo sabemos, estamos trabajando todos los días en desarrollar cada uno de los objetivos que tenemos planteados, sin contar que tenemos que realizar demasiadas pruebas y prevenir errores en un lanzamiento oficial. Puedes seguirnos en Medium y Twitter como @fenolang para obtener noticias al instante.',
     road: "Ruta del proyecto",
     answer2: 'y en nuestras redes sociales :)',
     ask_group: [
@@ -935,15 +945,15 @@ export default {
         asks: [
           {
             name: "¿Porqué debería dejar JS y usar Feno?",
-            answer: 'Feno está hecho para las personas a las que les gusta o les atrae JavaScript PERO no les encanta, por lo que Feno es una extensión de JS que soluciona todos sus errores, ofrece mejores funciones y mejora la capacidad de este mismo ;)'
+            answer: 'Feno es una extensión de JavaScript, nosotros dedicamos mucho tiempo y esfuerzo en mejorar el lenguaje, facilitar las cosas para todos, ofrecer una alternativa, una mejor versión para crear tu proyecto. ¿Quieres ver cuáles son los beneficios y disfrutar de ellos? Utiliza Feno.'
           },
           {
             name: "¿Puedo utilizar librerías de JS con Feno?",
-            answer: '¡Sí! Feno mantiene una compatibilidad perfecta con las librerías desarrolladas para JavaScript'
+            answer: '¡Claro! Puedes utilizar librerías de JS con Feno, trabajamos en cumplir con una compatibilidad increíble todos los días.'
           },
           {
             name: "¿Feno puede trabajar en conjunto a JS?",
-            answer: '¡Claro! Pero no es algo necesario y ya no deberías hacerlo'
+            answer: '¡Obvio! Puedes utilizar scripts escritos en Feno junto a otros escritos en JavaScript, pero sinceramente no lo recomendamos ya que no es necesario, todo lo que puedes hacer en un archivo de JS lo puedes hacer en un archivo de Feno y mucho mejor.'
           },
           {
             name: "Tengo un proyecto gigante en JS, ¿Puedo migrar fácilmente a Feno?",
@@ -951,7 +961,7 @@ export default {
           },
           {
             name: "¿Qué piensan de TypeScript?",
-            answer: '¡Nos encanta TypeScript! De hecho, el core de Feno está construído con TypeScript. Ahora, Feno y TS comparten ciertas características y ciertos objetivos PERO cada una tiene un objetivo central algo distinto, Feno tiene como objetivo ofrecer las nuevas características de el desarrollo web (componentes, layouts, etc), tipado fuerte y una sintaxis mucho más fácil de aprender y recordar además de introducir nuevas funciones nunca antes vistas. Feno tiene muchisimas funciones que TypeScript no ¿Por qué? porque ambos apuntan a algo distinto PERO ambos tienen el objetivo de mejorar la web'
+            answer: '¡Nos encanta TypeScript! De hecho, el core de Feno está construído con TypeScript. Ahora, Feno y TS comparten ciertas características y ciertos objetivos PERO cada uno tiene un objetivo central algo distinto, Feno tiene como objetivo ofrecer las nuevas características de el desarrollo web (componentes, layouts, etc), tipado fuerte y una sintaxis mucho más fácil de aprender y recordar además de introducir nuevas funciones nunca antes vistas. Feno tiene muchisimas funciones que TypeScript no ¿Por qué? porque ambos apuntan a algo distinto PERO ambos tienen el objetivo de mejorar la web.'
           }
         ]
       },
@@ -964,7 +974,7 @@ export default {
           },
           {
             name: "¿Necesito un editor o IDE especial para usar Feno?",
-            answer: 'No. Puedes utilizar cualquier editor o entorno para programar en Feno PERO sí que necesitas por ahora una estructura de carpetas especial para que Feno pueda trabajar perfectamente, aunque a futuro ésto podría desaparecer.'
+            answer: 'No. Puedes utilizar cualquier editor de texto o entorno para programar en Feno PERO sí que necesitas por ahora una estructura de carpetas especial para que Feno pueda trabajar perfectamente (Feno la crea automáticamente por ti), aunque a futuro ésto podría desaparecer.'
           },
           {
             name: "¿Feno funciona en todos los navegadores?",
@@ -981,11 +991,11 @@ export default {
         asks: [
           {
             name: "¿Porqué Feno funciona a través de instancias?",
-            answer: 'Estuvimos un LARGO tiempo pensando en la manera en la que queríamos que se organizara el código en Feno y la manera más cómoda fue la utilización de instancias (doc, head, etc). De tal manera que el código quedara dividido en varias partes y mantener un código limpio y legible.'
+            answer: 'En el inicio de Feno la mejor forma de organizar el código era por medio de instancias, así se dividía todo en tres partes y manteníamos una limpieza correcta. A partir de la versión 2.0 esto cambiará, de modo que las intancias en Feno dejarán de existir, todo se desarrollará en un plano, lo que hará que escribamos menos, tengamos que recordar menos cosas y la rápidez de Feno aumente ¿Genial no?.'
           },
           {
-            name: "Los Cristales son algo nuevo, ¿A qué se transpilan?",
-            answer: 'Los Cristales se transpilan a código con parámetros, el objetivo de Los Cristales es que ya no tengas que mandar y recibir parámetros para cambiar la manera en la que actúan tus aplicaciones pero como los navegadores no entienden código Feno los cristales se transpilan a código con parámetros (como actualmente se realiza).'
+            name: "Los Cubos son algo nuevo, ¿A qué se transpilan?",
+            answer: 'Los Cubos se transpilan a código con parámetros, el objetivo de Los Cubos es que ya no tengas que mandar y recibir parámetros para cambiar la manera en la que actúan tus aplicaciones pero como los navegadores no entienden código Feno los cubos se transpilan a código con parámetros (como actualmente se realiza). A partir de la versión 2.0 existen los vectores que son una versión mejorada de los cubos y sin los errores que estos presentan actualmente.'
           },
           {
             name: "¿Habrá cambios de sintaxis en futuras versiones?",
@@ -998,7 +1008,7 @@ export default {
         asks: [
           {
             name: "¿Porqué \"Feno\"?",
-            answer: 'Este proyecto ha pasado por una lista increíblemente GRANDE de nombres. Mientras pensaba en cuál sería el nombre definitivo me dí cuenta que en el barrio en el que resido es casi imposible salir y no ver un gato. "Feno" es una abreviación de "Felino" y el logo es una gato estilo origami, ¡Vivan los gatos!'
+            answer: 'Este proyecto ha pasado por una lista increíblemente GRANDE de nombres. Me gustan los felinos, "FENO" es una abreviación de "FELINO", el dato interesante es que nuestra paleta de colores e imágenes son de zorros y el zorro no es un felino, ups.'
           }
         ]
       }

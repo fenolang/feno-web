@@ -58,12 +58,12 @@
     padding-left: 10px;
     padding-right: 10px;
     border-radius: 5px;
-    border: 2px solid #F6AF91 !important;
+    border: 2px solid #FE612C !important;
 }
 
 .version:hover {
-    background: #F6AF91 !important;
-    color: #fff !important;
+    background: #FE612C !important;
+    color: #000 !important;
 }
 
 .version p {
@@ -123,11 +123,6 @@
 
 .ft-light {
     font-weight: 300 !important;
-}
-
-.border-btn {
-    border-color: #000 !important;
-    color: #000 !important;
 }
 
 .border {

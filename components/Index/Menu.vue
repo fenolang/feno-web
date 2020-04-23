@@ -1,6 +1,6 @@
 <template>
     <div>
-        <v-app-bar fixed flat app class="not STblack">
+        <v-app-bar flat app dense color="#000">
             <nuxt-link :to="localePath('index')" style="line-height:0;">
                 <img height="30" src="/logo.png" v-if="!isSiamese">
                 <img height="30" src="/slogo.png" v-else>
@@ -22,11 +22,11 @@
             <v-layout row wrap>
                 <v-flex xs12>
                     <div class="pt20 pl30">
-                        <p class="ft bold ft18">Inicio</p>
-                        <router-link :to="localePath('about')"><p class="link">{{ $t('btns.about') }}</p></router-link>
-                        <router-link :to="localePath('docs')"><p class="link">{{ $t('btns.docs') }}</p></router-link>
-                        <router-link :to="localePath('roadmap')"><p class="link">{{ $t('btns.roadmap') }}</p></router-link>
-                        <router-link :to="localePath('faq')"><p class="link">FAQ</p></router-link>
+                        <p class="ft0 bold ft18">Inicio</p>
+                        <router-link :to="localePath('about')"><p class="menu-link">{{ $t('btns.about') }}</p></router-link>
+                        <router-link :to="localePath('docs')"><p class="menu-link">{{ $t('btns.docs') }}</p></router-link>
+                        <router-link :to="localePath('roadmap')"><p class="menu-link">{{ $t('btns.roadmap') }}</p></router-link>
+                        <router-link :to="localePath('faq')"><p class="menu-link">FAQ</p></router-link>
                     </div>
                 </v-flex>
                 <v-flex xs12 v-if="isOnDocs">
@@ -34,7 +34,7 @@
                 </v-flex>
                 <v-flex xs12 v-if="isOnDocs">
                     <div class="pt20 pl10 pb20">
-                        <p class="ft pl20 bold ft18">{{ $t('btns.docs') }}</p>
+                        <p class="ft0 pl20 bold ft18">{{ $t('btns.docs') }}</p>
                         <DocsMenu/>
                     </div>
                 </v-flex>
@@ -42,12 +42,6 @@
         </v-navigation-drawer>
     </div>
 </template>
-
-<style scoped>
-.slink:hover {
-    color: #F9C992 !important;
-}
-</style>
 
 <script>
 const anchorJS = require('anchor-js');

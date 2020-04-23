@@ -8,9 +8,9 @@
             </v-flex>
             <v-flex xs12>
                 <div class="spacing">
-                    <p class="ft20 txt-dk">{{ $t('faq.when_comes') }}</p>
+                    <p class="ft20">{{ $t('faq.when_comes') }}</p>
                     <p class="ft13 lTXTgrey">
-                        {{ $t('faq.answer') }} <router-link :to="localePath('roadmap')" class="txt-dk">{{ $t('faq.road') }}</router-link> {{ $t('faq.answer2') }}
+                        {{ $t('faq.answer') }}
                     </p>
                 </div>
             </v-flex>
@@ -18,14 +18,14 @@
                 <v-layout row wrap>
                     <!-- TÍTULO -->
                     <v-flex xs12>
-                        <div class="spacing">
+                        <div class="spacing ft0">
                             <Subtitle>{{ item.name }}</Subtitle>
                         </div>
                     </v-flex>
                     <!-- PREGUNTAS -->
                     <v-flex xs12 v-for="(ask, index) in item.asks" :key="index">
                         <div class="spacing">
-                            <p class="ft15 txt-dk">{{ ask.name }}</p>
+                            <p class="ft15">{{ ask.name }}</p>
                             <p class="ft13 lTXTgrey" v-html="ask.answer"></p>
                         </div>
                     </v-flex>
@@ -36,24 +36,14 @@
 </template>
 
 <script>
-import { Title, Subtitle } from '@/components/Tools/index';
-import { Tag, Tab, El, String, Attr, Comment, Mark, CodeBox } from '@/components/Code/index';
-import { Doc, Head, Dmeta } from '@/components/Code/Instances/index';
-
+import { page } from '@/mixins/index'
 const anchorJS = require('anchor-js');
-const anchors = new anchorJS();
-
-const MenuModule = namespace('menu');
 
 export default {
     layout: 'doc',
-    components: {
-        Title, Subtitle,
-        CodeBox, Tag, Tab, El, String, Mark,
-        Doc, Head, Dmeta,
-    },
-
+    mixins: [page],
     mounted() {
+        const anchors = new anchorJS();
         anchors.options = {
             placement: 'left',
             icon: "#",

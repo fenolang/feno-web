@@ -16,11 +16,17 @@
                             <v-timeline-item :small="true" :color="item.color" :icon="item.icon" v-for="(item, index) in $t('roadmap.versions')" :key="index" :fill-dot="true">
                                 <v-card outlined>
                                     <v-card-title>
-                                        <span class="ft15" v-html="item.name"></span>
+                                        <span class="ft16 ft0 ft-medium" v-html="item.name"></span>
                                     </v-card-title>
                                     <v-card-text>
                                         <p v-html="item.text"></p>
-                                        <p v-if="item.news" class="bold TXTblack">{{ $t('roadmap.high') }}</p>
+                                        <p v-if="item.objectives" class="bold ft0">{{ $t('roadmap.objectives') }}</p>
+                                        <ul v-if="item.objectives">
+                                            <li v-for="(objective, index) in item.objectives" :key="index">
+                                                {{ objective }}
+                                            </li>
+                                        </ul>
+                                        <p v-if="item.news" class="bold ft0">{{ $t('roadmap.high') }}</p>
                                         <ul v-if="item.news">
                                             <li v-for="(news, index) in item.news" :key="index">
                                                 {{ news }}

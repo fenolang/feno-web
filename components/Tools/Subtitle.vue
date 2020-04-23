@@ -7,7 +7,7 @@
 
 <style>
     .mark-this {
-        background: #2c2e41 !important;
+        background: #FE612C !important;
         width: 60px;
         height: 3px;
         border: none;

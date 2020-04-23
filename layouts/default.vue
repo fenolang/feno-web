@@ -3,7 +3,7 @@
     <v-app dark>
       <Menu />
       <v-content class="dark-color">
-        <div class="line"></div>
+        <!--<div class="line"></div>-->
         <nuxt />
       </v-content>
       <v-footer padless>
