@@ -4,8 +4,8 @@
             <v-flex xs1 v-if="$vuetify.breakpoint.mdAndUp">
             </v-flex>
             <v-flex xs11>
-                <div class="spacing pt20">
-                    <Title>{{ $t('support.title') }}</Title>
+                <div class="spacing pt60">
+                    <p class="ft-medium" :class="mdAndUp ? 'ft70' : 'ft50'">{{ $t('support.title') }}</p>
                     <p class="ft15 lTXTgrey">
                         {{ $t('support.subtitle') }}
                     </p>
@@ -20,9 +20,13 @@
 <script>
 const anchorJS = require('anchor-js');
 import { Title, Subtitle } from '@/components/Tools/index';
+import screens from '@/components/screens'
 
 export default {
     components: {
         Title, Subtitle
-    }
+    },
+    mixins: [screens]
 }
+
+</script>

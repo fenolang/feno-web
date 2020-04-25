@@ -3,7 +3,7 @@
         <v-container grid-list-lg>
             <v-layout row wrap>
                 <v-flex xs12>
-                    <p class="ft50 bold ft-dk">{{ $t('about.title') }}</p>
+                    <p class="ft50 bold">{{ $t('about.title') }}</p>
                 </v-flex>
                 <v-flex xs12>
                     <v-layout row wrap>
@@ -38,7 +38,7 @@
 
 <style scoped>
     .profile {
-        border: 3px solid #0DBC82 !important;
+        border: 3px solid #FE612C !important;
         border-radius: 4px;
     }
 </style>

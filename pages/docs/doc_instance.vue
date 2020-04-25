@@ -47,8 +47,8 @@
                 <div class="spacing">
                     <Subtitle>{{ $t('docs.doc.where_head.title') }}</Subtitle>
                     <p class="ft15 lTXTgrey">
-                        <span v-html="$t('docs.doc.where_head.subtitle')"></span>
-                        <router-link class="txt-dk bold txt-line" to="/" v-html="$t('docs.head.title')"></router-link>
+                        {{ $t('docs.doc.where_head.subtitle') }}
+                        <router-link class="ft0 bold" to="/" v-html="$t('docs.head.title')"></router-link>
                     </p>
                 </div>
             </v-flex>

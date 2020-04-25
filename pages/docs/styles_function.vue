@@ -142,17 +142,10 @@
 
 <script>
 const anchorJS = require('anchor-js');
-import { Tag, Tab, El, String, Attr, Comment, CodeBox, Func } from '@/components/Code/index';
-import { Head, Doc } from '@/components/Code/Instances/index';
-import { Title, Subtitle } from '@/components/Tools/index';
-import Screens from '@/components/screens.vue';
+import { page } from '@/mixins/index'
 
 export default {
     layout: 'doc',
-    components: {
-        Tag, El, String, CodeBox, Attr, Comment, Tab, Func,
-        Doc, Head,
-        Title, Subtitle
-    },
-    mixins: [Screens]
+    mixins: [page]
 }
+</script>

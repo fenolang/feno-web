@@ -12,12 +12,12 @@
             <!-- CLI INSTALLATION -->
             <v-flex xs12 id="cli">
                 <div class="spacing">
-                    <p class="ft25 ft">{{ $t('docs.install.cli.title') }}</p>
+                    <p class="ft25 ft0">{{ $t('docs.install.cli.title') }}</p>
                     <p class="ft13 lTXTgrey">{{ $t('docs.install.cli.sub') }} <span class="ft-red">NPM</span>
                         ({{ $t('docs.install.cli.sub_2') }} <a href="https://nodejs.org/en/download/" target="_blank">NodeJS</a>)
                     </p>
                     <CodeBox>
-                        $ npm i -g <span class="ft">feno-cli</span>
+                        $ npm i -g <span class="ft0">feno-cli</span>
                     </CodeBox>
                 </div>
             </v-flex>
@@ -36,8 +36,8 @@
                     <p class="ft13 lTXTgrey">
                        {{ $t('docs.install.cli.question_process') }}
                     </p>
-                    <ul class="ft14 ft-dk">
-                        <li class="bold" v-for="(item, index) in $t('docs.install.cli.questions')" :key="index">
+                    <ul class="ft14">
+                        <li class="lTXTgrey bold" v-for="(item, index) in $t('docs.install.cli.questions')" :key="index">
                             {{ item }}
                         </li>
                         <!--<ul>
@@ -62,13 +62,13 @@
                     </CodeBox>
                     <p class="pt15 ft15 lTXTgrey">
                         {{ $t('docs.install.cli.final') }}
-                        <a href="http://localhost:8080" class="ft" target="_blank">http://localhost:8080</a>!
+                        <a href="http://localhost:8080" class="ft0" target="_blank">http://localhost:8080</a>!
                     </p>
                 </div>
             </v-flex>
             <v-flex xs12 id="scratch">
                 <div class="spacing">
-                    <p class="ft25 ft">{{ $t('docs.install.scratch.title') }}</p>
+                    <p class="ft25 ft0">{{ $t('docs.install.scratch.title') }}</p>
                     <p class="ft13 lTXTgrey">
                         {{ $t('docs.install.scratch.sub') }}
                     </p>
@@ -114,11 +114,11 @@
                     </CodeBox>
                     <p class="pt15 ft15 lTXTgrey">
                         {{ $t('docs.install.scratch.running_project') }}
-                        <a href="http://localhost:8080" class="ft" target="_blank">http://localhost:8080</a>
+                        <a href="http://localhost:8080" class="ft0" target="_blank">http://localhost:8080</a>
                     </p>
                     <p class="ft15 lTXTgrey">
                         {{ $t('docs.install.scratch.continue_docs') }}
-                        <router-link to="/docs/directory-structure" class="ft">
+                        <router-link to="/docs/directory-structure" class="ft0">
                             {{ $t('docs.menu.directory_structure') }}
                         </router-link>
                     </p>

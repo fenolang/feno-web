@@ -65,7 +65,7 @@
                 <div class="spacing">
                     <Subtitle>{{ $t('docs.head.elements.styles.title') }}</Subtitle>
                     <p class="ft13 lTXTgrey" v-html="$t('docs.head.elements.styles.subtitle')"></p>
-                    <v-btn outlined block class="border mb-4"
+                    <v-btn outlined block class="border-btn mb-4"
                     v-for="(item, index) in $t('docs.head.elements.styles.btns')" :key="index"
                     v-html="item.text" :to="localePath(item.route)+item.id"></v-btn>
                 </div>
@@ -74,7 +74,7 @@
                 <div class="spacing">
                     <Subtitle>Scripts</Subtitle>
                     <p class="ft13 lTXTgrey" v-html="$t('docs.head.elements.scripts.subtitle')"></p>
-                    <v-btn outlined block class="border mb-4"
+                    <v-btn outlined block class="border-btn mb-4"
                     v-for="(item, index) in $t('docs.head.elements.scripts.btns')" :key="index"
                     v-html="item.text" :to="localePath(item.route)+item.id"></v-btn>
                 </div>
@@ -99,7 +99,7 @@
                             <Comment>#- {{ $t('docs.meta.comment') }} -#</Comment>
                         </Doc>
                     </CodeBox>
-                    <v-alert outlined type="warning" border="left" class="mt-4" v-html="$t('docs.meta.props.noscript.alert')">
+                    <v-alert outlined type="warning" border-btn="left" class="mt-4" v-html="$t('docs.meta.props.noscript.alert')">
                     </v-alert>
                     <Subtitle id="noscript-default">{{ $t('docs.meta.props.nojs_default.name') }}</Subtitle>
                     <p class="ft13 lTXTgrey">
@@ -109,7 +109,7 @@
                     <p class="ft13 lTXTgrey" v-html="$t('docs.meta.props.configure_nojs.sub')">
                     </p>
                     <br>
-                    <v-btn depressed class="bg3 dk" :to="localePath('docs-config-file')">{{ $t('docs.meta.go') }}</v-btn>
+                    <v-btn depressed class="c0 bold TXTblack" :to="localePath('docs-config-file')">{{ $t('docs.meta.go') }}</v-btn>
                 </div>
             </v-flex>
             <v-flex xs12>
@@ -128,9 +128,9 @@
             </v-flex>
             <v-flex>
                 <div class="spacing mt20 mb40">
-                    <p class="ft25 ft-dk bold">{{ $t('docs.head.continue.title') }} <span class="txt-dk">#meta</span>!</p>
+                    <p class="ft25 ft0 bold">{{ $t('docs.head.continue.title') }} <span class="ft0">#meta</span>!</p>
                     <p class="ft13 lTXTgrey mb-0">{{ $t('docs.head.continue.subtitle') }}</p> <br>
-                    <v-btn outlined class="border bold" :to="localePath('docs-meta_elements')">{{ $t('docs.head.continue.btn') }}</v-btn>
+                    <v-btn outlined class="border-btn bold" :to="localePath('docs-meta_elements')">{{ $t('docs.head.continue.btn') }}</v-btn>
                 </div>
             </v-flex>
         </v-layout>     

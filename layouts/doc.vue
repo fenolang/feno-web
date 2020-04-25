@@ -20,8 +20,8 @@
     <v-footer padless>
       <v-card flat tile width="100%" class="center-txt black pt20 pb20">
         <span class="dk">
-          Copyright &copy; 2019
-          <span class="ft ft15 bold">YahirGNz</span>
+          Copyright &copy; {{ new Date().getFullYear() }}
+          <span class="ft0 ft15 bold">YahirGNz</span>
         </span>
       </v-card>
     </v-footer>

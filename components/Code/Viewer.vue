@@ -39,7 +39,6 @@ export default {
 }
 .card {
   border-radius: 10px !important;
-  background: #fff !important;
-  border: 1px solid #e6e6e6 !important;
+  background: #080808 !important;
 }
 </style>
