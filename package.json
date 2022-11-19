@@ -17,7 +17,7 @@
     "cross-env": "^5.2.0",
     "express": "^4.16.4",
     "nodemon": "^1.18.9",
-    "nuxt": "^2.0.0",
+    "nuxt": "^2.15.8",
     "nuxt-i18n": "^6.4.1",
     "vue": "^2.6.11",
     "vue-template-compiler": "^2.6.11",
