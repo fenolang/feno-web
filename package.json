@@ -15,7 +15,7 @@
     "@nuxtjs/vuetify": "^1.9.1",
     "anchor-js": "^4.2.2",
     "cross-env": "^5.2.0",
-    "express": "^4.16.4",
+    "express": "^4.17.3",
     "nodemon": "^1.18.9",
     "nuxt": "^2.0.0",
     "nuxt-i18n": "^6.4.1",
